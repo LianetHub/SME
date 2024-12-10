@@ -7,7 +7,70 @@
         <section class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
-
+                <section class="promo" style="background-image: url('@img/home/banner.jpg')">
+                    <div class="container">
+                        <div class="promo__body">
+                            <div class="promo__offer">
+                                <h1 class="promo__title">заговори на языке возможностей!</h1>
+                                <p class="promo__subtitle h5">
+                                    сеть курсов иностранных языков с лучшими преподавателями
+                                </p>
+                            </div>
+                            <form action="#" class="promo__form form">
+                                <div class="form__title text-center h5">
+                                    Запишитесь на
+                                    бесплатный урок
+                                </div>
+                                <input type="text" name="name" class="form__input" placeholder="Имя">
+                                <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                                <div class="form__select">
+                                    <select class="select">
+                                        <option value="0">Выберите филиал</option>
+                                        <option value="1">г. Мытищи, Борисовка,16 ЖК «Ярославский»</option>
+                                        <option value="2">г. Мытищи, Кадомцева,2 ЖК «новое медведково»</option>
+                                        <option value="3">г. Мытищи, 2-я институтская, 24А ЖК «Ярославский»</option>
+                                        <option value="3">г. Балашиха, кадомцева,2 ЖК «новое медведково»</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-secondary btn-sm">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_license.html', {})
+                <section class="method">
+                    <div class="container container-sm">
+                        <div class="method__content row">
+                            <div class="col-7">
+                                <div class="method__body">
+                                    <h2 class="method__title h3">коммуникативная ​методика</h2>
+                                    <div class="method__desc text-block-md">
+                                        <p>
+                                            Делаем основной упор на навыках общения и посвящаем ​большую часть занятия разговорной практике.
+                                        </p>
+                                        <p>
+                                            Уделяем внимание всем аспектам языка - устная речь, ​восприятие на слух, чтение, письмо и словарный запас, а ​так же грамматика и произношение по международным ​стандартам.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 offset-1">
+                                <div class="method__image">
+                                    <img src="@img/cambridge-logo.svg" alt="Лого университета">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_partner.html', {})
+                @@include('html/_regular.html', {})
+                @@include('html/_best-teachers.html', {})
+                @@include('html/_lesson.html', {})
+                @@include('html/_banner.html', {})
+                @@include('html/_cert.html', {})
+                @@include('html/_reviews.html', {})
+                @@include('html/_faq.html', {})
+                @@include('html/_trial.html', {})
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

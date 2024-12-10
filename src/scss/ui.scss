@@ -10,23 +10,131 @@
 
 //============ МОДУЛИ ====================
 
-.title-lg {
-	font-size: 1.8125rem;
-	font-weight: 00;
-	line-height: 135%;
+h1,
+.h1 {
+	font-family: $font-bebas;
+	line-height: 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 3rem;
 	@media (min-width: $md4) {
-		font-size: 2.5rem;
-		font-weight: 500;
+		font-size: 3.75rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 4.375rem;
 	}
 }
-
-.title {
+h2,
+.h2 {
+	font-family: $font-bebas;
+	line-height: 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2.5rem;
+	@media (min-width: $md4) {
+		font-size: 3.125rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 3.75rem;
+	}
+}
+h3,
+.h3 {
+	font-family: $font-bebas;
+	line-height: 120%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.875rem;
+	@media (min-width: $md4) {
+		font-size: 2.5rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 3.125rem;
+	}
+}
+h4,
+.h4 {
+	font-family: $font-bebas;
+	line-height: 120%;
+	text-transform: uppercase;
+	font-weight: 700;
 	font-size: 1.625rem;
-	font-weight: 500;
-	line-height: 130%;
 	@media (min-width: $md4) {
 		font-size: 2rem;
 	}
+	@media (min-width: $md2) {
+		font-size: 2.5rem;
+	}
+}
+h5,
+.h5 {
+	font-family: $font-bebas;
+	line-height: 120%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1.375rem;
+	@media (min-width: $md4) {
+		font-size: 1.625rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 2rem;
+	}
+}
+h6,
+.h6 {
+	font-family: $font-bebas;
+	line-height: 120%;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	@media (min-width: $md4) {
+		font-size: 1.375rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 1.5rem;
+	}
+}
+.h7 {
+	font-family: $font-bebas;
+	line-height: 120%;
+	text-transform: uppercase;
+	font-size: 1rem;
+	@media (min-width: $md4) {
+		font-size: 1.125rem;
+	}
+}
+.text-block-lg {
+	line-height: 140%;
+	font-size: 1rem;
+	@media (min-width: $md4) {
+		font-size: 1.125rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 1.25rem;
+	}
+}
+.text-block-md {
+	line-height: 140%;
+	font-size: 0.875rem;
+	@media (min-width: $md4) {
+		font-size: 1rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 1.125rem;
+	}
+}
+.text-block {
+	line-height: 140%;
+	font-size: 0.8125rem;
+	@media (min-width: $md4) {
+		font-size: 0.9375rem;
+	}
+	@media (min-width: $md2) {
+		font-size: 1rem;
+	}
+}
+
+.fw-bold {
+	font-weight: 700;
 }
 
 .text-center {
@@ -74,52 +182,39 @@
 	}
 }
 
-.more-link {
-	font-size: 0.875rem;
-	font-weight: 500;
-	line-height: 155%;
-	transition: color 0.3s ease 0s;
-	white-space: nowrap;
-	@media (any-hover: hover) {
-		&:hover {
-			color: #82a6ca;
-		}
-	}
-}
-
-.favorite-btn {
-	width: rem(40);
-	height: rem(40);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5rem;
-	background: #f3f6fa;
-	border-radius: 50%;
-	flex-shrink: 0;
-	&::before {
-		@extend %ic, .icon-heart;
-		transition: all 0.3s ease 0s;
-	}
-	&.active {
-		&::before {
-			@extend %ic, .icon-heart-fill;
-			color: #82a6ca;
-			animation: pulse 0.3s ease-in-out;
-			@keyframes pulse {
-				0% {
-					transform: scale(1);
-				}
-				50% {
-					transform: scale(1.4);
-				}
-				100% {
-					transform: scale(1);
-				}
-			}
-		}
-	}
-}
+// .favorite-btn {
+// 	width: rem(40);
+// 	height: rem(40);
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	font-size: 1.5rem;
+// 	background: #f3f6fa;
+// 	border-radius: 50%;
+// 	flex-shrink: 0;
+// 	&::before {
+// 		@extend %ic, .icon-heart;
+// 		transition: all 0.3s ease 0s;
+// 	}
+// 	&.active {
+// 		&::before {
+// 			@extend %ic, .icon-heart-fill;
+// 			color: #82a6ca;
+// 			animation: pulse 0.3s ease-in-out;
+// 			@keyframes pulse {
+// 				0% {
+// 					transform: scale(1);
+// 				}
+// 				50% {
+// 					transform: scale(1.4);
+// 				}
+// 				100% {
+// 					transform: scale(1);
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 .swiper-button-next,
 .swiper-button-prev {

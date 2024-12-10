@@ -1,0 +1,67 @@
+.promo {
+	padding: $header 0 2rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-color: $accent;
+	// .promo__body
+	&__body {
+		padding: 3.06rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .promo__offer
+	&__offer {
+		max-width: 30rem;
+	}
+	// .promo__title
+	&__title {
+		color: #fff;
+	}
+	// .promo__subtitle
+	&__subtitle {
+		margin-top: 2.5rem;
+		max-width: 23.25rem;
+	}
+	// .promo__form
+	&__form {
+		flex: 0 0 17.375rem;
+		border-radius: 0.625rem;
+		background: rgba($color: #fff, $alpha: 0.74);
+		padding: 1.88rem 1.75rem;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+}
+
+.method {
+	padding: 5rem 0 2.5rem;
+	// .method__container
+	&__container {
+	}
+	// .method__content
+	&__content {
+		align-items: center;
+	}
+	// .method__body
+	&__body {
+	}
+	// .method__title
+	&__title {
+	}
+	// .method__desc
+	&__desc {
+		margin-top: 0.5rem;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 0.75em;
+			}
+		}
+	}
+	// .method__image
+	&__image {
+	}
+}

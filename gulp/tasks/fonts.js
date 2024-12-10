@@ -72,8 +72,16 @@ export const fontsStyle = () => {
                 let fontFileName = fontsFiles[i].split(".")[0];
                 if (newFileOnly !== fontFileName) {
                     let fontName = fontFileName.split("-")[0] ? fontFileName.split("-")[0] : fontFileName;
-                    let fontWeight = fontFileName.split("-")[1] ? fontFileName.split("-")[1] : fontFileName;
+                    let fontWeight = fontFileName.split("-")[1] || '';
+                    let fontStyle = 'normal';
 
+                    // Обработка начертания Italic
+                    if (fontWeight.toLowerCase().includes("italic")) {
+                        fontStyle = "italic";
+                        fontWeight = fontWeight.replace(/italic/i, "").trim();
+                    }
+
+                    // Определение веса шрифта
                     switch (fontWeight.toLowerCase()) {
                         case "thin": fontWeight = 100; break;
                         case "extralight": fontWeight = 200; break;
@@ -95,7 +103,7 @@ export const fontsStyle = () => {
                             font-display: swap;
                             src: url("../fonts/${fontFileName}.woff") format("woff"), url("../fonts/${fontFileName}.woff2") format("woff2");
                             font-weight: ${fontWeight};
-                            font-style: normal;
+                            font-style: ${fontStyle};
                         }\r\n`, cb);
                     newFileOnly = fontFileName;
                 }

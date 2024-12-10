@@ -17,27 +17,27 @@
 // ======================================ИКОНОЧНЫЙ ШРИФТ======================================
 
 // Шрифт по умолчанию
-$fontfamily: "VelaSans";
-$font-inter: "InterTight";
+$fontfamily: "PTSans";
+$font-bebas: "BebasNeue";
 
 // Шрифт по умолчанию
 
 $md1: 1439.98px;
 $md2: 1199.98px;
 $md3: 991.98px;
-$md4: 743.98px;
+$md4: 767.98px;
 $md5: 575.98px;
 $md6: 389.98px;
 
 // ПЕРЕМЕННЫЕ
 $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1200); // Максимальная ширина ограничивающего контейнера
+$maxWidthContainer: rem(1196); // Максимальная ширина ограничивающего контейнера
 $containerPadding: 30;
 
-$text: #2b3239;
+$text: #393939;
 $white: #fff;
-$accent: #82a6ca;
+$accent: #fa5300;
 
 // Z-Index
 $ui-index-1: 1; // Для наполняющих элементов в общем потоке
@@ -79,6 +79,18 @@ body {
 	@media (min-width: $md4) {
 		overflow-x: clip;
 	}
+	&:has(.header.open-menu) {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #737373, $alpha: 0.6);
+			z-index: 5;
+		}
+	}
 }
 
 //================== ОБОЛОЧКА==================================
@@ -86,7 +98,7 @@ body {
 //=============== ОСНОВНАЯ СЕТКА===============================
 
 // Отзывчивая
-[class*="__container"] {
+.container {
 	margin: 0 auto;
 	max-width: 100%;
 	padding: 0 rem(20);
@@ -99,13 +111,14 @@ body {
 	}
 	@media (min-width: $md3) {
 		max-width: rem(960);
+		&.container-xs {
+			max-width: rem(785);
+		}
 	}
 	@media (min-width: $md2) {
 		max-width: $maxWidthContainer;
-	}
-	&.container-lg {
-		@media (min-width: $md2) {
-			max-width: rem(1240);
+		&.container-sm {
+			max-width: rem(992);
 		}
 	}
 }
@@ -114,12 +127,13 @@ body {
 
 //=================Подключаем файлы стилей
 //================Общий файл для элементов страницы
-// @import "grid";
+@import "grid";
 @import "ui";
 @import "forms";
 //================Общий файл для элементов страницы
 @import "header";
 @import "footer";
+@import "modules/common";
 //=======================================
 
 // =======================ОСНОВНОЙ БЛОК==================
@@ -129,192 +143,3 @@ body {
 // ========================================================
 
 @import "pages/home";
-@import "pages/catalog";
-@import "pages/magazine";
-@import "pages/article";
-@import "pages/info";
-@import "pages/product";
-@import "pages/service";
-@import "pages/lk";
-@import "pages/contacts";
-@import "pages/about";
-
-.auto-card {
-	min-width: 0;
-	display: flex;
-	flex-direction: column;
-	height: auto;
-	gap: rem(20);
-	&.swiper-slide {
-		@media (max-width: $md4) {
-			width: rem(270);
-		}
-	}
-	.rows & {
-		@media (min-width: $md3) {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			.auto-card__image {
-				padding-bottom: 50.5%;
-				min-height: 100%;
-			}
-			.auto-card__bottom {
-				flex-direction: row;
-			}
-		}
-	}
-	// .auto-card__slider
-	&__slider {
-		position: relative;
-		width: 100%;
-		@media (any-hover: hover) {
-			&:hover {
-				.auto-card__slider-pagination {
-					opacity: 1;
-				}
-				.auto-card__favorite {
-					opacity: 1;
-					visibility: visible;
-				}
-			}
-		}
-	}
-	// .auto-card__favorite
-	&__favorite {
-		position: absolute;
-		top: rem(10);
-		right: rem(10);
-		z-index: 2;
-		transition: all 0.3s ease 0s;
-		&.active {
-			opacity: 1;
-			visibility: visible;
-		}
-		@media (any-hover: hover) {
-			opacity: 0;
-			visibility: hidden;
-		}
-	}
-	// .auto-card__slider-pagination
-	&__slider-pagination {
-		position: absolute;
-		@media (any-hover: hover) {
-			opacity: 0;
-		}
-		&.swiper-pagination {
-			bottom: 0;
-			padding: rem(15) 0 cfv vbn;
-		}
-		.swiper-pagination-bullet {
-			width: rem(20);
-			height: rem(3);
-			border-radius: rem(3);
-			--swiper-pagination-bullet-horizontal-gap: #{rem(5)};
-
-			&.swiper-pagination-bullet-active {
-				background: #2d87ff;
-			}
-		}
-	}
-
-	// .auto-card__image
-	&__image {
-		height: 0;
-		position: relative;
-		width: 100%;
-		padding-bottom: 59%;
-		@media (min-width: $md4) {
-			padding-bottom: 65%;
-		}
-		& img {
-			position: absolute;
-			inset: 0;
-			border-radius: rem(10);
-		}
-	}
-	// .auto-card__body
-	&__body {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 auto;
-	}
-	// .auto-card__name
-	&__name {
-		font-weight: 500;
-		line-height: 130%;
-		transition: color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $accent;
-			}
-		}
-		font-size: 1.125rem;
-		@media (min-width: $md3) {
-			font-size: 1.375rem;
-		}
-	}
-	// .auto-card__props
-	&__props {
-		margin-top: 1.125rem;
-		padding: 1.25rem 0;
-		border-top: rem(1) solid #eaeaee;
-		border-bottom: rem(1) solid #eaeaee;
-		display: flex;
-		justify-content: space-between;
-	}
-	// .auto-card__props-item
-	&__props-item {
-	}
-	// .auto-card__props-name
-	&__props-name {
-		color: rgba(43, 50, 57, 0.4);
-		font-weight: 600;
-		line-height: 150%;
-		font-size: 0.75rem;
-		@media (min-width: $md3) {
-			font-size: 0.875rem;
-		}
-	}
-	// .auto-card__props-value
-	&__props-value {
-		margin-top: 0.31rem;
-		font-weight: 500;
-		line-height: 150%;
-		font-size: 1rem;
-		@media (min-width: $md3) {
-			font-size: 1.125rem;
-		}
-	}
-	// .auto-card__price
-	&__price {
-		margin-top: 1.125rem;
-		margin-bottom: auto;
-	}
-	// .auto-card__price-caption
-	&__price-caption {
-		color: rgba(43, 50, 57, 0.4);
-		font-size: 0.875rem;
-		font-weight: 600;
-		line-height: 150%;
-	}
-	// .auto-card__price-value
-	&__price-value {
-		margin-top: 0.31rem;
-		font-size: 1.625rem;
-		font-weight: 600;
-		line-height: 130%;
-	}
-	// .auto-card__bottom
-	&__bottom {
-		margin-top: 1.125rem;
-		display: flex;
-		gap: 0.44rem;
-		flex-direction: column;
-		@media (min-width: $md2) {
-			flex-direction: row;
-		}
-	}
-	// .auto-card__btn
-	&__btn {
-	}
-}

@@ -1,16 +1,13 @@
 .row {
-	--gutter-x: 0.63rem;
-	--gutter-y: 0.63rem;
-	@media (min-width: $md4) {
-		--gutter-x: 1.25rem;
-		--gutter-y: 1.25rem;
-	}
+	--gutter-x: #{rem(28)};
+	--gutter-y: #{rem(28)};
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: calc(-1 * var(--gutter-y));
 	margin-right: calc(-0.5 * var(--gutter-x));
 	margin-left: calc(-0.5 * var(--gutter-x));
 }
+
 .row > * {
 	flex-shrink: 0;
 	width: 100%;
