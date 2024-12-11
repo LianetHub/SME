@@ -1,15 +1,8 @@
 .form {
-	// .form__caption
-	&__caption {
-		font-size: 1.125rem;
-		font-weight: 500;
-		line-height: 140%;
-		text-align: center;
-		@media (min-width: $md4) {
-			font-size: 1rem;
-			font-weight: 400;
-			text-align: left;
-		}
+	// .form__title
+	&__title {
+		line-height: 1;
+		margin-bottom: 0.25rem;
 	}
 	// .form__input
 	&__input {
@@ -19,7 +12,7 @@
 		border-radius: 0.375rem;
 		background: #fff;
 		border: rem(1) solid #fff;
-		padding: 1.06rem 0.63rem;
+		padding: 0.875rem 0.63rem;
 		color: #000;
 		font-size: 1.125rem;
 		line-height: 100%;
@@ -133,9 +126,30 @@
 	// 		}
 	// 	}
 	// }
+	// .form__footer
+	&__footer {
+		margin-top: 0.65rem;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		.btn {
+			margin: 0 auto 0 auto;
+		}
+	}
+	// .form__tooltip
+	&__tooltip {
+		color: #737373;
+		font-size: rem(22);
+		margin-left: rem(-22);
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
 	// .form__btn
 	&__btn {
-		margin-top: 1.25rem;
 	}
 	// .form__file
 	&__file {

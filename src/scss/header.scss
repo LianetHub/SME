@@ -11,6 +11,7 @@
 	}
 	// .header__wrapper
 	&__wrapper {
+		transition: background-color 0.3s ease;
 	}
 	// .header__banner
 	&__banner {
@@ -38,7 +39,7 @@
 	// .header__body
 	&__body {
 		position: relative;
-		padding: rem(20) 0;
+		padding: rem(20) 0 rem(15);
 		border-bottom: rem(1) solid rgba($color: #fff, $alpha: 0.3);
 	}
 	// .header__content
@@ -50,6 +51,20 @@
 	// .header__logo
 	&__logo {
 		margin-right: auto;
+	}
+
+	// .header__logo-white
+	&__logo-white {
+		.header.open-menu & {
+			display: none;
+		}
+	}
+	// .header__logo-color
+	&__logo-color {
+		display: none;
+		.header.open-menu & {
+			display: block;
+		}
 	}
 	// .header__location
 	&__location {
@@ -119,6 +134,13 @@
 		width: 100%;
 		background: #fff;
 		padding: 1.88rem 0 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		.header.open-menu & {
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 	// .menu__body
 	&__body {
@@ -284,10 +306,7 @@
 				transition: transform 0.45s ease 0.35s, width 0.3s ease 0s;
 			}
 			&:first-child {
-				transform: translateY(rem(10));
-				@media (min-width: $md5) {
-					transform: translateY(rem(6));
-				}
+				transform: translateY(rem(6));
 				& svg {
 					transform: rotate(-135deg);
 				}
@@ -296,10 +315,7 @@
 				opacity: 0;
 			}
 			&:nth-child(3) {
-				transform: translateY(rem(-10));
-				@media (min-width: $md5) {
-					transform: translateY(rem(-6));
-				}
+				transform: translateY(rem(-6));
 				& svg {
 					transform: rotate(-225deg);
 				}
