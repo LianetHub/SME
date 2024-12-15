@@ -43,10 +43,8 @@ $(function () {
     $(document).on('click', (e) => {
         const $target = $(e.target);
 
-
-
         //  menu
-        if ($target.closest('.menu__btn').length) {
+        if ($target.closest('.header__menu-btn').length) {
             $('.header').toggleClass('open-menu');
         }
 
@@ -54,18 +52,214 @@ $(function () {
             $('.header').removeClass('open-menu');
         }
 
+        // faq accordion
         if ($target.closest('.faq__item').length) {
             const $faqItem = $target.closest('.faq__item');
             $faqItem.toggleClass('active');
             $faqItem.find('.faq__item-answer').slideToggle()
         }
 
+        // Открытие/закрытие списка локаций
+        if ($target.closest('.sign-lesson__location-selected').length) {
+            const $selectedBtn = $target.closest('.sign-lesson__location-selected');
+            const $locationList = $selectedBtn.siblings('.sign-lesson__location-list');
+
+            $selectedBtn.toggleClass('active');
+            $locationList.toggleClass('open');
+        }
+
+        // Закрытие списка при клике вне блока
+        if (!$target.closest('.sign-lesson__location').length) {
+            $('.sign-lesson__location-selected').removeClass('active');
+            $('.sign-lesson__location-list').removeClass('open');
+        }
+
+        // Выбор элемента из списка локаций
+        if ($target.closest('.sign-lesson__location-item').length) {
+            const $locationItem = $target.closest('.sign-lesson__location-item');
+            const $locationWrapper = $locationItem.closest('.sign-lesson__location');
+            const $locationSelected = $locationWrapper.find('.sign-lesson__location-selected');
+            const $locationList = $locationWrapper.find('.sign-lesson__location-list');
+            const $contentBlocks = $('.sign-lesson__content');
+
+            // Обновление активного элемента списка
+            $locationList.find('.sign-lesson__location-item').removeClass('active');
+            $locationItem.addClass('active');
+
+            // Обновление кнопки
+            $locationSelected.text($locationItem.text());
+            $locationSelected.removeClass('active');
+            $locationList.removeClass('open');
+
+            // Обновление контента
+            $contentBlocks.removeClass('active').eq($locationItem.index()).addClass('active');
+        }
+
+        // Открытие promo__info при клике на form__tooltip
+        if ($target.closest('.form__tooltip').length) {
+            const $promoForm = $target.closest('.promo__form');
+            const $promoInfo = $promoForm.siblings('.promo__info');
+
+            $promoForm.addClass('hidden');
+            $promoInfo.removeClass('hidden');
+        }
+
+        // Закрытие promo__info при клике на promo__info-close
+        if ($target.closest('.promo__info-close').length) {
+            const $promoInfo = $target.closest('.promo__info');
+            const $promoForm = $promoInfo.siblings('.promo__form');
+
+            $promoInfo.addClass('hidden');
+            $promoForm.removeClass('hidden');
+        }
+
+        // header location
+        if ($target.is('.header__location-btn')) {
+            $target.toggleClass('active');
+            $('.header__location-list').toggleClass('active');
+        }
+
+
+        if ($('body').hasClass('_touch')) {
+            if ($target.closest('.menu__link').length && $target.closest('.menu__item.has-children').length) {
+                e.preventDefault();
+                const $menuLink = $target.closest('.menu__link');
+                const $submenu = $menuLink.next('.submenu');
+
+                const isActive = $menuLink.hasClass('active');
+
+                $('.menu__link').removeClass('active');
+                $('.submenu').removeClass('open');
+
+                if (!isActive) {
+                    $menuLink.addClass('active');
+                    $submenu.addClass('open');
+                }
+            }
+        }
+
+        if ($target.closest('.submenu__close').length) {
+            $('.menu__link').removeClass('active');
+            $('.submenu').removeClass('open');
+        }
+
+
     });
 
 
-
-
     //  sliders
+    if ($('.atmosphere__slider').length) {
+        new Swiper('.atmosphere__slider', {
+            spaceBetween: 10,
+            slidesPerView: 1.15,
+            navigation: {
+                prevEl: '.atmosphere__prev',
+                nextEl: '.atmosphere__next',
+            },
+            pagination: {
+                el: '.atmosphere__pagination',
+                clickable: true
+            },
+            breakpoints: {
+                797.98: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            }
+        })
+    }
+
+    if ($('.languages__slider').length) {
+        new Swiper('.languages__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                clickable: true,
+                el: '.languages__pagination'
+            },
+            breakpoints: {
+                991.98: {
+                    spaceBetween: 19,
+                    slidesPerView: 5,
+                },
+                1199.98: {
+                    spaceBetween: 36,
+                    slidesPerView: 5,
+                }
+            }
+        })
+    }
+
+    if ($('.programms__slider').length) {
+        new Swiper('.programms__slider', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            watchOverflow: true,
+            pagination: {
+                clickable: true,
+                el: '.programms__pagination'
+            },
+            breakpoints: {
+                991.98: {
+                    spaceBetween: 40,
+                    slidesPerView: 3,
+                },
+                1199.98: {
+                    spaceBetween: 72,
+                    slidesPerView: 3,
+                }
+            }
+        })
+    }
+
+    if ($('.why__body').length) {
+        getMobileSlider('.why__body', {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            pagination: {
+                clickable: true,
+                el: '.why__pagination'
+            }
+        })
+    }
+
+    if ($('.best-teachers__slider').length) {
+        getMobileSlider('.best-teachers__slider', {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            pagination: {
+                clickable: true,
+                el: '.best-teachers__pagination'
+            }
+        })
+    }
+
+
+
+    function getMobileSlider(sliderName, options) {
+
+        let init = false;
+        let swiper = null;
+
+        function getSwiper() {
+            if (window.innerWidth <= 767.98) {
+                if (!init) {
+                    init = true;
+                    swiper = new Swiper(sliderName, options);
+                }
+            } else if (init) {
+                swiper.destroy();
+                swiper = null;
+                init = false;
+            }
+        }
+        getSwiper();
+        window.addEventListener("resize", getSwiper);
+    }
+
+
+
 
 
     // observer header scroll
@@ -93,7 +287,6 @@ $(function () {
     $(window).on('resize', function () {
         updateHeaderHeight();
     });
-
 
 
 

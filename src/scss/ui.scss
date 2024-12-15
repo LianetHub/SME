@@ -1,15 +1,3 @@
-//============ МОДУЛИ ====================
-@import "modules/popup";
-@import "modules/breadcrumbs";
-@import "modules/select";
-@import "modules/pagination";
-@import "modules/phone-input";
-// @import "modules/before-slider";
-// @import "modules/datepicker";
-// @import "modules/animation";
-
-//============ МОДУЛИ ====================
-
 h1,
 .h1 {
 	font-family: $font-bebas;
@@ -133,6 +121,18 @@ h6,
 	}
 }
 
+//============ МОДУЛИ ====================
+@import "modules/popup";
+@import "modules/breadcrumbs";
+@import "modules/select";
+@import "modules/pagination";
+@import "modules/phone-input";
+// @import "modules/before-slider";
+// @import "modules/datepicker";
+// @import "modules/animation";
+
+//============ МОДУЛИ ====================
+
 .fw-bold {
 	font-weight: 700;
 }
@@ -224,56 +224,65 @@ h6,
 	margin: 0;
 	transform: none;
 	transition: color 0.3s ease 0s;
-	color: inherit;
-	border-radius: 50%;
+	color: #fff;
 	transition: color 0.3s ease 0s, opacity 0.3s ease 0s, background-color 0.3s ease 0s, border-color 0.3s ease 0s;
-	background: #f3f6fa;
-	color: #2b3239;
 	z-index: 2;
-	width: 2.25rem;
-	height: 2.25rem;
+	font-size: 1.75rem;
+	width: 1.75rem;
+	height: 1.75rem;
 	&::after {
-		font-size: 0.875rem;
+		display: none;
 	}
 	@media (min-width: $md3) {
 		width: 2.5rem;
 		height: 2.5rem;
+		font-size: 2.5rem;
 		&::after {
 			font-size: 1rem;
 		}
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: darken($color: #f3f6fa, $amount: 10);
+			color: $accent;
 		}
 	}
+}
+
+.swiper-button-next {
+	@extend %ic, .icon-next;
+}
+.swiper-button-prev {
+	@extend %ic, .icon-prev;
 }
 
 .swiper-pagination {
 	position: static;
 	bottom: auto;
-	padding: 1.25rem 0;
+	margin-top: 1.25rem;
 	display: flex;
 	justify-content: center;
+	&.swiper-pagination-lock {
+		margin-top: 0;
+	}
 	.swiper-pagination-bullet {
 		position: relative;
 		width: 0.5rem;
 		height: 0.5rem;
-		--swiper-pagination-bullet-horizontal-gap: 0.18rem;
-		background: #cdd9e9;
+		--swiper-pagination-bullet-horizontal-gap: #{rem(6)};
+		background: #d9d9d9;
 		opacity: 1;
 		transition: all 0.3s ease 0s;
 		&.swiper-pagination-bullet-active {
-			background: $text;
+			background: #737373;
 		}
 	}
 }
 
-// .pc-only {
-// 	@media (max-width: $md4) {
-// 		display: none;
-// 	}
-// }
+.pc-only {
+	@media (max-width: $md3) {
+		display: none !important;
+	}
+}
 
 // .uppercase-mobile {
 // 	@media (max-width: $md4) {
@@ -496,10 +505,15 @@ $scrollbarHover: darken(
 // ========== ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ ======
 .hidden {
 	position: absolute;
-	clip: rect(0 0 0 0);
 	width: 1px;
 	height: 1px;
 	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .cover-image {

@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="header__banner-body">
                     <div class="header__banner-text fw-bold">Занятия в Центрах и Online</div>
-                    <a href="" class="header__banner-btn btn btn-primary btn-sm">Online</a>
+                    <a href="#order" data-fancybox class="header__banner-btn btn btn-primary btn-sm">Online</a>
                     <div class="header__banner-logo">
                         <img src="@img/Cambridge-University-logo.svg" alt="Логотип университета">
                     </div>
@@ -14,13 +14,18 @@
         <div class="header__body">
             <div class="container">
                 <div class="header__content">
-                    <a href="/" class="header__logo">
-                        <img src="@img/logo.svg" class="header__logo-white" alt="Логотип">
-                        <img src="@img/logo-color.svg" class="header__logo-color" alt="Логотип">
-                    </a>
-                    <div class="header__menu menu">
-                        <button type="button" class="menu__btn">
-                            <span class="menu__btn-icon icon-menu">
+                    <div class="header__content-top">
+                        <a href="/" class="header__logo">
+                            @@if(logo=="initial"){
+                            <img src="@img/logo.svg" class="header__logo-white" alt="Логотип">
+                            <img src="@img/logo-color.svg" class="header__logo-color" alt="Логотип">
+                            }
+                            @@if(logo=="pink"){
+                            <img src="@img/logo-color.svg" alt="Логотип">
+                            }
+                        </a>
+                        <button type="button" class="header__menu-btn" aria-label="Открыть меню">
+                            <span class="header__menu-icon icon-menu">
                                 <span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="2" viewBox="0 0 18 2" fill="none">
                                         <path d="M0 0V2.00087H18V0H0Z" fill="currentColor" />
@@ -37,9 +42,11 @@
                                     </svg>
                                 </span>
                             </span>
-                            меню
+                            <span class="header__menu-text">меню</span>
                         </button>
-                        <div class="menu__content">
+                    </div>
+                    <div class="header__content-bottom">
+                        <div class="header__menu menu">
                             <div class="container">
                                 <nav class="menu__body">
                                     <ul class="menu__list">
@@ -48,12 +55,16 @@
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/flag.svg" alt="Иконка">
                                                 </span>
-                                                <strong>Английский</strong>
-                                                Все программы по английскому языку
+                                                <span class="menu__link-text">
+                                                    <strong>Английский</strong>
+                                                    Все программы по английскому языку
+                                                </span>
                                             </a>
                                             <div class="submenu">
                                                 <div class="container">
-                                                    <button type="button" class="submenu__close icon-close">Закрыть</button>
+                                                    <button type="button" class="submenu__close icon-close">
+                                                        <span class="submenu__close-text">Закрыть</span>
+                                                    </button>
                                                     <ul>
                                                         <li><a href="">Группы для детей 3-6 лет</a></li>
                                                         <li><a href="">Группы для детей 7-9 лет</a></li>
@@ -70,18 +81,22 @@
                                             </div>
                                         </li>
                                         <li class="menu__item has-children">
-                                            <a href="" class="menu__link">
+                                            <a href="/preschoolers.html" class="menu__link">
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/preschoolers.svg" alt="Иконка">
                                                 </span>
-                                                <strong>Дошкольники</strong>
-                                                Все развивающие занятия для детей 3-6 лет
+                                                <span class="menu__link-text">
+                                                    <strong>Дошкольники</strong>
+                                                    Все развивающие занятия для детей 3-6 лет
+                                                </span>
                                             </a>
                                             <div class="submenu">
                                                 <div class="container">
-                                                    <button type="button" class="submenu__close icon-close">Закрыть</button>
+                                                    <button type="button" class="submenu__close icon-close">
+                                                        <span class="submenu__close-text">Закрыть</span>
+                                                    </button>
                                                     <ul>
-                                                        <li><a href="">Развивающий мини-сад для детей от 3 до 6 лет</a></li>
+                                                        <li><a href="/preschoolers.html">Развивающий мини-сад для детей от 3 до 6 лет</a></li>
                                                         <li><a href="">Подготовка к школе для детей от 5 до 6 лет</a></li>
                                                         <li><a href="">Развивай-ка для детей от 3 до 4 лет</a></li>
                                                         <li><a href="">Английский для детей от 3 до 6 лет</a></li>
@@ -94,12 +109,16 @@
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/languages.svg" alt="Иконка">
                                                 </span>
-                                                <strong>Языки</strong>
-                                                Все программы по другим языкам
+                                                <span class="menu__link-text">
+                                                    <strong>Языки</strong>
+                                                    Все программы по другим языкам
+                                                </span>
                                             </a>
                                             <div class="submenu">
                                                 <div class="container">
-                                                    <button type="button" class="submenu__close icon-close">Закрыть</button>
+                                                    <button type="button" class="submenu__close icon-close">
+                                                        <span class="submenu__close-text">Закрыть</span>
+                                                    </button>
                                                     <ul>
                                                         <li><a href="">Китайский язык</a></li>
                                                         <li><a href="">Японский язык</a></li>
@@ -111,16 +130,20 @@
                                             </div>
                                         </li>
                                         <li class="menu__item has-children">
-                                            <a href="" class="menu__link">
+                                            <a href="/about.html" class="menu__link">
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/lamp.svg" alt="Иконка">
                                                 </span>
-                                                <strong>О нас</strong>
-                                                Вся информация о нашей компании
+                                                <span class="menu__link-text">
+                                                    <strong>О нас</strong>
+                                                    Вся информация о нашей компании
+                                                </span>
                                             </a>
                                             <div class="submenu">
                                                 <div class="container">
-                                                    <button type="button" class="submenu__close icon-close">Закрыть</button>
+                                                    <button type="button" class="submenu__close icon-close">
+                                                        <span class="submenu__close-text">Закрыть</span>
+                                                    </button>
                                                     <ul>
                                                         <li><a href="">О нас</a></li>
                                                         <li><a href="">Наши преподаватели</a></li>
@@ -136,8 +159,10 @@
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/price.svg" alt="Иконка">
                                                 </span>
-                                                <strong>Цены</strong>
-                                                Стоимость занятий и&nbsp;акции
+                                                <span class="menu__link-text">
+                                                    <strong>Цены</strong>
+                                                    Стоимость занятий и&nbsp;акции
+                                                </span>
                                             </a>
                                         </li>
                                         <li class="menu__item has-children">
@@ -145,15 +170,19 @@
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/location-outline.svg" alt="Иконка">
                                                 </span>
-                                                <strong>Контакты</strong>
-                                                Адреса и телефоны наших центров
+                                                <span class="menu__link-text">
+                                                    <strong>Контакты</strong>
+                                                    Адреса и телефоны наших центров
+                                                </span>
                                             </a>
                                             <div class="submenu">
                                                 <div class="container">
-                                                    <button type="button" class="submenu__close icon-close">Закрыть</button>
+                                                    <button type="button" class="submenu__close icon-close">
+                                                        <span class="submenu__close-text">Закрыть</span>
+                                                    </button>
                                                     <ul>
                                                         <li><a href="">г. Мытищи</a></li>
-                                                        <li><a href="">г. Балашиха</a></li>
+                                                        <li><a href="/reutovskaya.html">г. Балашиха</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -162,15 +191,41 @@
                                 </nav>
                             </div>
                         </div>
+                        <div class="header__location">
+                            <button class="header__location-btn icon-chevron">г. Мытищи</button>
+                            <ul class="header__location-list">
+                                <li class="header__location-item">
+                                    <a href="" class="header__location-link">
+                                        г. Мытищи, ул. Борисовка, 16
+                                        <small class="fw-bold">ЖК «Ярославский»</small>
+                                    </a>
+                                </li>
+                                <li class="header__location-item">
+                                    <a href="" class="header__location-link">
+                                        г. Мытищи, ул. Кадомцева, 2
+                                        <small class="fw-bold">ЖК «Новое Медведково»</small>
+                                    </a>
+                                </li>
+                                <li class="header__location-item">
+                                    <a href="" class="header__location-link">
+                                        г. Мытищи, ул. 2-я Институтская, 24а
+                                        <small class="fw-bold">ЖК «Ярославский»</small>
+                                    </a>
+                                </li>
+                                <li class="header__location-item">
+                                    <a href="/reutovskaya.html" class="header__location-link">
+                                        г. Балашиха, ул. Реутовская, 20
+                                        <small class="fw-bold">ЖК «Измайловский Лес»</small>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="tel:+74955324955" class="header__phone icon-phone">+7 (495) 532-49-55</a>
+                        <a href="https://wa.me/+74955324955" target="_blank" class="header__whatsapp">
+                            <img src="@img/icons/whatsapp.svg" alt="Иконка">
+                            whatsapp
+                        </a>
                     </div>
-                    <div class="header__location icon-chevron">
-                        г. Мытищи
-                    </div>
-                    <a href="tel:+74955324955" class="header__phone icon-phone">+7 (495) 532-49-55</a>
-                    <a href="https://wa.me/+74955324955" target="_blank" class="header__whatsapp">
-                        <img src="@img/icons/whatsapp.svg" alt="Иконка">
-                        whatsapp
-                    </a>
                 </div>
             </div>
         </div>

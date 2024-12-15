@@ -5,36 +5,47 @@
     })
     <body>
         <section class="wrapper">
-            @@include('html/_header.html', {})
+            @@include('html/_header.html', {
+            "logo": "initial"
+            })
             <main class="page">
-                <section class="promo" style="background-image: url('@img/home/banner.jpg')">
+                <section class="promo promo-home">
                     <div class="container">
                         <div class="promo__body">
                             <div class="promo__offer">
                                 <h1 class="promo__title">заговори на языке возможностей!</h1>
                                 <p class="promo__subtitle h5">
-                                    сеть курсов иностранных языков с лучшими преподавателями
+                                    сеть курсов иностранных языков с&nbsp;лучшими преподавателями
                                 </p>
                             </div>
-                            <form action="#" class="promo__form form">
-                                <div class="form__title text-center h5">
-                                    Запишитесь на
-                                    бесплатный урок
+                            <div class="promo__side">
+                                <form action="#" class="promo__form form">
+                                    <div class="form__title text-center h5">
+                                        Запишитесь на
+                                        бесплатный урок
+                                    </div>
+                                    <input type="text" name="name" class="form__input" placeholder="Имя">
+                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                                    <select class="select">
+                                        <option disabled selected value="0">Выберите филиал</option>
+                                        <option value="1">г. Мытищи, Борисовка 16</option>
+                                        <option value="2">г. Мытищи, Кадомцева 2</option>
+                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
+                                        <option value="4">г. Балашиха, Реутовская 20</option>
+                                    </select>
+                                    <div class="form__footer">
+                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
+                                        <button type="button" class="form__tooltip icon-info"></button>
+                                    </div>
+                                </form>
+                                <div class="promo__info hidden">
+                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
+                                    <div class="promo__info-text">
+                                        Мы не передадим Ваши
+                                        данные третьим лицам
+                                    </div>
                                 </div>
-                                <input type="text" name="name" class="form__input" placeholder="Имя">
-                                <input type="tel" name="phone" class="form__input" placeholder="Телефон">
-                                <select class="select">
-                                    <option value="0">Выберите филиал</option>
-                                    <option value="1">г. Мытищи, Борисовка 16</option>
-                                    <option value="2">г. Мытищи, Кадомцева 2</option>
-                                    <option value="3">г. Мытищи, 2-я Институтская 24А</option>
-                                    <option value="4">г. Балашиха, Реутовская 20</option>
-                                </select>
-                                <div class="form__footer">
-                                    <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
-                                    <span class="form__tooltip icon-info"></span>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -42,19 +53,19 @@
                     <div class="container">
                         <div class="centres__body">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-xl-6">
                                     <div class="centres__header">
                                         <div class="centres__header-icon">
                                             <img src="@img/icons/CME-language-centres.svg" alt="Логотип">
                                         </div>
-                                        <h2 class="centres__title h4">языковые центры в г.&nbsp;Мытищи</h2>
+                                        <h2 class="centres__title h4">языковые центры в&nbsp;г.&nbsp;Мытищи</h2>
                                     </div>
                                     <p class="centres__text text-block-md">
                                         Компания Center of Modern English была основана в 2014 году. <br> С 2015 года являемся официальным партнером Cambridge. В CME учатся дети c 3 лет, подростки и взрослые. Основная направленность школы – преподавание разговорного английского языка. Наша главная задача – открыть для людей новые горизонты и возможности, обучая английскому языку эффективно и интересно.
                                     </p>
-                                    <a href="" class="centres__btn btn btn-secondary btn-md">подробнее о нас</a>
+                                    <a href="/about.html" class="centres__btn btn btn-secondary btn-md">подробнее о нас</a>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-xl-6">
                                     <div class="centres__video icon-camera">
                                         <iframe width="560" height="315" src="https://www.youtube.com/embed/Otrlgr8Em4k?si=DUVLpiNOB3K8SKaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     </div>
@@ -76,13 +87,13 @@
                             </li>
                             <li class="nums__item">
                                 <div class="nums__item-value h3">ОФИЦИАЛЬНЫЙ</div>
-                                <div class="nums__item-desc text-block-md">партнер Cambridge</div>
+                                <div class="nums__item-desc text-block-md">партнер <br> Cambridge</div>
                             </li>
                             <li class="nums__item">
                                 <div class="nums__item-value h3">ЛИЦЕНЗИЯ</div>
                                 <div class="nums__item-desc text-block-md">на образовательную деятельность</div>
                             </li>
-                            <li class="nums__item">
+                            <li class="nums__item pc-only">
                                 <div class="nums__item-value h3">ШТАТ</div>
                                 <div class="nums__item-desc text-block-md">профессиональных преподавателей</div>
                             </li>
@@ -91,13 +102,13 @@
                 </div>
                 <section class="groups">
                     <div class="container">
-                        <h2 class="groups__title text-center">Групповое Обучение английскому языку</h2>
+                        <h2 class="groups__title text-center h3">Групповое Обучение английскому языку</h2>
                         <ul class="groups__list">
                             <li class="groups__item">
                                 <div class="groups__item-age">3-6</div>
                                 <div class="groups__item-caption h5">ДОШКОЛЬНИКИ</div>
                                 <p class="groups__item-desc text-block-md">
-                                    Занятия по 45 мин 2 раза в неделю
+                                    Занятия по 45 мин 2&nbsp;раза в неделю
                                 </p>
                                 <div class="groups__item-price h5">
                                     4 480 Р./МЕС
@@ -106,9 +117,9 @@
                             </li>
                             <li class="groups__item">
                                 <div class="groups__item-age">7-9</div>
-                                <div class="groups__item-caption h5">младшая школа</div>
+                                <div class="groups__item-caption h5">младшая <br> школа</div>
                                 <p class="groups__item-desc text-block-md">
-                                    Занятия по 60 мин 2 раза в неделю
+                                    Занятия по 60 мин 2&nbsp;раза в неделю
                                 </p>
                                 <div class="groups__item-price h5">
                                     5 580 Р./МЕС
@@ -119,7 +130,7 @@
                                 <div class="groups__item-age">10-13</div>
                                 <div class="groups__item-caption h5">СРЕДНЯЯ школа</div>
                                 <p class="groups__item-desc text-block-md">
-                                    Занятия по 45 мин 2 раза в неделю
+                                    Занятия по 45 мин 2&nbsp;раза в неделю
                                 </p>
                                 <div class="groups__item-price h5">
                                     5 580 Р./МЕС
@@ -130,7 +141,7 @@
                                 <div class="groups__item-age">14-17</div>
                                 <div class="groups__item-caption h5">ТИНЕЙДЖЕРЫ</div>
                                 <p class="groups__item-desc text-block-md">
-                                    Занятия по 90 мин 2 раза в неделю
+                                    Занятия по 90 мин 2&nbsp;раза в неделю
                                 </p>
                                 <div class="groups__item-price h5">
                                     6 880 Р./МЕС
@@ -141,7 +152,7 @@
                                 <div class="groups__item-age">18+</div>
                                 <div class="groups__item-caption h5">ВЗРОСЛЫЕ</div>
                                 <p class="groups__item-desc text-block-md">
-                                    Занятия по 90 мин 2 раза в неделю
+                                    Занятия по 90 мин 2&nbsp;раза в неделю
                                 </p>
                                 <div class="groups__item-price h5">
                                     6 880 Р./МЕС
@@ -155,7 +166,7 @@
                     <div class="container container-sm">
                         <div class="types-learning__body">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-md-6">
                                     <div class="types-learning__card">
                                         <div class="types-learning__card-header">
                                             <div class="types-learning__card-icon">
@@ -170,7 +181,7 @@
                                         <a href="" class="types-learning__card-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-md-6">
                                     <div class="types-learning__card">
                                         <div class="types-learning__card-header">
                                             <div class="types-learning__card-icon">
@@ -181,7 +192,7 @@
                                                 <span>обучение</span>
                                             </h3>
                                         </div>
-                                        <p class="types-learning__card-desc text-block-lg">Удобный формат занятий для любого возраста.</p>
+                                        <p class="types-learning__card-desc text-block-lg">Свободный график и индивидуально подобранная программа обучения.</p>
                                         <a href="" class="types-learning__card-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
                                     </div>
                                 </div>
@@ -191,88 +202,175 @@
                 </div>
                 <section class="languages">
                     <div class="container">
-                        <h2 class="languages__title text-center">другие языки</h2>
-                        <ul class="languages__list">
-                            <li class="languages__item">
-                                <div class="languages__item-caption">
-                                    <div class="languages__item-icon">
-                                        <img src="@img/icons/spain.svg" alt="Флаг">
+                        <h2 class="languages__title text-center h3">другие языки</h2>
+                        <div class="languages__slider swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="languages__item swiper-slide">
+                                    <div class="languages__item-caption">
+                                        <div class="languages__item-icon">
+                                            <img src="@img/icons/spain.svg" alt="Флаг">
+                                        </div>
+                                        <div class="languages__item-name h6 fw-bold">
+                                            испанский
+                                        </div>
                                     </div>
-                                    <div class="languages__item-name h6 fw-bold">
-                                        испанский
+                                    <p class="languages__item-desc">
+                                        В группах, индивидуально и&nbsp;онлайн
+                                    </p>
+                                    <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </li>
+                                <li class="languages__item swiper-slide">
+                                    <div class="languages__item-caption">
+                                        <div class="languages__item-icon">
+                                            <img src="@img/icons/china.svg" alt="Флаг">
+                                        </div>
+                                        <div class="languages__item-name h6 fw-bold">
+                                            китайский
+                                        </div>
                                     </div>
-                                </div>
-                                <p class="languages__item-desc">
-                                    В группах, индивидуально и&nbsp;онлайн
-                                </p>
-                                <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
-                            </li>
-                            <li class="languages__item">
-                                <div class="languages__item-caption">
-                                    <div class="languages__item-icon">
-                                        <img src="@img/icons/china.svg" alt="Флаг">
+                                    <p class="languages__item-desc">
+                                        В группах, индивидуально и&nbsp;онлайн
+                                    </p>
+                                    <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </li>
+                                <li class="languages__item swiper-slide">
+                                    <div class="languages__item-caption">
+                                        <div class="languages__item-icon">
+                                            <img src="@img/icons/japan.svg" alt="Флаг">
+                                        </div>
+                                        <div class="languages__item-name h6 fw-bold">
+                                            японский
+                                        </div>
                                     </div>
-                                    <div class="languages__item-name h6 fw-bold">
-                                        китайский
+                                    <p class="languages__item-desc">
+                                        В группах, индивидуально и&nbsp;онлайн
+                                    </p>
+                                    <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </li>
+                                <li class="languages__item swiper-slide">
+                                    <div class="languages__item-caption">
+                                        <div class="languages__item-icon">
+                                            <img src="@img/icons/german.svg" alt="Флаг">
+                                        </div>
+                                        <div class="languages__item-name h6 fw-bold">
+                                            немецкий
+                                        </div>
                                     </div>
-                                </div>
-                                <p class="languages__item-desc">
-                                    В группах, индивидуально и&nbsp;онлайн
-                                </p>
-                                <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
-                            </li>
-                            <li class="languages__item">
-                                <div class="languages__item-caption">
-                                    <div class="languages__item-icon">
-                                        <img src="@img/icons/japan.svg" alt="Флаг">
+                                    <p class="languages__item-desc">
+                                        В группах, индивидуально и&nbsp;онлайн
+                                    </p>
+                                    <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </li>
+                                <li class="languages__item swiper-slide">
+                                    <div class="languages__item-caption">
+                                        <div class="languages__item-icon">
+                                            <img src="@img/icons/france.svg" alt="Флаг">
+                                        </div>
+                                        <div class="languages__item-name h6 fw-bold">
+                                            французский
+                                        </div>
                                     </div>
-                                    <div class="languages__item-name h6 fw-bold">
-                                        японский
-                                    </div>
-                                </div>
-                                <p class="languages__item-desc">
-                                    В группах, индивидуально и&nbsp;онлайн
-                                </p>
-                                <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
-                            </li>
-                            <li class="languages__item">
-                                <div class="languages__item-caption">
-                                    <div class="languages__item-icon">
-                                        <img src="@img/icons/german.svg" alt="Флаг">
-                                    </div>
-                                    <div class="languages__item-name h6 fw-bold">
-                                        немецкий
-                                    </div>
-                                </div>
-                                <p class="languages__item-desc">
-                                    В группах, индивидуально и&nbsp;онлайн
-                                </p>
-                                <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
-                            </li>
-                            <li class="languages__item">
-                                <div class="languages__item-caption">
-                                    <div class="languages__item-icon">
-                                        <img src="@img/icons/france.svg" alt="Флаг">
-                                    </div>
-                                    <div class="languages__item-name h6 fw-bold">
-                                        французский
-                                    </div>
-                                </div>
-                                <p class="languages__item-desc">
-                                    В группах, индивидуально и&nbsp;онлайн
-                                </p>
-                                <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
-                            </li>
-                        </ul>
+                                    <p class="languages__item-desc">
+                                        В группах, индивидуально и&nbsp;онлайн
+                                    </p>
+                                    <a href="" class="languages__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </li>
+                            </ul>
+                            <div class="languages__pagination swiper-pagination"></div>
+                        </div>
                     </div>
                 </section>
+                <section class="programms">
+                    <div class="container container-sm">
+                        <h2 class="programms__title text-center h3">Программы для дошкольников 3-6 лет:</h2>
+                        <div class="programms__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="programms__card swiper-slide">
+                                    <div class="programms__card-image">
+                                        <img src="@img/home/programms/01.png" alt="Рисунок детей">
+                                    </div>
+                                    <div class="programms__card-caption">развивающий <br> мини-сад</div>
+                                    <div class="programms__card-age">для детей 3-6 лет</div>
+                                    <div class="programms__card-time text-block-md">3 раза в неделю <br> по 4 часа</div>
+                                    <ul class="programms__card-list text-block-md">
+                                        <li class="programms__card-item">Английский</li>
+                                        <li class="programms__card-item">Чтение</li>
+                                        <li class="programms__card-item">Математика</li>
+                                        <li class="programms__card-item">Эмоциональный интеллект</li>
+                                        <li class="programms__card-item">Гимнастика</li>
+                                    </ul>
+                                    <a href="" class="programms__card-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </div>
+                                <div class="programms__card swiper-slide">
+                                    <div class="programms__card-image">
+                                        <img src="@img/home/programms/02.png" alt="Рисунок детей">
+                                    </div>
+                                    <div class="programms__card-caption">«развивай-ка»</div>
+                                    <div class="programms__card-age">для детей 3-4 лет</div>
+                                    <div class="programms__card-time text-block-md">2 раза в неделю <br> по 45 минут</div>
+                                    <ul class="programms__card-list text-block-md">
+                                        <li class="programms__card-item">Развитие речи</li>
+                                        <li class="programms__card-item">Развитие памяти</li>
+                                        <li class="programms__card-item">Изучение чисел</li>
+                                        <li class="programms__card-item">Творчество</li>
+                                        <li class="programms__card-item">Моторика</li>
+                                    </ul>
+                                    <a href="" class="programms__card-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </div>
+                                <div class="programms__card swiper-slide">
+                                    <div class="programms__card-image">
+                                        <img src="@img/home/programms/03.png" alt="Рисунок детей">
+                                    </div>
+                                    <div class="programms__card-caption">подготовка <br>
+                                        к школе</div>
+                                    <div class="programms__card-age">для детей 3-6 лет</div>
+                                    <div class="programms__card-time text-block-md">2 раза в неделю <br> по 45 минут</div>
+                                    <ul class="programms__card-list text-block-md">
+                                        <li class="programms__card-item">Развитие речи</li>
+                                        <li class="programms__card-item">Чтение</li>
+                                        <li class="programms__card-item">Письмо</li>
+                                        <li class="programms__card-item">Основы математики</li>
+                                        <li class="programms__card-item">Окружающий мир</li>
+                                    </ul>
+                                    <a href="" class="programms__card-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                                </div>
+                            </div>
+                            <div class="programms__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="mission">
+                    <div class="container">
+                        <div class="mission__body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="mission__main">
+                                        <h2 class="mission__title h1">МИССИЯ СМЕ</h2>
+                                        <p class="mission__desc text-block-lg">Открыть для людей новые горизонты и возможности, обучая английскому языку эффективно и интересно.</p>
+                                        <div class="mission__logo">
+                                            <img src="@img/icons/CME-mission.svg" alt="Логотип">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 offset-xl-1 col-md-7">
+                                    <div class="mission__image">
+                                        <img src="@img/home/mission.jpg" class="cover-image" alt="Фото преподавателя">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_atmosphere.html', {})
+                @@include('html/_sign-lesson.html', {})
+                @@include('html/_why.html', {})
                 @@include('html/_license.html', {})
                 <section class="method">
                     <div class="container container-sm">
                         <div class="method__content row">
                             <div class="col-7">
                                 <div class="method__body">
-                                    <h2 class="method__title h3">коммуникативная ​методика</h2>
+                                    <h2 class="method__title h3">коммуникативная <br> ​методика</h2>
                                     <div class="method__desc text-block-md">
                                         <p>
                                             Делаем основной упор на навыках общения и посвящаем ​большую часть занятия разговорной практике.

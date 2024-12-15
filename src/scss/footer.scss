@@ -17,7 +17,7 @@
 		color: $accent;
 		display: inline-block;
 		transition: color 0.3s ease 0s;
-		margin-bottom: 1.25rem;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: darken($color: $accent, $amount: 10);
@@ -31,7 +31,7 @@
 		line-height: 120%;
 		& li {
 			&:not(:last-child) {
-				margin-bottom: 0.875em;
+				margin-bottom: 0.5em;
 			}
 			& a {
 				transition: color 0.3s ease 0s;
@@ -46,7 +46,10 @@
 	// .footer__caption
 	&__caption {
 		&:not(:first-child) {
-			margin-top: 2.25rem;
+			margin-top: 2.75rem;
+			&.offset-lg {
+				margin-top: 5rem;
+			}
 		}
 		display: inline-block;
 		transition: color 0.3s ease 0s;
@@ -61,9 +64,10 @@
 		margin-top: 5.61rem;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		font-family: $font-bebas;
 		font-size: 3.125rem;
-		font-weight: 400;
+		font-weight: 700;
 		line-height: 120%;
 		text-transform: uppercase;
 		max-width: 10.08125rem;
@@ -92,6 +96,9 @@
 	// .footer__contacts
 	&__contacts {
 		margin-top: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 	// .footer__link
 	&__link {
@@ -124,7 +131,6 @@
 	}
 	// .footer__socials
 	&__socials {
-		margin-top: 1.25rem;
 		display: flex;
 		gap: rem(12);
 	}
@@ -138,8 +144,21 @@
 		background: #a1a1a1;
 		color: #fff;
 		border-radius: 50%;
+		transition: background-color 0.3s ease;
 		&.icon-vk {
 			font-size: 0.875rem;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #07f;
+				}
+			}
+		}
+		&.icon-telegram {
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #0088cc;
+				}
+			}
 		}
 	}
 }
