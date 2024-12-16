@@ -1,14 +1,6 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BebasNeue";
-  font-display: swap;
   src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -23,10 +15,10 @@
 }
 
 @font-face {
-  font-family: "PTSans";
+  font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
   font-style: normal;
 }
 
@@ -49,8 +41,8 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -60,6 +52,14 @@
   src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 .swiper-button-prev,
@@ -2212,7 +2212,7 @@ h6,
 
 .sign-lesson {
   background: #f6f6f6;
-  padding: 3.75rem 0;
+  padding: 2.5rem 0;
 }
 
 .sign-lesson__location {
@@ -2286,7 +2286,12 @@ h6,
 }
 
 .sign-lesson__body {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+}
+
+.sign-lesson__body .row {
+  --gutter-y: 1.75rem;
+  --gutter-x: 1.5rem;
 }
 
 .sign-lesson__content {
@@ -2305,17 +2310,19 @@ h6,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100%;
 }
 
 .sign-lesson__address {
   text-align: center;
   line-height: 90%;
+  margin-bottom: auto;
 }
 
 .sign-lesson__address::before {
   display: inline-block;
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
+  font-size: 0.75em;
+  margin-right: 0.25em;
 }
 
 .sign-lesson__address small {
@@ -2324,18 +2331,19 @@ h6,
 }
 
 .sign-lesson__image {
-  margin-top: 2.125rem;
+  margin-top: 1.75rem;
 }
 
 .sign-lesson__image img {
   width: 100%;
-  max-height: 15.875rem;
+  min-height: 12.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .sign-lesson__calllback {
-  margin-top: 3.75rem;
+  margin-top: 2.8125rem;
+  min-height: 2.625rem;
   margin-left: auto;
   margin-right: auto;
   display: -webkit-box;
@@ -2351,8 +2359,8 @@ h6,
 }
 
 .why__body {
-  margin: 4.38rem 0 0 0;
   overflow: visible;
+  margin: 4.25rem 0 0 0;
 }
 
 .why__card {
@@ -2370,11 +2378,8 @@ h6,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 2.19rem;
   z-index: 1;
+  padding: 3rem 3.75rem 1.29rem 1.63rem;
 }
 
 .why__card.orange {
@@ -2401,18 +2406,19 @@ h6,
 
 .why__card.icon-plus-circle::before {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  font-size: 1.625rem;
+  top: 0.62rem;
+  right: 0.69rem;
+  font-size: 1.5rem;
 }
 
 .why__card.rock-card {
-  background: url("../img/why-rock-bg.jpg") 100% 100%/cover no-repeat, #e2e2e2;
+  background: url("../img/why-rock-bg.jpg") 100% 100%/80% auto no-repeat, #e2e2e2;
 }
 
 .why__card-logo {
   position: absolute;
-  top: -1.5rem;
+  top: -1.75rem;
+  max-width: 3.75rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -2440,22 +2446,23 @@ h6,
 }
 
 .why__card-desc {
-  margin-top: 1.5rem;
   line-height: 110%;
+  margin-bottom: auto;
+  margin-top: 1.25rem;
 }
 
 .why__card-desc p:not(:last-child) {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 
 .why__card-link {
-  margin-top: auto;
+  margin-top: 0.88rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  font-size: 3.25rem;
   color: #fff;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+  font-size: 2.5rem;
 }
 
 .why__card-info {
@@ -2472,24 +2479,29 @@ h6,
 
 .license {
   background: #f6f6f6;
-  padding: 1.875rem 0;
+  padding: 2.5rem 0;
+}
+
+.license__content {
+  margin: 0 auto;
+  max-width: 43.9375rem;
 }
 
 .license__image {
-  margin-right: -1.35rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .license__image-caption {
   text-align: center;
-  font-size: 2rem;
   line-height: 110%;
   text-transform: uppercase;
   font-family: "BebasNeue";
-  margin-bottom: 0.94rem;
+  font-size: 1.625rem;
+  margin-bottom: 1.25rem;
 }
 
 .license__body {
-  padding: 6.5rem 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2507,7 +2519,12 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.88rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 2.15rem;
 }
 
 .license__icon {
@@ -2516,37 +2533,48 @@ h6,
 }
 
 .license__subtitle {
-  margin-top: 1.75rem;
+  margin-top: 1.35rem;
+  padding: 0 1.25rem;
 }
 
 .license__logo {
-  margin-top: auto;
-  margin-left: auto;
+  display: none;
 }
 
 .partner {
-  padding: 4.25rem 0;
+  padding: 1.25rem 0 2.47rem;
 }
 
 .partner__body {
-  margin-top: 5rem;
+  margin-top: 2.06rem;
+}
+
+.partner__body .row {
+  --gutter-x: 3.94rem;
+  --gutter-y: 3rem;
+}
+
+.partner__image {
+  width: 100%;
+  display: block;
 }
 
 .partner__image img {
   -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .partner__list {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
 }
 
 .partner__list-item {
-  font-size: 1.125rem;
   line-height: 140%;
-  padding: 2.25rem;
   border: 0.0625rem solid #393939;
   background: #fff;
+  padding: 1.25rem 2.5rem;
+  font-size: 0.875rem;
 }
 
 .partner__list-item:not(:last-child) {
@@ -2554,7 +2582,7 @@ h6,
 }
 
 .partner__logo {
-  margin-top: 2.5rem;
+  margin-top: 1.75rem;
 }
 
 .regular {
@@ -2562,17 +2590,16 @@ h6,
 }
 
 .regular__main {
-  padding: 3.75rem 0;
+  padding: 2.5rem 0 0;
 }
 
 .regular__body .row {
-  --gutter-x: 0;
-  --gutter-y: 0;
+  --gutter-y: 1.25rem;
 }
 
 .regular__desc {
-  margin-top: 2.5rem;
   max-width: 31.875rem;
+  margin-top: 2rem;
 }
 
 .regular__desc-item {
@@ -2582,21 +2609,21 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.75rem;
+  gap: 0.75rem;
 }
 
 .regular__desc-item::before {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  font-size: 4.625rem;
+  font-size: 3.5rem;
 }
 
 .regular__desc-item:not(:last-child) {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .regular__more {
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2609,14 +2636,14 @@ h6,
 }
 
 .regular__more::before {
-  font-size: 3rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  font-size: 2.5rem;
 }
 
 .regular__logo {
-  margin-top: 2.46rem;
+  display: none;
 }
 
 .regular__image {
@@ -2628,6 +2655,7 @@ h6,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 -1.25rem;
 }
 
 .regular__image img {
@@ -2641,11 +2669,10 @@ h6,
 }
 
 .best-teachers {
-  padding: 3.75rem 0 1.875rem;
+  padding: 2.62rem 0;
 }
 
 .best-teachers__header {
-  max-width: 36.5rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2657,6 +2684,7 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 43.875rem;
 }
 
 .best-teachers__icon {
@@ -2664,19 +2692,20 @@ h6,
 }
 
 .best-teachers__text {
-  margin-top: 1.56rem;
+  margin-top: 2.5rem;
 }
 
 .best-teachers__text p:not(:last-child) {
-  margin-bottom: 0.35em;
+  margin-bottom: 0.45em;
 }
 
 .best-teachers__slider {
   margin-top: 2.5rem;
+  overflow: visible;
 }
 
 .best-teachers__btn {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2699,9 +2728,9 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 11rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  width: 11.125rem;
 }
 
 .teacher__image {
@@ -2720,10 +2749,15 @@ h6,
 }
 
 .lesson {
-  padding: 1.875rem 0 3.75rem;
+  padding: 1.25rem 0 3.8rem;
 }
 
 .lesson__body {
+  margin: 0 auto;
+  max-width: 43.9375rem;
+}
+
+.lesson__body .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2734,7 +2768,11 @@ h6,
 }
 
 .lesson__desc {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.lesson__image {
+  text-align: center;
 }
 
 .banner {
@@ -2747,11 +2785,11 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  --gutter-y: 0.63rem;
 }
 
 .banner__title {
   line-height: 0.8;
-  padding-left: 1rem;
 }
 
 .banner__title small {
@@ -2760,23 +2798,27 @@ h6,
 }
 
 .banner__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: auto;
+  margin-top: 1rem;
 }
 
 .cert {
   padding: 3.75rem 0 1.875rem;
 }
 
+.cert__body {
+  margin: 0 auto;
+  max-width: 52.5rem;
+}
+
 .cert__body .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  --gutter-y: 2.75rem;
 }
 
 .cert__info-header {
@@ -2786,22 +2828,27 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.87rem;
+  gap: 0.5rem;
 }
 
 .cert__info-subtitle {
-  margin-top: 2.62rem;
+  padding-left: 4.5rem;
 }
 
 .reviews {
-  padding: 1.875rem;
+  padding: 1.875rem 0;
 }
 
 .reviews__body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 2.5rem auto 0;
+  max-width: 560px;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.25rem auto 0;
 }
 
 .faq {
@@ -2819,16 +2866,16 @@ h6,
 }
 
 .faq__subtitle {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  max-width: 13rem;
 }
 
 .faq__icon {
-  margin-top: auto;
+  display: none;
 }
 
 .faq__item {
   position: relative;
-  border-radius: 2.25rem;
   background: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2842,10 +2889,11 @@ h6,
           align-items: center;
   gap: 1.31rem;
   min-height: 10rem;
-  padding: 2.19rem 1.25rem 2.81rem 2.19rem;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+  border-radius: 1.625rem;
+  padding: 1.25rem;
 }
 
 .faq__item.active::before {
@@ -2875,7 +2923,6 @@ h6,
       -ms-flex-order: 1;
           order: 1;
   margin-top: auto;
-  font-size: 1.625rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: #000000;
@@ -2884,8 +2931,9 @@ h6,
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
   position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 0.63rem;
+  right: 0.63rem;
+  font-size: 1.875rem;
 }
 
 .faq__item:not(:last-child) {
@@ -2898,7 +2946,7 @@ h6,
 
 .faq__item-answer {
   display: none;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 110%;
 }
 
@@ -2914,17 +2962,17 @@ h6,
 .faq__item-answer ul li::before {
   content: "";
   position: absolute;
-  top: 0.35rem;
-  left: 0.25rem;
+  top: 0.35em;
+  left: 0.25em;
   background-color: currentColor;
   border-radius: 50%;
-  width: 0.35rem;
-  height: 0.35rem;
+  width: 0.35em;
+  height: 0.35em;
 }
 
 .trial {
   background: #f6f6f6;
-  padding: 3.75rem 0;
+  padding: 2.5rem 0;
 }
 
 .trial__body {
@@ -2941,9 +2989,9 @@ h6,
 }
 
 .trial__subtitle {
-  margin-top: 1.25rem;
-  font-size: 1.5rem;
   line-height: 150%;
+  font-size: 1.125rem;
+  margin-top: 1rem;
 }
 
 .trial__btn {
@@ -3481,14 +3529,28 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  --gutter-y: 2.75rem;
+}
+
+.method__title {
+  max-width: 30.125rem;
 }
 
 .method__desc {
-  margin-top: 1.5rem;
+  margin-top: 1.63rem;
 }
 
 .method__desc p:not(:last-child) {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+.method__image {
+  width: 100%;
+  text-align: center;
+}
+
+.method__image img {
+  width: 100%;
 }
 
 @media (min-width: 575.98px) {
@@ -3862,6 +3924,58 @@ h6,
     gap: 0.875rem;
   }
 
+  .sign-lesson__image img {
+    max-height: 15.875rem;
+  }
+
+  .sign-lesson__calllback {
+    min-height: auto;
+  }
+
+  .why__card-logo {
+    max-width: 4.5rem;
+  }
+
+  .license__header {
+    gap: 1.88rem;
+    text-align: left;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .partner__list-item {
+    font-size: 1rem;
+  }
+
+  .partner__logo {
+    margin-top: 2.5rem;
+  }
+
+  .regular__image {
+    margin: 0;
+  }
+
+  .banner__btn {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .faq__subtitle {
+    max-width: 50vw;
+  }
+
+  .faq__item-answer {
+    font-size: 1rem;
+  }
+
   .promo__subtitle {
     margin-top: 1.5rem;
     max-width: 23.25rem;
@@ -3924,6 +4038,10 @@ h6,
   .mission__image {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .method__image {
+    width: auto;
   }
 }
 
@@ -4438,12 +4556,17 @@ h6,
     display: none;
   }
 
+  .sign-lesson {
+    padding: 3.75rem 0;
+  }
+
   .why__body {
+    margin: 2.25rem 0 0 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .why__body .swiper-wrapper {
@@ -4451,10 +4574,11 @@ h6,
   }
 
   .why__card {
+    padding: 1.29rem 1rem 1.29rem 1.25rem;
     width: 100%;
     -ms-grid-row-span: 2;
     grid-row: span 2;
-    border-radius: 2.25rem;
+    border-radius: 1.77256rem;
   }
 
   .why__card.sm-card {
@@ -4465,18 +4589,112 @@ h6,
   .why__card.md-card {
     -ms-grid-row-span: 3;
     grid-row: span 3;
-    min-height: 27.25rem;
+    min-height: 21.4375rem;
   }
 
   .why__card.lg-card {
-    -ms-grid-row-span: 4;
-    grid-row: span 4;
-    margin-top: 2.75rem;
-    padding-top: 4rem;
+    padding-top: 3.25rem;
+    margin-top: 3rem;
+    -ms-grid-row-span: 3;
+    grid-row: span 3;
+  }
+
+  .why__card.rock-card {
+    background: url("../img/why-rock-bg.jpg") 100% 100%/cover no-repeat, #e2e2e2;
+  }
+
+  .why__card-title {
+    padding-right: 1rem;
+  }
+
+  .why__card-desc p:not(:last-child) {
+    margin-bottom: 0.65em;
+  }
+
+  .why__card-desc {
+    margin-top: 1rem;
   }
 
   .why__pagination {
     display: none;
+  }
+
+  .license {
+    padding: 3.75rem 0;
+  }
+
+  .license__image {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  .license__body {
+    padding: 6.5rem 0 0 0;
+  }
+
+  .license__subtitle {
+    padding: 0;
+    margin-top: 2.5rem;
+  }
+
+  .license__logo {
+    display: block;
+    margin-top: auto;
+    margin-left: auto;
+  }
+
+  .partner {
+    padding: 3.25rem 0 4.38rem;
+  }
+
+  .partner__body {
+    margin-top: 3.75rem;
+  }
+
+  .partner__list {
+    margin-top: 2.5rem;
+  }
+
+  .partner__list-item {
+    font-size: 1.125rem;
+    padding: 2.25rem;
+  }
+
+  .regular__main {
+    padding: 4.37rem 0 3.5rem;
+  }
+
+  .regular__body .row {
+    --gutter-y: 0;
+  }
+
+  .regular__desc {
+    margin-top: 2.5rem;
+  }
+
+  .regular__desc-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .regular__more {
+    margin-top: 2.5rem;
+  }
+
+  .regular__more::before {
+    font-size: 3rem;
+  }
+
+  .regular__logo {
+    margin-top: 1.875rem;
+    display: block;
+  }
+
+  .regular__image {
+    width: 50vw;
+  }
+
+  .best-teachers {
+    padding: 3.75rem 0 1.875rem;
   }
 
   .best-teachers__slider .swiper-wrapper {
@@ -4488,8 +4706,69 @@ h6,
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 2rem;
-    row-gap: 2.5rem;
+    gap: 1rem;
+    row-gap: 1.5rem;
+  }
+
+  .best-teachers__pagination {
+    display: none;
+  }
+
+  .teacher {
+    width: 10rem;
+  }
+
+  .lesson {
+    padding: 1.875rem 0 3.75rem;
+  }
+
+  .lesson__desc {
+    margin-top: 2rem;
+  }
+
+  .banner__body {
+    --gutter-y: 1.75rem;
+  }
+
+  .cert__body .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .cert__info {
+    padding-left: 1.5rem;
+  }
+
+  .cert__info-header {
+    gap: 1.87rem;
+  }
+
+  .cert__info-subtitle {
+    margin-top: 2.62rem;
+    padding-left: 0;
+  }
+
+  .reviews__body {
+    margin: 2.5rem auto 0;
+  }
+
+  .faq__item::before {
+    font-size: 1.5rem;
+  }
+
+  .faq__item {
+    padding: 2.19rem 1.25rem 2.81rem 2.19rem;
+  }
+
+  .trial {
+    padding: 3.75rem 0;
+  }
+
+  .trial__subtitle {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .promo.promo-home {
@@ -4593,6 +4872,14 @@ h6,
     max-width: 100%;
     margin-top: auto;
   }
+
+  .method__desc {
+    margin-top: 1.31rem;
+  }
+
+  .method__desc p:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
 }
 
 @media (min-width: 767.98px) and (hover: none) {
@@ -4601,6 +4888,24 @@ h6,
     visibility: visible;
     -webkit-transform: scaleY(1) translate3d(0, 0, 1px);
             transform: scaleY(1) translate3d(0, 0, 1px);
+  }
+}
+
+@media (min-width: 767.98px) and (min-width: 1199.98px) {
+  .why__card.md-card {
+    min-height: 27.25rem;
+  }
+
+  .why__card.lg-card {
+    margin-top: 2.75rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (min-width: 767.98px) and (min-width: 991.98px) {
+  .why__card.lg-card {
+    -ms-grid-row-span: 4;
+    grid-row: span 4;
   }
 }
 
@@ -4649,6 +4954,44 @@ h6,
 
   .menu__link-text strong {
     font-size: 1.125rem;
+  }
+
+  .sign-lesson__image {
+    margin-top: 2.25rem;
+  }
+
+  .sign-lesson__calllback {
+    margin-top: 2.75rem;
+  }
+
+  .why__body {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .why__card-link {
+    font-size: 3.25rem;
+  }
+
+  .regular__desc-item {
+    gap: 1.75rem;
+  }
+
+  .regular__desc-item::before {
+    font-size: 4.625rem;
+  }
+
+  .teacher {
+    width: 11rem;
+  }
+
+  .banner {
+    padding: 2.5rem 0;
+  }
+
+  .faq__icon {
+    margin-top: auto;
+    display: block;
   }
 
   .promo__side {
@@ -5075,28 +5418,151 @@ h6,
     padding: 5rem 0;
   }
 
+  .sign-lesson__body {
+    margin-top: 2rem;
+  }
+
+  .sign-lesson__body .row {
+    --gutter-x: 1.75rem;
+  }
+
+  .sign-lesson__image {
+    margin-top: 2.125rem;
+  }
+
+  .sign-lesson__calllback {
+    margin-top: 3.75rem;
+  }
+
   .why {
     padding: 5rem 0;
   }
 
-  .license {
+  .why__body {
+    margin: 4.38rem 0 0 0;
+    gap: 1.25rem;
+  }
+
+  .why__card {
+    padding: 2.19rem;
+    border-radius: 2.25rem;
+  }
+
+  .why__card.icon-plus-circle::before {
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.625rem;
+  }
+
+  .why__card-logo {
+    top: -1.5rem;
+  }
+
+  .why__card-desc p:not(:last-child) {
+    margin-bottom: 0.75em;
+  }
+
+  .why__card-desc {
+    margin-top: 1.5rem;
+  }
+
+  .license__content {
+    max-width: 100%;
+  }
+
+  .license__image {
+    padding-right: 0;
+    margin-right: -1.35rem;
+  }
+
+  .license__image-caption {
+    margin-bottom: 0.94rem;
+    font-size: 2rem;
+  }
+
+  .license__subtitle {
+    margin-top: 1.75rem;
+  }
+
+  .partner {
+    padding: 4.25rem 0;
+  }
+
+  .partner__body {
+    margin-top: 5rem;
+  }
+
+  .partner__body .row {
+    --gutter-x: 1.75rem;
+  }
+
+  .regular__main {
     padding: 3.75rem 0;
+  }
+
+  .regular__body .row {
+    --gutter-x: 0;
+  }
+
+  .regular__desc-item:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .regular__logo {
+    margin-top: 2.46rem;
+  }
+
+  .regular__image {
+    width: 100%;
   }
 
   .best-teachers {
     padding: 5rem 0 2.5rem;
   }
 
+  .best-teachers__header {
+    max-width: 36.5rem;
+  }
+
+  .best-teachers__text {
+    margin-top: 1.56rem;
+  }
+
+  .best-teachers__text p:not(:last-child) {
+    margin-bottom: 0.35em;
+  }
+
+  .best-teachers__slider .swiper-wrapper {
+    gap: 2rem;
+    row-gap: 2.5rem;
+  }
+
+  .best-teachers__btn {
+    margin-top: 4rem;
+  }
+
   .lesson {
     padding: 2.5rem 0 5rem;
   }
 
-  .banner {
-    padding: 2.5rem 0;
+  .lesson__body {
+    max-width: 100%;
+  }
+
+  .banner__title {
+    padding-left: 1rem;
   }
 
   .cert {
     padding: 5rem 0 2.5rem;
+  }
+
+  .cert__body {
+    max-width: 100%;
+  }
+
+  .cert__info {
+    padding-left: 0;
   }
 
   .reviews {
@@ -5105,6 +5571,24 @@ h6,
 
   .faq {
     padding: 2.5rem 0 5rem;
+  }
+
+  .faq__subtitle {
+    margin-top: 2rem;
+  }
+
+  .faq__item::before {
+    font-size: 1.625rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .faq__item {
+    border-radius: 2.25rem;
+  }
+
+  .trial__subtitle {
+    font-size: 1.5rem;
   }
 
   .centres {
@@ -5212,6 +5696,10 @@ h6,
 
   .method {
     padding: 5rem 0 2.5rem;
+  }
+
+  .method__desc {
+    margin-top: 2.5rem;
   }
 }
 
@@ -5809,14 +6297,75 @@ h6,
     display: contents;
   }
 
+  .why__card-title {
+    font-size: 1.625rem;
+  }
+
+  .why__card-desc {
+    font-size: 0.875rem;
+  }
+
+  .license__title {
+    font-size: 1.875rem;
+    line-height: 110%;
+  }
+
+  .license__subtitle {
+    line-height: 150%;
+  }
+
+  .partner__title {
+    font-size: 1.625rem;
+    line-height: 110%;
+  }
+
+  .partner__caption {
+    font-size: 3.125rem;
+    line-height: 110%;
+  }
+
+  .regular__title {
+    font-size: 3.125rem;
+  }
+
+  .lesson__image {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .banner__title {
+    line-height: 0.95;
+    font-size: 3.75rem;
+  }
+
+  .cert__info-title {
+    font-size: 1.875rem;
+  }
+
+  .reviews__title {
+    font-size: 1.875rem;
+  }
+
   .promo.promo-home {
     background-size: contain;
     background-position: 100% 15%;
     background-image: url("../img/home/banner-mobile.png");
   }
+
+  .method__desc {
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .sign-lesson__location-selected {
+    font-size: 1.125rem;
+  }
+
+  .sign-lesson__address {
+    font-size: 1.5rem;
+  }
+
   .centres__btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5844,6 +6393,14 @@ h6,
   .programms__title {
     max-width: 20rem;
     margin: 0 auto;
+  }
+
+  .method .container {
+    padding: 0 2.35rem;
+  }
+
+  .method__image img {
+    width: 13.66338rem;
   }
 }
 

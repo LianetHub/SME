@@ -725,29 +725,56 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0 2.5rem;
 	}
-	// .method__container
-	&__container {
+	& .container {
+		@media (max-width: $md5) {
+			padding: 0 2.35rem;
+		}
 	}
 	// .method__content
 	&__content {
 		align-items: center;
+		--gutter-y: 2.75rem;
 	}
 	// .method__body
 	&__body {
 	}
 	// .method__title
 	&__title {
+		max-width: 30.125rem;
 	}
 	// .method__desc
 	&__desc {
-		margin-top: 1.5rem;
+		margin-top: 1.63rem;
+		@media (max-width: $md4) {
+			line-height: 150%;
+		}
+		@media (min-width: $md4) {
+			margin-top: 1.31rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
 		& p {
 			&:not(:last-child) {
-				margin-bottom: 0.5em;
+				margin-bottom: 0.75em;
+				@media (min-width: $md4) {
+					margin-bottom: 0.5em;
+				}
 			}
 		}
 	}
 	// .method__image
 	&__image {
+		width: 100%;
+		text-align: center;
+		& img {
+			width: 100%;
+			@media (max-width: $md5) {
+				width: 13.66338rem;
+			}
+		}
+		@media (min-width: $md5) {
+			width: auto;
+		}
 	}
 }
