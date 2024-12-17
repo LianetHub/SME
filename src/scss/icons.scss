@@ -17,7 +17,15 @@
 		display: block;
 	}
 }
-
+.icon-next-circle:before {
+	content: "\e910";
+}
+.icon-prev-circle:before {
+	content: "\e911";
+}
+.icon-envelope:before {
+	content: "\e90f";
+}
 .icon-close:before {
 	content: "\e90e";
 }

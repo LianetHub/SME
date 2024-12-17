@@ -9,7 +9,15 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -17,8 +25,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
+  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -28,14 +36,6 @@
   src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
-}
-
-@font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
@@ -49,17 +49,17 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
+  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 
 .swiper-button-prev,
@@ -80,6 +80,18 @@
 [class^=icon-]:before,
 [class*=" icon-"]:before {
   display: block;
+}
+
+.icon-next-circle:before {
+  content: "\e910";
+}
+
+.icon-prev-circle:before {
+  content: "\e911";
+}
+
+.icon-envelope:before {
+  content: "\e90f";
 }
 
 .icon-close:before {
@@ -1467,6 +1479,12 @@ h6,
   padding: 0.75rem 1.6875rem;
 }
 
+.btn.btn-lg {
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem 2.65rem;
+}
+
 .btn:disabled,
 .btn[aria-disabled=true] {
   cursor: default;
@@ -1999,21 +2017,22 @@ h6,
 .footer {
   background: #303030;
   color: #a1a1a1;
-  padding: 2.5rem 0;
+  padding: 1.5625rem 0;
 }
 
 .footer__home {
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   color: #fa5300;
   display: inline-block;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .footer__menu {
-  margin-top: 0.63rem;
-  font-size: 1rem;
-  line-height: 120%;
+  display: none;
 }
 
 .footer__menu li:not(:last-child) {
@@ -2031,16 +2050,9 @@ h6,
   transition: color 0.3s ease 0s;
 }
 
-.footer__caption:not(:first-child) {
-  margin-top: 2.75rem;
-}
-
-.footer__caption:not(:first-child).offset-lg {
-  margin-top: 5rem;
-}
-
 .footer__vacanies {
-  margin-top: 5.61rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2052,17 +2064,18 @@ h6,
       -ms-flex-align: center;
           align-items: center;
   font-family: "BebasNeue";
-  font-size: 3.125rem;
+  max-width: 5.20463rem;
+  font-size: 1.59775rem;
+  margin-left: auto;
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
-  max-width: 10.08125rem;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
 }
 
 .footer__bottom {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border-top: 0.0625rem solid #555;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2074,6 +2087,15 @@ h6,
       -ms-flex-align: center;
           align-items: center;
   padding: 1.25rem 0 0 0;
+}
+
+.footer__copy {
+  font-size: 0.75rem;
+  max-width: 9.875rem;
+}
+
+.footer__logo {
+  max-width: 7.11581rem;
 }
 
 .footer__contacts {
@@ -2090,7 +2112,6 @@ h6,
 
 .footer__link {
   font-family: "BebasNeue";
-  font-size: 1.5rem;
   line-height: 120%;
   text-transform: uppercase;
   display: -webkit-box;
@@ -2102,6 +2123,7 @@ h6,
   gap: 0.625rem;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+  font-size: 1.25rem;
 }
 
 .footer__link::before {
@@ -3008,11 +3030,27 @@ h6,
   padding: var(--header-height, 7.75rem) 0 2rem;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center;
   background-color: #fa5300;
 }
 
+.promo.promo-reutovskaya {
+  background-color: #cfbc9f;
+  background-image: url("../img/location/banner-reutovskaya.jpg");
+}
+
+.promo.promo-institutskaya {
+  background-color: #cfbc9f;
+  background-image: url("../img/location/banner-instituskaya.jpg");
+}
+
+.promo.promo-kadomtseva {
+  background-color: #cfbc9f;
+  background-image: url("../img/location/banner-kadomtseva.jpg");
+}
+
 .promo.promo-home {
+  background-position: center bottom;
   background-color: #d57e28;
 }
 
@@ -3053,8 +3091,11 @@ h6,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 8.25rem;
   min-height: 21.875rem;
+}
+
+.promo__side:not(:first-child) {
+  margin-top: 8.25rem;
 }
 
 .promo__form {
@@ -3553,6 +3594,127 @@ h6,
   width: 100%;
 }
 
+.location {
+  padding: 2.75rem 0;
+  background: #f6f6f6;
+}
+
+.location__title {
+  line-height: 100%;
+  font-size: 1.625rem;
+  text-align: center;
+}
+
+.location__btns {
+  margin-top: 1.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 16.875rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location__btn {
+  text-transform: none;
+}
+
+.contacts__gallery-next,
+.contacts__gallery-prev {
+  display: none;
+}
+
+.contacts__gallery-next:disabled,
+.contacts__gallery-prev:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.contacts {
+  padding: 4.25rem 0 5rem;
+}
+
+.contacts__header .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__title {
+  text-align: center;
+  line-height: 100%;
+}
+
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 1.35rem;
+}
+
+.contacts__item::before {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 1rem;
+  width: 1.375rem;
+  height: 1.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__item a {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.contacts__gallery {
+  position: relative;
+  max-width: 56.25rem;
+  margin-top: 3.5rem;
+}
+
+.contacts__gallery-prev {
+  left: 0;
+}
+
+.contacts__gallery-next {
+  right: 0;
+}
+
 @media (min-width: 575.98px) {
   .container {
     -webkit-box-sizing: content-box;
@@ -3924,6 +4086,44 @@ h6,
     gap: 0.875rem;
   }
 
+  .footer {
+    padding: 2.5rem 0;
+  }
+
+  .footer__home {
+    font-size: 2.25rem;
+  }
+
+  .footer__menu {
+    display: block;
+    margin-top: 0.63rem;
+    font-size: 0.875rem;
+    line-height: 120%;
+  }
+
+  .footer__caption:not(:first-child) {
+    margin-top: 2.75rem;
+  }
+
+  .footer__caption:not(:first-child).offset-lg {
+    margin-top: 5rem;
+  }
+
+  .footer__vacanies {
+    max-width: 10.08125rem;
+    font-size: 2.5rem;
+    margin-top: 7.5rem;
+  }
+
+  .footer__copy {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .footer__logo {
+    max-width: 100%;
+  }
+
   .sign-lesson__image img {
     max-height: 15.875rem;
   }
@@ -3984,6 +4184,9 @@ h6,
   .promo__side {
     min-height: 23.875rem;
     width: 17.375rem;
+  }
+
+  .promo__side:not(:first-child) {
     margin-top: 1.25rem;
   }
 
@@ -4042,6 +4245,42 @@ h6,
 
   .method__image {
     width: auto;
+  }
+
+  .location__title {
+    text-align: left;
+  }
+
+  .location__btns {
+    max-width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .contacts__gallery-next,
+  .contacts__gallery-prev {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #c2bfbf;
+    z-index: 2;
+    -webkit-transition: color 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
+    font-size: 2.5rem;
+    display: block;
+  }
+
+  .contacts__gallery {
+    margin-top: 6.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 3rem;
   }
 }
 
@@ -4502,6 +4741,10 @@ h6,
     display: block;
   }
 
+  .footer__link {
+    font-size: 1.5rem;
+  }
+
   .atmosphere__main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4880,6 +5123,14 @@ h6,
   .method__desc p:not(:last-child) {
     margin-bottom: 0.5em;
   }
+
+  .location {
+    padding: 3.75rem 0;
+  }
+
+  .location__title {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 767.98px) and (hover: none) {
@@ -5054,6 +5305,19 @@ h6,
 
   .mission__desc {
     margin-top: 3.25rem;
+  }
+
+  .location__title {
+    font-size: 2.5rem;
+  }
+
+  .contacts__gallery-next,
+  .contacts__gallery-prev {
+    font-size: 5.0375rem;
+  }
+
+  .contacts__gallery {
+    padding: 0 6.2rem;
   }
 }
 
@@ -5406,6 +5670,19 @@ h6,
     font-size: 1rem;
   }
 
+  .footer__menu {
+    font-size: 1rem;
+  }
+
+  .footer__vacanies {
+    margin-top: 5.61rem;
+    font-size: 3.125rem;
+  }
+
+  .footer__bottom {
+    margin-top: 1rem;
+  }
+
   .atmosphere {
     padding: 5rem 0;
   }
@@ -5587,10 +5864,6 @@ h6,
     border-radius: 2.25rem;
   }
 
-  .trial__subtitle {
-    font-size: 1.5rem;
-  }
-
   .centres {
     padding: 5rem 0;
   }
@@ -5700,6 +5973,30 @@ h6,
 
   .method__desc {
     margin-top: 2.5rem;
+  }
+
+  .location {
+    padding: 5rem 0;
+  }
+
+  .location__btns {
+    margin-top: 2.5rem;
+  }
+
+  .contacts {
+    padding: 1.875rem 0 6.25rem;
+  }
+
+  .contacts__title {
+    text-align: left;
+  }
+
+  .contacts__list {
+    margin-top: 2rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
   }
 }
 
@@ -6250,6 +6547,13 @@ h6,
   }
 }
 
+@media (max-width: 1199.98px) {
+  .contacts__map {
+    max-width: 43.4375rem;
+    margin: 2rem auto 0;
+  }
+}
+
 @media (max-width: 991.98px) {
   .pc-only {
     display: none !important;
@@ -6358,12 +6662,52 @@ h6,
 }
 
 @media (max-width: 575.98px) {
+  .footer__header {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer__column {
+    display: contents;
+  }
+
+  .footer__caption {
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
   .sign-lesson__location-selected {
     font-size: 1.125rem;
   }
 
   .sign-lesson__address {
     font-size: 1.5rem;
+  }
+
+  .promo.promo-reutovskaya {
+    background-image: url("../img/location/banner-reutovskaya-mobile.png");
+    background-size: 250%;
+    background-position: top center;
+  }
+
+  .promo.promo-institutskaya {
+    background-image: url("../img/location/banner-instituskaya-mobile.jpg");
+    background-size: 250%;
+    background-position: top center;
+  }
+
+  .promo.promo-kadomtseva {
+    background-image: url("../img/location/banner-kadomtseva-mobile.png");
+    background-size: 250%;
+    background-position: top center;
+  }
+
+  .promo__side:first-child {
+    margin-top: 21.5rem;
   }
 
   .centres__btn {
@@ -6401,6 +6745,25 @@ h6,
 
   .method__image img {
     width: 13.66338rem;
+  }
+
+  .contacts__item {
+    font-size: 1rem;
+  }
+
+  .contacts__item:has(address) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contacts__map {
+    margin-right: -1.25rem;
+    margin-top: 0;
+    margin-left: -1.25rem;
+  }
+
+  .contacts__gallery-slider {
+    overflow: visible;
   }
 }
 
@@ -6572,6 +6935,15 @@ h6,
 
   .promo__info-close:hover {
     color: #fa0644;
+  }
+
+  .contacts__gallery-next:hover,
+  .contacts__gallery-prev:hover {
+    color: #fa5300;
+  }
+
+  .contacts__item a:hover {
+    color: #fa5300;
   }
 }
 

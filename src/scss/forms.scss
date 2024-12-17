@@ -249,6 +249,11 @@
 			padding: 0.5625rem 1.6875rem;
 		}
 	}
+	&.btn-lg {
+		font-size: 1.25rem;
+		border-radius: 0.5rem;
+		padding: 1.2rem 2.65rem;
+	}
 	&:disabled,
 	&[aria-disabled="true"] {
 		cursor: default;

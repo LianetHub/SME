@@ -235,6 +235,26 @@ $(function () {
         })
     }
 
+    if ($('.contacts__gallery-slider').length) {
+        new Swiper('.contacts__gallery-slider', {
+            spaceBetween: 10,
+            slidesPerView: 1,
+            navigation: {
+                prevEl: '.contacts__gallery-prev',
+                nextEl: '.contacts__gallery-next',
+            },
+            pagination: {
+                el: '.contacts__gallery-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                576.98: {
+                    spaceBetween: 0
+                }
+            }
+        })
+    }
+
 
 
     function getMobileSlider(sliderName, options) {

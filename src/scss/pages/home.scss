@@ -2,9 +2,37 @@
 	padding: $header 0 2rem;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-position: center;
 	background-color: $accent;
+	&.promo-reutovskaya {
+		background-color: #cfbc9f;
+		background-image: url("@img/location/banner-reutovskaya.jpg");
+		@media (max-width: $md5) {
+			background-image: url("@img/location/banner-reutovskaya-mobile.png");
+			background-size: 250%;
+			background-position: top center;
+		}
+	}
+	&.promo-institutskaya {
+		background-color: #cfbc9f;
+		background-image: url("@img/location/banner-instituskaya.jpg");
+		@media (max-width: $md5) {
+			background-image: url("@img/location/banner-instituskaya-mobile.jpg");
+			background-size: 250%;
+			background-position: top center;
+		}
+	}
+	&.promo-kadomtseva {
+		background-color: #cfbc9f;
+		background-image: url("@img/location/banner-kadomtseva.jpg");
+		@media (max-width: $md5) {
+			background-image: url("@img/location/banner-kadomtseva-mobile.png");
+			background-size: 250%;
+			background-position: top center;
+		}
+	}
 	&.promo-home {
+		background-position: center bottom;
 		background-color: #d57e28;
 		@media (max-width: $md4) {
 			background-size: contain;
@@ -55,12 +83,21 @@
 		padding: 1.875rem 1.75rem;
 		display: flex;
 		flex-direction: column;
-		margin-top: rem(132);
 		min-height: rem(350);
+		&:not(:first-child) {
+			margin-top: rem(132);
+		}
+		@media (max-width: $md5) {
+			&:first-child {
+				margin-top: 21.5rem;
+			}
+		}
 		@media (min-width: $md5) {
 			min-height: rem(382);
 			width: 17.375rem;
-			margin-top: rem(20);
+			&:not(:first-child) {
+				margin-top: rem(20);
+			}
 		}
 		@media (min-width: $md3) {
 			margin-top: 0;

@@ -1,0 +1,75 @@
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__header">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="contacts__main">
+                        <h2 class="contacts__title h4">контакты:</h2>
+                        <ul class="contacts__list text-block-md">
+                            <li class="contacts__item icon-phone">
+                                <span>Телефон <span class="pc-only">для связи</span>: <a href="tel:+74951503778">+7 (495) 150-37-78</a> доб. 4</span>
+                            </li>
+                            <li class="contacts__item">
+                                <div class="contacts__item-icon">
+                                    <img src="@img/icons/whatsapp.svg" alt="Иконка">
+                                </div>
+                                <span>WhatsApp: <a href="https://wa.me/+74951503778" target="_blank">+7 (495) 150-37-78</a></span>
+                            </li>
+                            <li class="contacts__item icon-location">
+                                <address>
+                                    Адрес:
+                                    @@if(location===1){г. Мытищи, ул. Борисовка, 16 <br>
+                                    ЖК «Ярославский» - рядом с ТЦ «ИЮНЬ»}
+                                    @@if(location===2){г. Мытищи, ул. Кадомцева, 2 <br>
+                                    ЖК «Новое Медведково» <br>
+                                    Рядом с ул. Колпакова, между школами №28 и №33}
+                                    @@if(location===3){г. Мытищи, ул. 2я Институтская 24А <br>
+                                    ЖК «Спутник» <br>Рядом с платформой «Строитель»}
+                                    @@if(location===4){г. Балашиха, ул. Реутовская, 20 <br>
+                                    ЖК «Измайловский Лес» – рядом со школой №32}
+                                </address>
+                            </li>
+                            <li class="contacts__item icon-envelope">
+                                <span>Email: <a href="mailto:info@cmeschool.ru">info@cmeschool.ru</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6 offset-xl-1">
+                    <div class="contacts__map">
+                        @@if(location===1){
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A413aae0ce46040d8f1716b362a1a393fa93c68fc49ee42707b219782929acf06&amp;source=constructor" width="100%" height="460" frameborder="0"></iframe>
+                        }
+                        @@if(location===2){
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A413aae0ce46040d8f1716b362a1a393fa93c68fc49ee42707b219782929acf06&amp;source=constructor" width="100%" height="460" frameborder="0"></iframe>
+                        }
+                        @@if(location===3){
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A413aae0ce46040d8f1716b362a1a393fa93c68fc49ee42707b219782929acf06&amp;source=constructor" width="100%" height="460" frameborder="0"></iframe>
+                        }
+                        @@if(location===4){
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A42b6e8e8d0e2bf1d2e0f2ad5f65f6fd341e16a932f3b7730755ba21ababd89c4&amp;source=constructor" width="100%" height="460" frameborder="0"></iframe>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts__gallery">
+            <div class="contacts__gallery-slider swiper">
+                <div class="swiper-wrapper">
+                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
+                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
+                    </a>
+                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
+                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
+                    </a>
+                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
+                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
+                    </a>
+                </div>
+            </div>
+            <button type="button" class="contacts__gallery-prev icon-prev-circle"></button>
+            <button type="button" class="contacts__gallery-next icon-next-circle"></button>
+            <div class="contacts__gallery-pagination swiper-pagination"></div>
+        </div>
+    </div>
+</section>
