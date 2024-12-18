@@ -1,0 +1,85 @@
+.gallery {
+	padding: 3.75rem 0;
+	@media (min-width: $md3) {
+		padding: 5rem 0;
+	}
+	// .gallery__header
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	// .gallery__title
+	&__title {
+	}
+	// .gallery__logo
+	&__logo {
+		margin-top: 1.88rem;
+		@media (min-width: $md3) {
+			margin-top: rem(40);
+		}
+	}
+	// .gallery__slider
+	&__slider {
+		position: relative;
+		max-width: rem(900);
+		margin-top: 3.5rem;
+		@media (min-width: $md5) {
+			margin-top: 6.5rem;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 3rem;
+		}
+		@media (min-width: $md3) {
+			padding: 0 6.2rem;
+		}
+	}
+	// .gallery__slider-slider
+	&__slider-content {
+		@media (max-width: $md5) {
+			overflow: visible;
+		}
+	}
+	// .gallery__slide
+	&__slide {
+	}
+	// .gallery__slider-prev
+	&__slider-prev {
+		left: 0;
+		@extend %contacts-btn;
+	}
+	// .gallery__slider-next
+	&__slider-next {
+		right: 0;
+		@extend %contacts-btn;
+	}
+	// .gallery__slider-pagination
+	&__slider-pagination {
+	}
+}
+
+%contacts-btn {
+	display: none;
+	@media (min-width: $md5) {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #c2bfbf;
+		z-index: 2;
+		transition: color 0.3s ease 0s;
+		font-size: 2.5rem;
+		display: block;
+	}
+	@media (min-width: $md3) {
+		font-size: 5.0375rem;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: $accent;
+		}
+	}
+	&:disabled {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+}

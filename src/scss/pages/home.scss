@@ -4,6 +4,9 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0;
 	}
+	&.our-centres_white {
+		background: transparent;
+	}
 	// .our-centres__body
 	&__body {
 		max-width: rem(702);
@@ -80,6 +83,20 @@
 			@media (min-width: $md2) {
 				width: 6rem;
 				height: 6rem;
+			}
+		}
+	}
+	// .our-centres__icon
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (min-width: $md5) {
+			min-height: 100%;
+		}
+		@media (max-width: $md5) {
+			& img {
+				max-width: 7.875rem;
 			}
 		}
 	}

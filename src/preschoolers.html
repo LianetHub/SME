@@ -7,17 +7,15 @@
         <section class="wrapper">
             @@include('html/_header.html', {
             "logo": "pink",
-            "colorBottom": "text"
+            "colorBottom": "white"
             })
             <main class="page">
-                <section class="promo promo-home">
+                <section class="promo promo-preschoolers">
                     <div class="container">
                         <div class="promo__body">
-                            <div class="promo__offer">
-                                <h1 class="promo__title">заговори на языке возможностей!</h1>
-                                <p class="promo__subtitle h5">
-                                    сеть курсов иностранных языков с&nbsp;лучшими преподавателями
-                                </p>
+                            <div class="promo__tagline blue">
+                                <h1 class="promo__tagline-title h4">Обучаем английскому дошкольников 3-6 лет</h1>
+                                <div class="promo__tagline-desc">Уроки проходят в игровой форме с&nbsp;использованием современных методик</div>
                             </div>
                             <div class="promo__side">
                                 <form action="#" class="promo__form form">
@@ -50,20 +48,358 @@
                         </div>
                     </div>
                 </section>
-
-                @@include('html/_why.html', {})
+                <section class="desc">
+                    <div class="container">
+                        <div class="desc__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="desc__main">
+                                        <h2 class="desc__title h3">Курсы английского языка для дошкольников в мытищах</h2>
+                                        <div class="desc__text text-block">
+                                            <p>В Center of Modern English мы обучаем детей с 3 лет. Уроки проходят в игровой форме с использованием современных методик. Ребята учатся по кембриджским пособиям, направленным на развитие коммуникативных навыков. Наша задача – не только научить ребенка языку, но и сделать уроки английского увлекательным хобби.</p>
+                                        </div>
+                                        <div class="desc__logo">
+                                            <img src="@img/icons/CME-language-centres.svg" alt="Логотип">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="desc__image">
+                                        <img src="@img/preschoolers.jpg" class="cover-image" alt="Фото основательницы">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="results">
+                    <div class="container">
+                        <h2 class="results__title h4">КАкие результаты будут у&nbsp;вашего ребенка?</h2>
+                        <div class="results__body">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="results__item">
+                                        <div class="results__item-icon">
+                                            <img src="@img/icons/talk.svg" alt="Иконка">
+                                        </div>
+                                        <div class="results__item-caption h5">Начнет говорить</div>
+                                        <div class="results__item-desc text-block-md">
+                                            Наши преподаватели вдохновляют детей использовать английский язык на протяжении всего занятия. Начинаем со звуков и слов, постепенно переходя к полноценным простым диалогам.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="results__item">
+                                        <div class="results__item-icon">
+                                            <img src="@img/icons/words.svg" alt="Иконка">
+                                        </div>
+                                        <div class="results__item-caption h5">словарный запас</div>
+                                        <div class="results__item-desc text-block-md">
+                                            За первый год ребенок узнает и запомнит в долгосрочной памяти более 200 слов и выражений. В процессе наших увлекательных заданий ребята усваивают новые слова, песни, буквы и звуки.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="results__item">
+                                        <div class="results__item-icon">
+                                            <img src="@img/icons/exp.png" alt="Иконка">
+                                        </div>
+                                        <div class="results__item-caption h5">всестороннее развитие</div>
+                                        <div class="results__item-desc text-block-md">
+                                            Обретет уверенность, заведет новых друзей и научится работать в команде. Будет лучше готов к школе.
+                                            Разовьет память, навык мелкой моторики и ассоциативное мышление. Раскроет творческий потенциал.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="results">
+                    <div class="container">
+                        <h2 class="results__title h4">какие навыки мы развиваем на занятиях?</h2>
+                        <div class="results__body blue">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="results__item">
+                                        <div class="results__item-icon">
+                                            <img src="@img/icons/speaking-kids.svg" alt="Иконка">
+                                        </div>
+                                        <div class="results__item-caption h5">устная речь и произношение</div>
+                                        <div class="results__item-desc text-block-md">
+                                            Начинаем ставить правильное произношение. Дети знакомятся с английскими звуками и учатся их воспроизводить.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="results__item">
+                                        <div class="results__item-icon">
+                                            <img src="@img/icons/listening-kids.svg" alt="Иконка">
+                                        </div>
+                                        <div class="results__item-caption h5">Восприятие на слух</div>
+                                        <div class="results__item-desc text-block-md">
+                                            Дети учатся распознавать звуки и&nbsp;слова. Затем диалоги и предложения. Привыкают к английской речи через песни, аудио задания и общение с преподавателем.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="results__item">
+                                        <div class="results__item-icon">
+                                            <img src="@img/icons/dialog.svg" alt="Иконка">
+                                        </div>
+                                        <div class="results__item-caption h5">умение строить простые диалоги</div>
+                                        <div class="results__item-desc text-block-md">
+                                            Ребята учатся описывать знакомые предметы. Изучают цвета, цифры, игрушки, части тела, животных и многое другое. Затем, изучая элементарные основы грамматики, учатся строить простые диалоги.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_atmosphere.html', {})
+                @@include('html/_cards-4.html', {})
+                <section class="desc">
+                    <div class="container">
+                        <div class="desc__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="desc__main">
+                                        <h2 class="desc__title h4">устраиваем праздники и проводим&nbsp;мастер-классы</h2>
+                                        <div class="desc__text text-block">
+                                            <p>Помимо основных занятий мы устраиваем разговорные клубы английского языка с носителями, увлекательные мастер классы, праздничные уроки на Новый Год, Хэллоуин и другие праздники.</p>
+                                        </div>
+                                        <div class="desc__logo">
+                                            <img src="@img/icons/confetti.png" alt="Конфетти">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="desc__image">
+                                        <img src="@img/holiday.jpg" class="cover-image" alt="Праздник">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_why-8.html', {})
+                @@include('html/_teachers.html', {})
                 @@include('html/_lesson.html', {})
                 @@include('html/_sign-lesson.html', {})
+                <div class="our-centres our-centres_white">
+                    <div class="container">
+                        <div class="centres__body">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="our-centres__icon">
+                                        <img src="@img/icons/cam.svg" alt="Иконка">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="our-centres__video icon-camera">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Otrlgr8Em4k?si=DUVLpiNOB3K8SKaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 @@include('html/_license.html', {})
-                @@include('html/_cert.html', {})
-                @@include('html/_regular.html', {})
+                <div class="info">
+                    <div class="container">
+                        <h2 class="info__title h3 text-center">обучение дошкольников в CME это:</h2>
+                        <div class="info__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/preschoolers/01.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">Кембриджская программа</div>
+                                        <p class="info__card-text">
+                                            Уделяем внимание различным аспектам языка –устная речь, восприятие на слух и словарный запас, а так же произношение по международным стандартам. Материал подается в виде историй и приключений различных героев, иллюстраций, песен и игр.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/preschoolers/02.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">Аутентичные пособия</div>
+                                        <div class="info__card-text">
+                                            <p>Мы используем красочные и увлекательные учебные материалы Kids Box, предназначенные для детей от 3 лет, начинающих знакомиться с английским языком. Структура и тематика учебника учитывают психологические способности детей дошкольного возраста.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/preschoolers/03.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">Прочные знания</div>
+                                        <div class="info__card-text">
+                                            <p>За первый год ребенок узнает и запоминает в долгосрочной памяти более 200 слов и выражений. В процессе наших увлекательных заданий ребята усваивают новые слова, песни, буквы и звуки.</p>
+                                            <p>А самое главное это мотивация и любовь к занятиям – дети с удовольствием ходят на наши уроки!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/preschoolers/04.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">Кембриджская программа</div>
+                                        <div class="info__card-text">
+                                            <p>
+                                                Занятия в CME не только научат основам английского языка, ребенок также:
+                                            </p>
+                                            <ul>
+                                                <li>Обретет уверенность, заведет новых друзей и научится работать в команде</li>
+                                                <li>Будет лучше готов к школе</li>
+                                                <li>Разовьет навыки моторики, память и ассоциативное мышление</li>
+                                                <li>Раскроет творческий потенциал</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__slider-pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_regular.html', {
+                "bg": "grey"
+                })
                 @@include('html/_partner.html', {})
-                <section>У нас</section>
+                <section class="sections">
+                    <div class="container">
+                        <h2 class="sections__title h3 text-center">у нас:</h2>
+                        <ul class="sections__list">
+                            <li class="sections__item">
+                                <div class="sections__item-icon">
+                                    <img src="@img/icons/lesson.svg" alt="Иконка">
+                                </div>
+                                <div class="sections__item-caption h5">лучшие педагоги</div>
+                                <div class="sections__item-desc text-block-md">Занятия для детей ведут педагоги с высшим педагогическим или психологическим образованием</div>
+                            </li>
+                            <li class="sections__item">
+                                <div class="sections__item-icon">
+                                    <img src="@img/icons/books.svg" alt="Иконка">
+                                </div>
+                                <div class="sections__item-caption h5">современные материалы</div>
+                                <div class="sections__item-desc text-block-md">Современные, красочные пособия, а также мультимедийные материалы</div>
+                            </li>
+                            <li class="sections__item">
+                                <div class="sections__item-icon">
+                                    <img src="@img/icons//game-form.svg" alt="Иконка">
+                                </div>
+                                <div class="sections__item-caption h5">игровая форма</div>
+                                <div class="sections__item-desc text-block-md">Занятия в игровой форме - детям интересно и они не устают</div>
+                            </li>
+                            <li class="sections__item">
+                                <div class="sections__item-icon">
+                                    <img src="@img/icons/audiences.svg" alt="Иконка">
+                                </div>
+                                <div class="sections__item-caption h5">комфортные аудитории</div>
+                                <div class="sections__item-desc text-block-md">Комфортные, красочные аудитории с необходимым оборудованием</div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
                 @@include('html/_banner.html', {})
-                <section class="price"></section>
+                <section class="prices">
+                    <div class="container">
+                        <div class="prices__header">
+                            <h2 class="prices__title h3 text-center">стоимость обучения</h2>
+                        </div>
+                        <div class="prices__body">
+                            <div class="prices__block">
+                                <h3 class="prices__caption h6 text-center">
+                                    ЗАНЯТИЯ В ГРУППАХ
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                45 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Стоимость за месяц <br> (8 занятий)
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    4980
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    4480р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h6 text-center">
+                                    ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                45 мин
+                                            </div>
+
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Русскоговорящий <br> преподаватель
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1350
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1125р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Носитель языка
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1700
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1500р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 @@include('html/_reviews.html', {})
                 @@include('html/_faq.html', {})
-                @@include('html/_trial.html', {})
+                @@include('html/_trial.html', {
+                "subtitle": "Наши администраторы ответят на все вопросы и подберут подходящую группу"
+                })
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})

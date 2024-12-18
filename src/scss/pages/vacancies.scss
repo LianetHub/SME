@@ -6,6 +6,9 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0;
 	}
+	& + .teachers {
+		padding-top: 0;
+	}
 	// .benefits__title
 	&__title {
 		line-height: 100%;

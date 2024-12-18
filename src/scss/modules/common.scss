@@ -61,6 +61,23 @@
 	&.promo-gray {
 		background-image: url("@img/banners/banner-vacancies.jpg");
 	}
+	&.promo-gallery {
+		background-color: #d57e28;
+		background-image: url("@img/banners/banner-gallery.jpg");
+		@media (max-width: $md5) {
+			background-position: center 0;
+			background-image: url("@img/banners/banner-gallery-mobile.jpg");
+		}
+	}
+	&.promo-preschoolers {
+		background-image: url("@img/banners/banner-preschoolers.jpg");
+		background-color: #e32528;
+		@media (max-width: $md5) {
+			background-image: url("@img/banners/banner-preschoolers-mobile.jpg");
+			background-size: 100% auto;
+			background-position: center 0;
+		}
+	}
 	// .promo__body
 	&__body {
 		display: flex;
@@ -85,6 +102,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		&:first-child {
+			margin: 0;
+		}
 		&.lg-image {
 			@media (min-width: $md4) {
 				min-width: 12rem;
@@ -101,6 +121,7 @@
 			}
 		}
 		& + .promo__offer {
+			margin: 1.25rem 0 0;
 			@media (min-width: $md3) {
 				margin: 0 auto;
 				max-width: 24rem;
@@ -112,7 +133,6 @@
 		@media (min-width: $md4) {
 			margin: 0 auto;
 			&:first-child {
-				margin: 0;
 				max-width: 22rem;
 			}
 		}
@@ -122,6 +142,65 @@
 		@media (min-width: $md2) {
 			max-width: 18.468rem;
 			width: 100%;
+		}
+	}
+	// .promo__tagline
+	&__tagline {
+		font-size: 1.375rem;
+		color: #fff;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1.06rem;
+		@media (max-width: $md4) {
+			gap: 0.63rem;
+			& ~ .promo__side {
+				&:not(:first-child) {
+					margin-top: rem(282);
+				}
+			}
+		}
+		@media (min-width: $md5) {
+			text-align: left;
+			color: $text;
+			border-radius: 0.625rem;
+			background: rgba($color: #fff, $alpha: 0.74);
+			padding: 1.94rem;
+			font-size: 1.625rem;
+			max-width: 17.8125rem;
+		}
+		@media (min-width: $md2) {
+			max-width: 24rem;
+			padding: 1.56rem 1.875rem;
+			font-size: 2.25rem;
+		}
+		&.blue {
+			border-radius: 0.625rem;
+			background: #38b6ff;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			max-width: 19.4375rem;
+			@media (min-width: $md2) {
+				max-width: 24rem;
+			}
+			@media (max-width: $md5) {
+				padding: 0.87rem;
+			}
+		}
+	}
+	// .promo__tagline-desc
+	&__tagline-desc {
+		font-family: $font-bebas;
+		line-height: 120%;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 1.25rem;
+		@media (min-width: $md4) {
+			font-size: 1.375rem;
+		}
+		@media (min-width: $md2) {
+			font-size: 1.6875rem;
 		}
 	}
 	// .promo__title
@@ -146,6 +225,12 @@
 				margin-top: 0rem;
 			}
 		}
+		&.color-text {
+			color: $text;
+			& + .promo__subtitle {
+				margin-top: 0rem;
+			}
+		}
 		&.promo__title_xl {
 			font-size: 4.375rem;
 			@media (min-width: $md2) {
@@ -165,6 +250,17 @@
 		&.text-center-mobile {
 			@media (max-width: $md4) {
 				max-width: 100%;
+			}
+		}
+		&.h6 {
+			font-size: 1.0625rem;
+			font-weight: 700;
+
+			@media (min-width: $md4) {
+				font-size: 1.25rem;
+			}
+			@media (min-width: $md2) {
+				font-size: 1.625rem;
 			}
 		}
 	}
@@ -356,6 +452,15 @@
 	}
 	@media (min-width: $md2) {
 		padding: 5rem 0;
+	}
+	& + .our-centres {
+		padding: 2.5rem 0;
+		@media (min-width: $md4) {
+			padding: 3.75rem 0;
+		}
+		@media (min-width: $md2) {
+			padding: 5rem 0;
+		}
 	}
 	// .sign-lesson__title
 	&__title {
@@ -911,7 +1016,9 @@
 }
 
 .regular {
-	background: #f6f6f6;
+	&.regular_grey {
+		background: #f6f6f6;
+	}
 	// .regular__container
 	&__container {
 	}
@@ -1555,6 +1662,12 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0 2.5rem;
 	}
+	& + .sign-lesson {
+		margin-top: 1, 87rem;
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
+	}
 	// .teachers__body
 	&__body {
 		& > .row {
@@ -1638,6 +1751,9 @@
 	}
 	// .desc__body
 	&__body {
+		.row {
+			align-items: center;
+		}
 	}
 	// .desc__main
 	&__main {
@@ -1652,8 +1768,10 @@
 		@media (min-width: $md4) {
 			text-align: left;
 		}
-		@media (min-width: $md3) {
-			font-size: 2.5rem;
+		&.h4 {
+			@media (min-width: $md3) {
+				font-size: 2.5rem;
+			}
 		}
 	}
 	// .desc__text
@@ -1702,6 +1820,90 @@
 		}
 		@media (min-width: $md2) {
 			margin-left: calc(-1 * var(--gutter-x));
+		}
+	}
+}
+
+.cards {
+	padding: 3.75rem 0 2.5rem;
+	& + .why {
+		padding-top: 1.875rem;
+		@media (min-width: $md2) {
+			padding-top: 2.5rem;
+		}
+	}
+	& + .language-desc {
+		margin-top: 1.875rem;
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
+	}
+	& + .desc {
+		margin-top: 1.875rem;
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
+	}
+	// .cards__slider
+	&__slider {
+		margin: 0 auto;
+		overflow: visible;
+		max-width: rem(785);
+		@media (min-width: $md2) {
+			max-width: 56rem;
+		}
+		.swiper-wrapper {
+			@media (min-width: $md4) {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				column-gap: 3.13rem;
+				row-gap: 2.5rem;
+			}
+			@media (min-width: $md2) {
+				column-gap: 6.25rem;
+				row-gap: 3.75rem;
+			}
+		}
+	}
+	// .cards__slide
+	&__slide {
+		position: relative;
+		border: rem(4) solid #393939;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		padding: 1rem 0.75rem;
+		min-height: 12.5rem;
+		gap: 1.25rem;
+		width: rem(158);
+		@media (min-width: $md4) {
+			width: 100%;
+		}
+	}
+	// .cards__slide-image
+	&__slide-image {
+		position: absolute;
+		top: rem(-32);
+		background: #fff;
+		padding: 0.25rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	// .cards__slide-title
+	&__slide-title {
+	}
+	// .cards__slide-desc
+	&__slide-desc {
+		font-weight: 700;
+		line-height: 110%;
+	}
+	// .cards__slider-pagination
+	&__slider-pagination {
+		@media (min-width: $md4) {
+			display: none;
 		}
 	}
 }

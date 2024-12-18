@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Китайский язык'
+    })
+    <body>
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "logo": "pink",
+            "colorBottom": "text"
+            })
+            <main class="page">
+                <div class="promo promo-gray">
+                    <div class="container">
+                        <div class="promo__body">
+                            <div class="promo__image lg-image">
+                                <img src="@img/pictures/china.svg" alt="Рисунок">
+                            </div>
+                            <div class="promo__offer">
+                                <h1 class="promo__title h2 color-red text-center-mobile">
+                                    китайский для всех возрастов!
+                                </h1>
+                                <p class="promo__subtitle h6 text-center-mobile">
+                                    Обучаем живому разговорному китайскому языку для повседневного общения, работы и путешествий!
+                                </p>
+                            </div>
+                            <div class="promo__side">
+                                <form action="#" class="promo__form form">
+                                    <div class="form__title text-center h5">
+                                        Запишитесь на
+                                        бесплатный урок
+                                    </div>
+                                    <input type="text" name="name" class="form__input" placeholder="Имя">
+                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                                    <select class="select">
+                                        <option disabled selected value="0">Выберите филиал</option>
+                                        <option value="1">г. Мытищи, Борисовка 16</option>
+                                        <option value="2">г. Мытищи, Кадомцева 2</option>
+                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
+                                        <option value="4">г. Балашиха, Реутовская 20</option>
+                                    </select>
+                                    <div class="form__footer">
+                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
+                                        <button type="button" class="form__tooltip icon-info"></button>
+                                    </div>
+                                </form>
+                                <div class="promo__info hidden">
+                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
+                                    <div class="promo__info-text">
+                                        Мы не передадим Ваши
+                                        данные третьим лицам
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_desc.html', {
+                "title": "Курсы китайского языка <br> в мытищах",
+                "desc": 7
+                })
+                @@include('./html/_cards.html')
+                @@include('html/_why-7.html', {})
+                @@include('html/_language-desc.html', {
+                "lang": "china"
+                })
+                <section class="benefits">
+                    <div class="container">
+                        <h2 class="benefits__title h3 text-center">почему наши студенты добиваются результатов?</h2>
+                        <div class="benefits__content">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/lamp-method.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">коммуникативная МЕТОДИКА</h3>
+                                            <p class="benefits__desc text-block-md">На уроках много общения и разговорной практики. Мы поможем вам овладеть современными языковыми оборотами, фразами и словами для комфортного общения с иностранцами. Обучаем разговорному испанскому для повседневного общения, работы и путешествий!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/love.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">Японский станет вашим хобби!</h3>
+                                            <p class="benefits__desc text-block-md">Мы называем наш поход «Эдьютейнмент» — это обучение в формате развлечений (от англ. education — образование, entertainment — развлечение). Используем игровые механики, интерактивные технологии и развлекательные элементы в обучении. Наша цель - сделать обучение интересным, увлекательным и эффективным.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/materials.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">современные учебные материалы</h3>
+                                            <p class="benefits__desc text-block-md">Подбираем лучшие учебные материалы в зависимости от возраста ученика. Вне зависимости от возраста - во всех пособиях делается упор на разговорные навыки, аутентичные аудио и видео.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/rest.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">удобный формат занятий</h3>
+                                            <p class="benefits__desc text-block-md">
+                                                Мы предлагаем индивидуальные занятия и занятия в мини-группе. Как офлайн в наших центрах, так и онлайн.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_teachers.html', {})
+                @@include('html/_sign-lesson.html', {})
+                <section class="prices">
+                    <div class="container">
+                        <div class="prices__header">
+                            <h2 class="prices__title h3 text-center">стоимость обучения</h2>
+                        </div>
+                        <div class="prices__body">
+                            <div class="prices__block">
+                                <h3 class="prices__caption h6 text-center">
+                                    стоимость обучения
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Стоимость за месяц <br> (8 занятий)
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    5980
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    5580р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    7500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    6880р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h6 text-center">
+                                    ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                45 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Стоимость
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1350
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1125р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1700
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1500р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    2550
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    2250р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_reviews.html', {})
+                @@include('html/_faq.html', {})
+                @@include('html/_trial.html', {
+                "subtitle": "Наши администраторы ответят на все вопросы и подберут подходящую группу"
+                })
+
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+    </body>
+</html>

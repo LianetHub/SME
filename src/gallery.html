@@ -6,13 +6,14 @@
     <body>
         <section class="wrapper">
             @@include('html/_header.html', {
-            "logo": "pink",
-            "colorBottom": "text"
+            "logo": "initial",
+            "colorBottom": "white"
             })
             <main class="page">
-                <div class="promo promo-borisovka">
+                <section class="promo promo-gallery">
                     <div class="container">
                         <div class="promo__body">
+                            <h1 class="promo__tagline">Комфортные, уютные аудитории, оснащенные всем необходимым для эффективного обучения</h1>
                             <div class="promo__side">
                                 <form action="#" class="promo__form form">
                                     <div class="form__title text-center h5">
@@ -43,28 +44,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <section class="contacts">
+                </section>
+                <section class="gallery">
                     <div class="container">
-                        <div class="contacts__gallery">
-                            <div class="contacts__gallery-slider swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
-                                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
-                                    </a>
-                                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
-                                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
-                                    </a>
-                                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
-                                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
-                                    </a>
-                                </div>
+                        <div class="gallery__header">
+                            <h2 class="gallery__title text-center">фотогалерея</h2>
+                            <div class="gallery__logo">
+                                <img src="@img/icons/CME-photos.svg" alt="Логотип">
                             </div>
-                            <button type="button" class="contacts__gallery-prev icon-prev-circle"></button>
-                            <button type="button" class="contacts__gallery-next icon-next-circle"></button>
-                            <div class="contacts__gallery-pagination swiper-pagination"></div>
                         </div>
+                        @@include('./html/templates/_gallery-slider.html')
                     </div>
                 </section>
                 @@include('html/_trial.html', {

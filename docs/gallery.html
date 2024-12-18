@@ -37,12 +37,12 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20241218183154">
-	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20241218183154">
-	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20241218183154" />
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20241218230750">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20241218230750">
+	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20241218230750" />
 	<!-- plugnis -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20241218183154">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241218183154">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20241218230750">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241218230750">
 </head>
 
 <body>
@@ -62,10 +62,11 @@
 				</div>
 				<div class="header__body">
 					<div class="container">
-						<div class="header__content">
+						<div class="header__content header__content_white">
 							<div class="header__content-top">
 								<a href="/" class="header__logo">
-									<img src="img/logo-color.svg" alt="Логотип">
+									<img src="img/logo.svg" class="header__logo-white" alt="Логотип">
+									<img src="img/logo-color.svg" class="header__logo-color" alt="Логотип">
 								</a>
 								<button type="button" class="header__menu-btn" aria-label="Открыть меню">
 									<span class="header__menu-icon icon-menu">
@@ -107,15 +108,15 @@
 																<span class="submenu__close-text">Закрыть</span>
 															</button>
 															<ul>
-																<li><a href="">Группы для детей 3-6 лет</a></li>
+																<li><a href="/preschoolers.html">Группы для детей 3-6 лет</a></li>
 																<li><a href="">Группы для детей 7-9 лет</a></li>
 																<li><a href="">Английский для детей 10-13 лет</a></li>
 																<li><a href="">Английский для подростков 14-17 лет</a></li>
 																<li><a href="">Английский для взрослых</a></li>
-																<li><a href="">Индивидуальные занятия</a></li>
+																<li><a href="/individual.html">Индивидуальные занятия</a></li>
 																<li><a href="/online.html">Английский ОНЛАЙН</a></li>
-																<li><a href="">Подготовка к ЕГЭ по английскому</a></li>
-																<li><a href="">Подготовка к ОГЭ по английскому</a></li>
+																<li><a href="/ege.html">Подготовка к ЕГЭ по английскому</a></li>
+																<li><a href="/oge.html">Подготовка к ОГЭ по английскому</a></li>
 																<li><a href="/exams.html">Международные сертификаты</a></li>
 															</ul>
 														</div>
@@ -135,16 +136,16 @@
 																<span class="submenu__close-text">Закрыть</span>
 															</button>
 															<ul>
-																<li><a href="/preschoolers.html">Развивающий мини-сад для детей от 3 до 6 лет</a></li>
+																<li><a href="">Развивающий мини-сад для детей от 3 до 6 лет</a></li>
 																<li><a href="">Подготовка к школе для детей от 5 до 6 лет</a></li>
 																<li><a href="">Развивай-ка для детей от 3 до 4 лет</a></li>
-																<li><a href="">Английский для детей от 3 до 6 лет</a></li>
+																<li><a href="/preschoolers.html">Английский для детей от 3 до 6 лет</a></li>
 															</ul>
 														</div>
 													</div>
 												</li>
 												<li class="menu__item has-children">
-													<a href="" class="menu__link">
+													<a href="/languages.html" class="menu__link">
 														<span class="menu__link-icon">
 															<img src="img/icons/languages.svg" alt="Иконка">
 														</span>
@@ -157,11 +158,11 @@
 																<span class="submenu__close-text">Закрыть</span>
 															</button>
 															<ul>
-																<li><a href="">Китайский язык</a></li>
-																<li><a href="">Японский язык</a></li>
-																<li><a href="">Испанский язык</a></li>
-																<li><a href="">Немецкий язык</a></li>
-																<li><a href="">Французский язык</a></li>
+																<li><a href="/china.html">Китайский язык</a></li>
+																<li><a href="/japan.html">Японский язык</a></li>
+																<li><a href="/spain.html">Испанский язык</a></li>
+																<li><a href="/german.html">Немецкий язык</a></li>
+																<li><a href="/france.html">Французский язык</a></li>
 															</ul>
 														</div>
 													</div>
@@ -253,9 +254,10 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="promo promo-borisovka">
+			<section class="promo promo-gallery">
 				<div class="container">
 					<div class="promo__body">
+						<h1 class="promo__tagline">Комфортные, уютные аудитории, оснащенные всем необходимым для эффективного обучения</h1>
 						<div class="promo__side">
 							<form action="#" class="promo__form form">
 								<div class="form__title text-center h5"> Запишитесь на бесплатный урок </div>
@@ -280,26 +282,32 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<section class="contacts">
+			</section>
+			<section class="gallery">
 				<div class="container">
-					<div class="contacts__gallery">
-						<div class="contacts__gallery-slider swiper">
+					<div class="gallery__header">
+						<h2 class="gallery__title text-center">фотогалерея</h2>
+						<div class="gallery__logo">
+							<img src="img/icons/CME-photos.svg" alt="Логотип">
+						</div>
+					</div>
+					<div class="gallery__slider">
+						<div class="gallery__slider-content swiper">
 							<div class="swiper-wrapper">
-								<a href="img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
+								<a href="img/gallery/01.jpg" data-fancybox="gallery" class="gallery__slide swiper-slide">
 									<img src="img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
 								</a>
-								<a href="img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
+								<a href="img/gallery/01.jpg" data-fancybox="gallery" class="gallery__slide swiper-slide">
 									<img src="img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
 								</a>
-								<a href="img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
+								<a href="img/gallery/01.jpg" data-fancybox="gallery" class="gallery__slide swiper-slide">
 									<img src="img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
 								</a>
 							</div>
 						</div>
-						<button type="button" class="contacts__gallery-prev icon-prev-circle"></button>
-						<button type="button" class="contacts__gallery-next icon-next-circle"></button>
-						<div class="contacts__gallery-pagination swiper-pagination"></div>
+						<button type="button" class="gallery__slider-prev icon-prev-circle"></button>
+						<button type="button" class="gallery__slider-next icon-next-circle"></button>
+						<div class="gallery__slider-pagination swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
@@ -352,10 +360,10 @@
 								<li><a href="">Английский для детей 10-13 лет</a></li>
 								<li><a href="">Английский для подростков 14-17 лет</a></li>
 								<li><a href="">Английский для взрослых</a></li>
-								<li><a href="">Индивидуальные занятия</a></li>
-								<li><a href="">Английский ОНЛАЙН</a></li>
-								<li><a href="">Подготовка к ЕГЭ по английскому</a></li>
-								<li><a href="">Подготовка к ОГЭ по английскому</a></li>
+								<li><a href="/individual.html">Индивидуальные занятия</a></li>
+								<li><a href="/online.html">Английский ОНЛАЙН</a></li>
+								<li><a href="/ege.html">Подготовка к ЕГЭ по английскому</a></li>
+								<li><a href="/oge.html">Подготовка к ОГЭ по английскому</a></li>
 								<li><a href="/exams.html">Международные сертификаты</a></li>
 							</ul>
 						</nav>
@@ -382,11 +390,11 @@
 						<a href="" class="footer__caption text-block-md fw-bold">Другие языки</a>
 						<nav class="footer__menu">
 							<ul>
-								<li><a href="">Китайский язык</a></li>
-								<li><a href="">Японский язык</a></li>
-								<li><a href="">Испанский язык</a></li>
-								<li><a href="">Немецкий язык</a></li>
-								<li><a href="">Французский язык</a></li>
+								<li><a href="/china.html">Китайский язык</a></li>
+								<li><a href="/japan.html">Японский язык</a></li>
+								<li><a href="/spain.html">Испанский язык</a></li>
+								<li><a href="/german.html">Немецкий язык</a></li>
+								<li><a href="/france.html">Французский язык</a></li>
 							</ul>
 						</nav>
 						<a href="/vacancies.html" class="footer__vacanies">
@@ -441,12 +449,12 @@
 				</div>
 			</div>
 		</div> <!-- plugnis -->
-		<script src="js/libs/jquery-3.7.1.min.js?_v=20241218183154"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20241218183154"></script>
-		<script src="js/libs/fancybox.umd.js?_v=20241218183154"></script>
-		<script src="js/libs/intlTelInput.min.js?_v=20241218183154"></script>
+		<script src="js/libs/jquery-3.7.1.min.js?_v=20241218230750"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20241218230750"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20241218230750"></script>
+		<script src="js/libs/intlTelInput.min.js?_v=20241218230750"></script>
 		<!-- plugnis -->
-		<script src="js/app.min.js?_v=20241218183154"></script>
+		<script src="js/app.min.js?_v=20241218230750"></script>
 </body>
 
 </html>

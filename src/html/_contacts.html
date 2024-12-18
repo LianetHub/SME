@@ -53,23 +53,6 @@
                 </div>
             </div>
         </div>
-        <div class="contacts__gallery">
-            <div class="contacts__gallery-slider swiper">
-                <div class="swiper-wrapper">
-                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
-                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
-                    </a>
-                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
-                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
-                    </a>
-                    <a href="@img/gallery/01.jpg" data-fancybox="gallery" class="contacts__gallery-slide swiper-slide">
-                        <img src="@img/gallery/01.jpg" class="cover-image" alt="Фото центра CME">
-                    </a>
-                </div>
-            </div>
-            <button type="button" class="contacts__gallery-prev icon-prev-circle"></button>
-            <button type="button" class="contacts__gallery-next icon-next-circle"></button>
-            <div class="contacts__gallery-pagination swiper-pagination"></div>
-        </div>
+        @@include('templates/_gallery-slider.html')
     </div>
 </section>
