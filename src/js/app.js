@@ -213,6 +213,22 @@ $(function () {
         })
     }
 
+    if ($('.prices__slider').length) {
+        $('.prices__slider').each(function (index, element) {
+            const $slider = $(element);
+            const $pagination = $slider.find('.prices__slider-pagination');
+
+            new Swiper($slider[0], {
+                slidesPerView: "auto",
+                watchOverflow: true,
+                pagination: {
+                    clickable: true,
+                    el: $pagination[0],
+                },
+            });
+        });
+    }
+
     if ($('.why__body').length) {
         getMobileSlider('.why__body', {
             spaceBetween: 20,

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Преподаватели'
+    })
+    <body>
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "logo": "pink",
+            "colorBottom": "text"
+            })
+            <main class="page">
+                <div class="promo promo-vacancies">
+                    <div class="container">
+                        <div class="promo__body">
+                            <div class="promo__offer">
+                                <h1 class="promo__title promo__title_lg color-red text-center-mobile">Карьера</h1>
+                                <p class="promo__subtitle h4 text-center-mobile">
+                                    Join our successful team!
+                                </p>
+                            </div>
+                            <div class="promo__image">
+                                <img src="@img/vacancies-job.svg" alt="Рисунок">
+                            </div>
+                            <div class="promo__side">
+                                <form action="#" class="promo__form form">
+                                    <div class="form__title text-center h5">
+                                        Запишитесь на
+                                        бесплатный урок
+                                    </div>
+                                    <input type="text" name="name" class="form__input" placeholder="Имя">
+                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                                    <select class="select">
+                                        <option disabled selected value="0">Выберите филиал</option>
+                                        <option value="1">г. Мытищи, Борисовка 16</option>
+                                        <option value="2">г. Мытищи, Кадомцева 2</option>
+                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
+                                        <option value="4">г. Балашиха, Реутовская 20</option>
+                                    </select>
+                                    <div class="form__footer">
+                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
+                                        <button type="button" class="form__tooltip icon-info"></button>
+                                    </div>
+                                </form>
+                                <div class="promo__info hidden">
+                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
+                                    <div class="promo__info-text">
+                                        Мы не передадим Ваши
+                                        данные третьим лицам
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section>наши преподаватели</section>
+                <section>Главное на занятиях – это преподаватели</section>
+                <section class="best-teachers">
+                    <div class="container container-sm">
+                        <div class="best-teachers__header text-center">
+                            <h2 class="best-teachers__title">
+                                Лучшие преподаватели
+                            </h2>
+                            <div class="best-teachers__icon">
+                                <img src="@img/icons/CME-teachers.svg" alt="Логотип">
+                            </div>
+                            <div class="best-teachers__text text-block-md">
+                                <p>По статистике, из 50 соискателей на должность преподавателя в CME, прошедших собеседование, мы отбираем только одного.</p>
+                                <p>Благодаря огромному опыту наших академических специалистов, мы работаем ​только с лучшими преподавателями, для которых быть учителем – это призвание!</p>
+                            </div>
+                        </div>
+                        <div class="best-teachers__slider swiper">
+                            <ul class="swiper-wrapper">
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/ivan-dorohin.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Иван Дорохин
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Академический ​директор
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/olga-bakleneva.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Ольга Бакленева
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Старший ​преподаватель, ​методист
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/yana-kuznetsova.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Яна Кузнецова
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Педагог высшей ​квалификации
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/alena-sutspol.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Алена Сютсполь
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Педагог высшей ​квалификации, ​CELTA
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/reuel-emmanuel.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Reuel Emmanuel
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Native teacher, TESOL
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/tuyana-nimaeva.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Туяна Нимаева
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Старший преподаватель, методист, CELTA
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/maria-kozlova.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Мария Козлова
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Старший преподаватель, C1 Business Higher
+                                    </div>
+                                </div>
+                                <div class="teacher swiper-slide">
+                                    <div class="teacher__image">
+                                        <img src="@img/teachers/marnarita-saakyan.jpg" alt="Фото преподавателя">
+                                    </div>
+                                    <div class="teacher__name text-block-md fw-bold">
+                                        Марнарита Саакян
+                                    </div>
+                                    <div class="teacher__position text-block-md">
+                                        Педагог высшей квалификации
+                                    </div>
+                                </div>
+                            </ul>
+                            <div class="best-teachers__pagination swiper-pagination"></div>
+                        </div>
+                        <a href="/teachers.html" class="best-teachers__btn btn btn-secondary btn-md">подробнее</a>
+                    </div>
+                </section>
+                <section>Требования</section>
+                @@include('html/_lesson.html', {})
+                @@include('html/_sign-lesson.html', {})
+                @@include('html/_reviews.html', {})
+                @@include('html/_faq.html', {})
+                @@include('html/_trial.html', {
+                "subtitle": "Наши администраторы ответят на все вопросы и подберут подходящую группу"
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+    </body>
+</html>

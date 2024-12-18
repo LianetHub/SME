@@ -121,6 +121,10 @@ h6,
 	}
 }
 
+.color-red {
+	color: $red;
+}
+
 //============ МОДУЛИ ====================
 @import "modules/popup";
 @import "modules/breadcrumbs";
@@ -139,6 +143,12 @@ h6,
 
 .text-center {
 	text-align: center;
+}
+
+.text-center-mobile {
+	@media (max-width: $md4) {
+		text-align: center;
+	}
 }
 
 .tabs {

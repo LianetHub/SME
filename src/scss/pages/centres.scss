@@ -1,0 +1,192 @@
+.centres {
+	padding: 1.25rem 0 3.75rem;
+	@media (min-width: $md5) {
+		padding: 1.875rem 0 4.375rem;
+	}
+	@media (min-width: $md2) {
+		padding: 2.5rem 0 3.75rem;
+	}
+	// .centres__block
+	&__block {
+		padding: 1.25rem 0;
+		@media (min-width: $md5) {
+			padding: 1.875rem 0;
+		}
+		@media (min-width: $md2) {
+			padding: 2.5rem 0;
+		}
+	}
+	// .centres__title
+	&__title {
+		line-height: 100%;
+		@media (max-width: $md5) {
+			font-size: 2rem;
+		}
+	}
+	// .centres__body
+	&__body {
+		margin-top: 2.25rem;
+		@media (min-width: $md5) {
+			margin-top: 1.87rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 3.5rem;
+		}
+	}
+}
+
+.certer-card {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	// .certer-card__address
+	&__address {
+		text-align: center;
+		line-height: 90%;
+		margin-bottom: auto;
+		@media (max-width: $md5) {
+			font-size: 1.5rem;
+		}
+		&::before {
+			display: inline-block;
+			font-size: em(1.5, 2);
+			margin-right: em(0.5, 2);
+		}
+		& small {
+			display: block;
+			font-size: 0.75em;
+		}
+	}
+	&__row {
+		margin-top: 2.25rem;
+		display: grid;
+		flex: 1 1 auto;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.certer-card__image {
+			margin-top: 0;
+			min-height: 100%;
+			& img {
+				height: 100%;
+				max-height: 100%;
+			}
+		}
+		.certer-card__info {
+			@media (min-width: $md5) {
+				padding: 1.25rem 1.75rem;
+			}
+			@media (min-width: $md2) {
+				padding: 1.87rem 3.56rem;
+			}
+		}
+		.certer-card__contacts-item {
+			&:not(:last-child) {
+				@media (min-width: $md5) {
+					margin-bottom: 0.75rem;
+				}
+				@media (min-width: $md2) {
+					margin-bottom: 1.37rem;
+				}
+			}
+		}
+		.certer-card__contacts-btn {
+			@media (min-width: $md5) {
+				margin-top: 0.75rem;
+			}
+			@media (min-width: $md2) {
+				margin-top: 1.25rem;
+			}
+		}
+	}
+	// .certer-card__image
+	&__image {
+		margin-top: rem(28);
+		@media (min-width: $md3) {
+			margin-top: 2.25rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 2.125rem;
+		}
+		& img {
+			width: 100%;
+			min-height: 12.5rem;
+			@media (min-width: $md5) {
+				max-height: 15.875rem;
+			}
+			object-fit: cover;
+		}
+	}
+	// .certer-card__info
+	&__info {
+		background: #f6f6f6;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		padding: 1.87rem 3rem;
+
+		@media (min-width: $md5) {
+			padding: 1.25rem 1rem;
+		}
+		@media (min-width: $md3) {
+			padding: 1.9rem;
+		}
+		@media (min-width: $md2) {
+			padding: 2.5rem 3.56rem;
+		}
+	}
+	// .certer-card__contacts
+	&__contacts {
+		margin-bottom: auto;
+		line-height: 110%;
+		@media (max-width: $md5) {
+			font-size: 1rem;
+		}
+	}
+	// .certer-card__contacts-item
+	&__contacts-item {
+		display: flex;
+		align-items: center;
+		gap: 0.63rem;
+		&::before {
+			width: 1.375rem;
+			height: 1.375rem;
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-self: flex-start;
+		}
+		&.icon-location {
+			&::before {
+				font-size: 1.375rem;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 1.37rem;
+		}
+		& a {
+			transition: color 0.3s ease;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
+	}
+	// .certer-card__contacts-icon
+	&__contacts-icon {
+		width: 1.375rem;
+		height: 1.375rem;
+		align-self: flex-start;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .certer-card__contacts-btn
+	&__contacts-btn {
+		margin-top: 2rem;
+		align-self: center;
+	}
+}

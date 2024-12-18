@@ -13,7 +13,7 @@
         </div>
         <div class="header__body">
             <div class="container">
-                <div class="header__content">
+                <div class="header__content@@if(colorBottom==='white'){ header__content_white}">
                     <div class="header__content-top">
                         <a href="/" class="header__logo">
                             @@if(logo=="initial"){
@@ -21,7 +21,13 @@
                             <img src="@img/logo-color.svg" class="header__logo-color" alt="Логотип">
                             }
                             @@if(logo=="pink"){
+                            @@if(colorBottom=="text"){
                             <img src="@img/logo-color.svg" alt="Логотип">
+                            }
+                            @@if(colorBottom=="white"){
+                            <img src="@img/logo-white.svg" class="header__logo-white" alt="Логотип">
+                            <img src="@img/logo-color.svg" class="header__logo-color" alt="Логотип">
+                            }
                             }
                         </a>
                         <button type="button" class="header__menu-btn" aria-label="Открыть меню">
@@ -72,10 +78,10 @@
                                                         <li><a href="">Английский для подростков 14-17 лет</a></li>
                                                         <li><a href="">Английский для взрослых</a></li>
                                                         <li><a href="">Индивидуальные занятия</a></li>
-                                                        <li><a href="">Английский ОНЛАЙН</a></li>
+                                                        <li><a href="/online.html">Английский ОНЛАЙН</a></li>
                                                         <li><a href="">Подготовка к ЕГЭ по английскому</a></li>
                                                         <li><a href="">Подготовка к ОГЭ по английскому</a></li>
-                                                        <li><a href="">Международные сертификаты</a></li>
+                                                        <li><a href="/exams.html">Международные сертификаты</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -145,17 +151,17 @@
                                                         <span class="submenu__close-text">Закрыть</span>
                                                     </button>
                                                     <ul>
-                                                        <li><a href="">О нас</a></li>
-                                                        <li><a href="">Наши преподаватели</a></li>
-                                                        <li><a href="">Методика Rock the Language</a></li>
+                                                        <li><a href="/about.html">О нас</a></li>
+                                                        <li><a href="/teachers.html">Наши преподаватели</a></li>
+                                                        <li><a href="/rock-the-language.html">Методика Rock the Language</a></li>
                                                         <li><a href="">Учредительные документы</a></li>
-                                                        <li><a href="">Фотогалерея</a></li>
+                                                        <li><a href="/gallery.html">Фотогалерея</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </li>
                                         <li class="menu__item">
-                                            <a href="" class="menu__link">
+                                            <a href="/prices.html" class="menu__link">
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/price.svg" alt="Иконка">
                                                 </span>
@@ -166,7 +172,7 @@
                                             </a>
                                         </li>
                                         <li class="menu__item has-children">
-                                            <a href="" class="menu__link">
+                                            <a href="/centres.html" class="menu__link">
                                                 <span class="menu__link-icon">
                                                     <img src="@img/icons/location-outline.svg" alt="Иконка">
                                                 </span>
@@ -181,8 +187,8 @@
                                                         <span class="submenu__close-text">Закрыть</span>
                                                     </button>
                                                     <ul>
-                                                        <li><a href="">г. Мытищи</a></li>
-                                                        <li><a href="/reutovskaya.html">г. Балашиха</a></li>
+                                                        <li><a href="/centres.html#mytishi">г. Мытищи</a></li>
+                                                        <li><a href="/centres.html#balashiha">г. Балашиха</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -195,7 +201,7 @@
                             <button class="header__location-btn icon-chevron">г. Мытищи</button>
                             <ul class="header__location-list">
                                 <li class="header__location-item">
-                                    <a href="" class="header__location-link">
+                                    <a href="/borisovka.html" class="header__location-link">
                                         г. Мытищи, ул. Борисовка, 16
                                         <small class="fw-bold">ЖК «Ярославский»</small>
                                     </a>

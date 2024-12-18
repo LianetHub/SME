@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Преподаватели'
+    })
+    <body>
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "logo": "pink",
+            "colorBottom": "text"
+            })
+            <main class="page">
+                <div class="promo promo-gray">
+                    <div class="container">
+                        <div class="promo__body">
+                            <div class="promo__image lg-image">
+                                <img src="@img/pictures/lamp.png" alt="Рисунок">
+                            </div>
+                            <div class="promo__offer">
+                                <h1 class="promo__title promo__title_lg text-center-mobile">скидки на обучение</h1>
+                                <p class="promo__subtitle h3 text-center-mobile">
+                                    на весь учебный год
+                                </p>
+                            </div>
+                            <div class="promo__side">
+                                <form action="#" class="promo__form form">
+                                    <div class="form__title text-center h5">
+                                        Запишитесь на
+                                        бесплатный урок
+                                    </div>
+                                    <input type="text" name="name" class="form__input" placeholder="Имя">
+                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                                    <select class="select">
+                                        <option disabled selected value="0">Выберите филиал</option>
+                                        <option value="1">г. Мытищи, Борисовка 16</option>
+                                        <option value="2">г. Мытищи, Кадомцева 2</option>
+                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
+                                        <option value="4">г. Балашиха, Реутовская 20</option>
+                                    </select>
+                                    <div class="form__footer">
+                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
+                                        <button type="button" class="form__tooltip icon-info"></button>
+                                    </div>
+                                </form>
+                                <div class="promo__info hidden">
+                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
+                                    <div class="promo__info-text">
+                                        Мы не передадим Ваши
+                                        данные третьим лицам
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="prices">
+                    <div class="container">
+                        <div class="prices__header">
+                            <h2 class="prices__title h3 text-center">Цены на 2024/2025 учебный&nbsp;год</h2>
+                            <p class="prices__desc text-center text-block-lg">
+                                Специальная программа «Early bird».
+                                Все студенты, записавшиеся до <strong>1 сентября 2024 года</strong> получат
+                                бесплатное первое занятие и скидку на <strong>весь 2024 - 2025 учебный год!</strong>
+                            </p>
+                            <div class="prices__logo">
+                                <img src="@img/icons/CME-prices.svg" alt="Логотип">
+                            </div>
+                        </div>
+                        <div class="prices__body">
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">группы 3-6 лет</h3>
+                                <div class="prices__table">
+                                    <div class="prices__table-column">
+                                        <div class="prices__table-row">
+                                            Продолжительность <br> занятия
+                                        </div>
+                                        <div class="prices__table-row">
+                                            45 мин
+                                        </div>
+                                    </div>
+                                    <div class="prices__table-column">
+                                        <div class="prices__table-row">
+                                            Английский (3-6 ЛЕТ) <br> 8 занятий в месяц
+                                        </div>
+                                        <div class="prices__table-row">
+                                            <span class="prices__table-price-old">
+                                                4980
+                                            </span>
+                                            <span class="prices__table-price-current">
+                                                4480р.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="prices__table-column">
+                                        <div class="prices__table-row">
+                                            «Развивай-ка» (3-4 года) <br> 8 занятий в месяц
+                                        </div>
+                                        <div class="prices__table-row">
+                                            <span class="prices__table-price-old">
+                                                4980
+                                            </span>
+                                            <span class="prices__table-price-current">
+                                                4480р.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="prices__table-column">
+                                        <div class="prices__table-row">
+                                            Подготовка к школе (5-6 лет) <br> 8 занятий в месяц
+                                        </div>
+                                        <div class="prices__table-row">
+                                            <span class="prices__table-price-old">
+                                                4980
+                                            </span>
+                                            <span class="prices__table-price-current">
+                                                4480р.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">развивающий мини-сад</h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                4 часа (10:00-14:00)
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                3 раза в неделю <br> 12 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    12500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    11500р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                5 раз в неделю <br> 20 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    12500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    11500р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">группы 7-13 лет</h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Английский и другие языки <br>
+                                                8 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    5980
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    5580р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">группы 14-17 лет</h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Английский и другие языки <br>
+                                                8 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    7500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    6880р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">группы для взрослых</h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Английский и другие языки <br>
+                                                8 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    7500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    6880р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">
+                                    индивидуальные занятия
+                                    <small>в центрах и online</small>
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                45 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Русскоговорящий <br> преподаватель
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1350
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1125р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1700
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1500р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    2550
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    2250р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Носитель языка
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1700
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1500р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    2300
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    2000р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    3500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    3000р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h3 text-center">
+                                    МИНИ-ГРУППЫ ПО 2 ЧЕЛОВЕКА
+                                    <small>в центрах и online</small>
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Русскоговорящий <br> преподаватель 8 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    8500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    8000р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    13000
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    12000р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Носитель языка <br> 8 занятий в месяц
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    13000
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    12000р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    17000
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    16000р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="promotions">
+                    <div class="container">
+                        <h2 class="promotions__title icon-sale text-center">
+                            акции:
+                        </h2>
+                        <div class="promotions__body text-block-md">
+                            <ul>
+                                <li>
+                                    Специальная программа «Early bird». <br>
+                                    Все студенты, записавшиеся до 1 марта 2024 года получат скидку на обучение на весь 2023/2024 учебный год!
+                                </li>
+                                <li>
+                                    Специальная программа «Baby Boom». <br>
+                                    Многодетным семьям мы предоставляем специальную скидку в 10%.
+                                </li>
+                                <li>
+                                    Специальная программа «Smart Start». <br>
+                                    При оплате обучения за весь учебный год – скидка 10%.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_banner.html', {})
+                @@include('html/_license.html', {})
+                @@include('html/_reviews.html', {})
+                @@include('html/_faq.html', {})
+                @@include('html/_trial.html', {
+                "subtitle": "Наши администраторы ответят на все вопросы и подберут подходящую группу"
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+    </body>
+</html>

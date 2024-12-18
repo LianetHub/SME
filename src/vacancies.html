@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Вакансии'
+    })
+    <body>
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "logo": "pink",
+            "colorBottom": "text"
+            })
+            <main class="page">
+                <div class="promo promo-gray">
+                    <div class="container">
+                        <div class="promo__body">
+                            <div class="promo__offer">
+                                <h1 class="promo__title promo__title_lg color-red text-center-mobile">Карьера</h1>
+                                <p class="promo__subtitle h4 text-center-mobile">
+                                    Join our successful team!
+                                </p>
+                            </div>
+                            <div class="promo__image">
+                                <img src="@img/pictures/vacancies-job.svg" alt="Рисунок">
+                            </div>
+                            <div class="promo__side">
+                                <form action="#" class="promo__form form">
+                                    <div class="form__title text-center h5">
+                                        Запишитесь на
+                                        бесплатный урок
+                                    </div>
+                                    <input type="text" name="name" class="form__input" placeholder="Имя">
+                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                                    <select class="select">
+                                        <option disabled selected value="0">Выберите филиал</option>
+                                        <option value="1">г. Мытищи, Борисовка 16</option>
+                                        <option value="2">г. Мытищи, Кадомцева 2</option>
+                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
+                                        <option value="4">г. Балашиха, Реутовская 20</option>
+                                    </select>
+                                    <div class="form__footer">
+                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
+                                        <button type="button" class="form__tooltip icon-info"></button>
+                                    </div>
+                                </form>
+                                <div class="promo__info hidden">
+                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
+                                    <div class="promo__info-text">
+                                        Мы не передадим Ваши
+                                        данные третьим лицам
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_desc.html', {
+                "title": "Вакансии центра иностранных языков Center of modern english",
+                "desc": 1
+                })
+
+                <section class="benefits">
+                    <div class="container">
+                        <h2 class="benefits__title h3 text-center">Наши преимущества для соискателей</h2>
+                        <div class="benefits__content">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/collective.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">лучший коллектив</h3>
+                                            <p class="benefits__desc text-block-md">Наша компания создана преподавателями - у нас комфортно работать и общаться с коллегами, администраторами и руководством. Дружелюбный и профессиональный коллектив, который всегда готов помочь и поддержать.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/rest.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">Все необходимое для работы</h3>
+                                            <p class="benefits__desc text-block-md">Продуманная программа. Работа по международным учебным пособиям и разработанным нами учебным материалам. Рабочий ноутбук, TV, большие доски и удобные рабочие места.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/schedule.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">гибкий график работы</h3>
+                                            <p class="benefits__desc text-block-md">Full-time и Part-time позиции. Вы можете выбрать удобный для себя график работы – в любое время дня. Как онлайн, так и в наших центрах.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="benefits__item">
+                                        <div class="benefits__icon">
+                                            <img src="@img/icons/salary.svg" alt="Иконка">
+                                        </div>
+                                        <div class="benefits__body">
+                                            <h3 class="benefits__caption h5">конкурентная заработная плата</h3>
+                                            <p class="benefits__desc text-block-md">Мы предлагаем достойную заработную плату, рост доходов со временем и гибкую систему бонусов. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_teachers.html', {})
+                <div class="vacancy-desc">
+                    <div class="container">
+                        <div class="vacancy-desc__body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="vacancy-desc__column">
+                                        <div class="vacancy-desc__icon">
+                                            <img src="@img/icons/responsibilities.svg" alt="Иконка">
+                                        </div>
+                                        <h3 class="vacancy-desc__caption h5">обязанности</h3>
+                                        <ul class="vacancy-desc__list text-block-md">
+                                            <li>Преподавание языков по коммуникативной методике в группах до 10 человек</li>
+                                            <li>Создание дружественной атмосферы и мотивация людей изучать язык с удовольствием</li>
+                                            <li>Постоянное нахождение в поиске новых идей</li>
+                                            <li>Составление планов занятий и их выполнение</li>
+                                            <li>Заполнение листов посещаемости и отчетов</li>
+                                            <li>Проведение тестов и контроль успеваемости учащихся</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="vacancy-desc__column">
+                                        <div class="vacancy-desc__icon">
+                                            <img src="@img/icons/requirements.svg" alt="Иконка">
+                                        </div>
+                                        <h3 class="vacancy-desc__caption h5">требования</h3>
+                                        <ul class="vacancy-desc__list text-block-md">
+                                            <li>Успешный опыт работы с группами более 2-х лет</li>
+                                            <li>Желание достичь наилучших результатов</li>
+                                            <li>Гибкость и умение найти подход к каждому студенту</li>
+                                            <li>Организованность и ответственность</li>
+                                            <li>Гибкий ум и чувство юмора</li>
+                                            <li>Нацеленность на долгосрочное сотрудничество</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="vacancy-desc__column">
+                                        <div class="vacancy-desc__icon">
+                                            <img src="@img/icons/terms.svg" alt="Иконка">
+                                        </div>
+                                        <h3 class="vacancy-desc__caption h5">Условия</h3>
+                                        <ul class="vacancy-desc__list text-block-md">
+                                            <li>Позитивные, профессиональные и увлеченные коллеги</li>
+                                            <li>Достойная заработная плата по результатам собеседования</li>
+                                            <li>Все, что может понадобиться современному учителю (библиотека, ноутбуки, Wi-Fi, телевизоры, принтеры, ламинатор, большие доски и т.д.)</li>
+                                            <li>Удобные, просторные и яркие классы, в которых преподавание доставляет удовольствие</li>
+                                            <li>Учительская с мягким диваном и вкусным кофе</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="resume">
+                    <div class="container">
+                        <div class="resume__body text-center">
+                            <h2 class="resume__title h3">отправьте ваше резюме на&nbsp;эту&nbsp;почту:</h2>
+                            <a href="mailto:ivandorokhin@gmail.com" class="resume__email h4">
+                                <span class="resume__email-icon">
+                                    <img src="@img/icons/mail.svg" alt="Иконка">
+                                </span>
+                                ivandorokhin@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+    </body>
+</html>
