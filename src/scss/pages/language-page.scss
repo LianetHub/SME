@@ -282,12 +282,14 @@
 	}
 	// .sections__list
 	&__list {
-		margin-top: 3.13rem;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem;
 		row-gap: 2.5rem;
 		justify-content: center;
+		&:not(:first-child) {
+			margin-top: 3.13rem;
+		}
 		@media (min-width: $md3) {
 			justify-content: space-between;
 		}

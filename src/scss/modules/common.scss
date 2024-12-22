@@ -109,8 +109,18 @@
 			@media (min-width: $md4) {
 				min-width: 12rem;
 			}
-			@media (min-width: $md3) {
+			@media (min-width: $md2) {
 				min-width: 20rem;
+			}
+		}
+		&.sm-mobile {
+			@media (max-width: $md5) {
+				max-width: 5.15863rem;
+				margin-top: 2rem;
+				order: 1;
+				& + .promo__offer {
+					margin-top: 0;
+				}
 			}
 		}
 		& ~ .promo__side {
@@ -233,8 +243,19 @@
 		}
 		&.promo__title_xl {
 			font-size: 4.375rem;
-			@media (min-width: $md2) {
+			line-height: 1;
+			display: flex;
+			flex-direction: column;
+			&.lg-mobile {
+				@media (max-width: $md3) {
+					font-size: 5.34363rem;
+				}
+			}
+			@media (min-width: $md3) {
 				font-size: 6.25rem;
+			}
+			& small {
+				font-size: em(3.84288, 6.25);
 			}
 		}
 	}
@@ -263,9 +284,18 @@
 				font-size: 1.625rem;
 			}
 		}
+		&.h4 {
+			margin-top: 0;
+			font-size: 2.00331rem;
+			@media (min-width: $md3) {
+				font-size: 2.34306rem;
+				line-height: 1;
+			}
+		}
 	}
 	// .promo__side
 	&__side {
+		order: 2;
 		flex-shrink: 0;
 		border-radius: 0.625rem;
 		background: rgba($color: #fff, $alpha: 0.74);
@@ -277,6 +307,7 @@
 			margin-top: rem(132);
 		}
 		@media (max-width: $md5) {
+			width: 100%;
 			&:first-child {
 				margin-top: 21.5rem;
 			}
@@ -1757,9 +1788,6 @@
 	}
 	// .desc__main
 	&__main {
-		@media (min-width: $md2) {
-			padding-right: 3rem;
-		}
 	}
 	// .desc__title
 	&__title {
@@ -1782,9 +1810,10 @@
 		}
 		@media (min-width: $md5) {
 			margin-top: rem(30);
+			font-size: 1rem;
 		}
 		@media (min-width: $md3) {
-			font-size: 1.125rem;
+			padding-right: 2rem;
 		}
 		& p {
 			&:not(:last-child) {
@@ -1817,9 +1846,6 @@
 		& img {
 			flex: 1 1 auto;
 			height: 100%;
-		}
-		@media (min-width: $md2) {
-			margin-left: calc(-1 * var(--gutter-x));
 		}
 	}
 }

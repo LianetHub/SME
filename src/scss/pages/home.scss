@@ -132,6 +132,23 @@
 			padding: 0 1.5rem;
 		}
 	}
+	// .nums__item-icon
+	&__item-icon {
+		margin-bottom: 1rem;
+		@media (min-width: $md4) {
+			margin-bottom: 1.38rem;
+		}
+		& img {
+			height: 3.25rem;
+			@media (min-width: $md4) {
+				height: 4.125rem;
+			}
+			@media (min-width: $md2) {
+				height: 4.875rem;
+			}
+			width: auto;
+		}
+	}
 	// .nums__item-value
 	&__item-value {
 	}
@@ -587,17 +604,31 @@
 			align-items: flex-start;
 			text-align: left;
 			padding-top: 3rem;
+			&:has(.text-block) {
+				padding-top: 0;
+				justify-content: center;
+			}
+		}
+		@media (min-width: $md2) {
+			margin-right: calc(-1.5 * var(--gutter-y));
 		}
 	}
 	// .mission__title
 	&__title {
+		&.h2 {
+			@media (max-width: $md4) {
+				font-size: 3.125rem;
+			}
+		}
 	}
 	// .mission__desc
 	&__desc {
 		margin-top: rem(24);
 		order: 1;
 		@media (min-width: $md4) {
-			margin-bottom: rem(24);
+			&:not(:last-child) {
+				margin-bottom: rem(24);
+			}
 			order: 0;
 		}
 		@media (min-width: $md3) {
@@ -605,6 +636,15 @@
 		}
 		@media (min-width: $md2) {
 			margin-top: 2.75rem;
+		}
+		&.text-block {
+			margin-top: 1.25rem;
+			text-align: left;
+		}
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 0.75em;
+			}
 		}
 	}
 	// .mission__logo

@@ -1,0 +1,227 @@
+.tagline {
+	padding: 2.5rem 0;
+	@media (min-width: $md3) {
+		padding: 3.75rem 0;
+	}
+	// .tagline__body
+	&__body {
+		max-width: 50rem;
+		margin: 0 auto;
+	}
+	// .tagline__title
+	&__title {
+		&.h3 {
+			@media (min-width: $md3) {
+				font-size: 2.5rem;
+			}
+			@media (min-width: $md2) {
+				font-size: 3.125rem;
+			}
+			line-height: 100%;
+		}
+	}
+	// .tagline__logo
+	&__logo {
+		margin-top: 1.25rem;
+		@media (max-width: $md5) {
+			max-width: 3.59138rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@media (min-width: $md3) {
+			margin-top: 2rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
+	}
+	// .tagline__text
+	&__text {
+		font-size: 1.375rem;
+		margin-top: 1.88rem;
+		@media (min-width: $md3) {
+			margin-top: 2rem;
+			font-size: 1.625rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 2.87rem;
+		}
+		font-family: $font-bebas;
+		line-height: 120%;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+.about {
+	padding: 2.5rem 0 3.75rem;
+	// .about__title
+	&__title {
+		@media (max-width: $md5) {
+			font-size: 2.25rem;
+		}
+	}
+	// .about__body
+	&__body {
+		margin-left: -1.25rem;
+		margin-right: -1.25rem;
+		@media (min-width: $md5) {
+			margin-top: 3rem;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		@media (min-width: $md2) {
+			margin-top: 3.75rem;
+		}
+		.row {
+			--gutter-x: 0;
+			--gutter-y: 0;
+			@media (max-width: $md4) {
+				flex-direction: column-reverse;
+			}
+			@media (min-width: $md4) {
+				&:nth-child(even) {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+	}
+	// .about__image
+	&__image {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		min-height: 100%;
+		@media (min-width: $md4) {
+			background-color: #eee;
+		}
+		& img {
+			flex: 1 1 auto;
+			&:not(.cover-image) {
+				width: 100%;
+				padding: 0 4.25rem;
+				@media (min-width: $md4) {
+					padding: 4.25rem;
+				}
+			}
+		}
+	}
+	// .about__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		min-height: 100%;
+		padding: 2.5rem 1.25rem;
+		@media (min-width: $md4) {
+			padding: 3.5rem 1.25rem;
+			background: #f6f6f6;
+		}
+		@media (min-width: $md2) {
+			padding: 4.13rem;
+		}
+	}
+	// .about__num
+	&__num {
+		font-family: $font-bebas;
+		font-size: 3.375rem;
+		font-weight: 700;
+		line-height: 100%;
+		text-transform: uppercase;
+		border: rem(7) solid;
+		width: 4.875rem;
+		height: 4.875rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .about__caption
+	&__caption {
+		margin-top: 2rem;
+		@media (min-width: $md2) {
+			margin-top: 2.5rem;
+		}
+
+		& + .about__desc {
+			@media (min-width: $md4) {
+				margin-top: 3.12rem;
+			}
+			@media (min-width: $md2) {
+				margin-top: 3.75rem;
+				font-size: 1rem;
+			}
+			& p {
+				&:not(:last-child) {
+					margin-bottom: 1.88rem;
+					@media (min-width: $md2) {
+						margin-bottom: 2.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	// .about__tagline
+	&__tagline {
+		color: #000;
+		font-family: $font-bebas;
+		line-height: 140%;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		gap: 1.88rem;
+		margin-top: 1.5rem;
+		font-size: 1.25rem;
+		flex-direction: column;
+		@media (min-width: $md4) {
+			flex-direction: row;
+			font-size: 1.375rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 1.88rem;
+			font-size: 1.5rem;
+		}
+		&:has(.about__tagline-icon) {
+			color: #393939;
+			font-size: 1.25rem;
+			@media (min-width: $md4) {
+				text-align: left;
+				font-size: 2rem;
+				font-weight: 700;
+			}
+		}
+	}
+	//  .about__tagline-icon
+	&__tagline-icon {
+		flex-shrink: 0;
+		width: 3.9375rem;
+	}
+	// .about__desc
+	&__desc {
+		margin-top: 1.75rem;
+		font-size: 0.875rem;
+		@media (min-width: $md4) {
+			font-size: 0.9375rem;
+		}
+		@media (min-width: $md2) {
+			margin-top: 1.88rem;
+		}
+		line-height: 110%;
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 0.75em;
+				@media (min-width: $md2) {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+	// .about__logo
+	&__logo {
+		margin-top: 2.5rem;
+	}
+}

@@ -10,13 +10,19 @@
             "colorBottom": "text"
             })
             <main class="page">
-                <section class="promo promo-home">
+                <div class="promo promo-gray">
                     <div class="container">
                         <div class="promo__body">
+                            <div class="promo__image lg-image sm-mobile">
+                                <img src="@img/pictures/lamp.svg" alt="Рисунок">
+                            </div>
                             <div class="promo__offer">
-                                <h1 class="promo__title">заговори на языке возможностей!</h1>
-                                <p class="promo__subtitle h5">
-                                    сеть курсов иностранных языков с&nbsp;лучшими преподавателями
+                                <h1 class="promo__title promo__title_xl lg-mobile text-center-mobile">
+                                    center of
+                                    <small>modern&nbsp;english</small>
+                                </h1>
+                                <p class="promo__subtitle h4 text-center-mobile">
+                                    “practice makes perfect”
                                 </p>
                             </div>
                             <div class="promo__side">
@@ -49,21 +55,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <section class="tagline">
+                    <div class="container">
+                        <div class="tagline__body text-center">
+                            <h2 class="tagline__title h3">О нас</h2>
+                            <div class="tagline__logo">
+                                <img src="@img/icons/CME-mission.svg" alt="Логотип">
+                            </div>
+                            <p class="tagline__text">Наша миссия: Открыть для людей новые горизонты и возможности, обучая иностранным языкам эффективно и интересно.</p>
+                        </div>
+                    </div>
                 </section>
                 <section class="mission">
                     <div class="container">
                         <div class="mission__body">
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-xl-5 col-md-6">
                                     <div class="mission__main">
-                                        <h2 class="mission__title h1">center of modern english</h2>
-                                        <p class="mission__desc text-block-lg">Открыть для людей новые горизонты и возможности, обучая английскому языку эффективно и интересно.</p>
-                                        <div class="mission__logo">
-                                            <img src="@img/icons/CME-mission.svg" alt="Логотип">
+                                        <h2 class="mission__title h2">center of modern english</h2>
+                                        <div class="mission__desc text-block">
+                                            <p>Компания CME была основана в 2014 году.</p>
+                                            <p>С 2016 года, помимо обучения иностранным языкам, профессионально занимаемся дошкольным образованием.</p>
+                                            <p>С 2017 года являемся официальным партнером Cambridge.</p>
+                                            <p>Основная направленность центра – преподавание разговорного английского языка. Своей главной задачей мы считаем открыть для людей новые горизонты и возможности, обучая иностранным языкам эффективно и интересно. Помогаем подготовиться и успешно сдать международные экзамены, ОГЭ и ЕГЭ. Подготовиться к собеседованию и развить навыки делового английского.</p>
+                                            <p>Помимо английского языка профессионально обучаем испанскому, французскому, немецкому, китайскому и японскому языкам.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xl-6 offset-xl-1 col-md-7">
+                                <div class="col-xl-6 offset-xl-1 col-md-6">
                                     <div class="mission__image">
                                         <img src="@img/home/mission.jpg" class="cover-image" alt="Фото преподавателя">
                                     </div>
@@ -72,13 +92,224 @@
                         </div>
                     </div>
                 </section>
-
+                <div class="nums">
+                    <div class="container">
+                        <ul class="nums__list">
+                            <li class="nums__item">
+                                <div class="nums__item-icon">
+                                    <img src="@img/icons/calendar.svg" alt="Иконка">
+                                </div>
+                                <div class="nums__item-value h1">10</div>
+                                <div class="nums__item-desc text-block-md">лет успешной работы</div>
+                            </li>
+                            <li class="nums__item">
+                                <div class="nums__item-icon">
+                                    <img src="@img/icons/yandex.svg" alt="Иконка">
+                                </div>
+                                <div class="nums__item-value h1">4,9</div>
+                                <div class="nums__item-desc text-block-md">средняя оценка на&nbsp;Яндекс.Картах</div>
+                            </li>
+                            <li class="nums__item">
+                                <div class="nums__item-icon">
+                                    <img src="@img/icons/uk-flag.svg" alt="Иконка">
+                                </div>
+                                <div class="nums__item-value h4">ОФИЦИАЛЬНЫЙ</div>
+                                <div class="nums__item-desc text-block-md">партнер <br> Cambridge</div>
+                            </li>
+                            <li class="nums__item">
+                                <div class="nums__item-icon">
+                                    <img src="@img/icons/licence.svg" alt="Иконка">
+                                </div>
+                                <div class="nums__item-value h4">ЛИЦЕНЗИЯ</div>
+                                <div class="nums__item-desc text-block-md">на образовательную деятельность</div>
+                            </li>
+                            <li class="nums__item pc-only">
+                                <div class="nums__item-icon">
+                                    <img src="@img/icons/hat.svg" alt="Иконка">
+                                </div>
+                                <div class="nums__item-value h4">ШТАТ</div>
+                                <div class="nums__item-desc text-block-md">профессиональных преподавателей</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="about">
+                    <div class="container">
+                        <h2 class="about__title h3 text-center">Почему выбирают CME:</h2>
+                        <div class="about__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/01.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">1</div>
+                                        <div class="about__caption h4">лучшие преподаватели</div>
+                                        <p class="about__tagline">Мы тщательно отбираем преподавательский состав для нашей школы. Наши педагоги - настоящие профессионалы своего дела.</p>
+                                        <div class="about__desc">
+                                            <p>По статистике, из 50 соискателей на должность преподавателя в CME, прошедших собеседование, мы отбираем только одного.</p>
+                                            <p>Благодаря огромному опыту наших академических специалистов, мы работаем только с лучшими педагогами, для которых быть учителем - это призвание!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/02.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">2</div>
+                                        <div class="about__caption h4">комфортные, уютные аудитории</div>
+                                        <div class="about__desc">
+                                            <p>Окружение играет немаловажную роль в процессе обучения. Мы заботимся о том, чтобы в CME вам было комфортно заниматься. Удобные классы оборудованы всем необходимым для занятий. У нас удобные учебные места, большие доски, телевизоры для просмотра видео, места для подвижных игр для детей, комната ожидания, питьевая вода и чай.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/03.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">3</div>
+                                        <div class="about__caption h4">методика rock the language</div>
+                                        <p class="about__tagline">В CME Вы будете учиться и общаться как с русскоязычными педагогами, так и с носителями языка.</p>
+                                        <div class="about__desc">
+                                            <p>
+                                                Основной курс ведут русскоговорящие преподаватели. В рамках учебного процесса мы организуем регулярные занятия с носителями языка - это позволяет нашим ученикам получить аутентичную языковую практику и благотворно сказывается на обучении.
+                                            </p>
+                                            <p>
+                                                Регулярные уроки с носителем языка уже включены в стоимость обучения. Вносим разнообразие в учебный процесс, преодолеваем языковой барьер и начинаем говорить!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/04.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">4</div>
+                                        <div class="about__caption h4">лучшие учебные материалы</div>
+                                        <p class="about__tagline">Мы используем признанные во всем мире учебные пособия Oxford, Cambridge и pearson</p>
+                                        <div class="about__desc">
+                                            <p>
+                                                Вне зависимости от уровня и возраста студентов мы используем только передовые учебные материалы ведущих образовательных учереждений в мире.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/05.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">5</div>
+                                        <div class="about__caption h4">личный журнал достижений</div>
+                                        <p class="about__tagline"> мотивациЯ наших студентов</p>
+                                        <div class="about__desc">
+                                            <p>
+                                                В начале обучения ученики получают личный журнал достижений, который помогает отслеживать успехи и учиться еще лучше! Достигая различных целей в обучении, ребята получают наклейки и собирают коллекцию.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/04.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">6</div>
+                                        <div class="about__caption h4">
+                                            государственная лицензия
+                                        </div>
+                                        <p class="about__tagline">
+                                            <span class="about__tagline-icon">
+                                                <img src="@img/icons/handshake.svg" alt="Иконка">
+                                            </span>
+                                            Доступна оплата материнским капиталом
+                                        </p>
+                                        <div class="about__desc">
+                                            <p>
+                                                Наши программы лицензированы государством. Вы сможете получить налоговый вычет и использовать материнский капитал для оплаты обучения.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/about/06.jpg" class="cover-image" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">7</div>
+                                        <div class="about__caption h4">разговорные клубы, праздники и мастер-классы</div>
+                                        <div class="about__desc">
+                                            <p>
+                                                Помимо основных занятий мы устраиваем разговорные клубы английского языка с носителями, увлекательные мастер классы, праздничные уроки на Новый Год, Хэллоуин и другие праздники
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="about__image">
+                                        <img src="@img/cambridge-logo.svg" alt="Фото компании">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about__column">
+                                        <div class="about__num">8</div>
+                                        <div class="about__caption h4">официальный партнер cambridge</div>
+                                        <div class="about__desc">
+                                            <p>
+                                                ЯВЛЯЕМСЯ ОФИЦИАЛЬНЫМИ ​ПАРТНЕРАМИ CAMBRIDGE C 2017​ ГОДА
+                                            </p>
+                                            <p>
+                                                ГОТОВИМ К СДАЧЕ КЕМБРИДЖСКИХ ​ЭКЗАМЕНОВ
+                                            </p>
+                                        </div>
+                                        <div class="about__logo">
+                                            <img src="@img/Cambridge-University-logo.svg" alt="Логотип университета">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 @@include('html/_sign-lesson.html', {})
                 @@include('html/_best-teachers.html', {})
                 @@include('html/_cert.html', {})
                 @@include('html/_reviews.html', {})
                 @@include('html/_faq.html', {})
-                @@include('html/_trial.html', {})
+                @@include('html/_trial.html', {
+                "subtitle": "Наши администраторы ответят на все вопросы и подберут подходящую группу"
+                })
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})
