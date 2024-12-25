@@ -1,25 +1,9 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BebasNeue";
-  font-display: swap;
   src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
 }
 
 @font-face {
@@ -27,6 +11,14 @@
   font-display: swap;
   src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-display: swap;
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
   font-style: normal;
 }
 
@@ -44,6 +36,14 @@
   src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
 }
 
 @font-face {
@@ -2251,6 +2251,40 @@ h6,
   background-color: #e32528;
 }
 
+.promo.promo-schoolers {
+  background-color: #d57e28;
+  background-image: url("../img/banners/banner-7-9.jpg");
+  background-position: 45% 0;
+}
+
+.promo.promo-schoolers .promo__subtitle {
+  max-width: 100%;
+}
+
+.promo.promo-10-13 {
+  background-position: center top;
+  background-color: #d57e28;
+  background-size: cover;
+}
+
+.promo.promo-10-13 .promo__offer {
+  max-width: 17.8125rem;
+}
+
+.promo.promo-10-13 .promo__subtitle {
+  max-width: 100%;
+}
+
+.promo.promo-14-17 {
+  background-position: center top;
+  background-color: #d57e28;
+  background-size: cover;
+}
+
+.promo.promo-14-17 .promo__subtitle {
+  max-width: 100%;
+}
+
 .promo__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2376,6 +2410,13 @@ h6,
   max-width: 50%;
   margin-top: 0.875rem;
   line-height: 130%;
+}
+
+.promo__subtitle.promo__subtitle-sm {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.125rem;
 }
 
 .promo__subtitle.h6 {
@@ -2691,6 +2732,14 @@ h6,
 
 .why__card.rock-card {
   background: url("../img/why-rock-bg.jpg") 100% 100%/80% auto no-repeat, #e2e2e2;
+}
+
+.why__card:has(.why__card-background) {
+  color: #fff;
+}
+
+.why__card:has(.why__card-background)::before {
+  color: #fff !important;
 }
 
 .why__card-logo {
@@ -3329,6 +3378,11 @@ h6,
   margin-top: 1, 87rem;
 }
 
+.teachers.teachers-grey {
+  background: #f6f6f6;
+  padding: 2.5rem 0;
+}
+
 .teachers__body > .row {
   --gutter-x: 1rem;
 }
@@ -3347,12 +3401,45 @@ h6,
 }
 
 .teachers__text p:not(:last-child) {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.75em;
+}
+
+.teachers__link {
+  margin-top: 1.875rem;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  color: #a4a3a4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.56rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.teachers__link::before {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  font-size: 2.5rem;
 }
 
 .desc {
   background: #f6f6f6;
   padding: 2.75rem 0 0;
+}
+
+.desc.desc-green {
+  background: #97c897;
+  color: #fff;
+}
+
+.desc.desc-white {
+  background: #fff;
 }
 
 .desc__body .row {
@@ -3366,6 +3453,12 @@ h6,
   text-align: center;
 }
 
+.desc__subtitle {
+  margin-top: 1.25rem;
+  font-weight: 700;
+  max-width: 26.5rem;
+}
+
 .desc__text {
   margin-top: 1.5rem;
 }
@@ -3376,6 +3469,7 @@ h6,
 
 .desc__logo {
   display: none;
+  max-width: 4.1875rem;
 }
 
 .desc__image {
@@ -3439,9 +3533,9 @@ h6,
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 0.75rem;
-  min-height: 12.5rem;
   gap: 1.25rem;
   width: 9.875rem;
+  min-height: 11rem;
 }
 
 .cards__slide-image {
@@ -3458,6 +3552,43 @@ h6,
 .cards__slide-desc {
   font-weight: 700;
   line-height: 110%;
+}
+
+.goals {
+  padding: 2.5rem 0;
+}
+
+.goals__slider {
+  margin-top: 2.5rem;
+  overflow: visible;
+}
+
+.goals__slide {
+  border-radius: 0.75rem;
+  background: #f8efd6;
+  height: auto;
+  width: 15.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.87rem 1.25rem 1.75rem;
+  text-align: center;
+}
+
+.goals__slide-title {
+  line-height: 110%;
+  margin-top: 1.25rem;
+}
+
+.goals__slide-desc {
+  margin-top: 1.25rem;
 }
 
 .page {
@@ -4191,6 +4322,10 @@ h6,
   margin-right: auto;
 }
 
+.language-desc__btn {
+  margin-top: 2.5rem;
+}
+
 .language-desc__icon {
   margin-top: 2rem;
 }
@@ -4400,6 +4535,7 @@ h6,
 
 .info__slider {
   margin-top: 2.5rem;
+  overflow: visible;
 }
 
 .info__card {
@@ -5637,6 +5773,9 @@ h6,
 
   .desc__text {
     margin-top: 1.875rem;
+  }
+
+  .desc__text:not(.text-block-lg) {
     font-size: 1rem;
   }
 
@@ -6377,6 +6516,27 @@ h6,
     background-image: url("../img/banners/banner.jpg");
   }
 
+  .promo.promo-schoolers .promo__offer {
+    margin-left: auto;
+    max-width: 20rem;
+  }
+
+  .promo.promo-schoolers .promo__side {
+    margin-left: 0;
+  }
+
+  .promo.promo-10-13 {
+    background-image: url("../img/banners/banner-10-13.jpg");
+  }
+
+  .promo.promo-14-17 .promo__offer {
+    max-width: 17.8125rem;
+  }
+
+  .promo.promo-14-17 {
+    background-image: url("../img/banners/banner-14-17.jpg");
+  }
+
   .promo__body {
     padding: 2.75rem 0 1rem;
     -webkit-box-pack: justify;
@@ -6407,6 +6567,10 @@ h6,
 
   .promo__title.promo__title_lg {
     font-size: 3.75rem;
+  }
+
+  .promo__subtitle.promo__subtitle-sm {
+    font-size: 1.25rem;
   }
 
   .promo__subtitle.h6 {
@@ -6697,6 +6861,14 @@ h6,
     padding: 3.75rem 0 1.875rem;
   }
 
+  .teachers__link {
+    margin-top: 3.94rem;
+  }
+
+  .teachers__link::before {
+    font-size: 3.12744rem;
+  }
+
   .desc {
     padding: 3.75rem 0;
   }
@@ -6717,6 +6889,7 @@ h6,
   }
 
   .cards__slide {
+    min-height: 12.5rem;
     width: 100%;
   }
 
@@ -7133,6 +7306,23 @@ h6,
 
   .desc__text {
     padding-right: 2rem;
+  }
+
+  .goals {
+    padding: 3.75rem 0;
+  }
+
+  .goals__slide {
+    padding: 1.25rem 1.25rem 1.75rem 1.25rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .goals__slide-title {
+    margin-top: 1.875rem;
   }
 
   .types-learning__card {
@@ -7675,6 +7865,26 @@ h6,
     margin-top: 1rem;
   }
 
+  .promo.promo-schoolers {
+    background-position: center 0;
+  }
+
+  .promo.promo-schoolers .promo__offer {
+    max-width: 19.75rem;
+  }
+
+  .promo.promo-schoolers .promo__side {
+    margin-left: 8.25rem;
+  }
+
+  .promo.promo-10-13 .promo__offer {
+    max-width: 20rem;
+  }
+
+  .promo.promo-14-17 .promo__offer {
+    max-width: 22rem;
+  }
+
   .promo__image.lg-image {
     min-width: 20rem;
   }
@@ -7700,6 +7910,10 @@ h6,
 
   .promo__title.promo__title_lg {
     font-size: 5rem;
+  }
+
+  .promo__subtitle.promo__subtitle-sm {
+    font-size: 1.375rem;
   }
 
   .promo__subtitle.h6 {
@@ -7906,6 +8120,10 @@ h6,
     margin-top: 2.5rem;
   }
 
+  .teachers.teachers-grey {
+    padding: 3.75rem 0;
+  }
+
   .teachers__body > .row {
     --gutter-x: 0;
   }
@@ -7920,6 +8138,10 @@ h6,
 
   .teachers__text {
     margin-top: 2rem;
+  }
+
+  .teachers__link::before {
+    font-size: 4.11788rem;
   }
 
   .desc {
@@ -7952,6 +8174,14 @@ h6,
        -moz-column-gap: 6.25rem;
             column-gap: 6.25rem;
     row-gap: 3.75rem;
+  }
+
+  .goals__slider {
+    margin-top: 3.56rem;
+  }
+
+  .goals__slide-title {
+    padding-right: 1.15rem;
   }
 
   .our-centres {
@@ -8898,6 +9128,40 @@ h6,
     background-image: url("../img/banners/banner-mobile.png");
   }
 
+  .promo.promo-schoolers {
+    background-image: url("../img/banners/banner-7-9-mobile.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .promo.promo-schoolers .promo__side {
+    margin-top: 24rem;
+  }
+
+  .promo.promo-10-13 .promo__side {
+    margin-top: 24rem;
+  }
+
+  .promo.promo-10-13 {
+    background-image: url("../img/banners/banner-10-13-mobile.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .promo.promo-14-17 .promo__title {
+    font-size: 1.9375rem;
+  }
+
+  .promo.promo-14-17 .promo__side {
+    margin-top: 24rem;
+  }
+
+  .promo.promo-14-17 {
+    background-image: url("../img/banners/banner-14-17-mobile.jpg");
+    background-size: cover;
+    background-position: center 80%;
+  }
+
   .promo__image ~ .promo__side:not(:first-child) {
     margin-top: 2rem;
   }
@@ -8986,6 +9250,31 @@ h6,
   .teachers__images {
     --gutter-x: 1.2rem;
     --gutter-y: 1.2rem;
+  }
+
+  .desc.desc-green {
+    padding: 2.5rem 0;
+  }
+
+  .desc.desc-green .desc__image {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .cards__slide-desc.h4 {
+    font-size: 2.25rem;
+  }
+
+  .goals__title {
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+
+  .goals__slide-desc {
+    line-height: 140%;
+    font-size: 0.9375rem;
+    margin-top: 1rem;
   }
 
   .mission__title.h2 {
@@ -9104,6 +9393,10 @@ h6,
   .teachers__text {
     margin-top: 1.5rem;
     font-size: 0.875rem;
+  }
+
+  .desc__title.h3 {
+    font-size: 2.25rem;
   }
 
   .desc__text {
@@ -9391,6 +9684,10 @@ h6,
 
   .faq__item:hover {
     background-color: #dddddd;
+  }
+
+  .teachers__link:hover {
+    color: #fa5300;
   }
 
   .selection__list-link:hover {

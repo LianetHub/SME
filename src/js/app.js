@@ -293,6 +293,29 @@ $(function () {
         })
     }
 
+    if ($('.goals__slider').length) {
+        new Swiper('.goals__slider', {
+            spaceBetween: 20,
+            slidesPerView: "auto",
+            watchOverflow: true,
+            pagination: {
+                el: '.goals__pagination',
+                clickable: true
+            },
+            breakpoints: {
+                991.98: {
+                    spaceBetween: 20,
+                    slidesPerView: 4,
+                },
+                1199.98: {
+                    spaceBetween: 28,
+                    slidesPerView: 4,
+
+                }
+            }
+        })
+    }
+
 
 
     function getMobileSlider(sliderName, options) {

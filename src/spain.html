@@ -22,34 +22,7 @@
                                     Обучаем живому разговорному испанскому языку для повседневного общения, работы и путешествий!
                                 </p>
                             </div>
-                            <div class="promo__side">
-                                <form action="#" class="promo__form form">
-                                    <div class="form__title text-center h5">
-                                        Запишитесь на
-                                        бесплатный урок
-                                    </div>
-                                    <input type="text" name="name" class="form__input" placeholder="Имя">
-                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
-                                    <select class="select">
-                                        <option disabled selected value="0">Выберите филиал</option>
-                                        <option value="1">г. Мытищи, Борисовка 16</option>
-                                        <option value="2">г. Мытищи, Кадомцева 2</option>
-                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
-                                        <option value="4">г. Балашиха, Реутовская 20</option>
-                                    </select>
-                                    <div class="form__footer">
-                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
-                                        <button type="button" class="form__tooltip icon-info"></button>
-                                    </div>
-                                </form>
-                                <div class="promo__info hidden">
-                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
-                                    <div class="promo__info-text">
-                                        Мы не передадим Ваши
-                                        данные третьим лицам
-                                    </div>
-                                </div>
-                            </div>
+                            @@include('./html/templates/_main-form.html')
                         </div>
                     </div>
                 </div>
@@ -117,7 +90,13 @@
                         </div>
                     </div>
                 </section>
-                @@include('html/_teachers.html', {})
+                @@include('html/_teachers.html', {
+                "subtitle": "формируем Команду увлеченных преподавателей, которые помогут любому ученику добиться поставленных целей!",
+                "text": 1,
+                "logo": false,
+                "link": false,
+                "bg": "white"
+                })
                 @@include('html/_sign-lesson.html', {})
                 <section class="prices">
                     <div class="container">

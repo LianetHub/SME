@@ -17,34 +17,7 @@
                                 <h1 class="promo__tagline-title h4">Обучаем английскому дошкольников 3-6 лет</h1>
                                 <div class="promo__tagline-desc">Уроки проходят в игровой форме с&nbsp;использованием современных методик</div>
                             </div>
-                            <div class="promo__side">
-                                <form action="#" class="promo__form form">
-                                    <div class="form__title text-center h5">
-                                        Запишитесь на
-                                        бесплатный урок
-                                    </div>
-                                    <input type="text" name="name" class="form__input" placeholder="Имя">
-                                    <input type="tel" name="phone" class="form__input" placeholder="Телефон">
-                                    <select class="select">
-                                        <option disabled selected value="0">Выберите филиал</option>
-                                        <option value="1">г. Мытищи, Борисовка 16</option>
-                                        <option value="2">г. Мытищи, Кадомцева 2</option>
-                                        <option value="3">г. Мытищи, 2-я Институтская 24А</option>
-                                        <option value="4">г. Балашиха, Реутовская 20</option>
-                                    </select>
-                                    <div class="form__footer">
-                                        <button type="submit" class="form__btn btn btn-secondary btn-md">Отправить</button>
-                                        <button type="button" class="form__tooltip icon-info"></button>
-                                    </div>
-                                </form>
-                                <div class="promo__info hidden">
-                                    <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
-                                    <div class="promo__info-text">
-                                        Мы не передадим Ваши
-                                        данные третьим лицам
-                                    </div>
-                                </div>
-                            </div>
+                            @@include('./html/templates/_main-form.html')
                         </div>
                     </div>
                 </section>
@@ -184,7 +157,13 @@
                     </div>
                 </section>
                 @@include('html/_why-8.html', {})
-                @@include('html/_teachers.html', {})
+                @@include('html/_teachers.html', {
+                "subtitle": "Команда опытных преподавателей, которые любят детей и&nbsp;стремятся дать им все самое лучшее!",
+                "text": 2,
+                "logo": false,
+                "link": true,
+                "bg": "grey"
+                })
                 @@include('html/_lesson.html', {})
                 @@include('html/_sign-lesson.html', {})
                 <div class="our-centres our-centres_white">
@@ -213,7 +192,7 @@
                             <div class="swiper-wrapper">
                                 <div class="info__card swiper-slide">
                                     <div class="info__card-image">
-                                        <img src="@img/preschoolers/01.jpg" class="cover-image" alt="Фото дошкольника">
+                                        <img src="@img/education/01.jpg" class="cover-image" alt="Фото дошкольника">
                                     </div>
                                     <div class="info__card-body">
                                         <div class="info__card-title h5">Кембриджская программа</div>
@@ -224,7 +203,7 @@
                                 </div>
                                 <div class="info__card swiper-slide">
                                     <div class="info__card-image">
-                                        <img src="@img/preschoolers/02.jpg" class="cover-image" alt="Фото дошкольника">
+                                        <img src="@img/education/02.jpg" class="cover-image" alt="Фото дошкольника">
                                     </div>
                                     <div class="info__card-body">
                                         <div class="info__card-title h5">Аутентичные пособия</div>
@@ -235,7 +214,7 @@
                                 </div>
                                 <div class="info__card swiper-slide">
                                     <div class="info__card-image">
-                                        <img src="@img/preschoolers/03.jpg" class="cover-image" alt="Фото дошкольника">
+                                        <img src="@img/education/03.jpg" class="cover-image" alt="Фото дошкольника">
                                     </div>
                                     <div class="info__card-body">
                                         <div class="info__card-title h5">Прочные знания</div>
@@ -247,7 +226,7 @@
                                 </div>
                                 <div class="info__card swiper-slide">
                                     <div class="info__card-image">
-                                        <img src="@img/preschoolers/04.jpg" class="cover-image" alt="Фото дошкольника">
+                                        <img src="@img/education/04.jpg" class="cover-image" alt="Фото дошкольника">
                                     </div>
                                     <div class="info__card-body">
                                         <div class="info__card-title h5">Кембриджская программа</div>

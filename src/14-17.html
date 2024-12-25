@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.html', {
+    'title': 'Главная страница'
+    })
+    <body>
+        <section class="wrapper">
+            @@include('html/_header.html', {
+            "logo": "initial",
+            "colorBottom": "text"
+            })
+            <main class="page">
+                <section class="promo promo-14-17">
+                    <div class="container">
+                        <div class="promo__body">
+                            <div class="promo__offer text-center-mobile">
+                                <h1 class="promo__title h2">делаем уроки
+                                    по-настоящему интересными!</h1>
+                                <p class="promo__subtitle promo__subtitle-sm">
+                                    научим свободно говорить и поможем освоить сложную грамматику
+                                </p>
+                            </div>
+                            @@include('./html/templates/_main-form.html')
+                        </div>
+                    </div>
+                </section>
+                <section class="desc">
+                    <div class="container">
+                        <div class="desc__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="desc__main">
+                                        <h2 class="desc__title h4">Курсы английского языка для подростков 14-17 лет в г. мытищи</h2>
+                                        <div class="desc__text text-block">
+                                            <p>Cовременным подросткам необходим современный английский!</p>
+                                            <p>Мы поможем улучшить разговорный английский, разобраться с грамматикой, подготовиться к международным экзаменам и внутренним экзаменам в ведущие ВУЗы, сдать ОГЭ или ЕГЭ, улучшить оценки в школе и сделать изучение английского своим хобби!</p>
+                                        </div>
+                                        <div class="desc__logo">
+                                            <img src="@img/icons/CME-for-kids.svg" alt="Логотип">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="desc__image">
+                                        <img src="@img/vacancies.jpg" class="cover-image" alt="Фото основательницы">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_goals.html', {})
+                @@include('html/_cards-7.html', {})
+                @@include('html/_atmosphere.html', {})
+                @@include('html/_teachers.html', {
+                "subtitle": "Команда опытных преподавателей, которые любят детей и&nbsp;стремятся дать им все самое лучшее!",
+                "text": 2,
+                "logo": false,
+                "link": true,
+                "bg": "grey"
+                })
+                @@include('html/_lesson.html', {})
+                @@include('html/_sign-lesson.html', {})
+                @@include('html/_why-9.html', {})
+                <section class="language-desc">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="language-desc__image">
+                                    <img src="@img/pictures/ege.svg" alt="Рисунок">
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="language-desc__main">
+                                    <h2 class="language-desc__title h5 text-center-mobile">
+                                        <img src="@img/icons/doc.svg" alt="Иконка">
+                                        обязательный контроль в&nbsp;течение учебного года
+                                    </h2>
+                                    <p class="language-desc__text text-block-md">
+                                        10 лет успешно готовим к экзаменам ОГЭ и ЕГЭ. Отличные результаты позволили нашим ученикам поступить в МГИМО, РУДН, МГУ, ВШЭ и другие вузы.
+                                    </p>
+                                    <a href="/ege.html" class="language-desc__btn btn btn-primary btn-sm">Подробнее</a>
+                                    <div class="language-desc__icon">
+                                        <img src="@img/icons/doc.svg" alt="Иконка">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="info">
+                    <div class="container">
+                        <h2 class="info__title h3 text-center">почему наши студенты добиваются успехов?</h2>
+                        <div class="info__slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/education/09.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">Коммуникативная методика</div>
+                                        <div class="info__card-text">
+                                            <p>На уроках много общения и разговорной практики. Мы поможем подросткам овладеть современными языковыми оборотами, фразами и словами для комфортного общения с иностранцами. Обучаем разговорному английскому для повседневного общения, учебы и путешествий!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/education/10.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">регулярные занятия с носителем</div>
+                                        <div class="info__card-text">
+                                            <p>Регулярные уроки с носителем языка уже включены в стоимость обучения. Занятия с носителем языка вносят разнообразие в учебный процесс и являются отличной разговорной практикой. Отличный способ избавиться от языкового барьера.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/education/11.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">аутентичные Учебные материалы</div>
+                                        <div class="info__card-text">
+                                            <p>Используем современные оксфордские и кембриджские учебные материалы. Актуальные темы, упор на разговорные навыки, аутентичные аудио и видео, логичная структура - все это делает занятия по учебным материалам эффективными и интересными.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info__card swiper-slide">
+                                    <div class="info__card-image">
+                                        <img src="@img/education/12.jpg" class="cover-image" alt="Фото дошкольника">
+                                    </div>
+                                    <div class="info__card-body">
+                                        <div class="info__card-title h5">Сделайте английский своим хобби!</div>
+                                        <div class="info__card-text">
+                                            <p>Мы называем наш поход «Эдьютейнмент» — это обучение в формате развлечений (от англ. education — образование, entertainment — развлечение). Используем игровые механики, интерактивные технологии и развлекательные элементы в обучении. Наша цель – сделать</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info__slider-pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                @@include('html/_regular.html', {
+                "bg": "grey"
+                })
+                @@include('html/_partner.html', {})
+                @@include('html/_license.html', {})
+                <section class="desc desc-white">
+                    <div class="container">
+                        <div class="desc__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="desc__main">
+                                        <h2 class="desc__title h3">разговорные клубы и <br> мастер-классы</h2>
+                                        <div class="desc__text text-block-lg">
+                                            <p>Помимо основных занятий мы устраиваем разговорные клубы английского языка с носителями, увлекательные мастер классы и праздничные уроки.</p>
+                                        </div>
+                                        <div class="desc__logo">
+                                            <img src="@img/icons/superman.png" alt="Супермэн">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="desc__image">
+                                        <img src="@img/holiday.jpg" class="cover-image" alt="Праздник">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_banner.html', {})
+                <div class="our-centres our-centres_white">
+                    <div class="container">
+                        <div class="centres__body">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="our-centres__icon">
+                                        <img src="@img/icons/cam.svg" alt="Иконка">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="our-centres__video icon-camera">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Otrlgr8Em4k?si=DUVLpiNOB3K8SKaE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="prices">
+                    <div class="container">
+                        <div class="prices__header">
+                            <h2 class="prices__title h3 text-center">стоимость обучения</h2>
+                        </div>
+                        <div class="prices__body">
+                            <div class="prices__block">
+                                <h3 class="prices__caption h6 text-center">
+                                    ЗАНЯТИЯ В ГРУППАХ
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Стоимость за месяц <br> (8 занятий)
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    5980
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    5580р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="prices__block">
+                                <h3 class="prices__caption h6 text-center">
+                                    ИНДИВИДУАЛЬНЫЕ ЗАНЯТИЯ
+                                </h3>
+                                <div class="prices__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Продолжительность <br> занятия
+                                            </div>
+                                            <div class="prices__table-row">
+                                                45 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                60 мин
+                                            </div>
+                                            <div class="prices__table-row">
+                                                90 мин
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Русскоговорящий <br> преподаватель
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1350
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1125р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1700
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1500р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    2550
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    2250р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="prices__slide swiper-slide">
+                                            <div class="prices__table-row">
+                                                Носитель языка
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    1700
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    1500р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    2300
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    2000р.
+                                                </span>
+                                            </div>
+                                            <div class="prices__table-row">
+                                                <span class="prices__table-price-old">
+                                                    3500
+                                                </span>
+                                                <span class="prices__table-price-current">
+                                                    3000р.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prices__slider-pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @@include('html/_reviews.html', {})
+                @@include('html/_faq.html', {})
+                @@include('html/_trial.html', {
+                "subtitle": "Наши администраторы ответят на все вопросы и подберут подходящую группу"
+                })
+            </main>
+            @@include('html/_footer.html', {})
+            @@include('html/_modal.html', {})
+            @@include('html/_js.html', {})
+    </body>
+</html>

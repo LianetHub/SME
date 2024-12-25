@@ -78,6 +78,10 @@
 			margin-top: 2.44rem;
 		}
 	}
+	// .language-desc__btn
+	&__btn {
+		margin-top: 2.5rem;
+	}
 	// .language-desc__icon
 	&__icon {
 		margin-top: 2rem;
@@ -350,6 +354,7 @@
 	// .info__slider
 	&__slider {
 		margin-top: rem(40);
+		overflow: visible;
 		@media (min-width: $md4) {
 			margin-top: rem(60);
 		}
