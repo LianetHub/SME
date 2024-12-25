@@ -175,6 +175,86 @@
 			background-image: url("@img/banners/banner-14-17.jpg");
 		}
 	}
+	&.promo-adults {
+		background-position: center bottom;
+		background-color: #d9d2c9;
+		.promo__offer {
+			@media (min-width: $md4) {
+				margin-left: auto;
+				max-width: 20rem;
+			}
+
+			@media (min-width: $md2) {
+				max-width: rem(360);
+			}
+		}
+		.promo__subtitle {
+			margin-top: 1rem;
+			max-width: 100%;
+		}
+		.promo__title {
+			color: #393939;
+		}
+		.promo__side {
+			@media (max-width: $md4) {
+				margin-top: 24rem;
+			}
+			@media (max-width: $md5) {
+				margin-top: 14rem;
+			}
+			@media (min-width: $md4) {
+				margin-left: 0;
+			}
+			@media (min-width: $md2) {
+				margin-left: rem(132);
+			}
+		}
+		@media (max-width: $md4) {
+			background-size: contain;
+			background-image: url("@img/banners/banner-adults-mobile.jpg");
+		}
+		@media (min-width: $md4) {
+			background-image: url("@img/banners/banner-adults.jpg");
+			@media (max-width: $md2) {
+				background-position: 45% bottom;
+			}
+		}
+	}
+	&.promo-minigarden {
+		background-position: center top;
+		background-color: #d57e28;
+		background-size: cover;
+		.promo__title {
+			@media (max-width: $md5) {
+				font-size: 1.9375rem;
+			}
+		}
+		.promo__offer {
+			max-width: 100%;
+			@media (min-width: $md4) {
+				max-width: 17.8125rem;
+			}
+			@media (min-width: $md2) {
+				max-width: 20rem;
+			}
+		}
+		.promo__subtitle {
+			max-width: 100%;
+		}
+		.promo__side {
+			@media (max-width: $md4) {
+				margin-top: 20rem;
+			}
+		}
+		@media (max-width: $md4) {
+			background-image: url("@img/banners/banner-minigarden-mobile.jpg");
+			background-size: cover;
+			background-position: center 0;
+		}
+		@media (min-width: $md4) {
+			background-image: url("@img/banners/banner-minigarden.jpg");
+		}
+	}
 	// .promo__body
 	&__body {
 		display: flex;
@@ -191,6 +271,9 @@
 	// .promo__offer
 	&__offer {
 		max-width: 30rem;
+		&.promo__offer-sm {
+			max-width: 23.75rem;
+		}
 	}
 	// .promo__image
 	&__image {
@@ -380,6 +463,18 @@
 			}
 			@media (min-width: $md2) {
 				font-size: 1.375rem;
+			}
+		}
+		&.promo__subtitle-md {
+			font-family: $font-bebas;
+			font-weight: 700;
+			margin: 0.5rem 0 0 0;
+			font-size: 1.125rem;
+			@media (min-width: $md4) {
+				font-size: 1.375rem;
+			}
+			@media (min-width: $md2) {
+				font-size: 1.5rem;
 			}
 		}
 		&.h6 {
@@ -715,6 +810,9 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0;
 	}
+	& + .desc {
+		padding-top: 0;
+	}
 	// .why__title
 	&__title {
 	}
@@ -847,6 +945,7 @@
 		}
 		&:has(.why__card-background) {
 			color: #fff;
+			background: transparent;
 			&::before {
 				color: #fff !important;
 			}
@@ -941,6 +1040,7 @@
 	// .why__card-background
 	&__card-background {
 		position: absolute;
+		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -1484,8 +1584,36 @@
 	@media (min-width: $md3) {
 		padding: 2.5rem 0;
 	}
+	&.banner-violet {
+		background: #cb6ce6;
+		@media (max-width: $md4) {
+			text-align: center;
+			.banner__body {
+				--gutter-y: 1.25rem;
+			}
+		}
+	}
+	& + .cards {
+		@media (min-width: $md3) {
+			margin-top: 2.5rem;
+		}
+	}
 	// .banner__container
 	&__container {
+	}
+	// .banner__icon
+	&__icon {
+		text-align: right;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 3.75rem;
+		@media (min-width: $md4) {
+			max-width: 5rem;
+			margin-right: 0;
+		}
+		@media (min-width: $md2) {
+			max-width: 6.3625rem;
+		}
 	}
 	// .banner__body
 	&__body {
@@ -1508,6 +1636,12 @@
 		& small {
 			line-height: 0.8;
 			font-size: 0.7em;
+		}
+		&.h3 {
+			line-height: 1.3;
+			@media (max-width: $md4) {
+				font-size: 1.4375rem;
+			}
 		}
 	}
 	// .banner__desc
@@ -1919,6 +2053,10 @@
 			}
 		}
 	}
+	// .teachers__logo
+	&__logo {
+		margin-top: rem(51);
+	}
 }
 
 .desc {
@@ -2056,6 +2194,13 @@
 			margin-top: 2.5rem;
 		}
 	}
+	// .cards__title
+	&__title {
+		margin-bottom: 4.5rem;
+		@media (min-width: $md2) {
+			margin-bottom: 5.75rem;
+		}
+	}
 	// .cards__slider
 	&__slider {
 		margin: 0 auto;
@@ -2187,5 +2332,37 @@
 			font-size: 0.9375rem;
 			margin-top: 1rem;
 		}
+	}
+}
+
+.heading {
+	padding: 2.5rem;
+	@media (min-width: $md3) {
+		padding: 3.75rem 0;
+	}
+	// .heading__body
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 40.125rem;
+		margin: 0 auto;
+		gap: 1.88rem;
+		@media (min-width: $md4) {
+			gap: 2.5rem;
+		}
+		@media (min-width: $md2) {
+			gap: 3.12rem;
+		}
+	}
+	// .heading__title
+	&__title {
+	}
+	// .heading__logo
+	&__logo {
+	}
+	// .heading__subtitle
+	&__subtitle {
+		font-weight: 700;
 	}
 }

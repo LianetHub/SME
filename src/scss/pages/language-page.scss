@@ -77,6 +77,15 @@
 			max-width: 100%;
 			margin-top: 2.44rem;
 		}
+		&:is(ul) {
+			list-style: disc;
+			padding-left: 1em;
+			& li {
+				&:not(:last-child) {
+					margin-bottom: 0.75em;
+				}
+			}
+		}
 	}
 	// .language-desc__btn
 	&__btn {
@@ -470,9 +479,11 @@
 		.row {
 			@media (min-width: $md3) {
 				--gutter-x: #{rem(40)};
+				--gutter-y: #{rem(40)};
 			}
 			@media (min-width: $md2) {
 				--gutter-x: #{rem(65)};
+				--gutter-y: #{rem(65)};
 			}
 		}
 	}
@@ -501,5 +512,117 @@
 		@media (min-width: $md5) {
 			max-width: 100%;
 		}
+	}
+}
+
+.daily-routine {
+	padding: 1.875rem 0 2.5rem;
+	@media (min-width: $md3) {
+		padding: 1.875rem 0 5rem;
+	}
+	// .daily-routine__title
+	&__title {
+	}
+	// .daily-routine__body
+	&__body {
+		margin-top: 3.75rem;
+		.row {
+			align-items: center;
+		}
+	}
+	// .daily-routine__items
+	&__items {
+		overflow: visible;
+		.swiper-wrapper {
+			@media (min-width: $md4) {
+				flex-direction: column;
+			}
+		}
+	}
+	// .daily-routine__item
+	&__item {
+		@media (max-width: $md4) {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	// .daily-routine__item-time
+	&__item-time {
+	}
+	// .daily-routine__item-desc
+	&__item-desc {
+	}
+	// .daily-routine__pagination
+	&__pagination {
+	}
+	// .daily-routine__item
+	&__item {
+		display: flex;
+		gap: 0.62rem;
+		@media (min-width: $md4) {
+			gap: 2.4rem;
+		}
+		&:not(:last-child) {
+			@media (min-width: $md4) {
+				margin-bottom: 1.6rem;
+			}
+			@media (min-width: $md2) {
+				margin-bottom: 1.85rem;
+			}
+			.daily-routine__item-time {
+				&::before {
+					content: "";
+					position: absolute;
+					background: #cb6ce6;
+					width: 100%;
+					height: 0.125rem;
+					top: calc(100% - 0.5625rem);
+					left: 0;
+					@media (min-width: $md4) {
+						left: auto;
+						right: 0.5625rem;
+						top: 0;
+						width: 0.125rem;
+						height: calc(100% + 1.6rem);
+					}
+					@media (min-width: $md2) {
+						height: calc(100% + 1.85rem);
+					}
+				}
+			}
+		}
+	}
+	// .daily-routine__item-time
+	&__item-time {
+		position: relative;
+		flex-shrink: 0;
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		gap: 0.56rem;
+		@media (min-width: $md4) {
+			justify-content: space-between;
+			flex-direction: row;
+			width: 8.5rem;
+		}
+		@media (min-width: $md2) {
+			width: 9.1rem;
+		}
+		&::after {
+			content: "";
+			flex-shrink: 0;
+			width: 1.25rem;
+			height: 1.25rem;
+			border-radius: 50%;
+			background: #cb6ce6;
+		}
+	}
+	// .daily-routine__item-desc
+	&__item-desc {
+		padding-right: 1.25rem;
+	}
+	// .daily__image
+	&__image {
 	}
 }

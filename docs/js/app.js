@@ -316,6 +316,17 @@ $(function () {
         })
     }
 
+    if ($('.daily-routine__items').length) {
+        getMobileSlider('.daily-routine__items', {
+            slidesPerView: 'auto',
+            pagination: {
+                clickable: true,
+                el: '.daily-routine__pagination'
+            }
+        })
+    }
+
+
 
 
     function getMobileSlider(sliderName, options) {

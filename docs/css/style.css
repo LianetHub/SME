@@ -7,14 +7,6 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "BebasNeue";
   font-display: swap;
   src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
@@ -41,14 +33,6 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-display: swap;
   src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
@@ -57,7 +41,23 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
   src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -2285,6 +2285,34 @@ h6,
   max-width: 100%;
 }
 
+.promo.promo-adults {
+  background-position: center bottom;
+  background-color: #d9d2c9;
+}
+
+.promo.promo-adults .promo__subtitle {
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+.promo.promo-adults .promo__title {
+  color: #393939;
+}
+
+.promo.promo-minigarden {
+  background-position: center top;
+  background-color: #d57e28;
+  background-size: cover;
+}
+
+.promo.promo-minigarden .promo__offer {
+  max-width: 100%;
+}
+
+.promo.promo-minigarden .promo__subtitle {
+  max-width: 100%;
+}
+
 .promo__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2301,6 +2329,10 @@ h6,
 
 .promo__offer {
   max-width: 30rem;
+}
+
+.promo__offer.promo__offer-sm {
+  max-width: 23.75rem;
 }
 
 .promo__image {
@@ -2413,6 +2445,13 @@ h6,
 }
 
 .promo__subtitle.promo__subtitle-sm {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.125rem;
+}
+
+.promo__subtitle.promo__subtitle-md {
   font-family: "BebasNeue";
   font-weight: 700;
   margin: 0.5rem 0 0 0;
@@ -2674,6 +2713,10 @@ h6,
   padding: 3.75rem 0;
 }
 
+.why + .desc {
+  padding-top: 0;
+}
+
 .why__body {
   overflow: visible;
 }
@@ -2736,6 +2779,7 @@ h6,
 
 .why__card:has(.why__card-background) {
   color: #fff;
+  background: transparent;
 }
 
 .why__card:has(.why__card-background)::before {
@@ -2806,6 +2850,7 @@ h6,
 
 .why__card-background {
   position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -3153,6 +3198,17 @@ h6,
   padding: 1.875rem 0;
 }
 
+.banner.banner-violet {
+  background: #cb6ce6;
+}
+
+.banner__icon {
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 3.75rem;
+}
+
 .banner__body {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3167,6 +3223,10 @@ h6,
 .banner__title small {
   line-height: 0.8;
   font-size: 0.7em;
+}
+
+.banner__title.h3 {
+  line-height: 1.3;
 }
 
 .banner__btn {
@@ -3428,6 +3488,10 @@ h6,
   font-size: 2.5rem;
 }
 
+.teachers__logo {
+  margin-top: 3.1875rem;
+}
+
 .desc {
   background: #f6f6f6;
   padding: 2.75rem 0 0;
@@ -3506,6 +3570,10 @@ h6,
 
 .cards + .desc {
   margin-top: 1.875rem;
+}
+
+.cards__title {
+  margin-bottom: 4.5rem;
 }
 
 .cards__slider {
@@ -3589,6 +3657,30 @@ h6,
 
 .goals__slide-desc {
   margin-top: 1.25rem;
+}
+
+.heading {
+  padding: 2.5rem;
+}
+
+.heading__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 40.125rem;
+  margin: 0 auto;
+  gap: 1.88rem;
+}
+
+.heading__subtitle {
+  font-weight: 700;
 }
 
 .page {
@@ -4322,6 +4414,15 @@ h6,
   margin-right: auto;
 }
 
+.language-desc__text:is(ul) {
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.language-desc__text:is(ul) li:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+
 .language-desc__btn {
   margin-top: 2.5rem;
 }
@@ -4641,6 +4742,70 @@ h6,
 .results__item-desc {
   margin-top: 1.25rem;
   max-width: 17.1875rem;
+}
+
+.daily-routine {
+  padding: 1.875rem 0 2.5rem;
+}
+
+.daily-routine__body {
+  margin-top: 3.75rem;
+}
+
+.daily-routine__body .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.daily-routine__items {
+  overflow: visible;
+}
+
+.daily-routine__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.62rem;
+}
+
+.daily-routine__item:not(:last-child) .daily-routine__item-time::before {
+  content: "";
+  position: absolute;
+  background: #cb6ce6;
+  width: 100%;
+  height: 0.125rem;
+  top: calc(100% - 0.5625rem);
+  left: 0;
+}
+
+.daily-routine__item-time {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.56rem;
+}
+
+.daily-routine__item-time::after {
+  content: "";
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #cb6ce6;
+}
+
+.daily-routine__item-desc {
+  padding-right: 1.25rem;
 }
 
 .prices {
@@ -6537,6 +6702,27 @@ h6,
     background-image: url("../img/banners/banner-14-17.jpg");
   }
 
+  .promo.promo-adults .promo__offer {
+    margin-left: auto;
+    max-width: 20rem;
+  }
+
+  .promo.promo-adults .promo__side {
+    margin-left: 0;
+  }
+
+  .promo.promo-adults {
+    background-image: url("../img/banners/banner-adults.jpg");
+  }
+
+  .promo.promo-minigarden .promo__offer {
+    max-width: 17.8125rem;
+  }
+
+  .promo.promo-minigarden {
+    background-image: url("../img/banners/banner-minigarden.jpg");
+  }
+
   .promo__body {
     padding: 2.75rem 0 1rem;
     -webkit-box-pack: justify;
@@ -6571,6 +6757,10 @@ h6,
 
   .promo__subtitle.promo__subtitle-sm {
     font-size: 1.25rem;
+  }
+
+  .promo__subtitle.promo__subtitle-md {
+    font-size: 1.375rem;
   }
 
   .promo__subtitle.h6 {
@@ -6812,6 +7002,11 @@ h6,
     margin-top: 2rem;
   }
 
+  .banner__icon {
+    max-width: 5rem;
+    margin-right: 0;
+  }
+
   .banner__body {
     --gutter-y: 1.75rem;
   }
@@ -6895,6 +7090,10 @@ h6,
 
   .cards__slider-pagination {
     display: none;
+  }
+
+  .heading__body {
+    gap: 2.5rem;
   }
 
   .our-centres__video::before {
@@ -7106,6 +7305,40 @@ h6,
     display: none;
   }
 
+  .daily-routine__items .swiper-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .daily-routine__item {
+    gap: 2.4rem;
+  }
+
+  .daily-routine__item:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  .daily-routine__item:not(:last-child) .daily-routine__item-time::before {
+    left: auto;
+    right: 0.5625rem;
+    top: 0;
+    width: 0.125rem;
+    height: calc(100% + 1.6rem);
+  }
+
+  .daily-routine__item-time {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 8.5rem;
+  }
+
   .prices__table-row {
     font-size: 1rem;
   }
@@ -7291,6 +7524,10 @@ h6,
     padding: 2.5rem 0;
   }
 
+  .banner + .cards {
+    margin-top: 2.5rem;
+  }
+
   .faq__icon {
     margin-top: auto;
     display: block;
@@ -7323,6 +7560,10 @@ h6,
 
   .goals__slide-title {
     margin-top: 1.875rem;
+  }
+
+  .heading {
+    padding: 3.75rem 0;
   }
 
   .types-learning__card {
@@ -7441,6 +7682,11 @@ h6,
 
   .results__body .row {
     --gutter-x: 2.5rem;
+    --gutter-y: 2.5rem;
+  }
+
+  .daily-routine {
+    padding: 1.875rem 0 5rem;
   }
 
   .prices {
@@ -7885,6 +8131,18 @@ h6,
     max-width: 22rem;
   }
 
+  .promo.promo-adults .promo__offer {
+    max-width: 22.5rem;
+  }
+
+  .promo.promo-adults .promo__side {
+    margin-left: 8.25rem;
+  }
+
+  .promo.promo-minigarden .promo__offer {
+    max-width: 20rem;
+  }
+
   .promo__image.lg-image {
     min-width: 20rem;
   }
@@ -7914,6 +8172,10 @@ h6,
 
   .promo__subtitle.promo__subtitle-sm {
     font-size: 1.375rem;
+  }
+
+  .promo__subtitle.promo__subtitle-md {
+    font-size: 1.5rem;
   }
 
   .promo__subtitle.h6 {
@@ -8074,6 +8336,10 @@ h6,
     max-width: 100%;
   }
 
+  .banner__icon {
+    max-width: 6.3625rem;
+  }
+
   .banner__title {
     padding-left: 1rem;
   }
@@ -8165,6 +8431,10 @@ h6,
     margin-top: 2.5rem;
   }
 
+  .cards__title {
+    margin-bottom: 5.75rem;
+  }
+
   .cards__slider {
     max-width: 56rem;
   }
@@ -8182,6 +8452,10 @@ h6,
 
   .goals__slide-title {
     padding-right: 1.15rem;
+  }
+
+  .heading__body {
+    gap: 3.12rem;
   }
 
   .our-centres {
@@ -8401,6 +8675,19 @@ h6,
 
   .results__body .row {
     --gutter-x: 4.0625rem;
+    --gutter-y: 4.0625rem;
+  }
+
+  .daily-routine__item:not(:last-child) {
+    margin-bottom: 1.85rem;
+  }
+
+  .daily-routine__item:not(:last-child) .daily-routine__item-time::before {
+    height: calc(100% + 1.85rem);
+  }
+
+  .daily-routine__item-time {
+    width: 9.1rem;
   }
 
   .prices__desc {
@@ -9162,6 +9449,25 @@ h6,
     background-position: center 80%;
   }
 
+  .promo.promo-adults .promo__side {
+    margin-top: 24rem;
+  }
+
+  .promo.promo-adults {
+    background-size: contain;
+    background-image: url("../img/banners/banner-adults-mobile.jpg");
+  }
+
+  .promo.promo-minigarden .promo__side {
+    margin-top: 20rem;
+  }
+
+  .promo.promo-minigarden {
+    background-image: url("../img/banners/banner-minigarden-mobile.jpg");
+    background-size: cover;
+    background-position: center 0;
+  }
+
   .promo__image ~ .promo__side:not(:first-child) {
     margin-top: 2rem;
   }
@@ -9234,9 +9540,21 @@ h6,
     margin: 0 auto;
   }
 
+  .banner.banner-violet {
+    text-align: center;
+  }
+
+  .banner.banner-violet .banner__body {
+    --gutter-y: 1.25rem;
+  }
+
   .banner__title {
     line-height: 0.95;
     font-size: 3.75rem;
+  }
+
+  .banner__title.h3 {
+    font-size: 1.4375rem;
   }
 
   .cert__info-title {
@@ -9302,6 +9620,17 @@ h6,
   .info__title {
     font-size: 2.25rem;
   }
+
+  .daily-routine__item {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -9356,6 +9685,14 @@ h6,
     background-image: url("../img/banners/banner-preschoolers-mobile.jpg");
     background-size: 100% auto;
     background-position: center 0;
+  }
+
+  .promo.promo-adults .promo__side {
+    margin-top: 14rem;
+  }
+
+  .promo.promo-minigarden .promo__title {
+    font-size: 1.9375rem;
   }
 
   .promo__image.sm-mobile {
@@ -9515,6 +9852,12 @@ h6,
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   .promo.promo-home {
     background-position: 38% bottom;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .promo.promo-adults {
+    background-position: 45% bottom;
   }
 }
 
