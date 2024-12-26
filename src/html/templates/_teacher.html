@@ -1,0 +1,39 @@
+<div class="teacher swiper-slide">
+    <a href="#@@id" data-fancybox class="teacher__main">
+        <span class="teacher__image">
+            <img src="@@image" alt="Фото преподавателя">
+        </span>
+        <span class="teacher__name text-block-md fw-bold">
+            @@name
+        </span>
+        <span class="teacher__position text-block-md">
+            Язык: @@language <br>
+            Стаж: @@experience
+        </span>
+    </a>
+    <div id="@@id" class="teacher__modal">
+        <div class="teacher__modal-content">
+            <button type="button" class="teacher__modal-close icon-close" data-fancybox-close></button>
+            <div class="teacher__modal-thumb">
+                <img src="@@image" alt="Фото преподавателя">
+            </div>
+            <div class="teacher__modal-body">
+                <div class="teacher__modal-header">
+                    <div class="teacher__modal-logo">
+                        <img src="@img/icons/CME-teachers.svg" alt="Логотип">
+                    </div>
+                    <div class="teacher__modal-name">
+                        @@name
+                    </div>
+                </div>
+                <div class="teacher__modal-info text-block-lg">
+                    Язык: @@language <br>
+                    Стаж преподавания: @@experience
+                </div>
+                <div class="teacher__modal-desc">
+                    @@desc
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

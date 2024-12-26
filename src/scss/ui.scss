@@ -125,6 +125,14 @@ h6,
 	color: $red;
 }
 
+.color-blue {
+	color: #38b6ff;
+}
+
+.color-white {
+	color: #fff;
+}
+
 //============ МОДУЛИ ====================
 @import "modules/popup";
 @import "modules/breadcrumbs";

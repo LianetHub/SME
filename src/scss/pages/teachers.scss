@@ -1,0 +1,47 @@
+.requirements {
+	padding: 2.5rem 0;
+	margin-top: 1.87rem;
+	@media (min-width: $md4) {
+		margin-top: 2.5rem;
+		padding: 3.75rem 0;
+	}
+	background: #f6f6f6;
+	// .requirements__title
+	&__title {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 2.5rem;
+		text-align: center;
+		@media (min-width: $md4) {
+			text-align: left;
+			gap: 1.25rem;
+			flex-direction: row;
+		}
+	}
+	// .requirements__title-icon
+	&__title-icon {
+	}
+	// .requirements__body
+	&__body {
+		margin-top: 1.25rem;
+		@media (min-width: $md4) {
+			margin-top: 2.69rem;
+		}
+		& p,
+		ul {
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+		& ul {
+			padding-left: 2.25em;
+			list-style: disc;
+			& li {
+				&:not(:last-child) {
+					margin-bottom: 0.35em;
+				}
+			}
+		}
+	}
+}

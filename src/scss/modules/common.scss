@@ -255,6 +255,96 @@
 			background-image: url("@img/banners/banner-minigarden.jpg");
 		}
 	}
+	&.promo-rock-the-lang {
+		background-color: #cdcacb;
+		background-image: url("@img/banners/banner-rock-the-lang.jpg");
+		@media (max-width: $md4) {
+			background-image: url("@img/banners/banner-rock-the-lang-mobile.jpg");
+			background-position: center top;
+			background-position: center 0;
+		}
+		.promo__title {
+			display: flex;
+			align-items: center;
+			gap: 1.78rem;
+			font-size: 2.25rem;
+			@media (min-width: $md4) {
+				font-size: 2.875rem;
+			}
+			&::before {
+				font-size: 4rem;
+				@media (min-width: $md4) {
+					font-size: 5.0875rem;
+				}
+			}
+		}
+		.promo__body {
+			@media (max-width: $md4) {
+				padding-top: 1rem;
+			}
+		}
+		.promo__subtitle {
+			margin-top: 1.25rem;
+			max-width: 100%;
+			@media (max-width: $md4) {
+				font-size: 1.25rem;
+			}
+		}
+		.promo__side {
+			@media (max-width: $md4) {
+				margin-top: 15rem;
+			}
+		}
+	}
+	&.promo-develop {
+		background-image: url("@img/banners/banner-develop.jpg");
+		@media (max-width: $md4) {
+			background-image: url("@img/banners/banner-develop-mobile.jpg");
+			background-position: center top;
+		}
+		.promo__body {
+			@media (max-width: $md4) {
+				padding-top: 1rem;
+			}
+		}
+		.promo__side {
+			@media (max-width: $md4) {
+				margin-top: 20rem;
+			}
+		}
+		.promo__title {
+			@media (max-width: $md4) {
+				font-size: 1.9375rem;
+				max-width: 80%;
+				margin: 0 auto;
+			}
+		}
+		.promo__subtitle {
+			@media (max-width: $md4) {
+				font-size: 1.625rem;
+				max-width: 75%;
+				margin: 0 auto;
+			}
+		}
+	}
+	&.promo-teachers {
+		background-image: url("@img/banners/banner-teachers.jpg");
+		@media (max-width: $md4) {
+			background-image: url("@img/banners/banner-teachers-mobile.jpg");
+			background-position: center top;
+			.promo__side {
+				margin-top: 20rem;
+			}
+
+			.promo__title {
+				font-size: 1.9375rem;
+				margin-bottom: 0.5rem;
+			}
+			.promo__subtitle {
+				font-size: 1.125rem;
+			}
+		}
+	}
 	// .promo__body
 	&__body {
 		display: flex;
@@ -420,6 +510,9 @@
 			& + .promo__subtitle {
 				margin-top: 0rem;
 			}
+		}
+		&.color-blue {
+			color: #38b6ff;
 		}
 		&.promo__title_xl {
 			font-size: 4.375rem;
@@ -696,6 +789,9 @@
 		@media (min-width: $md2) {
 			padding: 5rem 0;
 		}
+	}
+	&.sign-lesson-white {
+		background: #fff;
 	}
 	// .sign-lesson__title
 	&__title {
@@ -1433,6 +1529,7 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0 2.5rem;
 	}
+
 	// .best-teachers__container
 	&__container {
 	}
@@ -1453,6 +1550,17 @@
 	// .best-teachers__icon
 	&__icon {
 		margin-top: 1.25rem;
+	}
+	// .best-teachers__logo
+	&__logo {
+		max-width: 6.742rem;
+		margin: 0 auto;
+		& img {
+			width: 100%;
+		}
+		& + .best-teachers__slider {
+			margin-top: 3.82rem;
+		}
 	}
 	// .best-teachers__text
 	&__text {
@@ -1519,6 +1627,13 @@
 	@media (min-width: $md3) {
 		width: rem(176);
 	}
+	// .teacher__main
+	&__main {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
 	// .teacher__image
 	&__image {
 		max-width: rem(176);
@@ -1533,6 +1648,110 @@
 	&__position {
 		margin-top: 0.25rem;
 		line-height: 110%;
+	}
+	// .teacher__modal
+	&__modal {
+		display: none;
+	}
+	// .teacher__modal-content
+	&__modal-content {
+		position: relative;
+		border-radius: 2.25rem;
+		border: rem(6) solid #e2e1e2;
+		background: #fff;
+		color: $text;
+		max-width: 59.0625rem;
+		display: flex;
+		gap: 2.13rem;
+		padding: 3.75rem 3rem;
+		flex-direction: column;
+		@media (min-width: $md4) {
+			flex-direction: row;
+		}
+		@media (min-width: $md3) {
+			padding: 4.62rem;
+		}
+	}
+	// .teacher__modal-close
+	&__modal-close {
+		position: absolute;
+
+		background: #e2e1e2;
+		color: #fff;
+		font-size: 1.5rem;
+		width: 1.875rem;
+		height: 1.875rem;
+		border-radius: 50%;
+		transition: background-color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				background: $accent;
+			}
+		}
+		top: 1.25rem;
+		right: 1.25rem;
+		@media (min-width: $md4) {
+			top: 1.94rem;
+			right: 1.94rem;
+		}
+	}
+	// .teacher__modal-body
+	&__modal-body {
+	}
+	// .teacher__modal-thumb
+	&__modal-thumb {
+		width: 100%;
+		@media (min-width: $md4) {
+			flex: 0 0 18.75rem;
+		}
+		& img {
+			width: 100%;
+		}
+	}
+	// .teacher__modal-header
+	&__modal-header {
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+		font-weight: 700;
+		line-height: 140%;
+		font-size: 1.25rem;
+		@media (min-width: $md5) {
+			font-size: 1.5rem;
+		}
+	}
+	// .teacher__modal-logo
+	&__modal-logo {
+		display: none;
+		@media (min-width: $md5) {
+			display: block;
+		}
+	}
+	// .teacher__modal-name
+	&__modal-name {
+	}
+	// .teacher__modal-info
+	&__modal-info {
+		margin-top: 0.62rem;
+		@media (min-width: $md4) {
+			margin-top: 1.25rem;
+		}
+	}
+	// .teacher__modal-desc
+	&__modal-desc {
+		margin-top: 0.62rem;
+		font-size: 0.875rem;
+		@media (min-width: $md4) {
+			font-size: 0.9375rem;
+			margin-top: 1.25rem;
+			overflow-y: auto;
+			padding-right: 3.38rem;
+			&::-webkit-scrollbar-thumb {
+				background: #d6d5dd;
+			}
+			max-height: 10.625rem;
+		}
+		line-height: 140%;
 	}
 }
 
@@ -2104,7 +2323,9 @@
 		line-height: 100%;
 		text-align: center;
 		@media (min-width: $md4) {
-			text-align: left;
+			&:not(.text-center) {
+				text-align: left;
+			}
 		}
 		&.h4 {
 			@media (min-width: $md3) {
@@ -2131,7 +2352,7 @@
 		}
 		@media (min-width: $md5) {
 			margin-top: rem(30);
-			&:not(.text-block-lg) {
+			&:not(.text-block-lg, .text-block-md) {
 				font-size: 1rem;
 			}
 		}
@@ -2172,6 +2393,28 @@
 			height: 100%;
 		}
 	}
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.desc__text {
+			max-width: 30.125rem;
+		}
+	}
+	&__tagline {
+		margin-top: 0.5em;
+	}
+	&__icon {
+		text-align: center;
+		max-width: 40%;
+		margin: 0 auto;
+		@media (min-width: $md4) {
+			text-align: left;
+			padding-left: 5rem;
+			max-width: 100%;
+			margin: 0;
+		}
+	}
 }
 
 .cards {
@@ -2196,9 +2439,25 @@
 	}
 	// .cards__title
 	&__title {
-		margin-bottom: 4.5rem;
+		& + .cards__slider {
+			margin-top: 4.5rem;
+			@media (min-width: $md2) {
+				margin-top: 5.75rem;
+			}
+		}
+	}
+	// .cards__slider
+	&__subtitle {
+		max-width: 49.25rem;
+		margin: 1.25rem auto 0;
 		@media (min-width: $md2) {
-			margin-bottom: 5.75rem;
+			margin: rem(30) auto 0;
+		}
+		& + .cards__slider {
+			margin-top: 4.5rem;
+			@media (min-width: $md3) {
+				margin-top: 5rem;
+			}
 		}
 	}
 	// .cards__slider
@@ -2354,6 +2613,9 @@
 		@media (min-width: $md2) {
 			gap: 3.12rem;
 		}
+		&:has(.heading__text) {
+			max-width: 47.125rem;
+		}
 	}
 	// .heading__title
 	&__title {
@@ -2364,5 +2626,13 @@
 	// .heading__subtitle
 	&__subtitle {
 		font-weight: 700;
+	}
+	// .heading__text
+	&__text {
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
 	}
 }

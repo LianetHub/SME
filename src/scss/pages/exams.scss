@@ -1,0 +1,131 @@
+.popular {
+	// .popular__header
+	&__header {
+		padding: 3.75rem 0;
+		@media (min-width: $md2) {
+			padding: 5rem 0;
+		}
+	}
+	// .popular__title
+	&__title {
+		line-height: 1;
+		@media (min-width: $md3) {
+			font-size: 2.5rem;
+		}
+	}
+	// .popular__slider
+	&__slider {
+		margin-top: 3.13rem;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(1050);
+		overflow: visible;
+	}
+	// .popular__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 12.5rem;
+		@media (min-width: $md4) {
+			width: 100%;
+		}
+	}
+	// .popular__item-name
+	&__item-name {
+		width: 7.5rem;
+		height: 7.5rem;
+		flex-shrink: 0;
+		color: #fff;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		color: #fff;
+		text-align: center;
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 100%;
+		&.orange {
+			background: linear-gradient(137deg, #ff562e 13.5%, #dc390d 85.51%);
+		}
+		&.pink {
+			background: linear-gradient(137deg, #fe2375 13.5%, #d10853 85.51%);
+		}
+		&.blue {
+			background: linear-gradient(137deg, #0280d7 13.5%, #0058aa 85.51%);
+		}
+	}
+	// .popular__item-title
+	&__item-title {
+		margin-top: 2rem;
+		line-height: 100%;
+	}
+	// .popular__item-info
+	&__item-info {
+		margin-top: 0.63rem;
+		max-width: 14.375rem;
+	}
+	// .popular__item-desc
+	&__item-desc {
+		margin-top: 1.25rem;
+		line-height: 110%;
+		max-width: 17.375rem;
+	}
+	// .popular__blocks
+	&__blocks {
+	}
+	// .popular__block
+	&__block {
+		&:nth-child(3n + 1) {
+			background: #fdc5b8;
+		}
+		&:nth-child(3n + 2) {
+			background: #febfd2;
+		}
+		&:nth-child(3n + 3) {
+			background: #bed5ee;
+		}
+		padding: 2.5rem 0;
+	}
+	// .popular__block-title
+	&__block-title {
+	}
+	// .popular__block-body
+	&__block-body {
+		margin-top: 2rem;
+		.row {
+			--gutter-x: 5rem;
+		}
+	}
+	// .popular__block-caption
+	&__block-caption {
+	}
+	// .popular__block-desc
+	&__block-desc {
+		margin-top: 1.25rem;
+		& ul {
+			list-style: disc;
+			padding-left: 1.5em;
+			& li {
+				&:not(:last-child) {
+					margin-bottom: 0.75em;
+				}
+			}
+			&:not(:last-child) {
+				margin-bottom: 1.25rem;
+			}
+		}
+		& p {
+			&:not(:last-child) {
+				margin-bottom: 1.25rem;
+			}
+		}
+	}
+	// .popular__block-footer
+	&__block-footer {
+		margin-top: 2rem;
+	}
+}

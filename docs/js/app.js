@@ -319,9 +319,26 @@ $(function () {
     if ($('.daily-routine__items').length) {
         getMobileSlider('.daily-routine__items', {
             slidesPerView: 'auto',
+            watchOverflow: true,
             pagination: {
                 clickable: true,
                 el: '.daily-routine__pagination'
+            }
+        })
+    }
+
+    if ($('.popular__slider').length) {
+        new Swiper('.popular__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 60,
+            pagination: {
+                el: '.popular__slider-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                767.98: {
+                    slidesPerView: 3,
+                }
             }
         })
     }

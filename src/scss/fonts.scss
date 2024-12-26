@@ -6,10 +6,10 @@
                             font-style: normal;
                         }
 @font-face {
-                            font-family: 'BebasNeue';
+                            font-family: 'icons';
                             font-display: swap;
-                            src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-                            font-weight: 350;
+                            src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+                            font-weight: 400;
                             font-style: normal;
                         }
 @font-face {
@@ -34,6 +34,13 @@
                             font-style: italic;
                         }
 @font-face {
+                            font-family: 'BebasNeue';
+                            font-display: swap;
+                            src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+                            font-weight: 350;
+                            font-style: normal;
+                        }
+@font-face {
                             font-family: 'PTSans';
                             font-display: swap;
                             src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
@@ -44,13 +51,6 @@
                             font-family: 'PTSans';
                             font-display: swap;
                             src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
-                            font-weight: 400;
-                            font-style: normal;
-                        }
-@font-face {
-                            font-family: 'icons';
-                            font-display: swap;
-                            src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
                             font-weight: 400;
                             font-style: normal;
                         }
