@@ -63,6 +63,8 @@ body {
 	min-height: 100%;
 	line-height: normal;
 	color: $text;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	&:has(.header.open-menu) {
 		overflow: hidden;
 		.wrapper {
