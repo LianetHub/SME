@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .gallery {
 	padding: 3.75rem 0;
 	@media (min-width: $md3) {
@@ -47,11 +52,17 @@
 	&__slider-prev {
 		left: 0;
 		@extend %contacts-btn;
+		&.swiper-button-lock {
+			display: none;
+		}
 	}
 	// .gallery__slider-next
 	&__slider-next {
 		right: 0;
 		@extend %contacts-btn;
+		&.swiper-button-lock {
+			display: none;
+		}
 	}
 	// .gallery__slider-pagination
 	&__slider-pagination {

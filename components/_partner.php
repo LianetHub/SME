@@ -1,0 +1,28 @@
+<section class="partner">
+    <div class="container container-sm">
+        <h2 class="partner__title text-center h5">МЕМОРАНДУМ О СОТРУДНИЧЕСТВЕ С УНИВЕРСИТЕТОМ CAMBRIDGE</h2>
+        <div class="partner__body">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-5">
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/img/cambridge.jpg" data-fancybox class="partner__image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cambridge.jpg" class="cover-image" alt="Соглашение о сотрудничестве">
+                    </a>
+                </div>
+                <div class="col-lg-6 offset-xl-1 col-md-7">
+                    <div class="partner__main">
+                        <div class="partner__caption h1">
+                            Официальный <br> ​партнер Cambridge
+                        </div>
+                        <ul class="partner__list">
+                            <li class="partner__list-item">ЯВЛЯЕМСЯ ОФИЦИАЛЬНЫМИ ​ПАРТНЕРАМИ CAMBRIDGE C 2017​ ГОДА​</li>
+                            <li class="partner__list-item">ГОТОВИМ К СДАЧЕ КЕМБРИДЖСКИХ ​ЭКЗАМЕНОВ</li>
+                        </ul>
+                        <div class="partner__logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Cambridge-University-logo.svg" alt="Логотип университета">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../mixins" as *;
+@use "../_variables" as *;
+
 .pagination {
 	display: flex;
 	align-items: center;

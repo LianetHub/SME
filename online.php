@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Template Name:  Online Education Page Template
+ */
+?>
+<?php
+set_query_var('logo', 'pink');
+get_header();
+?>
+
+<?php require_once(TEMPLATE_PATH . '_desc.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_benefits.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_selection.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_why.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_teachers.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_sign-lesson.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_partner.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_license.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_prices.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_reviews.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_faq.php'); ?>
+
+<?php get_footer(); ?>

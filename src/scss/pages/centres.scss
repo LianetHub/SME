@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .centres {
 	padding: 1.25rem 0 3.75rem;
 	@media (min-width: $md5) {
@@ -111,10 +116,10 @@
 		& img {
 			width: 100%;
 			min-height: 12.5rem;
+			object-fit: cover;
 			@media (min-width: $md5) {
 				max-height: 15.875rem;
 			}
-			object-fit: cover;
 		}
 	}
 	// .certer-card__info

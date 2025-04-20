@@ -1,7 +1,7 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = `./docs`;
+const buildFolder = `./assets`;
 const srcFolder = `./src`;
 
 export const path = {
@@ -18,7 +18,6 @@ export const path = {
 		favicon: `${buildFolder}/`,
 		fonts: `${buildFolder}/fonts/`,
 		json: `${buildFolder}/json/`,
-		php: `${buildFolder}/`,
 	},
 	src: {
 		files: `${srcFolder}/files/**/*.*`,
@@ -33,7 +32,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		json: `${srcFolder}/json/*.*`,
-		php: `${srcFolder}/*.php`,
+
 	},
 	watch: {
 		files: `${srcFolder}/files/**/*.*`,
@@ -44,8 +43,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		json: `${srcFolder}/json/*.*`,
 		fonts: `${srcFolder}/fonts/*.{ttf,otf,woff,woff2}`,
-		php: `${srcFolder}/**/*.php`,
-
+		php: `**/*.php`,
 	},
 	clean: buildFolder,
 	srcFolder: srcFolder,

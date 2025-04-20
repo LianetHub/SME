@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../mixins" as *;
+@use "../_variables" as *;
+
 .dropdown {
 	position: relative;
 	width: 100%;
@@ -12,7 +17,7 @@
 			}
 		}
 	}
-	font-size: rem(13);
+	font-size: rem(15);
 	font-weight: 500;
 	line-height: 140%;
 	&.dropdown-top {
@@ -149,6 +154,7 @@
 	&__list-item {
 		cursor: pointer !important;
 		white-space: nowrap;
+		transition: color 0.3s ease 0s;
 		&:not(.active) {
 			@media (any-hover: hover) {
 				&:hover {
@@ -156,7 +162,7 @@
 				}
 			}
 		}
-		transition: color 0.3s ease 0s;
+
 		&.sort {
 			display: block;
 		}

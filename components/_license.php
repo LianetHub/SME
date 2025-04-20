@@ -1,0 +1,32 @@
+<section class="license">
+    <div class="container container-xs">
+        <div class="license__content">
+            <div class="row">
+                <div class="col-xl-5 col-md-6">
+                    <figure class="license__image">
+                        <figcaption class="license__image-caption">Государственная лицензия</figcaption>
+                        <a href="<?php echo get_template_directory_uri(); ?>/assets/img/license.jpg" data-fancybox class="license__image-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/license.jpg" alt="Фото Лицензии">
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-md-6 offset-xl-1">
+                    <div class="license__body">
+                        <div class="license__header">
+                            <div class="license__icon">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/handshake.svg" alt="Иконка">
+                            </div>
+                            <h2 class="license__title h5">Доступна оплата материнским&nbsp;капиталом</h2>
+                        </div>
+                        <p class="license__subtitle text-block-md">
+                            Наши программы лицензированы государством. Вы сможете получить налоговый вычет и использовать материнский капитал для оплаты обучения.
+                        </p>
+                        <div class="license__logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

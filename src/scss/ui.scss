@@ -1,3 +1,18 @@
+@use "sass:math";
+@use "sass:color";
+@use "_mixins" as *;
+@use "_variables" as *;
+@use "icons";
+
+//============ МОДУЛИ ====================
+@use "modules/popup";
+@use "modules/breadcrumbs";
+@use "modules/select";
+@use "modules/pagination";
+// @use "modules/phone-input";
+
+//============ МОДУЛИ ====================
+
 h1,
 .h1 {
 	font-family: $font-bebas;
@@ -133,18 +148,6 @@ h6,
 	color: #fff;
 }
 
-//============ МОДУЛИ ====================
-@import "modules/popup";
-@import "modules/breadcrumbs";
-@import "modules/select";
-@import "modules/pagination";
-@import "modules/phone-input";
-// @import "modules/before-slider";
-// @import "modules/datepicker";
-// @import "modules/animation";
-
-//============ МОДУЛИ ====================
-
 .fw-bold {
 	font-weight: 700;
 }
@@ -170,6 +173,9 @@ h6,
 		border-radius: rem(10);
 		color: rgba($color: $text, $alpha: 0.5);
 		transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+		font-size: 0.8125rem;
+		padding: 0.62em 0.88rem;
+		text-align: center;
 		&.active {
 			color: #fff;
 			background: $text;
@@ -180,9 +186,6 @@ h6,
 				background: $text;
 			}
 		}
-		font-size: 0.8125rem;
-		padding: 0.62em 0.88rem;
-		text-align: center;
 
 		@media (min-width: $md4) {
 			min-width: rem(140);
@@ -267,10 +270,12 @@ h6,
 }
 
 .swiper-button-next {
-	@extend %ic, .icon-next;
+	@extend %ic;
+	@extend .icon-next;
 }
 .swiper-button-prev {
-	@extend %ic, .icon-prev;
+	@extend %ic;
+	@extend .icon-prev;
 }
 
 .swiper-pagination {
@@ -314,11 +319,11 @@ h6,
 // 	}
 // }
 
-// .mobile-only {
-// 	@media (min-width: $md4) {
-// 		display: none;
-// 	}
-// }
+.mobile-only {
+	@media (min-width: $md5) {
+		display: none !important;
+	}
+}
 
 // .tablet-only {
 // 	@media (min-width: $md2) {
@@ -497,9 +502,9 @@ h6,
 // Стилизация скролла
 
 $scrollbarColor: $accent;
-$scrollbarHover: darken(
+$scrollbarHover: color.adjust(
 	$color: $scrollbarColor,
-	$amount: 10,
+	$lightness: -10%,
 );
 
 ::-webkit-scrollbar {

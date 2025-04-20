@@ -1,12 +1,18 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .location {
 	padding: 2.75rem 0;
+	background: #f6f6f6;
 	@media (min-width: $md4) {
 		padding: 3.75rem 0;
 	}
 	@media (min-width: $md2) {
 		padding: 5rem 0;
 	}
-	background: #f6f6f6;
+
 	// .location__title
 	&__title {
 		line-height: 100%;

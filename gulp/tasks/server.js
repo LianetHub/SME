@@ -1,10 +1,8 @@
 export const server = (done) => {
     app.plugins.browsersync.init({
-        server: {
-            baseDir: `${app.path.build.html}`
-        },
+        proxy: "http://wordpress-sme/",
         notify: false,
         port: 3000,
     });
-}
-
+    done();
+};

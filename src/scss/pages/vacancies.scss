@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .benefits {
 	padding: 2.5rem 0;
 	@media (min-width: $md4) {
@@ -6,9 +11,7 @@
 	@media (min-width: $md2) {
 		padding: 5rem 0;
 	}
-	& + .teachers {
-		padding-top: 0;
-	}
+
 	// .benefits__title
 	&__title {
 		line-height: 100%;
@@ -48,10 +51,10 @@
 	// .benefits__icon
 	&__icon {
 		width: 7.5rem;
+		flex-shrink: 0;
 		@media (min-width: $md2) {
 			width: 8.125rem;
 		}
-		flex-shrink: 0;
 	}
 	// .benefits__caption
 	&__caption {
@@ -63,10 +66,11 @@
 	// .benefits__desc
 	&__desc {
 		margin-top: 1.25rem;
+		line-height: 110%;
 		@media (min-width: $md4) {
 			margin-top: 1.5rem;
 		}
-		line-height: 110%;
+
 		&:is(ul) {
 			& li {
 				padding-left: 1.25em;

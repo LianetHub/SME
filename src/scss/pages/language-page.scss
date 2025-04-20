@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .language-desc {
 	padding: 2.25rem 0;
 	background: #f6f6f6;
@@ -6,9 +11,15 @@
 	}
 	&.language-desc-white {
 		background: #fff;
+		& + .sign-lesson {
+			background: #f6f6f6;
+		}
 	}
 	.row {
 		align-items: center;
+	}
+	& + .sign-lesson {
+		background: transparent;
 	}
 	// .language-desc__image
 	&__image {
@@ -29,11 +40,12 @@
 	&__title {
 		display: flex;
 		align-items: center;
+		gap: em(1.87, 2);
 		@media (max-width: $md5) {
 			font-size: 1.875rem;
 			justify-content: center;
 		}
-		gap: em(1.87, 2);
+
 		& img {
 			flex-shrink: 0;
 			width: em(3.9375, 2);
@@ -120,10 +132,10 @@
 	// .selection__body
 	&__body {
 		.row {
+			--gutter-y: 0;
 			@media (max-width: $md4) {
 				flex-direction: column-reverse;
 			}
-			--gutter-y: 0;
 		}
 	}
 	// .selection__title
@@ -224,12 +236,14 @@
 	// .selection__more
 	&__more {
 		margin-top: 1.25rem;
-		@media (min-width: $md4) {
-			margin-top: 2.5rem;
-		}
 		display: inline-flex;
 		align-items: center;
 		gap: 1rem;
+		transition: color 0.3s ease 0s;
+		@media (min-width: $md4) {
+			margin-top: 2.5rem;
+		}
+
 		&::before {
 			order: 1;
 			font-size: 2.5rem;
@@ -237,7 +251,7 @@
 				font-size: 3rem;
 			}
 		}
-		transition: color 0.3s ease 0s;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
@@ -356,6 +370,9 @@
 	@media (min-width: $md3) {
 		padding: 5rem 0;
 	}
+	& + .regular {
+		background: #f6f6f6;
+	}
 	// .info__title
 	&__title {
 		@media (max-width: $md4) {
@@ -398,11 +415,15 @@
 	// .info__card-image
 	&__card-image {
 		flex: 0 0 rem(184);
-		@media (min-width: $md2) {
-			flex: 0 0 rem(204);
-		}
+		height: rem(184);
 		display: flex;
 		flex-direction: column;
+
+		@media (min-width: $md2) {
+			flex: 0 0 rem(204);
+			height: rem(204);
+		}
+
 		& img {
 			flex: 1 1 auto;
 		}
@@ -502,6 +523,7 @@
 	}
 	// .results__item-icon
 	&__item-icon {
+		max-width: rem(64);
 	}
 	// .results__item-caption
 	&__item-caption {

@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .our-centres {
 	background: #f6f6f6;
 	padding: 3.75rem 0;
@@ -140,13 +145,13 @@
 		}
 		& img {
 			height: 3.25rem;
+			width: auto;
 			@media (min-width: $md4) {
 				height: 4.125rem;
 			}
 			@media (min-width: $md2) {
 				height: 4.875rem;
 			}
-			width: auto;
 		}
 	}
 	// .nums__item-value
@@ -155,10 +160,10 @@
 	// .nums__item-desc
 	&__item-desc {
 		margin-top: 0.25rem;
+		line-height: 110%;
 		@media (min-width: $md4) {
 			margin-top: 1rem;
 		}
-		line-height: 110%;
 	}
 }
 
@@ -430,6 +435,7 @@
 	// .languages__item-desc
 	&__item-desc {
 		margin-top: 2.5rem;
+		margin-bottom: auto;
 		@media (max-width: $md5) {
 			line-height: 110%;
 			font-size: 0.875rem;
@@ -440,7 +446,6 @@
 		@media (min-width: $md2) {
 			margin-top: 2.94rem;
 		}
-		margin-bottom: auto;
 	}
 	// .languages__item-btn
 	&__item-btn {
@@ -474,6 +479,8 @@
 		max-width: rem(790);
 		overflow: visible;
 		margin-top: 2.5rem;
+		margin-left: auto;
+		margin-right: auto;
 		@media (min-width: $md4) {
 			margin-top: 4.5rem;
 		}
@@ -481,8 +488,6 @@
 			max-width: rem(850);
 			margin-top: 5.5rem;
 		}
-		margin-left: auto;
-		margin-right: auto;
 	}
 	// .programms__card
 	&__card {
@@ -507,11 +512,12 @@
 	&__card-image {
 		position: absolute;
 		top: -1.25rem;
+		left: 50%;
+		transform: translateX(-50%);
 		@media (min-width: $md2) {
 			top: -2rem;
 		}
-		left: 50%;
-		transform: translateX(-50%);
+
 		& img {
 			height: 4.5rem;
 			width: auto;
@@ -583,13 +589,14 @@
 
 .mission {
 	padding: rem(46) 0 rem(0);
+	background: #f6f6f6;
 	@media (min-width: $md4) {
 		padding: rem(46) 0 rem(60);
 	}
 	@media (min-width: $md2) {
 		padding: 3.75rem 0;
 	}
-	background: #f6f6f6;
+
 	// .mission__body
 	&__body {
 	}

@@ -1,3 +1,8 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .tagline {
 	padding: 2.5rem 0;
 	@media (min-width: $md3) {
@@ -11,13 +16,13 @@
 	// .tagline__title
 	&__title {
 		&.h3 {
+			line-height: 100%;
 			@media (min-width: $md3) {
 				font-size: 2.5rem;
 			}
 			@media (min-width: $md2) {
 				font-size: 3.125rem;
 			}
-			line-height: 100%;
 		}
 	}
 	// .tagline__logo
@@ -39,6 +44,10 @@
 	&__text {
 		font-size: 1.375rem;
 		margin-top: 1.88rem;
+		font-family: $font-bebas;
+		line-height: 120%;
+		text-transform: uppercase;
+		font-weight: 700;
 		@media (min-width: $md3) {
 			margin-top: 2rem;
 			font-size: 1.625rem;
@@ -46,10 +55,6 @@
 		@media (min-width: $md2) {
 			margin-top: 2.87rem;
 		}
-		font-family: $font-bebas;
-		line-height: 120%;
-		text-transform: uppercase;
-		font-weight: 700;
 	}
 }
 
@@ -185,32 +190,35 @@
 			margin-top: 1.88rem;
 			font-size: 1.5rem;
 		}
-		&:has(.about__tagline-icon) {
+		&:has(img) {
 			color: #393939;
 			font-size: 1.25rem;
+			display: flex;
+			align-items: center;
 			@media (min-width: $md4) {
 				text-align: left;
 				font-size: 2rem;
 				font-weight: 700;
 			}
 		}
+		& img {
+			flex-shrink: 0;
+			width: 3.9375rem;
+		}
 	}
-	//  .about__tagline-icon
-	&__tagline-icon {
-		flex-shrink: 0;
-		width: 3.9375rem;
-	}
+
 	// .about__desc
 	&__desc {
 		margin-top: 1.75rem;
 		font-size: 0.875rem;
+		line-height: 110%;
 		@media (min-width: $md4) {
 			font-size: 0.9375rem;
 		}
 		@media (min-width: $md2) {
 			margin-top: 1.88rem;
 		}
-		line-height: 110%;
+
 		& p {
 			&:not(:last-child) {
 				margin-bottom: 0.75em;

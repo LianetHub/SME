@@ -1,166 +1,25 @@
-// Использование модулей SASS
 @use "sass:math";
-// Использование модулей SASS
-// ======================================МИКСИНЫ==============================================
-@import "mixins";
-// ======================================МИКСИНЫ==============================================
+@use "sass:color";
+@use "_mixins" as *;
+@use "_variables" as *;
 
-// ======================================ШРИФТЫ===============================================
+@use "fonts";
+@use "icons";
+@use "grid";
+@use "ui";
+@use "forms";
+@use "header";
+@use "footer";
+@use "modules/common";
 
-// &display=swap&subset=cyrillic-ext
-@import "fonts";
-@import "icons";
-
-// ======================================ШРИФТЫ===============================================
-// ======================================ИКОНОЧНЫЙ ШРИФТ======================================
-
-// ======================================ИКОНОЧНЫЙ ШРИФТ======================================
-
-// Шрифт по умолчанию
-$fontfamily: "PTSans";
-$font-bebas: "BebasNeue";
-
-// Шрифт по умолчанию
-
-$md1: 1439.98px;
-$md2: 1199.98px;
-$md3: 991.98px;
-$md4: 767.98px;
-$md5: 575.98px;
-$md6: 389.98px;
-
-// ПЕРЕМЕННЫЕ
-$minWidth: 320; // Минимальная ширина страницы
-$maxWidth: 1920; // Ширина макета
-$maxWidthContainer: rem(1196); // Максимальная ширина ограничивающего контейнера
-$containerPadding: 30;
-
-$text: #393939;
-$white: #fff;
-$accent: #fa5300;
-$red: #fa0644;
-
-// Z-Index
-$ui-index-1: 1; // Для наполняющих элементов в общем потоке
-$ui-index-2: 2; // Для наполняющих элементов в общем потоке
-$ui-index-3: 3; // Для масок
-$ui-index-4: 4; // Для сайдбаров
-$ui-index-5: 5; // Для модалок
-$ui-index-6: 6; // Для элементов, перекрывающих все
-
-$header: var(--header-height, #{rem(124)});
-
-//ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ
-
-html {
-	scrollbar-gutter: stable;
-}
-
-body {
-	font-family: $fontfamily, sans-serif;
-	font-size: 1rem;
-	min-width: 375px;
-	min-height: 100%;
-	line-height: normal;
-	color: $text;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	&:has(.header.open-menu) {
-		overflow: hidden;
-		.wrapper {
-			&::before {
-				opacity: 1;
-				visibility: visible;
-				pointer-events: all;
-			}
-		}
-	}
-}
-// ==================ОБОЛОЧКА==============================
-.wrapper {
-	position: relative;
-	width: 100%;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow-x: hidden;
-	@media (min-width: $md4) {
-		overflow-x: clip;
-	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba($color: #737373, $alpha: 0.6);
-		z-index: 5;
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
-		transition: opacity 0.3s ease, visibility 0.3s ease;
-		cursor: pointer;
-	}
-}
-
-//================== ОБОЛОЧКА==================================
-
-//=============== ОСНОВНАЯ СЕТКА===============================
-
-// Отзывчивая
-.container {
-	margin: 0 auto;
-	max-width: 100%;
-	padding: 0 rem(20);
-	@media (min-width: $md5) {
-		box-sizing: content-box;
-		max-width: rem(540);
-	}
-	@media (min-width: $md4) {
-		max-width: rem(720);
-	}
-	@media (min-width: $md3) {
-		max-width: rem(940);
-		&.container-xs {
-			max-width: rem(785);
-		}
-	}
-	@media (min-width: $md2) {
-		max-width: $maxWidthContainer;
-		&.container-sm {
-			max-width: rem(992);
-		}
-	}
-}
-
-//=============== ОСНОВНАЯ СЕТКА===============================
-
-//=================Подключаем файлы стилей
-//================Общий файл для элементов страницы
-@import "grid";
-@import "ui";
-@import "forms";
-//================Общий файл для элементов страницы
-@import "header";
-@import "footer";
-@import "modules/common";
-//=======================================
-
-// =======================ОСНОВНОЙ БЛОК==================
-.page {
-	flex: 1 1 auto;
-}
-// ========================================================
-
-@import "pages/home";
-@import "pages/about";
-@import "pages/language-page";
-@import "pages/prices";
-@import "pages/rock-the-lang";
-@import "pages/teachers";
-@import "pages/exams";
-@import "pages/vacancies";
-@import "pages/gallery";
-@import "pages/centres";
-@import "pages/location-page";
+@use "pages/home";
+@use "pages/about";
+@use "pages/language-page";
+@use "pages/prices";
+@use "pages/rock-the-lang";
+@use "pages/teachers";
+@use "pages/exams";
+@use "pages/vacancies";
+@use "pages/gallery";
+@use "pages/centres";
+@use "pages/location-page";

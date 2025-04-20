@@ -1,11 +1,17 @@
+@use "sass:math";
+@use "sass:color";
+@use "../_mixins" as *;
+@use "../_variables" as *;
+
 .requirements {
 	padding: 2.5rem 0;
 	margin-top: 1.87rem;
+	background: #f6f6f6;
 	@media (min-width: $md4) {
 		margin-top: 2.5rem;
 		padding: 3.75rem 0;
 	}
-	background: #f6f6f6;
+
 	// .requirements__title
 	&__title {
 		display: flex;
