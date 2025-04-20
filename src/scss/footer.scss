@@ -46,6 +46,11 @@
 	// .footer__menu
 	&__menu {
 		display: none;
+		@media (max-width: $md5) {
+			width: 100%;
+			order: -1;
+			margin-top: 1rem;
+		}
 		@media (min-width: $md5) {
 			display: block;
 			margin-top: 0.63rem;
@@ -94,6 +99,9 @@
 					color: #fff;
 				}
 			}
+		}
+		&.active {
+			color: #fff;
 		}
 	}
 	// .footer__vacanies

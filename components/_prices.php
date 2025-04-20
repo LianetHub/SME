@@ -39,7 +39,7 @@ function render_prices_slider($title, $title_size, $data)
 
                 <?php foreach ($column_titles as $i => $col_title): ?>
                     <div class="prices__slide swiper-slide">
-                        <div class="prices__table-row"><?= esc_html($col_title) ?></div>
+                        <div class="prices__table-row"><?= $col_title ?></div>
                         <?php foreach ($lessons as $lesson): ?>
                             <div class="prices__table-row">
                                 <?

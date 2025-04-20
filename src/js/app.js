@@ -140,6 +140,13 @@ $(function () {
             }
         }
 
+        if ($(window).width() < 576 && $target.is('.footer__caption')) {
+            e.preventDefault();
+            $target.toggleClass('active');
+            $target.next().slideToggle()
+
+        }
+
         if ($target.closest('.submenu__close').length) {
             $('.menu__link').removeClass('active');
             $('.submenu').removeClass('open');
@@ -147,6 +154,24 @@ $(function () {
 
 
     });
+
+    $(document).on('mouseenter', '.form__tooltip', function () {
+        const $promoWrapper = $(this).closest('.promo__side');
+        const $promoInfo = $promoWrapper.find('.promo__info');
+
+        $promoWrapper.addClass('show-info');
+        $promoInfo.removeClass('hidden');
+    });
+
+    $(document).on('mouseleave', '.promo__side', function () {
+        const $promoWrapper = $(this);
+        const $promoInfo = $promoWrapper.find('.promo__info');
+
+        $promoWrapper.removeClass('show-info');
+        $promoInfo.addClass('hidden');
+    });
+
+
 
 
     //  sliders
@@ -388,9 +413,9 @@ $(function () {
 
     // observer header height
     function updateHeaderHeight() {
-        var headerHeight = $('.header__wrapper').outerHeight() / parseFloat($('html').css('font-size'));
+        var headerHeight = $('.header__body').outerHeight();
 
-        $('body').css('--header-height', headerHeight + 'rem');
+        $('body').css('--header-height', headerHeight + 'px');
     }
 
     updateHeaderHeight();

@@ -47,7 +47,7 @@
                 </nav>
             </div>
             <div class="footer__column col-lg-4 col-sm-6">
-                <a href="/3-6" class="footer__caption text-block-md fw-bold">Дошкольники</a>
+                <div class="footer__caption text-block-md fw-bold">Дошкольники</div>
                 <nav class="footer__menu">
                     <?php
                     wp_nav_menu(array(
@@ -129,10 +129,10 @@
         <button type="button" class="popup__close icon-plus-circle" data-fancybox-close></button>
         <div class="popup__success text-center">
             <div class="popup__title h4">
-                Ваша заявка принята
+                готово!
             </div>
             <div class="popup__success-desc text-block-md">
-                Наш менеджер свяжется с вами
+                мы свяжемся с вами!
             </div>
         </div>
     </div>

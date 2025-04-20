@@ -9,10 +9,7 @@
 }
 
 .fancybox__slide {
-	padding: 0;
-	@media (min-width: $md5) {
-		padding: 1.25rem;
-	}
+	padding: 1.25rem;
 }
 
 .fancybox__backdrop {

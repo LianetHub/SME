@@ -68,6 +68,13 @@ if ($promo_block) {
                             данные третьим лицам
                         </div>
                     </div>
+                    <div class="promo__success hidden">
+                        <button type="button" aria-label="Закрыть окно успеха" class="promo__success-close icon-close"></button>
+                        <div class="promo__info-text">
+                            Готово! <br>
+                            мы свяжемся с вами!
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -67,7 +67,7 @@
                     <div class="container">
                         <div class="header__banner-body">
                             <div class="header__banner-text fw-bold">Занятия в Центрах и Online</div>
-                            <a href="#order" data-fancybox class="header__banner-btn btn btn-primary btn-sm">Online</a>
+                            <a href="/online/" class="header__banner-btn btn btn-primary btn-sm">Online</a>
                             <div class="header__banner-logo">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Cambridge-University-logo.svg" alt="Логотип университета">
                             </div>
