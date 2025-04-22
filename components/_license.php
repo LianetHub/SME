@@ -5,9 +5,9 @@
                 <div class="col-xl-5 col-md-6">
                     <figure class="license__image">
                         <figcaption class="license__image-caption">Государственная лицензия</figcaption>
-                        <a href="<?php echo get_template_directory_uri(); ?>/assets/img/license.jpg" data-fancybox class="license__image-content">
+                        <div class="license__image-content">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/license.jpg" alt="Фото Лицензии">
-                        </a>
+                        </div>
                     </figure>
                 </div>
                 <div class="col-md-6 offset-xl-1">

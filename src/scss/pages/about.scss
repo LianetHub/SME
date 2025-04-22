@@ -98,6 +98,8 @@
 		flex-direction: column;
 		align-items: center;
 		min-height: 100%;
+		max-height: rem(610);
+		overflow: hidden;
 		@media (min-width: $md4) {
 			background-color: #eee;
 		}
@@ -174,7 +176,7 @@
 	&__tagline {
 		color: #000;
 		font-family: $font-bebas;
-		line-height: 140%;
+		line-height: 130%;
 		text-transform: uppercase;
 		display: flex;
 		align-items: center;
@@ -210,10 +212,10 @@
 	// .about__desc
 	&__desc {
 		margin-top: 1.75rem;
-		font-size: 0.875rem;
+		font-size: rem(15);
 		line-height: 110%;
 		@media (min-width: $md4) {
-			font-size: 0.9375rem;
+			font-size: 1rem;
 		}
 		@media (min-width: $md2) {
 			margin-top: 1.88rem;

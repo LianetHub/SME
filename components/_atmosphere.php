@@ -18,9 +18,9 @@
                     <div class="atmosphere__slider swiper">
                         <div class="swiper-wrapper">
                             <?php foreach ($gallery as $image): ?>
-                                <a href="<?php echo esc_url($image['url']); ?>" data-fancybox="gallery" class="gallery__slide swiper-slide">
+                                <div class="gallery__slide swiper-slide">
                                     <img src="<?php echo esc_url($image['url']); ?>" class="cover-image" alt="<?php echo esc_attr($image['alt']); ?>">
-                                </a>
+                                </div>
                             <?php endforeach; ?>
                         </div>
                         <button type="button" class="atmosphere__prev swiper-button-prev"></button>

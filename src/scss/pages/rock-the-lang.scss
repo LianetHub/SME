@@ -63,7 +63,7 @@
 		padding-left: 1.5em;
 		list-style: disc;
 		@media (max-width: $md5) {
-			font-size: 0.875rem;
+			font-size: rem(15);
 		}
 		& li {
 			&:not(:last-child) {

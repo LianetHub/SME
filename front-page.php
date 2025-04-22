@@ -36,7 +36,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     </div>
                     <div class="col-xl-6">
                         <div class="our-centres__video icon-camera">
-                            <iframe width="560" height="315" src="<?= esc_url($our_centres_youtube_link) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="430" height="235" src="<?= esc_url($our_centres_youtube_link) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 <a href="" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
             <li class="groups__item">
-                <div class="groups__item-age">18+</div>
+                <div class="groups__item-age">18<span>+</span></div>
                 <div class="groups__item-caption h5">ВЗРОСЛЫЕ</div>
                 <p class="groups__item-desc text-block-md">
                     Занятия по 90 мин 2&nbsp;раза в неделю

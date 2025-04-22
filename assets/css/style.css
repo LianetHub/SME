@@ -25,9 +25,9 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
@@ -41,16 +41,16 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -167,7 +167,7 @@ html {
 }
 
 body {
-  font-family: "PTSans", sans-serif;
+  font-family: "PTSans", Arial, sans-serif;
   font-size: 1rem;
   min-width: 375px;
   min-height: 100%;
@@ -2335,7 +2335,6 @@ h6,
 
 .promo.promo-rock-the-lang .promo__subtitle {
   margin-top: 1.25rem;
-  max-width: 100%;
 }
 
 .promo.promo-develop {
@@ -2661,6 +2660,12 @@ h6,
   background: #f6f6f6;
 }
 
+.atmosphere__body .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .atmosphere__main {
   display: contents;
 }
@@ -2724,6 +2729,10 @@ h6,
 
 .sign-lesson.sign-lesson-white {
   background: #fff;
+}
+
+.sign-lesson__subtitle {
+  margin-top: 2.25rem;
 }
 
 .sign-lesson__location {
@@ -2799,11 +2808,14 @@ h6,
 
 .sign-lesson__body {
   margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 57rem;
 }
 
 .sign-lesson__body .row {
-  --gutter-y: 1.75rem;
   --gutter-x: 1.5rem;
+  --gutter-y: 2.5rem;
 }
 
 .sign-lesson__content {
@@ -3025,6 +3037,10 @@ h6,
   padding: 2.5rem 0;
 }
 
+.license + .reviews {
+  padding-top: 3.75rem;
+}
+
 .license__content {
   margin: 0 auto;
   max-width: 43.9375rem;
@@ -3040,8 +3056,8 @@ h6,
   line-height: 110%;
   text-transform: uppercase;
   font-family: "BebasNeue";
-  font-size: 1.625rem;
   margin-bottom: 1.25rem;
+  font-size: 1.875rem;
 }
 
 .license__body {
@@ -3219,6 +3235,7 @@ h6,
 }
 
 .regular__image {
+  position: relative;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3238,6 +3255,14 @@ h6,
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.regular__image .regular__logo {
+  position: absolute;
+  top: 2.25rem;
+  left: 1.25rem;
+  width: 4.8125rem;
+  display: block;
 }
 
 .best-teachers {
@@ -3880,10 +3905,6 @@ h6,
   max-width: 4.1875rem;
 }
 
-.home .desc__logo {
-  margin-top: auto;
-}
-
 .desc__image {
   min-height: 100%;
   display: -webkit-box;
@@ -4126,6 +4147,12 @@ h6,
   margin: 0 -1.25rem;
 }
 
+.our-centres__video iframe {
+  aspect-ratio: 1.829787234;
+  width: 100%;
+  height: auto;
+}
+
 .our-centres__video::before {
   display: none;
 }
@@ -4151,7 +4178,7 @@ h6,
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem 1.88rem;
+  gap: 1.875rem 1.25rem;
 }
 
 .nums__item {
@@ -4241,7 +4268,12 @@ h6,
   background: #f6f6f6;
   font-size: 2.875rem;
   top: -1.5rem;
-  width: 5.5rem;
+  padding: 0 0.5rem 0 0.25rem;
+}
+
+.groups__item-age span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
 }
 
 .groups__item-caption {
@@ -4607,6 +4639,8 @@ h6,
       -ms-flex-align: center;
           align-items: center;
   min-height: 100%;
+  max-height: 38.125rem;
+  overflow: hidden;
 }
 
 .about__image img {
@@ -4671,7 +4705,7 @@ h6,
 .about__tagline {
   color: #000;
   font-family: "BebasNeue";
-  line-height: 140%;
+  line-height: 130%;
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4707,7 +4741,7 @@ h6,
 
 .about__desc {
   margin-top: 1.75rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 110%;
 }
 
@@ -4832,6 +4866,14 @@ h6,
 
 .language-desc__icon {
   margin-top: 2rem;
+}
+
+.page-template-rock-the-language .language-desc__icon {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 .selection {
@@ -6582,6 +6624,10 @@ h6,
     max-width: 4.5rem;
   }
 
+  .license__image-caption {
+    font-size: 1.625rem;
+  }
+
   .license__header {
     gap: 1.88rem;
     text-align: left;
@@ -6687,7 +6733,6 @@ h6,
   }
 
   .groups__item-age {
-    width: 6.5rem;
     top: -1.75rem;
     font-size: 3.125rem;
   }
@@ -6786,9 +6831,7 @@ h6,
   }
 
   .prices__slider {
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
+    max-width: calc(100vw - 2.5rem);
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -7529,6 +7572,11 @@ h6,
     padding: 3.75rem 0;
   }
 
+  .sign-lesson__body .row {
+    --gutter-x: 4.5rem;
+    --gutter-y: 3.75rem;
+  }
+
   .why__body {
     display: -ms-grid;
     display: grid;
@@ -7673,6 +7721,10 @@ h6,
     width: 50vw;
   }
 
+  .regular__image .regular__logo {
+    display: none;
+  }
+
   .best-teachers {
     padding: 3.75rem 0 1.875rem;
   }
@@ -7806,6 +7858,11 @@ h6,
     padding: 3.75rem 0;
   }
 
+  .page-template-rock-the-language .desc {
+    background: -webkit-gradient(linear, left top, right top, from(#fafafb), to(#f6f6f6));
+    background: linear-gradient(90deg, #fafafb calc(50vw - 6rem), #f6f6f6 calc(50vw - 6rem));
+  }
+
   .desc__body .order-first .desc__image {
     text-align: left;
     padding-left: 5rem;
@@ -7829,6 +7886,10 @@ h6,
 
   .home .desc__text:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+
+  .home .desc__logo {
+    margin-top: auto;
   }
 
   .cards__slider .swiper-wrapper {
@@ -8008,7 +8069,7 @@ h6,
   }
 
   .about__desc {
-    font-size: 0.9375rem;
+    font-size: 1rem;
   }
 
   .selection__main {
@@ -9038,7 +9099,8 @@ h6,
   }
 
   .sign-lesson__body .row {
-    --gutter-x: 1.75rem;
+    --gutter-x: 7rem;
+    --gutter-y: 3.75rem;
   }
 
   .sign-lesson__calllback {
@@ -9262,6 +9324,11 @@ h6,
     padding: 5rem 0;
   }
 
+  .page-template-rock-the-language .desc {
+    background: -webkit-gradient(linear, left top, right top, from(#fafafb), to(#f6f6f6));
+    background: linear-gradient(90deg, #fafafb calc(50vw - 12rem), #f6f6f6 calc(50vw - 12rem));
+  }
+
   .home .desc__text p {
     font-size: 1.25rem;
   }
@@ -9324,6 +9391,16 @@ h6,
 
   .our-centres__body {
     max-width: 100%;
+  }
+
+  .our-centres__body .row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .our-centres__text {
+    max-width: 33.75rem;
   }
 
   .our-centres__btn {
@@ -10224,6 +10301,10 @@ h6,
     font-size: 0.9375rem;
   }
 
+  .home .desc__logo {
+    display: block;
+  }
+
   .benefits__caption {
     font-size: 1.375rem;
   }
@@ -10237,6 +10318,10 @@ h6,
 @media (max-width: 991.98px) {
   .pc-only {
     display: none !important;
+  }
+
+  .promo.promo-rock-the-lang .promo__subtitle {
+    max-width: 16rem;
   }
 
   .promo__title.promo__title_xl.lg-mobile {
@@ -10277,6 +10362,10 @@ h6,
     background-size: contain;
     background-position: 100% 15%;
     background-image: url("../img/banners/banner-mobile.png");
+  }
+
+  .promo.promo-home .promo__side {
+    margin-top: 16rem;
   }
 
   .promo.promo-schoolers {
@@ -10411,9 +10500,6 @@ h6,
   }
 
   .atmosphere__body .row {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding: 0;
     margin: 0;
   }
@@ -10505,8 +10591,27 @@ h6,
     margin-right: 0;
   }
 
+  .page-template-rock-the-language .desc__body .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .page-template-rock-the-language .desc__body {
+    padding-bottom: 2.0625rem;
+  }
+
   .page-template-exams .desc__title {
     font-size: 2.25rem;
+  }
+
+  .home .desc__logo {
+    margin: auto 0;
+    margin-top: 1.25rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 
   .cards__slide-desc.h4 {
@@ -10715,7 +10820,12 @@ h6,
     font-size: 0.9375rem;
   }
 
+  .our-centres__title {
+    font-size: 1.875rem;
+  }
+
   .our-centres__btn {
+    margin-top: 2.0625rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -10782,8 +10892,16 @@ h6,
     font-size: 2.25rem;
   }
 
+  .promotions__title {
+    font-size: 3.125rem;
+  }
+
+  .promotions__body {
+    font-size: 0.9375rem;
+  }
+
   .speaker__item-list {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
 
   .vacancy-desc__list {
@@ -10832,6 +10950,12 @@ h6,
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   .promo.promo-adults {
     background-position: 45% bottom;
+  }
+}
+
+@media (max-width: 1199.98px) and (min-width: 991.98px) {
+  .page-template-prices .promo__image {
+    width: 22rem;
   }
 }
 

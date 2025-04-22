@@ -17,6 +17,9 @@
 			background-size: contain;
 			background-position: 100% 15%;
 			background-image: url("@img/banners/banner-mobile.png");
+			.promo__side {
+				margin-top: 16rem;
+			}
 		}
 		@media (min-width: $md4) {
 			background-image: url("@img/banners/banner.jpg");
@@ -291,9 +294,11 @@
 		}
 		.promo__subtitle {
 			margin-top: 1.25rem;
-			max-width: 100%;
 			@media (max-width: $md4) {
 				font-size: 1.25rem;
+			}
+			@media (max-width: $md3) {
+				max-width: 16rem;
 			}
 		}
 		.promo__side {
@@ -530,6 +535,13 @@
 		@media (min-width: $md2) {
 			max-width: 18.468rem;
 			width: 100%;
+		}
+		.page-template-prices & {
+			@media (max-width: $md2) {
+				@media (min-width: $md3) {
+					width: 22rem;
+				}
+			}
 		}
 	}
 	// // .promo__tagline
@@ -832,8 +844,8 @@
 	// .atmosphere__body
 	&__body {
 		.row {
+			align-items: center;
 			@media (max-width: $md4) {
-				align-items: center;
 				padding: 0;
 				margin: 0;
 				& > * {
@@ -959,6 +971,9 @@
 	// .sign-lesson__title
 	&__title {
 	}
+	&__subtitle {
+		margin-top: rem(36);
+	}
 	// .sign-lesson__location
 	&__location {
 		margin-top: 2rem;
@@ -1027,14 +1042,22 @@
 	// .sign-lesson__body
 	&__body {
 		margin-top: 2.5rem;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(912);
 		@media (min-width: $md2) {
 			margin-top: 2rem;
 		}
 		.row {
-			--gutter-y: #{rem(28)};
 			--gutter-x: #{rem(24)};
+			--gutter-y: #{rem(40)};
+			@media (min-width: $md4) {
+				--gutter-x: #{rem(72)};
+				--gutter-y: #{rem(60)};
+			}
 			@media (min-width: $md2) {
-				--gutter-x: #{rem(28)};
+				--gutter-x: #{rem(112)};
+				--gutter-y: #{rem(60)};
 			}
 		}
 	}
@@ -1373,7 +1396,9 @@
 	@media (min-width: $md4) {
 		padding: 3.75rem 0;
 	}
-
+	& + .reviews {
+		padding-top: rem(60);
+	}
 	// .license__container
 	&__container {
 	}
@@ -1404,8 +1429,11 @@
 		line-height: 110%;
 		text-transform: uppercase;
 		font-family: $font-bebas;
-		font-size: 1.625rem;
 		margin-bottom: 1.25rem;
+		font-size: rem(30);
+		@media (min-width: $md5) {
+			font-size: 1.625rem;
+		}
 		@media (min-width: $md2) {
 			margin-bottom: 0.94rem;
 			font-size: 2rem;
@@ -1705,6 +1733,7 @@
 	}
 	// .regular__image
 	&__image {
+		position: relative;
 		min-height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -1723,6 +1752,16 @@
 			min-height: 100%;
 			width: auto;
 			object-fit: cover;
+		}
+		.regular__logo {
+			position: absolute;
+			top: rem(36);
+			left: rem(20);
+			width: rem(77);
+			display: block;
+			@media (min-width: $md4) {
+				display: none;
+			}
 		}
 	}
 }
@@ -2531,6 +2570,14 @@
 			background: #f6f6f6;
 		}
 	}
+	.page-template-rock-the-language & {
+		@media (min-width: $md4) {
+			background: linear-gradient(90deg, #fafafb calc(50vw - 6rem), #f6f6f6 calc(50vw - 6rem));
+		}
+		@media (min-width: $md2) {
+			background: linear-gradient(90deg, #fafafb calc(50vw - 12rem), #f6f6f6 calc(50vw - 12rem));
+		}
+	}
 	// .desc__body
 	&__body {
 		.row {
@@ -2541,6 +2588,11 @@
 			.col-md-6 {
 				&:has(.desc__image) {
 					align-self: stretch;
+				}
+			}
+			.page-template-rock-the-language & {
+				@media (max-width: $md4) {
+					flex-direction: column-reverse;
 				}
 			}
 		}
@@ -2555,6 +2607,11 @@
 					max-width: 20rem;
 					margin: 0;
 				}
+			}
+		}
+		.page-template-rock-the-language & {
+			@media (max-width: $md4) {
+				padding-bottom: rem(33);
 			}
 		}
 	}
@@ -2672,12 +2729,25 @@
 	&__logo {
 		display: none;
 		max-width: 4.1875rem;
+		@media (max-width: $md2) {
+			.home & {
+				display: block;
+			}
+		}
+
 		@media (min-width: $md2) {
 			display: block;
 			margin-top: 2rem;
 		}
 		.home & {
-			margin-top: auto;
+			@media (max-width: $md4) {
+				margin: auto 0;
+				margin-top: rem(20);
+				align-self: center;
+			}
+			@media (min-width: $md4) {
+				margin-top: auto;
+			}
 		}
 	}
 	// .desc__image

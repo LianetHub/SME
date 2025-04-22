@@ -4,9 +4,9 @@
         <div class="partner__body">
             <div class="row">
                 <div class="col-xl-5 col-lg-6 col-md-5">
-                    <a href="<?php echo get_template_directory_uri(); ?>/assets/img/cambridge.jpg" data-fancybox class="partner__image">
+                    <div class="partner__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cambridge.jpg" class="cover-image" alt="Соглашение о сотрудничестве">
-                    </a>
+                    </div>
                 </div>
                 <div class="col-lg-6 offset-xl-1 col-md-7">
                     <div class="partner__main">

@@ -29,6 +29,9 @@
                 <div class="col-md-6">
                     <div class="regular__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/benefits/01.jpg" class="cover-image" alt="Постер">
+                        <div class="regular__logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-rock-the-language.svg" alt="Логотип">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,64 +1,52 @@
 <section class="sign-lesson">
     <div class="container">
         <h2 class="sign-lesson__title h4 text-center">Запишитесь на бесплатный урок!</h2>
-        <div class="sign-lesson__location text-block-lg">
-            <button type="button" class="sign-lesson__location-selected icon-chevron">
-                г. Мытищи
-            </button>
-            <ul class="sign-lesson__location-list">
-                <li class="sign-lesson__location-item active">г. Мытищи</li>
-                <li class="sign-lesson__location-item">г. Балашиха</li>
-            </ul>
-        </div>
+        <p class="sign-lesson__subtitle h5 text-center">
+            Наши филиалы:
+        </p>
         <div class="sign-lesson__body">
-            <div class="sign-lesson__content active">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="certer-card">
-                            <address class="certer-card__address h5 icon-location">
-                                Борисовка,16
-                                <small>ЖК «Ярославский»</small>
-                            </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/01.jpg" data-fancybox class="certer-card__image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/01.jpg" alt="Фото нашего центра">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="certer-card">
-                            <address class="certer-card__address h5 icon-location">
-                                кадомцева,2
-                                <small>ЖК «новое медведково»</small>
-                            </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" data-fancybox class="certer-card__image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="certer-card">
-                            <address class="certer-card__address h5 icon-location">
-                                2-я институтская, 24А
-                                <small>ЖК «Ярославский»</small>
-                            </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" data-fancybox class="certer-card__image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" alt="Фото нашего центра">
-                            </a>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="certer-card">
+                        <address class="certer-card__address h5 icon-location">
+                            Борисовка,16
+                            <small>ЖК «Ярославский»</small>
+                        </address>
+                        <div class="certer-card__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/01.jpg" alt="Фото нашего центра">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="sign-lesson__content">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="certer-card">
-                            <address class="certer-card__address h5 icon-location">
-                                кадомцева,2
-                                <small>ЖК «новое медведково»</small>
-                            </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" data-fancybox class="certer-card__image">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
-                            </a>
+                <div class="col-sm-6">
+                    <div class="certer-card">
+                        <address class="certer-card__address h5 icon-location">
+                            кадомцева,2
+                            <small>ЖК «новое медведково»</small>
+                        </address>
+                        <div class="certer-card__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="certer-card">
+                        <address class="certer-card__address h5 icon-location">
+                            2-я институтская, 24А
+                            <small>ЖК «Ярославский»</small>
+                        </address>
+                        <div class="certer-card__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" alt="Фото нашего центра">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="certer-card">
+                        <address class="certer-card__address h5 icon-location">
+                            кадомцева,2
+                            <small>ЖК «новое медведково»</small>
+                        </address>
+                        <div class="certer-card__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
                         </div>
                     </div>
                 </div>

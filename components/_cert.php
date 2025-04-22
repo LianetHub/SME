@@ -3,9 +3,9 @@
         <div class="cert__body">
             <div class="row">
                 <div class="col-xl-5 col-md-6">
-                    <a href="<?php echo get_template_directory_uri(); ?>/assets/img/cert.jpg" data-fancybox class="cert__image">
+                    <div class="cert__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cert.jpg" class="cover-image" alt="Фото сертификата">
-                    </a>
+                    </div>
                 </div>
                 <div class="col-xl-5 offset-xl-1 col-md-6">
                     <div class="cert__info">
