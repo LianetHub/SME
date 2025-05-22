@@ -1,5 +1,14 @@
 <?php
 define('TEMPLATE_PATH', dirname(__FILE__) . '/components/');
+function my_theme_enqueue_styles() {
+    wp_enqueue_style(
+        'theme-style', // handle
+        get_template_directory_uri() . '/style.css', // путь до style.css
+        array(), // зависимости
+        filemtime(get_template_directory() . '/style.css') // версия по времени изменения
+    );
+}
+add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
 function theme_enqueue_styles()
 {
@@ -81,3 +90,28 @@ function register_teachers_post_type()
 	]);
 }
 add_action('init', 'register_teachers_post_type');
+
+
+function register_post_audio_type()
+{
+register_post_type('audio_lesson', [
+  'labels' => ['name' => 'Аудио-уроки'],
+  'public' => true,
+  'rewrite' => ['slug' => 'courses/audio'],
+  'supports' => ['title', 'editor'],
+]);
+}
+add_action('init', 'register_post_audio_type');
+
+function register_audio_taxonomy() {
+    register_taxonomy('category_audio', 'audio_lesson', [
+        'labels' => ['name' => 'Категории аудио'],
+        'hierarchical' => true,
+        'rewrite' => ['slug' => 'courses/audio', 'with_front' => false],
+        'public' => true,
+    ]);
+}
+add_action('init', 'register_audio_taxonomy');
+
+
+

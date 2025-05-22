@@ -20,3 +20,4 @@ Tested up to: 6.5.4
 Requires PHP: 8.1
 
 */
+    .header__whatsapp:hover .header__whatsapp-items {        z-index: 1;    }

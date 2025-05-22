@@ -10742,7 +10742,7 @@ h6,
   .promo.promo-preschoolers {
     background-image: url("../img/banners/banner-preschoolers-mobile.jpg");
     background-size: 100% auto;
-    background-position: center 0;
+    background-position: center -218px;;
   }
 
   .promo.promo-adults .promo__side {
@@ -11029,6 +11029,7 @@ h6,
   .header__whatsapp:hover .header__whatsapp-items {
     opacity: 1;
     visibility: visible;
+	  z-index:1;
   }
 
   .header__whatsapp-btn:hover {

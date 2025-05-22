@@ -269,7 +269,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="tel<? echo esc_html($formatted_phone_number); ?>" class="header__phone icon-phone"><? echo esc_html($phone_number); ?></a>
+                                <a href="tel:<? echo esc_html($formatted_phone_number); ?>" class="header__phone icon-phone"><? echo esc_html($phone_number); ?></a>
                                 <div class="header__whatsapp">
                                     <button type="button" class="header__whatsapp-btn">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
