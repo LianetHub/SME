@@ -59,17 +59,17 @@ if ($promo_block) {
                     </div>
                 <?php endif; ?>
 
-                <div class="promo__side">
+                <div class="promo__side form__wrapper">
                     <?= do_shortcode('[contact-form-7 id="10c718e" title="Контактная форма 1"]'); ?>
                     <div class="promo__info hidden">
                         <button type="button" aria-label="Закрыть окно информации" class="promo__info-close icon-close"></button>
                         <div class="promo__info-text">
                             Мы не передадим Ваши
-                            данные третьим лицам
+                            данные&nbsp;третьим лицам
                         </div>
                     </div>
-                    <div class="promo__success hidden">
-                        <button type="button" aria-label="Закрыть окно успеха" class="promo__success-close icon-close"></button>
+                    <div class="promo__success form__success-block hidden">
+                        <button type="button" aria-label="Закрыть окно успеха" class="promo__success-close form__success-close icon-close"></button>
                         <div class="promo__info-text">
                             Готово! <br>
                             мы свяжемся с вами!

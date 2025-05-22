@@ -300,7 +300,7 @@
 		line-height: 140%;
 		text-transform: uppercase;
 		transition: color 0.3s ease;
-		gap: 0.5rem;
+		gap: rem(10);
 		font-size: 1rem;
 		@media (any-hover: hover) {
 			&:hover {
@@ -325,7 +325,7 @@
 		position: absolute;
 		top: 100%;
 		right: 0;
-		width: rem(280);
+		width: 15.625rem;
 		padding: rem(20) rem(10) rem(10) rem(10);
 		&::before {
 			content: "";
@@ -339,11 +339,13 @@
 			z-index: -1;
 			border-radius: 0.375rem;
 		}
+		font-family: $font-bebas;
+		line-height: 140%;
 		color: $text;
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity 0.3s ease, visibility 0.3s ease;
-		font-size: 1rem;
+		font-size: rem(18);
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
@@ -368,7 +370,7 @@
 	&__menu-btn {
 		display: flex;
 		align-items: center;
-		gap: 0.62rem;
+		gap: rem(12);
 	}
 	// .header__menu-text
 	&__menu-text {
@@ -377,6 +379,7 @@
 		font-family: $font-bebas;
 		font-size: 1.125rem;
 		line-height: 140%;
+		padding-top: rem(3);
 		@media (min-width: $md5) {
 			display: block;
 		}
@@ -516,6 +519,19 @@
 				opacity: 1;
 			}
 		}
+		&.active {
+			.menu__link-text {
+				@media (max-width: $md5) {
+					& strong {
+						margin-bottom: -1em;
+					}
+					& span {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+		}
 	}
 	// .menu__link-icon
 	&__link-icon {
@@ -543,9 +559,9 @@
 		align-items: flex-start;
 		text-align: left;
 		& span {
-			@media (max-width: $md5) {
-				display: none;
-			}
+			// @media (max-width: $md5) {
+			// 	display: none;
+			// }
 		}
 		@media (min-width: $md4) {
 			text-align: center;
@@ -556,9 +572,7 @@
 			line-height: 110%;
 			text-transform: uppercase;
 			font-size: 1rem;
-			@media (min-width: $md5) {
-				margin-bottom: 0.5em;
-			}
+			margin-bottom: 0.5em;
 			@media (min-width: $md4) {
 				font-size: 0.875rem;
 			}
@@ -609,15 +623,13 @@
 		display: flex;
 		flex-direction: column;
 		line-height: 110%;
-		font-size: rem(15);
+		font-size: rem(17);
 		gap: 0.75rem;
 		@media (min-width: $md5) {
-			font-size: rem(15);
 			gap: 0.875rem;
 		}
 		@media (min-width: $md1) {
 			gap: 1rem;
-			font-size: 1rem;
 		}
 		& li {
 			& a {

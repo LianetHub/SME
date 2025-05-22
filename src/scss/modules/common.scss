@@ -752,10 +752,16 @@
 			margin-top: 0;
 			margin-left: auto;
 		}
-		&.show-info {
+		&.show-info,
+		&.show-success {
 			.wpcf7-form {
 				opacity: 0;
 				visibility: hidden;
+			}
+		}
+		.form__title {
+			@media (max-width:$md4) {
+				font-size: rem(25) !important;
 			}
 		}
 	}
@@ -767,6 +773,7 @@
 		justify-content: space-between;
 		gap: 0.75rem;
 		flex: 1 1 auto;
+		
 	}
 	// .promo__info
 	&__info {

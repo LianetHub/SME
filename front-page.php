@@ -58,7 +58,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 <div class="groups__item-price h5">
                     4 480 Р./МЕС
                 </div>
-                <a href="" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                <a href="/preschoolers-age/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
             <li class="groups__item">
                 <div class="groups__item-age">7-9</div>
@@ -69,7 +69,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 <div class="groups__item-price h5">
                     5 580 Р./МЕС
                 </div>
-                <a href="" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                <a href="/7-9/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
             <li class="groups__item">
                 <div class="groups__item-age">10-13</div>
@@ -80,7 +80,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 <div class="groups__item-price h5">
                     5 580 Р./МЕС
                 </div>
-                <a href="" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                <a href="/10-13/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
             <li class="groups__item">
                 <div class="groups__item-age">14-17</div>
@@ -91,7 +91,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 <div class="groups__item-price h5">
                     6 880 Р./МЕС
                 </div>
-                <a href="" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                <a href="/14-17/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
             <li class="groups__item">
                 <div class="groups__item-age">18<span>+</span></div>
@@ -102,7 +102,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 <div class="groups__item-price h5">
                     6 880 Р./МЕС
                 </div>
-                <a href="" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
+                <a href="/adults/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
         </ul>
     </div>
@@ -157,20 +157,26 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                 if ($menu_items) {
                     foreach ($menu_items as $item) {
                         $flag_icon = '';
+                        $caption = '';
                         switch ($item->title) {
                             case 'Испанский язык':
+                                $caption = 'Испанский';
                                 $flag_icon = 'spain.svg';
                                 break;
                             case 'Китайский язык':
+                                $caption = 'Китайский';
                                 $flag_icon = 'china.svg';
                                 break;
                             case 'Японский язык':
+                                $caption = 'Японский';
                                 $flag_icon = 'japan.svg';
                                 break;
                             case 'Немецкий язык':
+                                $caption = 'Немецкий';
                                 $flag_icon = 'german.svg';
                                 break;
                             case 'Французский язык':
+                                $caption = 'Французский';
                                 $flag_icon = 'france.svg';
                                 break;
                         }
@@ -181,7 +187,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/<?php echo $flag_icon; ?>" alt="Флаг">
                                 </span>
                                 <span class="languages__item-name h6 fw-bold">
-                                    <?php echo esc_html($item->title); ?>
+                                    <?php echo $caption; ?>
                                 </span>
                             </a>
                             <p class="languages__item-desc">

@@ -215,7 +215,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="menu__item">
+                                                <li class="menu__item has-children">
                                                     <a href="/prices" class="menu__link">
                                                         <span class="menu__link-icon">
                                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price.svg" alt="Иконка">
@@ -225,6 +225,16 @@
                                                             <span>Стоимость занятий и&nbsp;акции</span>
                                                         </span>
                                                     </a>
+                                                    <div class="submenu">
+                                                        <div class="container">
+                                                            <button type="button" class="submenu__close icon-close">
+                                                                <span class="submenu__close-text">Закрыть</span>
+                                                            </button>
+                                                            <ul>
+                                                                <li><a href="/prices">Стоимость занятий и акции</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                                 <li class="menu__item has-children">
                                                     <button type="button" class="menu__link">

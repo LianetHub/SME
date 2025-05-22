@@ -47,6 +47,12 @@
 		padding: 1.87rem 1.25rem;
 		display: flex;
 		flex-direction: column;
+		&.show-success {
+			.popup__content {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
 		@media (min-width: $md4) {
 			border-radius: 0.625rem;
 			padding: 3.87rem 3.94rem 2.25rem;
@@ -68,6 +74,7 @@
 		transform: rotate(45deg);
 		border-radius: 50%;
 		transition: color 0.3s ease 0s;
+		z-index: 2;
 		@media (any-hover: hover) {
 			&:hover {
 				color: $red;
@@ -102,6 +109,7 @@
 			flex: 0 0 17.375rem;
 		}
 	}
+
 	// .popup__form-body
 	&__form-body {
 		border-radius: 0.625rem;
@@ -112,16 +120,27 @@
 		flex-direction: column;
 		gap: 0.75rem;
 		width: 100%;
+		&::before {
+			content: "";
+			position: absolute;
+			top: -1.5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			width: rem(71);
+			height: rem(52);
+			background: url("@img/icons/CME-languages.svg") center / contain no-repeat;
+		}
 	}
-	// .popup__form-logo
-	&__form-logo {
-		position: absolute;
-		top: -1.5rem;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+
 	// .popup__form-btn
 	&__form-btn {
+		margin-top: rem(30);
+		margin-left: auto;
+		margin-right: auto;
+		width: fit-content;
+		&.btn {
+			display: flex;
+		}
 	}
 	// .popup__desc
 	&__desc {
@@ -160,10 +179,14 @@
 	&__success {
 		display: flex;
 		flex-direction: column;
-
 		justify-content: center;
 		align-items: center;
 		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 	}
 	// .popup__success-title
 	&__success-title {

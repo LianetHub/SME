@@ -122,12 +122,15 @@
 		color: #393939;
 		opacity: 0;
 		visibility: hidden;
+		font-size: rem(17);
 		&.visible {
 			opacity: 1;
 			visibility: visible;
 		}
 	}
 	&__list {
+		line-height: 140%;
+		font-family: $font-bebas;
 		max-height: rem(280);
 		overflow-x: hidden;
 		overflow-y: auto;

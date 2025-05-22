@@ -115,10 +115,34 @@ $(function () {
             $promoInfo.addClass('hidden');
         }
 
+        // Закрытие success состояния отправки формы 
+        if ($target.closest('.form__success-close').length) {
+
+            const $promoWrapper = $target.closest('.form__wrapper');
+            const $promoSuccess = $promoWrapper.find('.form__success-block');
+
+            $promoWrapper.removeClass('show-success');
+            $promoSuccess.addClass('hidden');
+        }
+
         // header location
         if ($target.is('.header__location-btn')) {
             $target.toggleClass('active');
             $('.header__location-list').toggleClass('active');
+        }
+        if (!$target.closest('.header__location').length) {
+            $('.header__location-btn').removeClass('active');
+            $('.header__location-list').removeClass('active');
+        }
+
+        // whatsapp выпадающий список в header
+        if ($target.is('.header__whatsapp-btn')) {
+            $target.toggleClass('active');
+            $('.header__whatsapp-items').toggleClass('active');
+        }
+        if (!$target.closest('.header__whatsapp').length) {
+            $('.header__whatsapp-btn').removeClass('active');
+            $('.header__whatsapp-items').removeClass('active');
         }
 
 
@@ -136,6 +160,22 @@ $(function () {
                 if (!isActive) {
                     $menuLink.addClass('active');
                     $submenu.addClass('open');
+
+                    if ($(window).width() < 576) {
+                        const $menuContainer = $('.menu');
+                        const menuTop = $menuContainer.offset().top;
+                        const menuScrollTop = $menuContainer.scrollTop();
+                        const itemTop = $menuLink.offset().top;
+                        const itemHeight = $menuLink.outerHeight();
+                        const containerHeight = $menuContainer.height();
+
+                        if (itemTop + itemHeight > menuTop + containerHeight || itemTop < menuTop) {
+                            const scrollOffset = itemTop - menuTop + menuScrollTop;
+                            $menuContainer.animate({
+                                scrollTop: scrollOffset
+                            }, 300);
+                        }
+                    }
                 }
             }
         }
@@ -171,6 +211,20 @@ $(function () {
         $promoInfo.addClass('hidden');
     });
 
+    // form submit handlers
+    $(document).on('wpcf7submit', function (e) {
+        var $form = $(e.target);
+        var $container = $form.closest('.form__wrapper');
+        var $succesBlock = $container.find('.form__success-block');
+        $form.find('.wpcf7-response-output').hide();
+
+        $succesBlock.removeClass('hidden');
+        $container.addClass("show-success");
+        setTimeout(function () {
+            $container.removeClass("show-success");
+            $succesBlock.addClass('hidden');
+        }, 10000);
+    });
 
 
 
@@ -686,6 +740,7 @@ $(function () {
                 .addClass('selected')
                 .attr('aria-checked', 'true');
             this.$dropdown.find('.dropdown__button-text').text(state.selectedText);
+                 this.$dropdown.find('.dropdown__button').removeClass('selected');
         }
 
         syncSelectedOption() {

@@ -3,6 +3,10 @@
 @use "_mixins" as *;
 @use "_variables" as *;
 
+.wpcf7-response-output {
+	display: none !important;
+}
+
 .form {
 	// .form__title
 	&__title {
@@ -25,7 +29,7 @@
 			font-size: 1.125rem;
 		}
 		&::placeholder {
-			opacity: 0.7;
+			opacity: 1;
 			color: #737373;
 		}
 		&:hover,
@@ -171,6 +175,7 @@
 	}
 	// .form__btn
 	&__btn {
+		cursor: pointer;
 		.wpcf7-spinner {
 			display: none;
 		}

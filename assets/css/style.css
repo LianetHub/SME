@@ -25,9 +25,9 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
@@ -41,17 +41,17 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
@@ -548,6 +548,11 @@ body:has(.header.open-menu) .wrapper::before {
           flex-direction: column;
 }
 
+.popup__body.show-success .popup__content {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .popup__close {
   position: absolute;
   top: 0.63rem;
@@ -569,6 +574,7 @@ body:has(.header.open-menu) .wrapper::before {
   border-radius: 50%;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+  z-index: 2;
 }
 
 .popup__content {
@@ -617,13 +623,32 @@ body:has(.header.open-menu) .wrapper::before {
   width: 100%;
 }
 
-.popup__form-logo {
+.popup__form-body::before {
+  content: "";
   position: absolute;
   top: -1.5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 4.4375rem;
+  height: 3.25rem;
+  background: url("../img/icons/CME-languages.svg") center/contain no-repeat;
+}
+
+.popup__form-btn {
+  margin-top: 1.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.popup__form-btn.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .popup__desc {
@@ -662,6 +687,11 @@ body:has(.header.open-menu) .wrapper::before {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .popup__success-desc {
@@ -834,6 +864,7 @@ body:has(.header.open-menu) .wrapper::before {
   color: #393939;
   opacity: 0;
   visibility: hidden;
+  font-size: 1.0625rem;
 }
 
 .dropdown__body.visible {
@@ -842,6 +873,8 @@ body:has(.header.open-menu) .wrapper::before {
 }
 
 .dropdown__list {
+  line-height: 140%;
+  font-family: "BebasNeue";
   max-height: 17.5rem;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1171,6 +1204,10 @@ h6,
      object-fit: cover;
 }
 
+.wpcf7-response-output {
+  display: none !important;
+}
+
 .form__title {
   line-height: 1;
   margin-bottom: 0.25rem;
@@ -1191,27 +1228,27 @@ h6,
 }
 
 .form__input::-webkit-input-placeholder {
-  opacity: 0.7;
+  opacity: 1;
   color: #737373;
 }
 
 .form__input::-moz-placeholder {
-  opacity: 0.7;
+  opacity: 1;
   color: #737373;
 }
 
 .form__input:-ms-input-placeholder {
-  opacity: 0.7;
+  opacity: 1;
   color: #737373;
 }
 
 .form__input::-ms-input-placeholder {
-  opacity: 0.7;
+  opacity: 1;
   color: #737373;
 }
 
 .form__input::placeholder {
-  opacity: 0.7;
+  opacity: 1;
   color: #737373;
 }
 
@@ -1303,6 +1340,10 @@ h6,
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
   margin-right: -2.375rem;
+}
+
+.form__btn {
+  cursor: pointer;
 }
 
 .form__btn .wpcf7-spinner {
@@ -1743,7 +1784,7 @@ h6,
   text-transform: uppercase;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  gap: 0.5rem;
+  gap: 0.625rem;
   font-size: 1rem;
 }
 
@@ -1758,14 +1799,16 @@ h6,
   position: absolute;
   top: 100%;
   right: 0;
-  width: 17.5rem;
+  width: 15.625rem;
   padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+  font-family: "BebasNeue";
+  line-height: 140%;
   color: #393939;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  font-size: 1rem;
+  font-size: 1.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1806,7 +1849,7 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.62rem;
+  gap: 0.75rem;
 }
 
 .header__menu-text {
@@ -1815,6 +1858,7 @@ h6,
   font-family: "BebasNeue";
   font-size: 1.125rem;
   line-height: 140%;
+  padding-top: 0.1875rem;
 }
 
 .menu {
@@ -1888,6 +1932,7 @@ h6,
   line-height: 110%;
   text-transform: uppercase;
   font-size: 1rem;
+  margin-bottom: 0.5em;
 }
 
 .submenu {
@@ -1906,7 +1951,7 @@ h6,
       -ms-flex-direction: column;
           flex-direction: column;
   line-height: 110%;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   gap: 0.75rem;
 }
 
@@ -2555,7 +2600,8 @@ h6,
   margin-top: 8.25rem;
 }
 
-.promo__side.show-info .wpcf7-form {
+.promo__side.show-info .wpcf7-form,
+.promo__side.show-success .wpcf7-form {
   opacity: 0;
   visibility: hidden;
 }
@@ -6527,12 +6573,7 @@ h6,
     max-height: calc(100vh - 11.625rem);
   }
 
-  .menu__link-text strong {
-    margin-bottom: 0.5em;
-  }
-
   .submenu ul {
-    font-size: 0.9375rem;
     gap: 0.875rem;
   }
 
@@ -10270,7 +10311,6 @@ h6,
 
   .submenu ul {
     gap: 1rem;
-    font-size: 1rem;
   }
 
   .groups__list {
@@ -10499,6 +10539,10 @@ h6,
     max-width: 100%;
   }
 
+  .promo__side .form__title {
+    font-size: 1.5625rem !important;
+  }
+
   .atmosphere__body .row {
     padding: 0;
     margin: 0;
@@ -10680,8 +10724,13 @@ h6,
             justify-content: center;
   }
 
-  .menu__link-text span {
-    display: none;
+  .menu__link.active .menu__link-text strong {
+    margin-bottom: -1em;
+  }
+
+  .menu__link.active .menu__link-text span {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .footer__header {
@@ -10742,7 +10791,7 @@ h6,
   .promo.promo-preschoolers {
     background-image: url("../img/banners/banner-preschoolers-mobile.jpg");
     background-size: 100% auto;
-    background-position: center -218px;;
+    background-position: center 0;
   }
 
   .promo.promo-adults .promo__side {
@@ -11029,7 +11078,6 @@ h6,
   .header__whatsapp:hover .header__whatsapp-items {
     opacity: 1;
     visibility: visible;
-	  z-index:1;
   }
 
   .header__whatsapp-btn:hover {

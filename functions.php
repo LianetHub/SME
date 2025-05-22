@@ -64,6 +64,7 @@ function set_global_acf_fields()
 		'faq_items' => get_field('faq_items', 'option'),
 		'gallery_images' => get_field('gallery_images', 'option'),
 		'resume_email' => get_field('resume_email', 'option'),
+		'vk_url' => get_field('vk_url', 'option'),
 	];
 }
 add_action('wp', 'set_global_acf_fields');
