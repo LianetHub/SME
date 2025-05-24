@@ -46,9 +46,6 @@ $tag = ($why_title) ? 'section' : 'div';
                                     <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
                                 </div>
                             <?php endif; ?>
-                            <?php if ($key === 0) : ?>
-                                <a href="/teachers" class="why__card-link icon-arrow-cirlce"></a>
-                            <?php endif; ?>
                         </div>
                     <? endforeach ?>
                 </div>

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
   font-style: normal;
 }
 
@@ -17,8 +17,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
+  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -41,14 +41,6 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-display: swap;
   src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -60,6 +52,14 @@
   src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
 }
 
 .promotions__body ul li::before,
@@ -2551,7 +2551,7 @@ h6,
 }
 
 .promo__subtitle.h4 {
-  margin-top: 0;
+  margin-top: 0.5rem;
   font-size: 2.00331rem;
 }
 
@@ -2925,7 +2925,7 @@ h6,
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 1;
-  padding: 3rem 3.75rem 1.29rem 1.63rem;
+  padding: 3rem 2.75rem 1.29rem 1.63rem;
 }
 
 .why__card.orange {
@@ -3554,9 +3554,6 @@ h6,
 }
 
 .banner__body {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   --gutter-y: 0.63rem;
 }
 
@@ -3571,6 +3568,10 @@ h6,
 
 .banner__title.h3 {
   line-height: 1.3;
+}
+
+.banner__desc {
+  margin-top: 0;
 }
 
 .banner__btn {
@@ -3952,7 +3953,6 @@ h6,
 }
 
 .desc__image {
-  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4468,7 +4468,7 @@ h6,
 }
 
 .programms {
-  padding: 1.25rem 0 3.75rem;
+  padding: 2.5rem 0 3.75rem;
 }
 
 .programms__slider {
@@ -4685,7 +4685,6 @@ h6,
       -ms-flex-align: center;
           align-items: center;
   min-height: 100%;
-  max-height: 38.125rem;
   overflow: hidden;
 }
 
@@ -4726,6 +4725,7 @@ h6,
   line-height: 100%;
   text-transform: uppercase;
   border: 0.4375rem solid;
+  padding-right: 0.1rem;
   width: 4.875rem;
   height: 4.875rem;
   border-radius: 50%;
@@ -7454,10 +7454,6 @@ h6,
     font-size: 1.5rem;
   }
 
-  .promo.promo-home {
-    background-image: url("../img/banners/banner.jpg");
-  }
-
   .promo.promo-schoolers .promo__offer {
     margin-left: auto;
     max-width: 20rem;
@@ -7839,7 +7835,11 @@ h6,
   }
 
   .banner__body {
-    --gutter-y: 1.75rem;
+    --gutter-y: 0rem;
+  }
+
+  .banner__desc {
+    margin-top: 1.75rem;
   }
 
   .cert__body .row {
@@ -8079,6 +8079,7 @@ h6,
   }
 
   .about__image {
+    height: 31.125rem;
     background-color: #eee;
   }
 
@@ -8370,6 +8371,10 @@ h6,
     font-size: 1.125rem;
   }
 
+  .promo.promo-home {
+    background-image: url("../img/banners/banner.jpg");
+  }
+
   .promo.promo-teachers {
     background-image: url("../img/banners/banner-teachers.jpg");
   }
@@ -8439,6 +8444,17 @@ h6,
     margin-top: 2.5rem;
   }
 
+  .banner__body {
+    --gutter-y: 1.75rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .banner__desc {
+    margin-top: 0;
+  }
+
   .faq__icon {
     margin-top: auto;
     display: block;
@@ -8467,6 +8483,10 @@ h6,
 
   .page-template-language .desc__text {
     padding-right: 0.625rem;
+  }
+
+  .desc__image {
+    min-height: 100%;
   }
 
   .cards__subtitle + .cards__slider {
@@ -9571,6 +9591,10 @@ h6,
     margin-top: 3.75rem;
   }
 
+  .about__image {
+    height: 38.125rem;
+  }
+
   .about__column {
     padding: 4.13rem;
   }
@@ -10400,12 +10424,8 @@ h6,
 
   .promo.promo-home {
     background-size: contain;
-    background-position: 100% 15%;
+    background-position: 100% 0;
     background-image: url("../img/banners/banner-mobile.png");
-  }
-
-  .promo.promo-home .promo__side {
-    margin-top: 16rem;
   }
 
   .promo.promo-schoolers {
@@ -10759,6 +10779,14 @@ h6,
             order: -1;
   }
 
+  .promo.promo-home .promo__side {
+    margin-top: 8.25rem;
+  }
+
+  .promo.promo-home .promo__subtitle {
+    max-width: 11.1875rem;
+  }
+
   .promo.promo-reutovskaya {
     background-image: url("../img/banners/banner-reutovskaya-mobile.png");
     background-size: 250%;
@@ -10987,12 +11015,6 @@ h6,
     margin-right: -1.25rem;
     margin-top: 0;
     margin-left: -1.25rem;
-  }
-}
-
-@media (min-width: 767.98px) and (max-width: 991.98px) {
-  .promo.promo-home {
-    background-position: 38% bottom;
   }
 }
 

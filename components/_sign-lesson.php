@@ -9,7 +9,7 @@
                 <div class="col-sm-6">
                     <div class="certer-card">
                         <address class="certer-card__address h5 icon-location">
-                            Борисовка,16
+                            Мытищи, Борисовка,16
                             <small>ЖК «Ярославский»</small>
                         </address>
                         <div class="certer-card__image">
@@ -20,8 +20,8 @@
                 <div class="col-sm-6">
                     <div class="certer-card">
                         <address class="certer-card__address h5 icon-location">
-                            кадомцева,2
-                            <small>ЖК «новое медведково»</small>
+                            Мытищи, кадомцева,2
+                            <small>ЖК «Новое Медведково»</small>
                         </address>
                         <div class="certer-card__image">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
@@ -31,8 +31,8 @@
                 <div class="col-sm-6">
                     <div class="certer-card">
                         <address class="certer-card__address h5 icon-location">
-                            2-я институтская, 24А
-                            <small>ЖК «Ярославский»</small>
+                            Мытищи, 2-я институтская, 24А
+                            <small>Мкр. «Строитель»</small>
                         </address>
                         <div class="certer-card__image">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" alt="Фото нашего центра">
@@ -42,11 +42,11 @@
                 <div class="col-sm-6">
                     <div class="certer-card">
                         <address class="certer-card__address h5 icon-location">
-                            кадомцева,2
-                            <small>ЖК «новое медведково»</small>
+                            Балашиха, Реутовская, 20
+                            <small>ЖК «Измайловский Лес»</small>
                         </address>
                         <div class="certer-card__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/04.jpg" alt="Фото нашего центра">
                         </div>
                     </div>
                 </div>

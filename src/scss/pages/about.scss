@@ -98,10 +98,13 @@
 		flex-direction: column;
 		align-items: center;
 		min-height: 100%;
-		max-height: rem(610);
 		overflow: hidden;
 		@media (min-width: $md4) {
+			height: rem(498);
 			background-color: #eee;
+		}
+		@media (min-width: $md2) {
+			height: rem(610);
 		}
 		& img {
 			flex: 1 1 auto;
@@ -139,6 +142,7 @@
 		line-height: 100%;
 		text-transform: uppercase;
 		border: rem(7) solid;
+		padding-right: 0.1rem;
 		width: 4.875rem;
 		height: 4.875rem;
 		border-radius: 50%;

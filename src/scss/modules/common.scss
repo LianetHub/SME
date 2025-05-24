@@ -10,22 +10,25 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: $accent;
+	
 	&.promo-home {
 		background-position: center bottom;
 		background-color: #d57e28;
 		@media (max-width: $md4) {
 			background-size: contain;
-			background-position: 100% 15%;
+			background-position: 100% 0;
 			background-image: url("@img/banners/banner-mobile.png");
+		}
+		@media (max-width: $md5) {
 			.promo__side {
-				margin-top: 16rem;
+				margin-top: rem(132);
+			}
+			.promo__subtitle {
+				max-width: rem(179);
 			}
 		}
-		@media (min-width: $md4) {
+		@media (min-width: $md3) {
 			background-image: url("@img/banners/banner.jpg");
-			@media (max-width: $md3) {
-				background-position: 38% bottom;
-			}
 		}
 	}
 	&.promo-reutovskaya {
@@ -702,7 +705,7 @@
 			}
 		}
 		&.h4 {
-			margin-top: 0;
+			margin-top: 0.5rem;
 			font-size: 2.00331rem;
 			@media (min-width: $md3) {
 				font-size: 2.34306rem;
@@ -760,7 +763,7 @@
 			}
 		}
 		.form__title {
-			@media (max-width:$md4) {
+			@media (max-width: $md4) {
 				font-size: rem(25) !important;
 			}
 		}
@@ -773,7 +776,6 @@
 		justify-content: space-between;
 		gap: 0.75rem;
 		flex: 1 1 auto;
-		
 	}
 	// .promo__info
 	&__info {
@@ -1158,7 +1160,7 @@
 		display: flex;
 		flex-direction: column;
 		z-index: 1;
-		padding: 3rem 3.75rem 1.29rem 1.63rem;
+		padding: 3rem 2.75rem 1.29rem 1.63rem;
 		@media (min-width: $md4) {
 			padding: 1.29rem 1rem 1.29rem 1.25rem;
 			width: 100%;
@@ -2098,10 +2100,13 @@
 	}
 	// .banner__body
 	&__body {
-		align-items: center;
 		--gutter-y: 0.63rem;
-		@media (min-width: $md4) {
+		@media (min-width: $md3) {
 			--gutter-y: #{rem(28)};
+			align-items: center;
+		}
+		@media (min-width: $md4) {
+			--gutter-y: #{rem(0)};
 		}
 	}
 	// .banner__title
@@ -2127,6 +2132,13 @@
 	}
 	// .banner__desc
 	&__desc {
+		margin-top: 0;
+		@media (min-width: $md4) {
+			margin-top: rem(28);
+		}
+		@media (min-width: $md3) {
+			margin-top: 0;
+		}
 	}
 	// .banner__btn
 	&__btn {
@@ -2759,7 +2771,7 @@
 	}
 	// .desc__image
 	&__image {
-		min-height: 100%;
+
 		display: flex;
 		flex-direction: column;
 		margin-left: -1.25rem;
@@ -2767,6 +2779,9 @@
 		@media (min-width: $md5) {
 			margin-left: 0;
 			margin-right: 0;
+		}
+		@media (min-width:$md3) {
+				min-height: 100%;
 		}
 		& img {
 			flex: 1 1 auto;
