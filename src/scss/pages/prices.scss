@@ -59,10 +59,8 @@
 		margin: 0 -1.25rem;
 		display: flex;
 		flex-direction: column;
-
 		min-width: 100vw;
 		@media (min-width:$md5) {
-			width: 100%;
 			min-width: 0;
 		}
 		@media (min-width: $md4) {

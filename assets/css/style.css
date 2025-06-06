@@ -2300,7 +2300,7 @@ h6,
 .promo.promo-schoolers {
   background-color: #d57e28;
   background-image: url("../img/banners/banner-7-9.jpg");
-  background-position: 45% 0;
+  background-position: 50% 0;
 }
 
 .promo.promo-schoolers .promo__subtitle {
@@ -6880,7 +6880,6 @@ h6,
   }
 
   .prices__row {
-    width: 100%;
     min-width: 0;
   }
 
@@ -7481,11 +7480,6 @@ h6,
 
   .footer__link {
     font-size: 1.5rem;
-  }
-
-  .promo.promo-schoolers .promo__offer {
-    margin-left: auto;
-    max-width: 20rem;
   }
 
   .promo.promo-schoolers .promo__side {
@@ -8417,6 +8411,11 @@ h6,
     background-image: url("../img/banners/banner.jpg");
   }
 
+  .promo.promo-schoolers .promo__offer {
+    margin-left: auto;
+    max-width: 20rem;
+  }
+
   .promo.promo-teachers {
     background-image: url("../img/banners/banner-teachers.jpg");
   }
@@ -9189,6 +9188,10 @@ h6,
 
   .atmosphere {
     padding: 5rem 0;
+  }
+
+  .atmosphere + .why {
+    margin-top: -1.25rem;
   }
 
   .atmosphere__link::before {
@@ -10430,6 +10433,10 @@ h6,
 @media (max-width: 991.98px) {
   .pc-only {
     display: none !important;
+  }
+
+  .promo.promo-schoolers {
+    background-image: none;
   }
 
   .promo.promo-rock-the-lang .promo__subtitle {
