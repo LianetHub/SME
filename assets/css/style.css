@@ -1,8 +1,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
+  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -17,16 +17,16 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
   font-style: italic;
 }
 
@@ -49,17 +49,17 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
+  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 .promotions__body ul li::before,
@@ -1358,6 +1358,7 @@ h6,
   font-size: inherit;
   font-weight: inherit;
   text-transform: inherit;
+  cursor: pointer;
 }
 
 .form__file-btn {
@@ -3792,6 +3793,10 @@ h6,
   --gutter-x: 1rem;
 }
 
+.teachers__title {
+  text-align: center;
+}
+
 .teachers__tagline {
   margin-top: 1.25rem;
   text-transform: uppercase;
@@ -4144,7 +4149,7 @@ h6,
 
 .our-centres {
   background: #f6f6f6;
-  padding: 3.75rem 0;
+  padding: 3.75rem 0 0;
 }
 
 .our-centres.our-centres_white {
@@ -5387,6 +5392,21 @@ h6,
 
 .prices__caption small {
   font-size: 0.8em;
+}
+
+.prices__row {
+  background: #f6f6f6;
+  min-width: 0;
+  padding: 1.25rem;
+  margin: 0 -1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 100vw;
 }
 
 .prices__table {
@@ -6739,6 +6759,10 @@ h6,
     margin-right: 0;
   }
 
+  .our-centres {
+    padding: 3.75rem 0;
+  }
+
   .our-centres__video {
     width: 100%;
     margin: 0;
@@ -6853,6 +6877,11 @@ h6,
 
   .prices__caption {
     margin-bottom: 2.44rem;
+  }
+
+  .prices__row {
+    width: 100%;
+    min-width: 0;
   }
 
   .prices__table {
@@ -8222,6 +8251,19 @@ h6,
     padding-bottom: 4.37rem;
   }
 
+  .prices__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: calc(100vw - 2.5rem);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 1.625rem;
+  }
+
   .prices__table-row {
     font-size: 1rem;
   }
@@ -8467,6 +8509,7 @@ h6,
 
   .teachers__title {
     font-size: 3.125rem;
+    text-align: left;
   }
 
   .desc__title.h4 {
@@ -8516,6 +8559,11 @@ h6,
 
   .page-template-prices .heading__body .heading__title {
     font-size: 3.125rem;
+  }
+
+  .our-centres.our-centres_white .our-centres__header-icon {
+    padding-left: 6rem;
+    padding-top: 3rem;
   }
 
   .types-learning__card {
@@ -10731,6 +10779,12 @@ h6,
             flex-direction: column;
   }
 
+  .prices__row .prices__slide {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
   .popular__title {
     font-size: 1.875rem;
   }
@@ -10742,6 +10796,22 @@ h6,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .page-template-preschoolers .header__wrapper {
+    background: #fff;
+  }
+
+  .page-template-preschoolers .header__content {
+    color: #393939;
+  }
+
+  .page-template-preschoolers .header__logo-white {
+    display: none;
+  }
+
+  .page-template-preschoolers .header__logo-color {
+    display: block;
   }
 
   .menu__link.active .menu__link-text strong {
@@ -10817,6 +10887,7 @@ h6,
   }
 
   .promo.promo-preschoolers {
+    margin-top: 5rem;
     background-image: url("../img/banners/banner-preschoolers-mobile.jpg");
     background-size: 100% auto;
     background-position: center 0;

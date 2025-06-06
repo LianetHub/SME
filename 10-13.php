@@ -17,7 +17,6 @@ get_header();
 <?php require_once(TEMPLATE_PATH . '_teachers.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_lesson.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_sign-lesson.php'); ?>
-<?php require_once(TEMPLATE_PATH . '_holidays.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_license.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_info-block.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_regular.php'); ?>

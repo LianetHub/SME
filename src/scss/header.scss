@@ -17,6 +17,11 @@
 	// .header__wrapper
 	&__wrapper {
 		transition: background-color 0.3s ease;
+		.page-template-preschoolers & {
+			@media (max-width: $md5) {
+				background: #fff;
+			}
+		}
 	}
 	// .header__banner
 	&__banner {
@@ -100,6 +105,11 @@
 				color: $text;
 			}
 		}
+		.page-template-preschoolers & {
+			@media (max-width: $md5) {
+				color: $text;
+			}
+		}
 	}
 	// .header__content-top
 	&__content-top {
@@ -133,12 +143,22 @@
 		.header.open-menu & {
 			display: none;
 		}
+		.page-template-preschoolers & {
+			@media (max-width: $md5) {
+				display: none;
+			}
+		}
 	}
 	// .header__logo-color
 	&__logo-color {
 		display: none;
 		.header.open-menu & {
 			display: block;
+		}
+		.page-template-preschoolers & {
+			@media (max-width: $md5) {
+				display: block;
+			}
 		}
 	}
 	// .header__location

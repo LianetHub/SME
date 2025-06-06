@@ -1,12 +1,13 @@
 <?php
 define('TEMPLATE_PATH', dirname(__FILE__) . '/components/');
-function my_theme_enqueue_styles() {
-    wp_enqueue_style(
-        'theme-style', // handle
-        get_template_directory_uri() . '/style.css', // путь до style.css
-        array(), // зависимости
-        filemtime(get_template_directory() . '/style.css') // версия по времени изменения
-    );
+function my_theme_enqueue_styles()
+{
+	wp_enqueue_style(
+		'theme-style', // handle
+		get_template_directory_uri() . '/style.css', // путь до style.css
+		array(), // зависимости
+		filemtime(get_template_directory() . '/style.css') // версия по времени изменения
+	);
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
 
@@ -65,6 +66,7 @@ function set_global_acf_fields()
 		'gallery_images' => get_field('gallery_images', 'option'),
 		'resume_email' => get_field('resume_email', 'option'),
 		'vk_url' => get_field('vk_url', 'option'),
+		'telegram_url' => get_field('telegram_url', 'option'),
 	];
 }
 add_action('wp', 'set_global_acf_fields');
@@ -95,24 +97,22 @@ add_action('init', 'register_teachers_post_type');
 
 function register_post_audio_type()
 {
-register_post_type('audio_lesson', [
-  'labels' => ['name' => 'Аудио-уроки'],
-  'public' => true,
-  'rewrite' => ['slug' => 'courses/audio'],
-  'supports' => ['title', 'editor'],
-]);
+	register_post_type('audio_lesson', [
+		'labels' => ['name' => 'Аудио-уроки'],
+		'public' => true,
+		'rewrite' => ['slug' => 'courses/audio'],
+		'supports' => ['title', 'editor'],
+	]);
 }
 add_action('init', 'register_post_audio_type');
 
-function register_audio_taxonomy() {
-    register_taxonomy('category_audio', 'audio_lesson', [
-        'labels' => ['name' => 'Категории аудио'],
-        'hierarchical' => true,
-        'rewrite' => ['slug' => 'courses/audio', 'with_front' => false],
-        'public' => true,
-    ]);
+function register_audio_taxonomy()
+{
+	register_taxonomy('category_audio', 'audio_lesson', [
+		'labels' => ['name' => 'Категории аудио'],
+		'hierarchical' => true,
+		'rewrite' => ['slug' => 'courses/audio', 'with_front' => false],
+		'public' => true,
+	]);
 }
 add_action('init', 'register_audio_taxonomy');
-
-
-

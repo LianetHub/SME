@@ -10,7 +10,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: $accent;
-	
+
 	&.promo-home {
 		background-position: center bottom;
 		background-color: #d57e28;
@@ -85,6 +85,7 @@
 		background-image: url("@img/banners/banner-preschoolers.jpg");
 		background-color: #e32528;
 		@media (max-width: $md5) {
+			margin-top: rem(80);
 			background-image: url("@img/banners/banner-preschoolers-mobile.jpg");
 			background-size: 100% auto;
 			background-position: center 0;
@@ -2474,11 +2475,13 @@
 	}
 	// .teachers__title
 	&__title {
+		text-align: center;
 		@media (max-width: $md5) {
 			font-size: 2.5rem;
 		}
 		@media (min-width: $md3) {
 			font-size: 3.125rem;
+			text-align: left;
 		}
 	}
 	// .teachers__tagline
@@ -2771,7 +2774,6 @@
 	}
 	// .desc__image
 	&__image {
-
 		display: flex;
 		flex-direction: column;
 		margin-left: -1.25rem;
@@ -2780,8 +2782,8 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
-		@media (min-width:$md3) {
-				min-height: 100%;
+		@media (min-width: $md3) {
+			min-height: 100%;
 		}
 		& img {
 			flex: 1 1 auto;

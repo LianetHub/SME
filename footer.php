@@ -5,6 +5,7 @@
     <?php
     $phone_number = get_field('phone_number', 'option');
     $vk_url = get_field('vk_url', 'option');
+    $telegram_url = get_field('telegram_url', 'option');
     $formatted_phone_number = preg_replace('/[^0-9+]/', '', $phone_number);
     ?>
     <div class="container">
@@ -30,8 +31,8 @@
                     <a href="tel:<? echo esc_html($formatted_phone_number); ?>" class="footer__link icon-phone"><? echo esc_html($phone_number); ?></a>
                     <a href="https://wa.me/<? echo esc_html($formatted_phone_number); ?>" target="_blank" class="footer__link icon-whatsapp">whatsapp</a>
                     <div class="footer__socials">
-                        <a href="<?=$vk_url?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-vk"></a>
-                        <a href="https://t.me/<? echo esc_html($formatted_phone_number); ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-telegram"></a>
+                        <a href="<?= $vk_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-vk"></a>
+                        <a href="<?= $telegram_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-telegram"></a>
                     </div>
                 </div>
             </div>

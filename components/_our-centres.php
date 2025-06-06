@@ -10,7 +10,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
         <div class="container">
             <div class="our-centres__body">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-5">
                         <div class="our-centres__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/cam.svg" alt="Иконка">
                         </div>

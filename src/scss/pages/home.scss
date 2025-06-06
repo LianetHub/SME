@@ -5,12 +5,21 @@
 
 .our-centres {
 	background: #f6f6f6;
-	padding: 3.75rem 0;
+	padding: 3.75rem 0 0;
+	@media (min-width: $md5) {
+		padding: 3.75rem 0;
+	}
 	@media (min-width: $md2) {
 		padding: 5rem 0;
 	}
 	&.our-centres_white {
 		background: transparent;
+		.our-centres__header-icon {
+			@media (min-width: $md3) {
+				padding-left: 6rem;
+				padding-top: 3rem;
+			}
+		}
 	}
 	// .our-centres__body
 	&__body {
