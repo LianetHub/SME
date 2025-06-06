@@ -22,7 +22,7 @@ get_header();
 <?php require_once(TEMPLATE_PATH . '_sign-lesson.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_sections-block.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_license.php'); ?>
-<?php require_once(TEMPLATE_PATH . '_prices.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_prices-v2.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_reviews.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_faq.php'); ?>
 

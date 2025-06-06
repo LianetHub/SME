@@ -95,7 +95,7 @@
 		background-color: #d57e28;
 		background-image: url("@img/banners/banner-7-9.jpg");
 		background-position: 50% 0;
-		@media (max-width:$md3) {
+		@media (max-width: $md3) {
 			background-image: none;
 		}
 		@media (max-width: $md4) {
@@ -316,13 +316,13 @@
 	}
 	&.promo-develop {
 		background-image: url("@img/banners/banner-develop.jpg");
-		@media (max-width: $md4) {
+		@media (max-width: $md4) { 
 			background-image: url("@img/banners/banner-develop-mobile.jpg");
 			background-position: center top;
 		}
 		.promo__body {
 			@media (max-width: $md4) {
-				padding-top: 1rem;
+				padding-top: 2.5rem;
 			}
 		}
 		.promo__side {
@@ -850,7 +850,7 @@
 	}
 	& + .why {
 		padding-top: 0;
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			margin-top: -1.25rem;
 		}
 	}
@@ -2082,6 +2082,9 @@
 				--gutter-y: 1.25rem;
 			}
 		}
+		.banner__icon {
+			margin: 0 auto;
+		}
 	}
 	& + .cards {
 		@media (min-width: $md3) {
@@ -2979,6 +2982,15 @@
 			font-size: 0.9375rem;
 			margin-top: 1rem;
 		}
+		& a {
+			text-decoration: underline;
+			font-weight: 700;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 
@@ -3030,6 +3042,7 @@
 	}
 	// .heading__logo
 	&__logo {
+		max-width: rem(94);
 	}
 	// .heading__subtitle
 	&__subtitle {
