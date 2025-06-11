@@ -216,7 +216,7 @@
                                                     </div>
                                                 </li>
                                                 <li class="menu__item has-children">
-                                                    <a href="/prices" class="menu__link">
+                                                    <a href="/prices/" class="menu__link">
                                                         <span class="menu__link-icon">
                                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price.svg" alt="Иконка">
                                                         </span>
@@ -231,29 +231,31 @@
                                                                 <span class="submenu__close-text">Закрыть</span>
                                                             </button>
                                                             <ul>
-                                                                <li><a href="/prices">Стоимость занятий и акции</a></li>
+                                                                <li><a href="/prices/">Стоимость занятий и акции</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li class="menu__item has-children">
-                                                    <button type="button" class="menu__link">
-                                                        <span class="menu__link-icon">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/location-outline.svg" alt="Иконка">
+                                                    <a href="/centres/" class="menu__link">
+                                                        <span class="menu__link">
+                                                            <span class="menu__link-icon">
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/location-outline.svg" alt="Иконка">
+                                                            </span>
+                                                            <span class="menu__link-text">
+                                                                <strong>Контакты</strong>
+                                                                <span>Адреса и телефоны наших центров</span>
+                                                            </span>
                                                         </span>
-                                                        <span class="menu__link-text">
-                                                            <strong>Контакты</strong>
-                                                            <span>Адреса и телефоны наших центров</span>
-                                                        </span>
-                                                    </button>
+                                                    </a>
                                                     <div class="submenu">
                                                         <div class="container">
                                                             <button type="button" class="submenu__close icon-close">
                                                                 <span class="submenu__close-text">Закрыть</span>
                                                             </button>
                                                             <ul>
-                                                                <li><a href="/centres#mytishi">г. Мытищи</a></li>
-                                                                <li><a href="/centres#balashiha">г. Балашиха</a></li>
+                                                                <li><a href="/centres#mytishi/">г. Мытищи</a></li>
+                                                                <li><a href="/centres#balashiha/">г. Балашиха</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>

@@ -78,7 +78,7 @@
                     ));
                     ?>
                 </nav>
-                <a href="/vacancies" class="footer__vacanies">
+                <a href="/vacancies/" class="footer__vacanies">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vacancies.svg" alt="Наши вакансии">
                     Вакансии
                 </a>
