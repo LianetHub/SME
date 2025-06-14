@@ -29,8 +29,10 @@ $tag = ($why_title) ? 'section' : 'div';
                         <div class="why__card swiper-slide <? echo $color ?>">
                             <div class="why__card-inner">
                                 <div class="why__card-front">
-                                    <? if ($key !== 0): ?>
-                                        <button type="button" data-toggler-card class="why__card-btn icon-plus-circle"></button>
+                                    <?php if ($back) : ?>
+                                        <? if ($key !== 0): ?>
+                                            <button type="button" data-toggler-card class="why__card-btn icon-plus-circle"></button>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                     <?php if ($key === 0) : ?>
                                         <div class="why__card-logo">
@@ -52,8 +54,10 @@ $tag = ($why_title) ? 'section' : 'div';
                                             <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
                                         </div>
                                     <?php endif; ?>
-                                    <? if ($key == 0): ?>
-                                        <button type="button" data-toggler-card class="why__card-toggler icon-arrow-cirlce"></button>
+                                    <?php if ($back) : ?>
+                                        <? if ($key == 0): ?>
+                                            <button type="button" data-toggler-card class="why__card-toggler icon-arrow-cirlce"></button>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                                 <div class="why__card-back">

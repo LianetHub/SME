@@ -194,7 +194,17 @@ $(function () {
 
         // card animation
         if ($target.is('[data-toggler-card]')) {
-            $target.closest('.why__card').toggleClass('is-flipped');
+            const $card = $target.closest('.why__card');
+            const isFlipped = $card.hasClass('is-flipped');
+            const $cardBack = $card.find('.why__card-back');
+
+            if (!isFlipped && $cardBack.innerHeight() > $card.innerHeight()) {
+                $card.css('height', $cardBack.innerHeight() + 'px');
+            } else {
+                $card.css('height', 'auto');
+            }
+
+            $card.toggleClass('is-flipped');
         }
 
 

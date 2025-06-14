@@ -1147,10 +1147,8 @@
 			&:not(:first-child) {
 				margin: 4.38rem 0 0 0;
 			}
-			gap: 1.25rem;
 		}
-		@media (min-width: $md1) {
-		}
+	
 	}
 	// .why__column
 	&__column {
@@ -1163,12 +1161,12 @@
 		position: relative;
 		z-index: 1;
 		width: 18.75rem;
-		height: auto;
+		height: 100%;
 		perspective: rem(1000);
 		flex-shrink: 0;
-		@media (max-width:$md4) {
-			min-height: rem(354);
-		}
+		display: flex;
+		flex-direction: column;
+		transition: height 0.3s ease;
 		@media (min-width: $md4) {
 			grid-row: span 2;
 			width: 100%;
@@ -1176,6 +1174,7 @@
 		&.is-flipped {
 			& .why__card-inner {
 				transform: rotateY(180deg);
+			
 			}
 		}
 		&.orange {
@@ -1256,15 +1255,18 @@
 					padding-top: 4rem;
 				}
 			}
-			.why__card-back {
-				text-align: center;
-			}
+
 			.why__card-body {
-				@media (min-width: $md4) {
-					gap: rem(50);
+				&:has(img) {
+					text-align: center;
 				}
-				@media (min-width: $md2) {
-					gap: rem(60);
+				& img {
+					@media (min-width: $md4) {
+						margin-top: rem(30);
+					}
+					@media (min-width: $md2) {
+						margin-top: rem(40);
+					}
 				}
 			}
 		}
@@ -1296,7 +1298,11 @@
 		border-radius: 1.625rem;
 		padding: 3rem 2.75rem 1.29rem 1.63rem;
 		min-height: 100%;
-		max-width: 100%;
+		max-width: 100%;		
+		flex: 1 1 auto;
+		@media (max-width: $md4) {
+			min-height: rem(354);
+		}
 		@media (min-width: $md4) {
 			padding: 1.29rem 1rem 1.29rem 1.25rem;
 			width: 100%;
@@ -1307,6 +1313,7 @@
 			border-radius: 2.25rem;
 		}
 	}
+	// .why__card-front
 	&__card-front {
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
@@ -1324,9 +1331,8 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 100%;
-		padding: 3rem 1.63rem 1.29rem;
 		min-height: 100%;
+		padding: 3rem 1.63rem 1.29rem;
 		max-width: 100%;
 		@media (min-width: $md4) {
 			padding: 1.29rem 1rem 1.29rem 1.25rem;
@@ -1519,6 +1525,8 @@
 		}
 	}
 }
+
+
 
 .license {
 	background: #f6f6f6;
