@@ -25,15 +25,23 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
   src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -49,17 +57,9 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 }
 
 .promotions__body ul li::before,
@@ -3127,7 +3127,7 @@ h6,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .why__card-body h3 {
@@ -3136,6 +3136,11 @@ h6,
 
 .why__card-body p:has(img) {
   text-align: center;
+}
+
+.why__card-body ul {
+  list-style: disc;
+  padding-left: 1em;
 }
 
 .why__card-desc {
@@ -6802,6 +6807,10 @@ h6,
 
   .sign-lesson__calllback {
     min-height: auto;
+  }
+
+  .page-template-7-9 .why__title {
+    display: none;
   }
 
   .why__card-logo {
