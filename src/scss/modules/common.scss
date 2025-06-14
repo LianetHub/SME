@@ -316,7 +316,7 @@
 	}
 	&.promo-develop {
 		background-image: url("@img/banners/banner-develop.jpg");
-		@media (max-width: $md4) { 
+		@media (max-width: $md4) {
 			background-image: url("@img/banners/banner-develop-mobile.jpg");
 			background-position: center top;
 		}
@@ -1149,6 +1149,8 @@
 			}
 			gap: 1.25rem;
 		}
+		@media (min-width: $md1) {
+		}
 	}
 	// .why__column
 	&__column {
@@ -1159,94 +1161,111 @@
 	// .why__card
 	&__card {
 		position: relative;
+		z-index: 1;
 		width: 18.75rem;
 		height: auto;
+		perspective: rem(1000);
 		flex-shrink: 0;
-		border-radius: 1.625rem;
-		background: #e2e2e2;
-		display: flex;
-		flex-direction: column;
-		z-index: 1;
-		padding: 3rem 2.75rem 1.29rem 1.63rem;
-		@media (min-width: $md4) {
-			padding: 1.29rem 1rem 1.29rem 1.25rem;
-			width: 100%;
-			grid-row: span 2;
-			border-radius: 1.77256rem;
+		@media (max-width:$md4) {
+			min-height: rem(354);
 		}
-		@media (min-width: $md2) {
-			padding: 2.19rem;
-			border-radius: 2.25rem;
+		@media (min-width: $md4) {
+			grid-row: span 2;
+			width: 100%;
+		}
+		&.is-flipped {
+			& .why__card-inner {
+				transform: rotateY(180deg);
+			}
 		}
 		&.orange {
-			background: #fa5300;
-			color: #fff;
+			.why__card-inner {
+				background: #fa5300;
+				color: #fff;
+			}
 		}
 		&.violet {
-			background: #aa02ff;
-			color: #fff;
+			.why__card-inner {
+				background: #aa02ff;
+				color: #fff;
+			}
 		}
 		&:not(.orange, .violet) {
 			&:nth-child(4n + 1) {
-				&.icon-plus-circle {
+				& .why__card-btn {
 					&::before {
 						color: #fa0644;
 					}
 				}
 			}
 			&:nth-child(4n + 2) {
-				&.icon-plus-circle {
+				& .why__card-btn {
 					&::before {
 						color: #fa0644;
 					}
 				}
 			}
 			&:nth-child(4n + 3) {
-				&.icon-plus-circle {
+				& .why__card-btn {
 					&::before {
 						color: #aa02ff;
 					}
 				}
 			}
 		}
-		&.icon-plus-circle {
-			&::before {
-				position: absolute;
-				top: 0.62rem;
-				right: 0.69rem;
-				font-size: 1.5rem;
-				@media (min-width: $md2) {
-					top: 1.25rem;
-					right: 1.25rem;
-					font-size: 1.625rem;
+		&.rock-card {
+			& .why__card-inner {
+				background: url("@img/why-rock-bg.jpg") 100% 100% / 80% auto no-repeat, #e2e2e2;
+				@media (min-width: $md4) {
+					background: url("@img/why-rock-bg.jpg") 100% 100% / cover no-repeat, #e2e2e2;
 				}
 			}
 		}
-		&.rock-card {
-			background: url("@img/why-rock-bg.jpg") 100% 100% / 80% auto no-repeat, #e2e2e2;
-			@media (min-width: $md4) {
-				background: url("@img/why-rock-bg.jpg") 100% 100% / cover no-repeat, #e2e2e2;
-			}
-		}
 		&:has(.why__card-background) {
-			color: #fff;
-			background: transparent;
-			&::before {
-				color: #fff !important;
+			& .why__card-inner {
+				color: #fff;
+				background: transparent;
+				&::before {
+					color: #fff !important;
+				}
+				.why__card-back {
+					background: #e2e2e2;
+					color: #393939;
+					border-radius: 1.625rem;
+					@media (min-width: $md4) {
+						border-radius: 1.77256rem;
+					}
+					@media (min-width: $md2) {
+						border-radius: 2.25rem;
+					}
+				}
 			}
 		}
 		&:nth-child(7n + 1) {
 			@media (min-width: $md4) {
-				padding-top: 3.25rem;
-				margin-top: 3rem;
 				grid-row: span 3;
+				.why__card-inner {
+					padding-top: 3.25rem;
+				}
 			}
 			@media (min-width: $md3) {
 				grid-row: span 4;
 			}
 			@media (min-width: $md2) {
-				margin-top: 2.75rem;
-				padding-top: 4rem;
+				.why__card-inner {
+					padding-top: 4rem;
+				}
+			}
+			.why__card-back {
+				text-align: center;
+			}
+			.why__card-body {
+				@media (min-width: $md4) {
+					gap: rem(50);
+				}
+				@media (min-width: $md2) {
+					gap: rem(60);
+				}
 			}
 		}
 		&:nth-child(7n + 4) {
@@ -1262,6 +1281,74 @@
 			@media (min-width: $md2) {
 				min-height: rem(436);
 			}
+		}
+	}
+	// .why__card-inner
+	&__card-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		display: flex;
+		flex-direction: column;
+		background: #e2e2e2;
+		border-radius: 1.625rem;
+		padding: 3rem 2.75rem 1.29rem 1.63rem;
+		min-height: 100%;
+		max-width: 100%;
+		@media (min-width: $md4) {
+			padding: 1.29rem 1rem 1.29rem 1.25rem;
+			width: 100%;
+			border-radius: 1.77256rem;
+		}
+		@media (min-width: $md2) {
+			padding: 2.19rem;
+			border-radius: 2.25rem;
+		}
+	}
+	&__card-front {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		border-radius: inherit;
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+	}
+	// .why__card-back
+	&__card-back {
+		transform: rotateY(180deg);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 3rem 1.63rem 1.29rem;
+		min-height: 100%;
+		max-width: 100%;
+		@media (min-width: $md4) {
+			padding: 1.29rem 1rem 1.29rem 1.25rem;
+			width: 100%;
+			border-radius: 1.77256rem;
+		}
+		@media (min-width: $md2) {
+			padding: 2.19rem;
+			border-radius: 2.25rem;
+		}
+	}
+	// .why__card-btn
+	&__card-btn {
+		position: absolute;
+		top: 0.62rem;
+		right: 0.69rem;
+		font-size: 1.5rem;
+		color: #fff;
+		@media (min-width: $md2) {
+			top: 1.25rem;
+			right: 1.25rem;
+			font-size: 1.625rem;
 		}
 	}
 	// .why__card-logo
@@ -1294,7 +1381,7 @@
 			line-height: 1.1;
 			font-weight: 400;
 		}
-		&:first-child:last-child {
+		&:last-child {
 			margin-top: auto;
 		}
 		&.h6 {
@@ -1320,6 +1407,33 @@
 				@media (min-width: $md2) {
 					font-size: 2rem;
 				}
+			}
+		}
+	}
+	&__card-back {
+		display: flex;
+		flex-direction: column;
+	}
+	// .why__card-body
+	&__card-body {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: rem(20);
+
+		& h3 {
+			font-size: rem(26);
+			@media (min-width: $md4) {
+				font-size: rem(22);
+			}
+			@media (min-width: $md2) {
+				font-size: rem(24);
+			}
+		}
+		& p {
+			&:has(img) {
+				text-align: center;
 			}
 		}
 	}
@@ -1350,8 +1464,8 @@
 			margin-top: 1.5rem;
 		}
 	}
-	// .why__card-link
-	&__card-link {
+	// .why__card-toggler
+	&__card-toggler {
 		margin-top: 0.88rem;
 		align-self: flex-start;
 		color: #fff;

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
   font-style: normal;
 }
 
@@ -17,24 +17,16 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
+  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
 }
 
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -44,6 +36,14 @@
   src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
 }
 
 @font-face {
@@ -2912,12 +2912,75 @@ h6,
 
 .why__card {
   position: relative;
+  z-index: 1;
   width: 18.75rem;
   height: auto;
+  -webkit-perspective: 62.5rem;
+          perspective: 62.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  border-radius: 1.625rem;
+}
+
+.why__card.is-flipped .why__card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.why__card.orange .why__card-inner {
+  background: #fa5300;
+  color: #fff;
+}
+
+.why__card.violet .why__card-inner {
+  background: #aa02ff;
+  color: #fff;
+}
+
+.why__card:not(.orange, .violet):nth-child(4n+1) .why__card-btn::before {
+  color: #fa0644;
+}
+
+.why__card:not(.orange, .violet):nth-child(4n+2) .why__card-btn::before {
+  color: #fa0644;
+}
+
+.why__card:not(.orange, .violet):nth-child(4n+3) .why__card-btn::before {
+  color: #aa02ff;
+}
+
+.why__card.rock-card .why__card-inner {
+  background: url("../img/why-rock-bg.jpg") 100% 100%/80% auto no-repeat, #e2e2e2;
+}
+
+.why__card:has(.why__card-background) .why__card-inner {
+  color: #fff;
+  background: transparent;
+}
+
+.why__card:has(.why__card-background) .why__card-inner::before {
+  color: #fff !important;
+}
+
+.why__card:has(.why__card-background) .why__card-inner .why__card-back {
   background: #e2e2e2;
+  color: #393939;
+  border-radius: 1.625rem;
+}
+
+.why__card:nth-child(7n+1) .why__card-back {
+  text-align: center;
+}
+
+.why__card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2925,50 +2988,50 @@ h6,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 1;
+  background: #e2e2e2;
+  border-radius: 1.625rem;
   padding: 3rem 2.75rem 1.29rem 1.63rem;
+  min-height: 100%;
+  max-width: 100%;
 }
 
-.why__card.orange {
-  background: #fa5300;
-  color: #fff;
+.why__card-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
-.why__card.violet {
-  background: #aa02ff;
-  color: #fff;
+.why__card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 1.63rem 1.29rem;
+  min-height: 100%;
+  max-width: 100%;
 }
 
-.why__card:not(.orange, .violet):nth-child(4n+1).icon-plus-circle::before {
-  color: #fa0644;
-}
-
-.why__card:not(.orange, .violet):nth-child(4n+2).icon-plus-circle::before {
-  color: #fa0644;
-}
-
-.why__card:not(.orange, .violet):nth-child(4n+3).icon-plus-circle::before {
-  color: #aa02ff;
-}
-
-.why__card.icon-plus-circle::before {
+.why__card-btn {
   position: absolute;
   top: 0.62rem;
   right: 0.69rem;
   font-size: 1.5rem;
-}
-
-.why__card.rock-card {
-  background: url("../img/why-rock-bg.jpg") 100% 100%/80% auto no-repeat, #e2e2e2;
-}
-
-.why__card:has(.why__card-background) {
   color: #fff;
-  background: transparent;
-}
-
-.why__card:has(.why__card-background)::before {
-  color: #fff !important;
 }
 
 .why__card-logo {
@@ -2998,7 +3061,7 @@ h6,
   font-weight: 400;
 }
 
-.why__card-title:first-child:last-child {
+.why__card-title:last-child {
   margin-top: auto;
 }
 
@@ -3029,6 +3092,41 @@ h6,
   margin-bottom: 0;
 }
 
+.why__card-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.why__card-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+}
+
+.why__card-body h3 {
+  font-size: 1.625rem;
+}
+
+.why__card-body p:has(img) {
+  text-align: center;
+}
+
 .why__card-desc {
   line-height: 110%;
   margin-bottom: auto;
@@ -3039,7 +3137,7 @@ h6,
   margin-bottom: 0.5em;
 }
 
-.why__card-link {
+.why__card-toggler {
   margin-top: 0.88rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -7673,22 +7771,30 @@ h6,
   }
 
   .why__card {
-    padding: 1.29rem 1rem 1.29rem 1.25rem;
-    width: 100%;
     -ms-grid-row-span: 2;
     grid-row: span 2;
-    border-radius: 1.77256rem;
+    width: 100%;
   }
 
-  .why__card.rock-card {
+  .why__card.rock-card .why__card-inner {
     background: url("../img/why-rock-bg.jpg") 100% 100%/cover no-repeat, #e2e2e2;
   }
 
+  .why__card:has(.why__card-background) .why__card-inner .why__card-back {
+    border-radius: 1.77256rem;
+  }
+
   .why__card:nth-child(7n+1) {
-    padding-top: 3.25rem;
-    margin-top: 3rem;
     -ms-grid-row-span: 3;
     grid-row: span 3;
+  }
+
+  .why__card:nth-child(7n+1) .why__card-inner {
+    padding-top: 3.25rem;
+  }
+
+  .why__card:nth-child(7n+1) .why__card-body {
+    gap: 3.125rem;
   }
 
   .why__card:nth-child(7n+4) {
@@ -7702,12 +7808,28 @@ h6,
     min-height: 21.4375rem;
   }
 
+  .why__card-inner {
+    padding: 1.29rem 1rem 1.29rem 1.25rem;
+    width: 100%;
+    border-radius: 1.77256rem;
+  }
+
+  .why__card-back {
+    padding: 1.29rem 1rem 1.29rem 1.25rem;
+    width: 100%;
+    border-radius: 1.77256rem;
+  }
+
   .why__card-title {
     padding-right: 1rem;
   }
 
   .page-template-default .why__card-title.h6 {
     font-size: 1.625rem;
+  }
+
+  .why__card-body h3 {
+    font-size: 1.375rem;
   }
 
   .why__card-desc p:not(:last-child) {
@@ -8482,7 +8604,7 @@ h6,
     grid-row: span 4;
   }
 
-  .why__card-link {
+  .why__card-toggler {
     font-size: 3.25rem;
   }
 
@@ -9256,24 +9378,36 @@ h6,
     margin: 4.38rem 0 0 0;
   }
 
-  .why__card {
-    padding: 2.19rem;
+  .why__card:has(.why__card-background) .why__card-inner .why__card-back {
     border-radius: 2.25rem;
   }
 
-  .why__card.icon-plus-circle::before {
-    top: 1.25rem;
-    right: 1.25rem;
-    font-size: 1.625rem;
+  .why__card:nth-child(7n+1) .why__card-inner {
+    padding-top: 4rem;
   }
 
-  .why__card:nth-child(7n+1) {
-    margin-top: 2.75rem;
-    padding-top: 4rem;
+  .why__card:nth-child(7n+1) .why__card-body {
+    gap: 3.75rem;
   }
 
   .why__card:nth-child(7n+5) {
     min-height: 27.25rem;
+  }
+
+  .why__card-inner {
+    padding: 2.19rem;
+    border-radius: 2.25rem;
+  }
+
+  .why__card-back {
+    padding: 2.19rem;
+    border-radius: 2.25rem;
+  }
+
+  .why__card-btn {
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.625rem;
   }
 
   .why__card-logo {
@@ -9282,6 +9416,10 @@ h6,
 
   .page-template-default .why__card-title.h6 {
     font-size: 2rem;
+  }
+
+  .why__card-body h3 {
+    font-size: 1.5rem;
   }
 
   .why__card-desc p:not(:last-child) {
@@ -10660,6 +10798,10 @@ h6,
     display: contents;
   }
 
+  .why__card {
+    min-height: 22.125rem;
+  }
+
   .why__card-title {
     font-size: 1.625rem;
   }
@@ -11326,7 +11468,7 @@ h6,
     color: #fa5300;
   }
 
-  .why__card-link:hover {
+  .why__card-toggler:hover {
     color: #fa5300;
   }
 

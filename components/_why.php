@@ -16,6 +16,7 @@ $tag = ($why_title) ? 'section' : 'div';
                         <?
                         $title = $card['title'];
                         $desc = $card['desc'];
+                        $back = $card['back'];
                         if ($key === 1 || $key === 3) {
                             $color = "orange";
                         } elseif ($key === 6) {
@@ -25,27 +26,50 @@ $tag = ($why_title) ? 'section' : 'div';
                         }
                         $image = $card['image'];
                         ?>
-                        <div class="why__card swiper-slide <? echo $color ?> <? if ($key !== 0): ?> icon-plus-circle <?php endif; ?>">
-                            <?php if ($key === 0) : ?>
-                                <div class="why__card-logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                        <div class="why__card swiper-slide <? echo $color ?>">
+                            <div class="why__card-inner">
+                                <div class="why__card-front">
+                                    <? if ($key !== 0): ?>
+                                        <button type="button" data-toggler-card class="why__card-btn icon-plus-circle"></button>
+                                    <?php endif; ?>
+                                    <?php if ($key === 0) : ?>
+                                        <div class="why__card-logo">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($title) : ?>
+                                        <div class="why__card-title <?php if ($image): ?> h6 <? else: ?> h5 <? endif; ?>">
+                                            <? echo $title ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($desc) : ?>
+                                        <div class="why__card-desc text-block">
+                                            <? echo $desc ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($image) : ?>
+                                        <div class="why__card-background">
+                                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
+                                        </div>
+                                    <?php endif; ?>
+                                    <? if ($key == 0): ?>
+                                        <button type="button" data-toggler-card class="why__card-toggler icon-arrow-cirlce"></button>
+                                    <?php endif; ?>
                                 </div>
-                            <?php endif; ?>
-                            <?php if ($title) : ?>
-                                <div class="why__card-title <?php if ($image): ?> h6 <? else: ?> h5 <? endif; ?>">
-                                    <? echo $title ?>
+                                <div class="why__card-back">
+                                    <button type="button" data-toggler-card class="why__card-btn icon-plus-circle"></button>
+                                    <?php if ($key === 0) : ?>
+                                        <div class="why__card-logo">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if ($back) : ?>
+                                        <div class="why__card-body">
+                                            <? echo $back ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
-                            <?php endif; ?>
-                            <?php if ($desc) : ?>
-                                <div class="why__card-desc text-block">
-                                    <? echo $desc ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($image) : ?>
-                                <div class="why__card-background">
-                                    <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
-                                </div>
-                            <?php endif; ?>
+                            </div>
                         </div>
                     <? endforeach ?>
                 </div>

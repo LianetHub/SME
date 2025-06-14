@@ -192,6 +192,11 @@ $(function () {
             $('.submenu').removeClass('open');
         }
 
+        // card animation
+        if ($target.is('[data-toggler-card]')) {
+            $target.closest('.why__card').toggleClass('is-flipped');
+        }
+
 
     });
 
@@ -740,7 +745,7 @@ $(function () {
                 .addClass('selected')
                 .attr('aria-checked', 'true');
             this.$dropdown.find('.dropdown__button-text').text(state.selectedText);
-                 this.$dropdown.find('.dropdown__button').removeClass('selected');
+            this.$dropdown.find('.dropdown__button').removeClass('selected');
         }
 
         syncSelectedOption() {
