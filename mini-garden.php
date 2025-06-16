@@ -16,12 +16,12 @@ get_header();
 <section class="banner banner-violet">
     <div class="container container-sm">
         <div class="banner__body row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="banner__icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/clock.svg" alt="Иконка">
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <h2 class="banner__title h3">
                     Детям - 4 часа развивающих занятий! <br>
                     Родителям - 4 часа свободного времени!

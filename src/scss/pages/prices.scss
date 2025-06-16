@@ -17,7 +17,11 @@
 				margin-top: 3.75rem;
 			}
 		}
-		.page-template-lets-develop-it & {
+		.page-template-lets-develop-it,
+		.page-template-preparing-for-school,
+		.page-template-oge,
+		.page-template-ege,
+		.page-template-language & {
 			@media (max-width: $md5) {
 				margin-top: rem(30);
 			}
@@ -33,7 +37,11 @@
 				margin-bottom: 1.88rem;
 			}
 		}
-		.page-template-lets-develop-it & {
+		.page-template-lets-develop-it,
+		.page-template-preparing-for-school,
+		.page-template-oge,
+		.page-template-ege,
+		.page-template-language & {
 			@media (max-width: $md5) {
 				background: #f6f6f6;
 				margin: 0 -1.25rem;
@@ -129,8 +137,11 @@
 		height: auto;
 		display: grid;
 		grid-template-rows: 1fr;
-		width: rem(175);
+		width: 50%;
 		@media (min-width: $md5) {
+			width: rem(175);
+		}
+		@media (min-width: $md4) {
 			width: rem(215);
 		}
 	}

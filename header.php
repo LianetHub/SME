@@ -238,14 +238,12 @@
                                                 </li>
                                                 <li class="menu__item has-children">
                                                     <a href="/centres/" class="menu__link">
-                                                        <span class="menu__link">
-                                                            <span class="menu__link-icon">
-                                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/location-outline.svg" alt="Иконка">
-                                                            </span>
-                                                            <span class="menu__link-text">
-                                                                <strong>Контакты</strong>
-                                                                <span>Адреса и телефоны наших центров</span>
-                                                            </span>
+                                                        <span class="menu__link-icon">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/location-outline.svg" alt="Иконка">
+                                                        </span>
+                                                        <span class="menu__link-text">
+                                                            <strong>Контакты</strong>
+                                                            <span>Адреса и телефоны наших центров</span>
                                                         </span>
                                                     </a>
                                                     <div class="submenu">
@@ -268,16 +266,16 @@
                                     <button class="header__location-btn icon-chevron">ФИЛИАЛЫ</button>
                                     <ul class="header__location-list">
                                         <li class="header__location-item">
-                                            <a href="/borisovka/" class="header__location-link"> г. Мытищи, ул. Борисовка, 16 <small class="fw-bold">ЖК «Ярославский»</small></a>
+                                            <a href="/borisovka/" class="header__location-link"> г. Мытищи, ул. Борисовка, 16</a>
                                         </li>
                                         <li class="header__location-item">
-                                            <a href="/kadomtseva/" class="header__location-link"> г. Мытищи, ул. Кадомцева, 2 <small class="fw-bold">ЖК «Новое Медведково»</small></a>
+                                            <a href="/kadomtseva/" class="header__location-link"> г. Мытищи, ул. Кадомцева, 2</a>
                                         </li>
                                         <li class="header__location-item">
-                                            <a href="/institutskaya/" class="header__location-link"> г. Мытищи, ул. 2-я Институтская, 24а <small class="fw-bold">ЖК «Ярославский»</small></a>
+                                            <a href="/institutskaya/" class="header__location-link"> г. Мытищи, ул. 2-я Институтская, 24а</a>
                                         </li>
                                         <li class="header__location-item">
-                                            <a href="/reutovskaya/" class="header__location-link"> г. Балашиха, ул. Реутовская, 20 <small class="fw-bold">ЖК «Измайловский Лес»</small></a>
+                                            <a href="/reutovskaya/" class="header__location-link"> г. Балашиха, ул. Реутовская, 20</a>
                                         </li>
                                     </ul>
                                 </div>

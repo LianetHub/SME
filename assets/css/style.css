@@ -1,8 +1,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
+  font-weight: 350;
   font-style: normal;
 }
 
@@ -17,17 +17,17 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
-  font-weight: 350;
+  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
+  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -49,16 +49,16 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
+  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -1691,7 +1691,7 @@ h6,
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .header__location-list::before {
@@ -5561,7 +5561,7 @@ h6,
   display: grid;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  width: 10.9375rem;
+  width: 50%;
 }
 
 .prices__table-column {
@@ -6976,6 +6976,10 @@ h6,
             align-items: flex-start;
   }
 
+  .page-template-adults .col-md-5 .language-desc__main {
+    max-width: 28.625rem;
+  }
+
   .language-desc__title img {
     display: block;
   }
@@ -7046,7 +7050,7 @@ h6,
   }
 
   .prices__slide {
-    width: 13.4375rem;
+    width: 10.9375rem;
   }
 
   .prices__table-column {
@@ -8423,6 +8427,10 @@ h6,
     width: fit-content;
     margin: 0 auto;
     border-radius: 1.625rem;
+  }
+
+  .prices__slide {
+    width: 13.4375rem;
   }
 
   .prices__table-row {
@@ -9902,6 +9910,10 @@ h6,
     height: 12.75rem;
   }
 
+  .page-template-preschoolers .info__card-image {
+    height: 14.25rem;
+  }
+
   .info__card-body {
     font-size: 1rem;
   }
@@ -10726,7 +10738,7 @@ h6,
   }
 
   .promo.promo-rock-the-lang .promo__body {
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
 
   .promo.promo-rock-the-lang .promo__subtitle {
@@ -10743,7 +10755,7 @@ h6,
   }
 
   .promo.promo-develop .promo__body {
-    padding-top: 2.5rem;
+    padding-top: 3rem;
   }
 
   .promo.promo-develop .promo__side {
@@ -10751,8 +10763,8 @@ h6,
   }
 
   .promo.promo-develop .promo__title {
-    font-size: 1.9375rem;
-    max-width: 80%;
+    font-size: 2.0625rem;
+    max-width: 18.125rem;
     margin: 0 auto;
   }
 
@@ -11026,6 +11038,49 @@ h6,
     display: contents;
   }
 
+  .footer__column:nth-child(1) .footer__caption {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .footer__column:nth-child(1) .footer__menu {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .footer__column:nth-child(1) .footer__menu:nth-child(2) {
+    display: block;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .footer__column:nth-child(1) .footer__menu:nth-child(2) .menu-item {
+    display: none;
+  }
+
+  .footer__column:nth-child(1) .footer__menu:nth-child(2) .menu-item:first-child {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .footer__column:nth-child(3) .footer__caption:nth-child(3) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .footer__column:nth-child(3) .footer__menu:nth-child(4) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
   .footer__menu {
     width: 100%;
     -webkit-box-ordinal-group: 0;
@@ -11041,6 +11096,18 @@ h6,
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+  }
+
+  .footer__vacanies {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .footer__contacts {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 
   .promo.promo-home .promo__side {
@@ -11078,6 +11145,16 @@ h6,
   .promo.promo-gallery {
     background-position: center 0;
     background-image: url("../img/banners/banner-gallery-mobile.jpg");
+  }
+
+  .promo.promo-gallery .promo__body {
+    padding-top: 2.5rem;
+    max-width: 17.7125rem;
+    margin: 0 auto;
+  }
+
+  .promo.promo-gallery .promo__title {
+    color: #fff;
   }
 
   .promo.promo-preschoolers {
@@ -11162,6 +11239,11 @@ h6,
     font-size: 0.9375rem;
   }
 
+  .page-id-68 .desc__image {
+    max-width: 13.1875rem;
+    margin: 0 auto 2.5rem;
+  }
+
   .our-centres__title {
     font-size: 1.875rem;
   }
@@ -11242,17 +11324,29 @@ h6,
     font-size: 2.25rem;
   }
 
-  .page-template-lets-develop-it .prices__body {
+  .prices__body .page-template-lets-develop-it,
+  .prices__body .page-template-preparing-for-school,
+  .prices__body .page-template-oge,
+  .prices__body .page-template-ege,
+  .page-template-language .prices__body {
     margin-top: 1.875rem;
   }
 
-  .page-template-lets-develop-it .prices__block {
+  .prices__block .page-template-lets-develop-it,
+  .prices__block .page-template-preparing-for-school,
+  .prices__block .page-template-oge,
+  .prices__block .page-template-ege,
+  .page-template-language .prices__block {
     background: #f6f6f6;
     margin: 0 -1.25rem;
     padding: 1.25rem 1.25rem 0;
   }
 
-  .page-template-lets-develop-it .prices__block .prices__caption {
+  .prices__block .page-template-lets-develop-it .prices__caption,
+  .prices__block .page-template-preparing-for-school .prices__caption,
+  .prices__block .page-template-oge .prices__caption,
+  .prices__block .page-template-ege .prices__caption,
+  .page-template-language .prices__block .prices__caption {
     font-size: 1.375rem;
     font-weight: 400;
     margin-bottom: 0;

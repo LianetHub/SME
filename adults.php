@@ -27,7 +27,7 @@ $list = get_field('language-desc_list');
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-5 offset-md-1">
+                <div class="col-md-5">
                     <div class="language-desc__main">
                         <?php if ($title) : ?>
                             <h2 class="language-desc__title h5 text-center-mobile">
