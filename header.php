@@ -6,8 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" itemprop="description" content="описание страницы">
-    <meta name="keywords" itemprop="keywords" content="ключевые слова">
+
 
     <!-- WordPress Title -->
     <title><?php wp_title(); ?></title>
@@ -286,16 +285,16 @@
                                         whatsapp
                                     </button>
                                     <div class="header__whatsapp-items">
-                                        <a href="https://wa.me/+79259235142" class="header__whatsapp-item">
+                                        <a href="https://wa.me/79259235142" class="header__whatsapp-item">
                                             г. Мытищи, ул. Борисовка, 16
                                         </a>
-                                        <a href="https://wa.me/+79067744866" class="header__whatsapp-item">
+                                        <a href="https://wa.me/79067744866" class="header__whatsapp-item">
                                             г. Мытищи, ул. Кадомцева, 2
                                         </a>
-                                        <a href="https://wa.me/+79856303053" class="header__whatsapp-item">
+                                        <a href="https://wa.me/79856303053" class="header__whatsapp-item">
                                             г. Мытищи, ул. 2-я Институтская, 24а
                                         </a>
-                                        <a href="https://wa.me/+79956557339" class="header__whatsapp-item">
+                                        <a href="https://wa.me/79956557339" class="header__whatsapp-item">
                                             г. Балашиха, ул. Реутовская, 20
                                         </a>
                                     </div>

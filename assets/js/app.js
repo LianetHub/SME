@@ -198,10 +198,10 @@ $(function () {
             const isFlipped = $card.hasClass('is-flipped');
             const $cardBack = $card.find('.why__card-back');
 
-            if (!isFlipped && $cardBack.innerHeight() > $card.innerHeight()) {
-                $card.css('height', $cardBack.innerHeight() + 'px');
+            if (!isFlipped ) {
+                $card.css('min-height', $cardBack.outerHeight() + 'px');
             } else {
-                $card.css('height', 'auto');
+                $card.css('min-height', 'auto');
             }
 
             $card.toggleClass('is-flipped');

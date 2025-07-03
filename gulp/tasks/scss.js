@@ -24,8 +24,7 @@ export const scss = () => {
         }))
         .pipe(
             app.plugins.if(
-                // app.isBuild,
-                true,
+                app.isBuild,
                 groupCssMediaQueries()
             )
         )
@@ -40,8 +39,7 @@ export const scss = () => {
         // )
         .pipe(
             app.plugins.if(
-                // app.isBuild,
-                true,
+                app.isBuild,
                 autoprefixer({
                     grid: true,
                     overrideBrowserslist: ['last 3 versions'],
@@ -59,8 +57,7 @@ export const scss = () => {
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(
             app.plugins.if(
-                // app.isBuild,
-                true,
+                app.isBuild,
                 cleanCss()
             )
         )

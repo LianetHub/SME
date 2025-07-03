@@ -22,7 +22,7 @@
                                         <div class="certer-card__contacts-icon">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
                                         </div>
-                                        <a href="https://wa.me/+74951503778">+7 (495) 150-37-78</a>
+                                        <a href="https://wa.me/79259235142">+7(925)923-51-42</a>
                                     </li>
                                     <li class="certer-card__contacts-item icon-location">
                                         <address>
@@ -53,7 +53,7 @@
                                         <div class="certer-card__contacts-icon">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
                                         </div>
-                                        <a href="https://wa.me/+74951503778">+7 (495) 150-37-78</a>
+                                        <a href="https://wa.me/79067744866">+7(906)774-48-668</a>
                                     </li>
                                     <li class="certer-card__contacts-item icon-location">
                                         <address>
@@ -84,7 +84,7 @@
                                         <div class="certer-card__contacts-icon">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
                                         </div>
-                                        <a href="https://wa.me/+74951503778">+7 (495) 150-37-78</a>
+                                        <a href="https://wa.me/79067744866">+7 (906) 774-48-66</a>
                                     </li>
                                     <li class="certer-card__contacts-item icon-location">
                                         <address>
@@ -122,7 +122,7 @@
                                             <div class="certer-card__contacts-icon">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
                                             </div>
-                                            <a href="https://wa.me/+74951503778">+7 (495) 150-37-78</a>
+                                            <a href="https://wa.me/79956557339">+7 (995) 655-73-39</a>
                                         </li>
                                         <li class="certer-card__contacts-item icon-location">
                                             <address>

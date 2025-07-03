@@ -2,10 +2,12 @@
 $phone_number = get_field('phone_number', 'option');
 $formatted_phone_number = preg_replace('/[^0-9+]/', '', $phone_number);
 $email_address = get_field('email_address', 'option');
-
 $contacts_address = get_field('contacts_address');
 $yandex_map_url = get_field('yandex_map_url');
 $gallery = get_field('gallery_images');
+$phone_number_center_wa = get_field('phone_number_center_wa');
+$formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_center_wa);
+
 
 ?>
 <?php if ($contacts_address) : ?>
@@ -28,7 +30,7 @@ $gallery = get_field('gallery_images');
                                     <div class="contacts__item-icon">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
                                     </div>
-                                    <span>WhatsApp: <a href="https://wa.me/<? echo esc_html($formatted_phone_number); ?>" target="_blank"><? echo esc_html($phone_number); ?></a></span>
+                                    <span>WhatsApp: <a href="https://wa.me/<? echo esc_html($formatted_phone_number_center_wa); ?>" target="_blank"><? echo esc_html($phone_number_center_wa); ?></a></span>
                                 </li>
                                 <li class="contacts__item icon-location">
                                     <address>
@@ -60,7 +62,7 @@ $gallery = get_field('gallery_images');
                         <div class="swiper-wrapper">
                             <?php foreach ($gallery as $image): ?>
                                 <a href="<?php echo esc_url($image['url']); ?>" data-fancybox="gallery" class="gallery__slide swiper-slide">
-                                    <img src="<?php echo esc_url($image['sizes']['full']); ?>" class="cover-image" alt="<?php echo esc_attr($image['alt']); ?>">
+                                    <img src="<?php echo esc_url($image['url']); ?>" class="cover-image" alt="<?php echo esc_attr($image['alt']); ?>">
                                 </a>
                             <?php endforeach; ?>
                         </div>

@@ -21,3 +21,26 @@ Requires PHP: 8.1
 
 */
     .header__whatsapp:hover .header__whatsapp-items {        z-index: 1;    }
+
+.is-flipped .why__card-btn::before {
+transform: rotate(45deg);}
+
+@media (max-width: 575.98px) {
+    .promo.promo-preschoolers::before {
+        content: "";
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 240px;
+        height: 100%;
+        background-image: url(../sme-theme/assets/img/banners/banner-age-mob.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.promo.promo-preschoolers {
+  position: relative;
+}
+}

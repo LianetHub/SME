@@ -29,7 +29,7 @@
                 </nav>
                 <div class="footer__contacts">
                     <a href="tel:<? echo esc_html($formatted_phone_number); ?>" class="footer__link icon-phone"><? echo esc_html($phone_number); ?></a>
-                    <a href="https://wa.me/<? echo esc_html($formatted_phone_number); ?>" target="_blank" class="footer__link icon-whatsapp">whatsapp</a>
+                    <a href="https://wa.me/79259235142" target="_blank" class="footer__link icon-whatsapp">whatsapp</a>
                     <div class="footer__socials">
                         <a href="<?= $vk_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-vk"></a>
                         <a href="<?= $telegram_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-telegram"></a>

@@ -67,6 +67,7 @@ function set_global_acf_fields()
 		'resume_email' => get_field('resume_email', 'option'),
 		'vk_url' => get_field('vk_url', 'option'),
 		'telegram_url' => get_field('telegram_url', 'option'),
+		'phone_number_center_wa' => get_field('phone_number_center_wa', 'option'),
 	];
 }
 add_action('wp', 'set_global_acf_fields');
@@ -116,3 +117,75 @@ function register_audio_taxonomy()
 	]);
 }
 add_action('init', 'register_audio_taxonomy');
+add_action('wp_head', function() {
+  if (is_singular()) {
+    $keywords = get_post_meta(get_the_ID(), '_yoast_wpseo_focuskw', true);
+    if ($keywords) {
+      echo '<meta name="keywords" content="' . esc_attr($keywords) . '">' . "\n";
+    }
+  }
+});
+
+
+add_action('wpcf7_before_send_mail', 'send_cf7_to_telegram');
+
+function send_cf7_to_telegram($cf7) {
+    $form_id = $cf7->id();
+    $form_title = $cf7->title();
+
+    // ✅ Укажи ID нужных форм
+    $target_forms = [6, 1749];
+
+    error_log("🚀 Hook запущен. Форма ID: $form_id ($form_title)");
+
+    if (!in_array($form_id, $target_forms)) {
+        error_log("⛔ Форма не в списке нужных. Прерываю.");
+        return;
+    }
+
+    $submission = WPCF7_Submission::get_instance();
+
+    if (!$submission) {
+        error_log("⚠️ submission = false");
+        return;
+    }
+
+    $posted_data = $submission->get_posted_data();
+    $page_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'неизвестно';
+
+    // ✅ Формируем сообщение
+    $message = "📩 Новая заявка с формы: {$form_title}\n";
+    $message .= "🧭 Страница отправки: {$page_url}\n\n";
+
+    foreach ($posted_data as $key => $value) {
+        if (in_array($key, ['_wpcf7', '_wpnonce', '_wpcf7_unit_tag', '_wpcf7_container_post'])) continue;
+
+        // обработка массива (если поле с checkbox или select multiple)
+        if (is_array($value)) {
+            $value = implode(', ', $value);
+        }
+
+        $message .= "$key: $value\n";
+    }
+
+    // ✅ Telegram config
+    $token = '7549397283:AAE4eXvuLHv8jwmA7prQtR_zjAujuwFPxgU';
+    $chat_id = '-4845275736';
+    $send_url = "https://api.telegram.org/bot{$token}/sendMessage";
+
+    // ✅ Отправка
+    $response = wp_remote_post($send_url, [
+        'body' => [
+            'chat_id' => $chat_id,
+            'text' => $message,
+            // Без Markdown пока — чтобы не ловить ошибку форматирования
+        ]
+    ]);
+
+    // ✅ Логируем результат
+    if (is_wp_error($response)) {
+        error_log('❌ Ошибка отправки в Telegram: ' . $response->get_error_message());
+    } else {
+        error_log('✅ Ответ от Telegram: ' . wp_remote_retrieve_body($response));
+    }
+}
