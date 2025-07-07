@@ -27,6 +27,9 @@ if ($promo_block) {
     $promo_image = $promo_block['promo_image'] ?? '';
     $promo_image_class = $promo_block['promo_image_class'] ?? '';
 
+    $promo_sticker_active = $promo_block['promo_sticker_active'] ?? false;
+    $promo_sticker_image = $promo_block['promo_sticker_image'] ?? '';
+
     $tag = ($promo_title) ? 'section' : 'div';
 
     $title_class = is_array($title_class) ? implode(' ', $title_class) : $title_class;
@@ -75,8 +78,18 @@ if ($promo_block) {
                             мы свяжемся с вами!
                         </div>
                     </div>
+                    <?php if ($promo_sticker_active) : ?>
+                        <div class="promo__sticker promo__sticker--desktop">
+                            <img src="https://www.me-english.ru/wp-content/uploads/2025/07/day-open-doors.svg">
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </<?= $tag ?>>
+    <?php if ($promo_sticker_active) : ?>
+        <div class="promo__sticker promo__sticker--mobile">
+            <img src="https://www.me-english.ru/wp-content/uploads/2025/07/day-open-doors-mobile.svg">
+        </div>
+    <?php endif; ?>
 <?php } ?>
