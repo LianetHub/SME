@@ -6,44 +6,30 @@
         </p>
         <div class="sign-lesson__body">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="certer-card">
                         <address class="certer-card__address h5 icon-location">
-                            Мытищи, Борисовка,16
-                            <small>ЖК «Ярославский»</small>
+                            Москва
+                        </address>
+                        <div class="certer-card__image">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/lyublino.png" alt="Фото нашего центра">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="certer-card">
+                        <address class="certer-card__address h5 icon-location">
+                            Мытищи
                         </address>
                         <div class="certer-card__image">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/01.jpg" alt="Фото нашего центра">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="certer-card">
                         <address class="certer-card__address h5 icon-location">
-                            Мытищи, кадомцева,2
-                            <small>ЖК «Новое Медведково»</small>
-                        </address>
-                        <div class="certer-card__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="certer-card">
-                        <address class="certer-card__address h5 icon-location">
-                            Мытищи, 2-я институтская, 24А
-                            <small>Мкр. «Строитель»</small>
-                        </address>
-                        <div class="certer-card__image">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" alt="Фото нашего центра">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="certer-card">
-                        <address class="certer-card__address h5 icon-location">
-                            Балашиха, Реутовская, 20
-                            <small>ЖК «Измайловский Лес»</small>
+                            Балашиха
                         </address>
                         <div class="certer-card__image">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/04.jpg" alt="Фото нашего центра">

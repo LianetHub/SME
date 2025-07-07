@@ -89,10 +89,11 @@
 		@media (min-width: $md2) {
 			gap: 1.1em;
 		}
-		& iframe {
+		& video {
 			aspect-ratio: math.div(430, 235);
 			width: 100%;
 			height: auto;
+			flex-shrink: 0;
 		}
 		&::before {
 			display: none;

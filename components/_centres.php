@@ -1,5 +1,44 @@
 <section class="centres">
     <div class="container">
+        <div class="centres__block" id="moskow">
+            <h2 class="centres__title h3 text-center">центр в Москве</h2>
+            <div class="centres__body">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="certer-card">
+                            <address class="certer-card__address h5 icon-location">
+                                Люблинская, 72Ак2
+                                <small>ЖК «Люблинский Парк»</small>
+                            </address>
+                            <div class="certer-card__row">
+                                <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/lyublino.png" data-fancybox class="certer-card__image">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/lyublino.png" alt="Фото нашего центра">
+                                </a>
+                                <div class="certer-card__info">
+                                    <ul class="certer-card__contacts text-block-md">
+                                        <li class="certer-card__contacts-item icon-phone">
+                                            <span><a href="tel:+74951503778">+7 (495) 150-37-78</a></span>
+                                        </li>
+                                        <li class="certer-card__contacts-item">
+                                            <div class="certer-card__contacts-icon">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/whatsapp.svg" alt="Иконка">
+                                            </div>
+                                            <a href="https://wa.me/79932506658">+7 (993) 250-66-58</a>
+                                        </li>
+                                        <li class="certer-card__contacts-item icon-location">
+                                            <address>
+                                                г. Москва, ул. Люблинская, 72Ак2 ЖК «Люблинский Парк»
+                                            </address>
+                                        </li>
+                                    </ul>
+                                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('lyublinskiy-park'))); ?>" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="centres__block" id="mytishi">
             <h2 class="centres__title h3 text-center">центры в мытищах</h2>
             <div class="centres__body">
@@ -31,7 +70,7 @@
                                         </address>
                                     </li>
                                 </ul>
-                                <a href="/borisovka/" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_path('borisovka'))); ?>" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -62,7 +101,7 @@
                                         </address>
                                     </li>
                                 </ul>
-                                <a href="/kadomtseva/" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_path('kadomtseva'))); ?>" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +131,7 @@
                                         </address>
                                     </li>
                                 </ul>
-                                <a href="/institutskaya/" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
+                                <a href="<?php echo esc_url(get_permalink(get_page_by_path('institutskaya'))); ?>" class="certer-card__contacts-btn btn btn-primary btn-sm">Подробнее</a>
                             </div>
                         </div>
                     </div>

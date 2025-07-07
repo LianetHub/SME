@@ -29,7 +29,28 @@
                 </nav>
                 <div class="footer__contacts">
                     <a href="tel:<? echo esc_html($formatted_phone_number); ?>" class="footer__link icon-phone"><? echo esc_html($phone_number); ?></a>
-                    <a href="https://wa.me/79259235142" target="_blank" class="footer__link icon-whatsapp">whatsapp</a>
+                    <div class="footer__whatsapp">
+                        <button type="button" class="footer__whatsapp-btn icon-whatsapp">
+                            whatsapp
+                        </button>
+                        <div class="footer__whatsapp-items">
+                            <a href="https://wa.me/79932506658" class="footer__whatsapp-item">
+                                г. Москва, ул. Люблинская, 72Ак2
+                            </a>
+                            <a href="https://wa.me/79259235142" class="footer__whatsapp-item">
+                                г. Мытищи, ул. Борисовка, 16
+                            </a>
+                            <a href="https://wa.me/79067744866" class="footer__whatsapp-item">
+                                г. Мытищи, ул. Кадомцева, 2
+                            </a>
+                            <a href="https://wa.me/79856303053" class="footer__whatsapp-item">
+                                г. Мытищи, ул. 2-я Институтская, 24а
+                            </a>
+                            <a href="https://wa.me/79956557339" class="footer__whatsapp-item">
+                                г. Балашиха, ул. Реутовская, 20
+                            </a>
+                        </div>
+                    </div>
                     <div class="footer__socials">
                         <a href="<?= $vk_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-vk"></a>
                         <a href="<?= $telegram_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-telegram"></a>
@@ -62,6 +83,7 @@
                 <a href="/centres" class="footer__caption text-block-md fw-bold offset-lg">Наши центры</a>
                 <nav class="footer__menu">
                     <ul>
+                        <li><a href="/centres#moskow">г. Москва</a></li>
                         <li><a href="/centres#mytishi">г. Мытищи</a></li>
                         <li><a href="/centres#balashiha">г. Балашиха</a></li>
                     </ul>

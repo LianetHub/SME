@@ -5,7 +5,8 @@ $location_title = get_field('location_title') ?? 'выберите удобны�
     <div class="container">
         <h1 class="location__title"><?= esc_html($location_title); ?></h1>
         <div class="location__btns">
-            <a href="/centres#mytishi" class="location__btn btn btn-lg btn-secondary">Центры в Мытищах</a>
+            <a href="/centres#moskow" class="location__btn btn btn-lg btn-secondary">Центры в Москве</a>
+            <a href="/centres#mytishi" class="location__btn btn btn-lg btn-primary">Центры в Мытищах</a>
             <a href="/centres#balashiha" class="location__btn btn btn-lg btn-primary">Центры в Балашихе</a>
         </div>
     </div>
