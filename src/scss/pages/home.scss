@@ -89,11 +89,10 @@
 		@media (min-width: $md2) {
 			gap: 1.1em;
 		}
-		& video {
+		& iframe {
 			aspect-ratio: math.div(430, 235);
 			width: 100%;
 			height: auto;
-			flex-shrink: 0;
 		}
 		&::before {
 			display: none;
@@ -494,34 +493,11 @@
 	@media (min-width: $md2) {
 		padding: 2.5rem 0 5rem;
 	}
-	.page-template-lublino-park-template & {
-		padding: rem(40) 0 rem(60);
-		@media (min-width: $md4) {
-			padding: 4.275rem 0 rem(60);
-		}
-		@media (min-width: $md2) {
-			padding: 5rem 0 5rem;
-		}
-	}
 	// .programms__title
 	&__title {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 1.62rem;
-		row-gap: 1rem;
-		& img {
-			max-width: 4rem;
-		}
 		@media (max-width: $md5) {
 			max-width: 20rem;
 			margin: 0 auto;
-		}
-		.page-template-lublino-park-template & {
-			@media (min-width: $md3) {
-				font-size: rem(60);
-			}
 		}
 	}
 	// .programms__slider
@@ -633,80 +609,6 @@
 		}
 		@media (min-width: $md3) {
 			margin-top: 2.31rem;
-		}
-	}
-	// .programms__list
-	&__list {
-		margin-top: 2.5rem;
-		@media (min-width: $md4) {
-			margin-top: 4rem;
-		}
-		.row {
-			--gutter-y: 3.13rem;
-			@media (min-width: $md3) {
-				--gutter-x: 2.75rem;
-			}
-		}
-	}
-	// .programms__item
-	&__item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-	// .programms__item-num
-	&__item-num {
-		font-size: 3.75rem;
-		@media (min-width: $md5) {
-			font-size: rem(70);
-		}
-		@media (min-width: $md2) {
-			font-size: 5rem;
-		}
-	}
-	// .programms__item-caption
-	&__item-caption {
-		font-weight: 700;
-		line-height: 110%;
-		text-transform: uppercase;
-		margin-top: 1.25rem;
-		font-size: 1.625rem;
-		@media (min-width: $md4) {
-			font-size: 1.75rem;
-			margin-top: 2.75rem;
-		}
-		@media (min-width: $md2) {
-			margin-top: 1.75rem;
-		}
-	}
-	// .programms__item-list
-	&__item-list {
-		margin-top: 1rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 0.9375rem;
-		line-height: 160%;
-		@media (min-width: $md2) {
-			line-height: 136%;
-			font-size: 1rem;
-		}
-		& li {
-			text-align: center;
-			gap: 0.5rem;
-			&::before {
-				content: "";
-				vertical-align: top;
-				margin-top: 0.5em;
-				margin-right: 0.5rem;
-				min-width: 0.3em;
-				height: 0.3em;
-				flex-shrink: 0;
-				border-radius: 50%;
-				background: currentColor;
-				display: inline-block;
-			}
 		}
 	}
 }

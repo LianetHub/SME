@@ -88,7 +88,7 @@ $formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_cente
                     </ul>
                 </li>
                 <li class="programms__item col-md-4 col-sm-6">
-                    <div class="programms__item-num h1">18+</div>
+                    <div class="programms__item-num h1">18<span>+</span></div>
                     <div class="programms__item-caption">Взрослые</div>
                     <ul class="programms__item-list text-block-md">
                         <li>Английский и другие языки, занятия в&nbsp;группах и индивидуально</li>

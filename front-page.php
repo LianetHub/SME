@@ -9,7 +9,6 @@ $our_centres_title = get_field('our_centres_title');
 $our_centres_desc = get_field('our_centres_desc');
 $our_centres_has_link = get_field('our_centres_has_link');
 $our_centres_youtube_link = get_field('our_centres_youtube_link');
-$our_centres_video_poster = get_field('our_centres_video_poster');
 ?>
 
 <?php if ($our_centres_title || $our_centres_desc || $our_centres_youtube_link): ?>
@@ -37,9 +36,7 @@ $our_centres_video_poster = get_field('our_centres_video_poster');
                     </div>
                     <div class="col-xl-6">
                         <div class="our-centres__video icon-camera">
-                            <video width="430" height="235" controls preload="metadata" <?php if ($our_centres_video_poster): ?>poster="<?= esc_url($our_centres_video_poster) ?>" <?php endif; ?>>
-                                <source src="<?= esc_url($our_centres_youtube_link) ?>" type="video/mp4">
-                            </video>
+                            <iframe width="430" height="235" src="<?= esc_url($our_centres_youtube_link) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
