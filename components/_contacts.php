@@ -7,7 +7,9 @@ $yandex_map_url = get_field('yandex_map_url');
 $gallery = get_field('gallery_images');
 $phone_number_center_wa = get_field('phone_number_center_wa');
 $formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_center_wa);
-
+$liczenziya = get_field('liczenziya');
+$dannye = get_field('dannye');
+$dogovor = get_field('dogovor');
 
 ?>
 <?php if ($contacts_address) : ?>
@@ -23,7 +25,7 @@ $formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_cente
                                     <span>
                                         Телефон <span class="pc-only">для связи</span>:
                                         <a href="tel:<? echo esc_html($formatted_phone_number); ?>">
-                                            <? echo esc_html($phone_number); ?></a> <? echo $extension_text ?>
+                                            <? echo esc_html($phone_number); ?></a> 
                                     </span>
                                 </li>
                                 <li class="contacts__item">
@@ -39,6 +41,15 @@ $formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_cente
                                 </li>
                                 <li class="contacts__item icon-envelope">
                                     <span>Email: <a href="mailto:<? echo esc_html($email_address); ?>"><? echo esc_html($email_address); ?></a></span>
+                                </li>
+								<li class="contacts__item">
+                                    <span><a href="<? echo esc_html($dogovor); ?>" target="_blank">Договор</a></span>
+                                </li>
+								 <li class="contacts__item">
+                                    <span><a href="<? echo esc_html($dannye); ?>" target="_blank">Данные об организации</a></span>
+                                </li>
+								 <li class="contacts__item">
+                                    <span> <a href="<? echo esc_html($liczenziya); ?>" target="_blank">Лицензия</a></span>
                                 </li>
                             </ul>
                         </div>

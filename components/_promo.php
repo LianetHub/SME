@@ -79,7 +79,7 @@ if ($promo_block) {
                         </div>
                     </div>
                     <?php if ($promo_sticker_active) : ?>
-                        <div class="promo__sticker">
+                        <div class="promo__sticker promo__sticker--desktop">
                             <img src="https://www.me-english.ru/wp-content/uploads/2025/07/day-open-doors.svg">
                         </div>
                     <?php endif; ?>
@@ -87,4 +87,9 @@ if ($promo_block) {
             </div>
         </div>
     </<?= $tag ?>>
+    <?php if ($promo_sticker_active) : ?>
+        <div class="promo__sticker promo__sticker--mobile">
+            <img src="https://www.me-english.ru/wp-content/uploads/2025/07/day-open-doors-mobile.svg">
+        </div>
+    <?php endif; ?>
 <?php } ?>

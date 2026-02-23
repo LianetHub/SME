@@ -29,7 +29,28 @@
                 </nav>
                 <div class="footer__contacts">
                     <a href="tel:<? echo esc_html($formatted_phone_number); ?>" class="footer__link icon-phone"><? echo esc_html($phone_number); ?></a>
-                    <a href="https://wa.me/79259235142" target="_blank" class="footer__link icon-whatsapp">whatsapp</a>
+                    <div class="footer__whatsapp">
+                        <button type="button" class="footer__whatsapp-btn icon-whatsapp">
+                            whatsapp
+                        </button>
+                        <div class="footer__whatsapp-items">
+                            <a href="https://wa.me/79932506658" class="footer__whatsapp-item">
+                                г. Москва, ул. Люблинская, 72Ак2
+                            </a>
+                            <a href="https://wa.me/79259235142" class="footer__whatsapp-item">
+                                г. Мытищи, ул. Борисовка, 16
+                            </a>
+                            <a href="https://wa.me/79067744866" class="footer__whatsapp-item">
+                                г. Мытищи, ул. Кадомцева, 2
+                            </a>
+                            <a href="https://wa.me/79856303053" class="footer__whatsapp-item">
+                                г. Мытищи, ул. 2-я Институтская, 24а
+                            </a>
+                            <a href="https://wa.me/79956557339" class="footer__whatsapp-item">
+                                г. Балашиха, ул. Реутовская, 20
+                            </a>
+                        </div>
+                    </div>
                     <div class="footer__socials">
                         <a href="<?= $vk_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-vk"></a>
                         <a href="<?= $telegram_url ?>" target="_blank" rel="noopener noreferrer" class="footer__social icon-telegram"></a>
@@ -62,6 +83,7 @@
                 <a href="/centres" class="footer__caption text-block-md fw-bold offset-lg">Наши центры</a>
                 <nav class="footer__menu">
                     <ul>
+                        <li><a href="/centres#moskow">г. Москва</a></li>
                         <li><a href="/centres#mytishi">г. Мытищи</a></li>
                         <li><a href="/centres#balashiha">г. Балашиха</a></li>
                     </ul>
@@ -122,6 +144,40 @@
 </div>
 </div>
 <?php wp_footer(); ?>
+
+<!-- Yandex.Metrika informer 
+<a href="//metrika.yandex.ru/stat/?id=23802907&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/23802907/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:23802907,lang:'ru'});return false}catch(e){}"/></a>
+/Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23802907 = new Ya.Metrika({id:23802907,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/23802907" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </body>
 
 </html>

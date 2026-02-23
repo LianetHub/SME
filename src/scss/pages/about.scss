@@ -109,10 +109,12 @@
 		& img {
 			flex: 1 1 auto;
 			&:not(.cover-image) {
-				width: 100%;
+				width: auto;
+				height: auto;
+				max-height: 100%;
 				padding: 0 4.25rem;
 				@media (min-width: $md4) {
-					padding: 4.25rem;
+					padding: 3.06rem 4.25rem;
 				}
 			}
 		}

@@ -376,6 +376,7 @@
 			}
 		}
 	}
+
 	// .promo__body
 	&__body {
 		display: flex;
@@ -394,6 +395,11 @@
 					margin: 0 auto;
 					max-width: 24rem;
 				}
+			}
+		}
+		.page-template-lublino-park-template & {
+			@media (max-width: $md5) {
+				padding-top: 2.3rem;
 			}
 		}
 	}
@@ -491,6 +497,19 @@
 				max-width: 100%;
 			}
 		}
+		.page-template-lublino-park-template & {
+			@media (min-width: $md4) {
+				text-align: right;
+				max-width: 100% !important;
+				margin: 0 0.6rem 0 auto !important;
+			}
+			@media (min-width: $md3) {
+				margin: 0 1.7rem 0 auto !important;
+			}
+			@media (min-width: $md2) {
+				margin: 0 3.6rem 0 auto !important;
+			}
+		}
 	}
 	// .promo__image
 	&__image {
@@ -534,6 +553,12 @@
 					order: 0;
 				}
 			}
+			.page-template-lublino-park-template & {
+				@media (max-width: $md4) {
+					order: 0;
+					margin-top: rem(27);
+				}
+			}
 			@media (min-width: $md4) {
 				max-width: 22rem;
 			}
@@ -556,6 +581,18 @@
 				@media (min-width: $md3) {
 					width: 22rem;
 				}
+			}
+		}
+		.page-template-lublino-park-template & {
+			max-width: rem(160);
+			@media (min-width: $md3) {
+				max-width: 15.0625rem;
+				width: 100%;
+				flex-shrink: 0;
+			}
+			@media (min-width: $md2) {
+				margin-left: -0.95rem;
+				max-width: 18.468rem;
 			}
 		}
 	}
@@ -666,6 +703,26 @@
 				font-size: em(3.84288, 6.25);
 			}
 		}
+		.page-template-lublino-park-template & {
+			font-size: rem(80);
+			line-height: 53%;
+			@media (min-width: $md4) {
+				line-height: 65%;
+				font-size: rem(50);
+			}
+			@media (min-width: $md3) {
+				font-size: rem(80);
+			}
+			& small {
+				font-size: 0.33em;
+				@media (min-width: $md4) {
+					font-size: 0.4em;
+				}
+				@media (min-width: $md2) {
+					font-size: 0.57em;
+				}
+			}
+		}
 	}
 	// .promo__subtitle
 	&__subtitle {
@@ -727,6 +784,20 @@
 		.page-template-language & {
 			margin-top: rem(20) !important;
 		}
+		.page-template-lublino-park-template & {
+			max-width: 100%;
+			font-size: 2.25rem;
+			@media (min-width: $md4) {
+				font-size: 1.9rem;
+			}
+			@media (min-width: $md3) {
+				font-size: rem(42);
+			}
+			@media (min-width: $md2) {
+				margin-top: 1.5rem !important;
+				font-size: rem(58);
+			}
+		}
 	}
 	// .promo__side
 	&__side {
@@ -777,6 +848,11 @@
 		.form__title {
 			@media (max-width: $md4) {
 				font-size: rem(25) !important;
+			}
+		}
+		.page-template-lublino-park-template & {
+			@media (min-width: $md3) {
+				margin-left: 0;
 			}
 		}
 	}
@@ -847,6 +923,34 @@
 			&:hover {
 				color: $red;
 			}
+		}
+	}
+	// .promo__sticker
+	&__sticker {
+		&.promo__sticker--desktop {
+			@media (max-width: $md5) {
+				display: none;
+			}
+		}
+		&.promo__sticker--mobile {
+			& img {
+				width: 100%;
+			}
+			@media (min-width: $md5) {
+				display: none;
+			}
+		}
+		@media (min-width: $md5) {
+			position: absolute;
+			bottom: rem(-78);
+			width: rem(154);
+			height: rem(154);
+			left: rem(-91);
+		}
+		@media (min-width: $md2) {
+			left: rem(-130);
+			width: rem(160);
+			height: rem(160);
 		}
 	}
 }
@@ -1066,23 +1170,23 @@
 	// .sign-lesson__body
 	&__body {
 		margin-top: 2.5rem;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: rem(912);
+		// margin-left: auto;
+		// margin-right: auto;
+		// max-width: rem(912);
 		@media (min-width: $md2) {
-			margin-top: 2rem;
+			margin-top: 3.75rem;
 		}
 		.row {
-			--gutter-x: #{rem(24)};
-			--gutter-y: #{rem(40)};
-			@media (min-width: $md4) {
-				--gutter-x: #{rem(72)};
-				--gutter-y: #{rem(60)};
-			}
-			@media (min-width: $md2) {
-				--gutter-x: #{rem(112)};
-				--gutter-y: #{rem(60)};
-			}
+			// --gutter-x: #{rem(24)};
+			// --gutter-y: #{rem(40)};
+			// @media (min-width: $md4) {
+			// --gutter-x: #{rem(72)};
+			// --gutter-y: #{rem(60)};
+			// }
+			// @media (min-width: $md2) {
+			// --gutter-x: #{rem(112)};
+			// --gutter-y: #{rem(60)};
+			// }
 		}
 	}
 	// .sign-lesson__content
@@ -2299,6 +2403,12 @@
 
 .cert {
 	padding: 3.75rem 0 1.875rem;
+	.page-template-lublino-park-template & {
+		padding: rem(0) 0 rem(60);
+		@media (min-width: $md2) {
+			padding: rem(40) 0 rem(80);
+		}
+	}
 	@media (min-width: $md2) {
 		padding: 5rem 0 2.5rem;
 	}

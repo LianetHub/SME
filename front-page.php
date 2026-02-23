@@ -9,6 +9,7 @@ $our_centres_title = get_field('our_centres_title');
 $our_centres_desc = get_field('our_centres_desc');
 $our_centres_has_link = get_field('our_centres_has_link');
 $our_centres_youtube_link = get_field('our_centres_youtube_link');
+$our_centres_video_poster = get_field('our_centres_video_poster');
 ?>
 
 <?php if ($our_centres_title || $our_centres_desc || $our_centres_youtube_link): ?>
@@ -36,7 +37,11 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     </div>
                     <div class="col-xl-6">
                         <div class="our-centres__video icon-camera">
-                            <iframe width="430" height="235" src="<?= esc_url($our_centres_youtube_link) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="our-centres__video-block">
+                                <video width="430" height="235" controls preload="metadata" <?php if ($our_centres_video_poster): ?>poster="<?= esc_url($our_centres_video_poster) ?>" <?php endif; ?>>
+                                    <source src="<?= esc_url($our_centres_youtube_link) ?>" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,7 +61,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     Занятия по 45 мин 2&nbsp;раза в неделю
                 </p>
                 <div class="groups__item-price h5">
-                    4 480 Р./МЕС
+                    4 880 Р./МЕС
                 </div>
                 <a href="/preschoolers-age/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
@@ -67,7 +72,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     Занятия по 60 мин 2&nbsp;раза в неделю
                 </p>
                 <div class="groups__item-price h5">
-                    5 580 Р./МЕС
+                    5 980 Р./МЕС
                 </div>
                 <a href="/7-9/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
@@ -78,7 +83,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     Занятия по 45 мин 2&nbsp;раза в неделю
                 </p>
                 <div class="groups__item-price h5">
-                    5 580 Р./МЕС
+                    5 980 Р./МЕС
                 </div>
                 <a href="/10-13/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
@@ -89,7 +94,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     Занятия по 90 мин 2&nbsp;раза в неделю
                 </p>
                 <div class="groups__item-price h5">
-                    6 880 Р./МЕС
+                    7 280 Р./МЕС
                 </div>
                 <a href="/14-17/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>
@@ -100,7 +105,7 @@ $our_centres_youtube_link = get_field('our_centres_youtube_link');
                     Занятия по 90 мин 2&nbsp;раза в неделю
                 </p>
                 <div class="groups__item-price h5">
-                    6 880 Р./МЕС
+                    7 280 Р./МЕС
                 </div>
                 <a href="/adults/" class="groups__item-btn btn btn-secondary btn-md">ПОДРОБНЕЕ</a>
             </li>

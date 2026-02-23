@@ -24,4 +24,18 @@ get_header();
 <?php require_once(TEMPLATE_PATH . '_centres.php'); ?>
 <?php endif; ?>
 <?php require_once(TEMPLATE_PATH . '_contacts.php'); ?>
+<section class="center-page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <?php
+                while (have_posts()) : the_post();
+                    the_content();
+                endwhile;
+                ?>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>

@@ -44,3 +44,42 @@ transform: rotate(45deg);}
   position: relative;
 }
 }
+
+
+.wpcf7-form-control-wrap   .dropdown__list-item.active, .dropdown__list-item[aria-checked=true] {
+    color: #393939!important;
+}
+
+
+.center-page-content ul,
+.center-page-content ol {
+    list-style-position: inside;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style-type: disc; /* или decimal для ol */
+}
+
+.center-page-content ul li,
+.center-page-content ol li {
+    margin-bottom: 0.5rem;
+}
+
+
+.page-id-2653 .trial{display:none!important;}
+.prices{padding: 0rem 0 2.5rem!important;}
+.reviews__title {        font-size: 3.125rem!important;   }
+.page-id-2653 .footer {	margin-top: 5rem;}
+
+
+
+/* Мобайл: вернуть нормальные пробелы в заголовках карточек целей */
+@media (max-width: 768px) {
+  .goals__slide-title.h5,
+  .goals__slide-title.h4 {
+    letter-spacing: 0;          /* снять отрицательный трекинг */
+    word-spacing: 0.12em;       /* чуть расширить промежутки между словами */
+    font-kerning: none;         /* на случай агрессивного кернинга шрифта */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

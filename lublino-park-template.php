@@ -14,7 +14,9 @@ $contacts_address = get_field('contacts_address');
 $yandex_map_url = get_field('yandex_map_url');
 $phone_number_center_wa = get_field('phone_number_center_wa');
 $formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_center_wa);
-
+$liczenziya = get_field('liczenziya');
+$dannye = get_field('dannye');
+$dogovor = get_field('dogovor');
 ?>
 <?php if ($contacts_address) : ?>
     <section class="contacts">
@@ -32,6 +34,17 @@ $formatted_phone_number_center_wa = preg_replace('/\D/', '', $phone_number_cente
                             endif;
                             ?>
                         </div>
+						<ul>
+															<li class="contacts__item">
+                                    <span><a href="<? echo esc_html($dogovor); ?>" target="_blank">Договор</a></span>
+                                </li>
+							<li class="contacts__item">
+                                    <span><a href="<? echo esc_html($dannye); ?>" target="_blank">Данные об организации</a></span>
+                                </li>
+								 <li class="contacts__item">
+                                    <span> <a href="<? echo esc_html($liczenziya); ?>" target="_blank">Лицензия</a></span>
+                                </li>
+						</ul>
                     </div>
                 </div>
             </div>

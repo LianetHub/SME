@@ -65,8 +65,8 @@
                 <div class="header__banner">
                     <div class="container">
                         <div class="header__banner-body">
-                            <div class="header__banner-text fw-bold">Занятия в Центрах и Online</div>
-                            <a href="/online/" class="header__banner-btn btn btn-primary btn-sm">Online</a>
+                            <div class="header__banner-text header__banner-text--large fw-bold text-uppercase">ОТКРЫТИЕ НОВОГО ФИЛИАЛА В ЖК «ЛЮБЛИНСКИЙ ПАРК»</div>
+                            <a href="<?php echo esc_url(get_permalink(get_page_by_path('lyublinskiy-park'))); ?>" class="header__banner-btn btn btn-primary btn-sm">Подробнее</a>
                             <div class="header__banner-logo">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/Cambridge-University-logo.svg" alt="Логотип университета">
                             </div>
@@ -215,7 +215,8 @@
                                                     </div>
                                                 </li>
                                                 <li class="menu__item has-children">
-                                                    <a href="/prices/" class="menu__link">
+													<button type="button" class="menu__link">
+                                              
                                                         <span class="menu__link-icon">
                                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/price.svg" alt="Иконка">
                                                         </span>
@@ -223,14 +224,19 @@
                                                             <strong>Цены</strong>
                                                             <span>Стоимость занятий и&nbsp;акции</span>
                                                         </span>
-                                                    </a>
+                                       
+														 </button>
                                                     <div class="submenu">
                                                         <div class="container">
                                                             <button type="button" class="submenu__close icon-close">
                                                                 <span class="submenu__close-text">Закрыть</span>
                                                             </button>
                                                             <ul>
-                                                                <li><a href="/prices/">Стоимость занятий и акции</a></li>
+                                                                <li><a href="/prices-moscow/">г.Москва</a></li>
+																<li><a href="/czeny-i-akczii-g-mytishhi/">г.Мытищи</a></li>
+																<li><a href="/prices/">г.Балашиха</a></li>
+                                                                <li><a href="/akczii-i-czeny-online-uroki/">ONLINE уроки</a></li>
+
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -251,6 +257,7 @@
                                                                 <span class="submenu__close-text">Закрыть</span>
                                                             </button>
                                                             <ul>
+                                                                <li><a href="/centres#moskow/">г. Москва</a></li>
                                                                 <li><a href="/centres#mytishi/">г. Мытищи</a></li>
                                                                 <li><a href="/centres#balashiha/">г. Балашиха</a></li>
                                                             </ul>
@@ -265,16 +272,19 @@
                                     <button class="header__location-btn icon-chevron">ФИЛИАЛЫ</button>
                                     <ul class="header__location-list">
                                         <li class="header__location-item">
-                                            <a href="/borisovka/" class="header__location-link"> г. Мытищи, ул. Борисовка, 16</a>
+                                            <a href="/lyublinskiy-park/" class="header__location-link">г. Москва, ул. Люблинская, 72Ак2</a>
                                         </li>
                                         <li class="header__location-item">
-                                            <a href="/kadomtseva/" class="header__location-link"> г. Мытищи, ул. Кадомцева, 2</a>
+                                            <a href="/borisovka/" class="header__location-link">г. Мытищи, ул. Борисовка, 16</a>
                                         </li>
                                         <li class="header__location-item">
-                                            <a href="/institutskaya/" class="header__location-link"> г. Мытищи, ул. 2-я Институтская, 24а</a>
+                                            <a href="/kadomtseva/" class="header__location-link">г. Мытищи, ул. Кадомцева, 2</a>
                                         </li>
                                         <li class="header__location-item">
-                                            <a href="/reutovskaya/" class="header__location-link"> г. Балашиха, ул. Реутовская, 20</a>
+                                            <a href="/institutskaya/" class="header__location-link">г. Мытищи, ул. 2-я Институтская, 24а</a>
+                                        </li>
+                                        <li class="header__location-item">
+                                            <a href="/reutovskaya/" class="header__location-link">г. Балашиха, ул. Реутовская, 20</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -285,6 +295,9 @@
                                         whatsapp
                                     </button>
                                     <div class="header__whatsapp-items">
+                                        <a href="https://wa.me/79932506658" class="header__whatsapp-item">
+                                            г. Москва, ул. Люблинская, 72Ак2
+                                        </a>
                                         <a href="https://wa.me/79259235142" class="header__whatsapp-item">
                                             г. Мытищи, ул. Борисовка, 16
                                         </a>

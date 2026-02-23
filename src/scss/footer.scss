@@ -2,6 +2,7 @@
 @use "sass:color";
 @use "_mixins" as *;
 @use "_variables" as *;
+@use "header";
 
 .footer {
 	background: #303030;
@@ -208,6 +209,35 @@
 		@media (max-width: $md5) {
 			order: 2;
 		}
+	}
+	// .footer__whatsapp
+	&__whatsapp {
+		position: relative;
+		z-index: 2;
+		@media (any-hover: hover) {
+			&:hover {
+				.footer__whatsapp-items {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+	// .footer__whatsapp-btn
+	&__whatsapp-btn {
+		@extend .footer__link;
+	}
+	// .footer__whatsapp-items
+	&__whatsapp-items {
+		top: auto;
+		right: auto;
+		left: 0;
+		bottom: 100%;
+		@extend .header__whatsapp-items;
+	}
+	// .footer__whatsapp-item
+	&__whatsapp-item {
+		@extend .header__whatsapp-item;
 	}
 	// .footer__link
 	&__link {
