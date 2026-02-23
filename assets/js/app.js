@@ -145,6 +145,16 @@ $(function () {
             $('.header__whatsapp-items').removeClass('active');
         }
 
+        // whatsapp выпадающий список в footer
+        if ($target.is('.footer__whatsapp-btn')) {
+            $target.toggleClass('active');
+            $('.footer__whatsapp-items').toggleClass('active');
+        }
+        if (!$target.closest('.footer__whatsapp').length) {
+            $('.footer__whatsapp-btn').removeClass('active');
+            $('.footer__whatsapp-items').removeClass('active');
+        }
+
 
         if ($('body').hasClass('_touch')) {
             if ($target.closest('.menu__link').length && $target.closest('.menu__item.has-children').length) {
@@ -198,10 +208,10 @@ $(function () {
             const isFlipped = $card.hasClass('is-flipped');
             const $cardBack = $card.find('.why__card-back');
 
-            if (!isFlipped ) {
-                $card.css('min-height', $cardBack.outerHeight() + 'px');
+            if (!isFlipped && $cardBack.innerHeight() > $card.innerHeight()) {
+                $card.css('height', $cardBack.innerHeight() + 'px');
             } else {
-                $card.css('min-height', 'auto');
+                $card.css('height', 'auto');
             }
 
             $card.toggleClass('is-flipped');
