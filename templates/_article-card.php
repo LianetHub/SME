@@ -26,21 +26,22 @@
                 });
 
                 if (!empty($filtered_categories)) : ?>
-                    <span class="article-card__categories">
-                        <?php foreach ($filtered_categories as $category) : ?>
-                            <span class="article-card__category">
-                                <?php echo esc_html($category->name); ?>
-                            </span>
-                        <?php endforeach; ?>
-                    </span>
+                    <?php foreach ($filtered_categories as $category) : ?>
+                        <span class="article-card__category">
+                            <?php echo esc_html($category->name); ?>
+                        </span>
+                    <?php endforeach; ?>
                 <?php endif; ?>
                 <span class="article-card__views icon-eye">
-                    <?php echo cme_get_post_views(get_the_ID()); ?> просмотров
+                    <?php
+                    $views_count = (int)cme_get_post_views(get_the_ID());
+                    echo cme_pluralize($views_count, ['просмотр', 'просмотра', 'просмотров']);
+                    ?>
                 </span>
             </span>
             <span class="article-card__title h6"><?php the_title(); ?></span>
             <span class="article-card__excerpt">
-                <?php echo wp_trim_words(get_the_excerpt(), 15); ?>
+                <?php echo wp_trim_words(get_the_excerpt(), 19); ?>
             </span>
         </span>
     </a>

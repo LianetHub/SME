@@ -447,3 +447,15 @@ function cme_increment_views_ajax()
 }
 add_action('wp_ajax_cme_increment_views', 'cme_increment_views_ajax');
 add_action('wp_ajax_nopriv_cme_increment_views', 'cme_increment_views_ajax');
+
+
+function cme_pluralize($number, $titles)
+{
+  $cases = [2, 0, 1, 1, 1, 2];
+  return $number . ' ' . $titles[($number % 100 > 4 && $number % 100 < 20) ? 2 : $cases[min($number % 10, 5)]];
+}
+
+
+add_filter('wp_tag_cloud', function ($return) {
+  return preg_replace('/(<a[^>]*>)([^<]+)(<\/a>)/i', '$1#$2$3', $return);
+});

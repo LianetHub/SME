@@ -38,36 +38,50 @@ get_header();
                 </div>
             <?php endif; ?>
 
-            <section class="popular-tags">
-                <h3 class="popular-tags__title text-center">ПОПУЛЯРНЫЕ ТЕГИ</h3>
-                <div class="popular-tags__cloud">
-                    <?php wp_tag_cloud(array('smallest' => 14, 'largest' => 14, 'unit' => 'px', 'number' => 15)); ?>
-                </div>
-            </section>
+        </div>
+    </div>
+</section>
+<section class="popular-tags">
+    <div class="container">
+        <h3 class="popular-tags__title text-center">ПОПУЛЯРНЫЕ ТЕГИ</h3>
+        <div class="popular-tags__cloud">
+            <?php
+            wp_tag_cloud(array(
+                'taxonomy' => 'category',
+                'number'   => 15,
+                'smallest' => 16,
+                'largest'  => 16,
+                'separator' => '',
+            ));
+            ?>
+        </div>
+    </div>
+</section>
 
-            <section class="most-read">
-                <h3 class="most-read__title text-center">САМОЕ ЧИТАЕМОЕ</h3>
-                <div class="most-read__slider">
-                    <?php
-                    $popular_query = new WP_Query(array(
-                        'posts_per_page' => 3,
-                        'meta_key'       => 'post_views_count',
-                        'orderby'        => 'meta_value_num',
-                        'order'          => 'DESC'
-                    ));
+<section class="most-read">
+    <div class="container">
 
-                    if ($popular_query->have_posts()) : ?>
-                        <ul class="articles__list">
-                            <?php while ($popular_query->have_posts()) : $popular_query->the_post(); ?>
-                                <?php include(locate_template('templates/_article-card.php')); ?>
-                            <?php endwhile; ?>
-                        </ul>
-                    <?php
-                    endif;
-                    wp_reset_postdata();
-                    ?>
-                </div>
-            </section>
+        <h3 class="most-read__title text-center">САМОЕ ЧИТАЕМОЕ</h3>
+        <div class="most-read__slider swiper">
+            <?php
+            $popular_query = new WP_Query(array(
+                'posts_per_page' => 10,
+                'meta_key'       => 'post_views_count',
+                'orderby'        => 'meta_value_num',
+                'order'          => 'DESC'
+            ));
+
+            if ($popular_query->have_posts()) : ?>
+                <ul class="swiper-wrapper">
+                    <?php while ($popular_query->have_posts()) : $popular_query->the_post(); ?>
+                        <?php include(locate_template('templates/_article-card.php')); ?>
+                    <?php endwhile; ?>
+                </ul>
+                <div class="most-read__pagination swiper-pagination"></div>
+            <?php
+            endif;
+            wp_reset_postdata();
+            ?>
         </div>
     </div>
 </section>

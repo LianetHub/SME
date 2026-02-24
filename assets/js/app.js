@@ -1,5 +1,7 @@
 "use strict";
 
+// const { default: Swiper } = require("swiper");
+
 //  init Fancybox
 if (typeof Fancybox !== "undefined" && Fancybox !== null) {
     Fancybox.bind("[data-fancybox]", {
@@ -449,6 +451,22 @@ $(function () {
         })
     }
 
+    if ($('.most-read__slider').length) {
+        new Swiper('.most-read__slider', {
+            slidesPerView: 'auto',
+            spaceBetween: 60,
+            slideClass: "article-card",
+            pagination: {
+                el: '.most-read__pagination',
+                clickable: true
+            },
+            breakpoints: {
+                767.98: {
+                    slidesPerView: 3,
+                }
+            }
+        })
+    }
 
 
 
