@@ -69,9 +69,14 @@
 
                 if ($popular_query->have_posts()) : ?>
                     <ul class="swiper-wrapper">
-                        <?php while ($popular_query->have_posts()) : $popular_query->the_post(); ?>
+                        <?php
+                        $is_slider = true;
+                        while ($popular_query->have_posts()) : $popular_query->the_post();
+                        ?>
                             <?php include(locate_template('templates/_article-card.php')); ?>
-                        <?php endwhile; ?>
+                        <?php endwhile;
+                        $is_slider = false;
+                        ?>
                     </ul>
                     <div class="most-read__pagination swiper-pagination"></div>
                 <?php

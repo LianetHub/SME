@@ -12234,7 +12234,13 @@ h6,
 
 .articles {
   margin-top: 4.0625rem;
-  padding: var(--header-height, 7.75rem) 0 2.8125rem;
+  padding: var(--header-height, 7.75rem) 0 2.5rem;
+}
+
+@media (min-width: 1199.98px) {
+  .articles {
+    padding: var(--header-height, 7.75rem) 0 2.8125rem;
+  }
 }
 
 .articles__header {
@@ -12259,10 +12265,23 @@ h6,
 }
 
 .articles__list {
-  margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
+  margin-inline: auto;
+  max-width: 48.75rem;
+  gap: 1.25rem;
+  row-gap: 1.875rem;
+  margin-top: 3.2rem;
+}
+
+@media (min-width: 1199.98px) {
+  .articles__list {
+    margin-top: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    gap: 1.75rem;
+  }
 }
 
 .article-card {
@@ -12275,6 +12294,15 @@ h6,
   height: 100%;
   position: relative;
   transition-property: transform;
+}
+
+.article-card.swiper-slide {
+  width: 23.75rem;
+  height: auto;
+}
+
+.article-card.swiper-slide .article-card__body {
+  min-height: 12rem;
 }
 
 .article-card__content {
@@ -12357,7 +12385,13 @@ h6,
 }
 
 .popular-tags {
-  padding: 2.8125rem 0 2.5rem;
+  padding: 2.5rem 0 2.5rem;
+}
+
+@media (min-width: 1199.98px) {
+  .popular-tags {
+    padding: 2.8125rem 0 2.5rem;
+  }
 }
 
 .popular-tags__cloud {
@@ -12395,9 +12429,27 @@ h6,
 }
 
 .most-read__slider {
-  margin-top: 3.75rem;
   position: relative;
-  padding: 0 6.25rem;
+  margin-top: 2.8125rem;
+}
+
+.most-read__slider .swiper {
+  overflow: visible;
+}
+
+@media (min-width: 1439.98px) {
+  .most-read__slider {
+    margin-top: 3.75rem;
+    padding: 0 6.25rem;
+  }
+
+  .most-read__slider .swiper {
+    overflow: hidden;
+  }
+}
+
+.most-read__pagination.swiper-pagination {
+  margin-top: 2.5rem;
 }
 
 .most-read__slider-prev {
@@ -12420,7 +12472,7 @@ h6,
   display: none;
 }
 
-@media (min-width: 575.98px) {
+@media (min-width: 1439.98px) {
   .most-read__slider-prev, .most-read__slider-next {
     position: absolute;
     top: 50%;
@@ -12430,11 +12482,6 @@ h6,
     transition: color 0.3s ease 0s;
     font-size: 2.5rem;
     display: block;
-  }
-}
-
-@media (min-width: 991.98px) {
-  .most-read__slider-prev, .most-read__slider-next {
     font-size: 5rem;
   }
 }

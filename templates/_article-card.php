@@ -1,4 +1,4 @@
-<li class="article-card">
+<li class="article-card <?php echo isset($is_slider) && $is_slider ? 'swiper-slide' : ''; ?>">
     <a href="<?php the_permalink(); ?>" class="article-card__content">
         <span class="article-card__thumbnail">
             <?php
@@ -40,9 +40,12 @@
                 </span>
             </span>
             <span class="article-card__title h6"><?php the_title(); ?></span>
-            <span class="article-card__excerpt">
-                <?php echo wp_trim_words(get_the_excerpt(), 19); ?>
-            </span>
+
+            <?php if (!isset($is_slider) || !$is_slider) : ?>
+                <span class="article-card__excerpt">
+                    <?php echo wp_trim_words(get_the_excerpt(), 19); ?>
+                </span>
+            <?php endif; ?>
         </span>
     </a>
 </li>

@@ -455,7 +455,6 @@ $(function () {
         new Swiper('.most-read__slider .swiper', {
             slidesPerView: 'auto',
             spaceBetween: 28,
-            slideClass: "article-card",
             pagination: {
                 el: '.most-read__pagination',
                 clickable: true
@@ -464,11 +463,6 @@ $(function () {
                 nextEl: '.most-read__slider-next',
                 prevEl: '.most-read__slider-prev'
             },
-            breakpoints: {
-                767.98: {
-                    slidesPerView: 3,
-                }
-            }
         })
     }
 
