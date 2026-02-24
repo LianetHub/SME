@@ -452,13 +452,17 @@ $(function () {
     }
 
     if ($('.most-read__slider').length) {
-        new Swiper('.most-read__slider', {
+        new Swiper('.most-read__slider .swiper', {
             slidesPerView: 'auto',
-            spaceBetween: 60,
+            spaceBetween: 28,
             slideClass: "article-card",
             pagination: {
                 el: '.most-read__pagination',
                 clickable: true
+            },
+            navigation: {
+                nextEl: '.most-read__slider-next',
+                prevEl: '.most-read__slider-prev'
             },
             breakpoints: {
                 767.98: {

@@ -353,6 +353,19 @@ add_action('init', function () {
 
 
 add_filter('wpseo_breadcrumb_links', function ($links) {
+  if (is_category() || is_singular('post')) {
+    $blog_page_id = get_option('page_for_posts');
+
+    if ($blog_page_id) {
+      $blog_link = array(
+        'url' => get_permalink($blog_page_id),
+        'text' => 'Блог СМЕ',
+      );
+
+      array_splice($links, 1, 0, array($blog_link));
+    }
+  }
+
   foreach ($links as &$link) {
     if (isset($link['text'])) {
       if ($link['text'] === 'Блог') {
@@ -363,6 +376,7 @@ add_filter('wpseo_breadcrumb_links', function ($links) {
       }
     }
   }
+
   return $links;
 });
 
@@ -376,9 +390,7 @@ add_filter('wpseo_breadcrumb_single_link', function ($link_output, $link) {
 add_filter('wpseo_breadcrumb_output', function ($output) {
   $output = preg_replace('/<span\b[^>]*>/', '', $output);
   $output = str_replace('</span>', '', $output);
-
   $output = trim($output);
-
   return '<ul class="breadcrumbs__list">' . $output . '</ul>';
 });
 

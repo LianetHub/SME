@@ -6,7 +6,7 @@
 
 .articles {
     margin-top: rem(65);
-    padding: $header 0 2rem;
+    padding: $header 0 rem(45);
 
 
     // .articles__header
@@ -45,8 +45,6 @@
     // .articles__pagination
     &__pagination {}
 }
-
-
 
 .article-card {
     display: flex;
@@ -106,12 +104,14 @@
     &__meta {
         display: flex;
         align-items: center;
+        align-content: flex-start;
         flex-wrap: wrap;
         color: #A1A1A1;
         font-size: 0.9375rem;
         line-height: 110%;
         gap: rem(10);
         row-gap: rem(2);
+        min-height: rem(42);
     }
 
     // .article-card__category
@@ -138,7 +138,7 @@
 
     // .article-card__title
     &__title {
-        margin-top: 3rem;
+        margin-top: 1.75rem;
         text-align: center;
         font-weight: 700;
     }
@@ -151,10 +151,8 @@
     }
 }
 
-
-
 .popular-tags {
-    padding: rem(40) 0;
+    padding: rem(45) 0 rem(40);
 
     // .popular-tags__title
     &__title {}
@@ -186,16 +184,75 @@
 }
 
 .most-read {
-    padding: rem(40) 0;
+    padding: rem(40) 0 rem(100);
+
+    .container {
+        @media (min-width:$md1) {
+            max-width: rem(1396);
+        }
+    }
 
     // .most-read__title
     &__title {}
 
     // .most-read__slider
     &__slider {
-        margin-top: rem(74);
+        margin-top: rem(60);
+        position: relative;
+        padding: 0 rem(100);
     }
 
-    // .most-read__list
-    &__list {}
+    // .most-read__pagination
+    &__pagination {}
+
+    // .most-read__slider-prev
+    &__slider-prev {
+        left: 0;
+        @extend %blog-arrow-btn;
+
+        &.swiper-button-lock {
+            display: none;
+        }
+    }
+
+    // .most-read__slider-next
+    &__slider-next {
+        right: 0;
+        @extend %blog-arrow-btn;
+
+        &.swiper-button-lock {
+            display: none;
+        }
+    }
+
+}
+
+%blog-arrow-btn {
+    display: none;
+
+    @media (min-width: $md5) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #c2bfbf;
+        z-index: 2;
+        transition: color 0.3s ease 0s;
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    @media (min-width: $md3) {
+        font-size: rem(80);
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
 }
