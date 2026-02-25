@@ -6,7 +6,12 @@
 
 .articles {
     margin-top: rem(65);
-    padding: $header 0 rem(40);
+    padding: $header 0 rem(30);
+
+    @media (min-width:$md5) {
+        padding: $header 0 rem(40);
+
+    }
 
     @media (min-width:$md2) {
         padding: $header 0 rem(45);
@@ -16,38 +21,62 @@
     // .articles__header
     &__header {
         background-color: #F6F6F6;
-        padding: 2.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: rem(20);
+
+        @media (min-width:$md5) {
+            padding: 2.5rem;
+
+        }
     }
 
     // .articles__logo
     &__logo {
-        max-width: 6.685rem;
+        max-width: rem(70);
+
+        @media (min-width:$md5) {
+            max-width: 6.685rem;
+
+        }
     }
 
     // .articles__content
     &__content {
-        padding: 0.6rem 0;
+        padding: rem(14) 0;
+
+        @media (min-width:$md5) {
+            padding: 0.6rem 0;
+
+        }
     }
 
     // .articles__title
     &__title {
-        margin-top: 0.4rem;
+        margin-top: 2rem;
+
+        @media (min-width:$md5) {
+            margin-top: 0.4rem;
+        }
     }
 
     // .articles__list
     &__list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
-        margin-inline: auto;
-        max-width: rem(780);
         gap: rem(20);
         row-gap: rem(30);
-        margin-top: 3.2rem;
+        margin-top: 0.75rem;
+
+        @media (min-width:$md5) {
+            margin-top: 3.2rem;
+            margin-inline: auto;
+            max-width: rem(780);
+            grid-template-columns: repeat(2, 1fr);
+
+        }
 
         @media (min-width:$md2) {
             margin-top: 3rem;
@@ -74,11 +103,21 @@
     transition-property: transform;
 
     &.swiper-slide {
-        width: rem(380);
+        width: 100%;
         height: auto;
 
+        @media (min-width:$md5) {
+            width: rem(380);
+
+        }
+
         .article-card__body {
-            min-height: rem(192);
+            min-height: auto;
+
+            @media (min-width:$md5) {
+                min-height: rem(192);
+
+            }
         }
     }
 
@@ -117,12 +156,18 @@
 
     // .article-card__body
     &__body {
-        padding: rem(8) rem(24) rem(24);
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 18.875rem;
         flex: 1 1 auto;
+        padding: rem(8) rem(20) rem(20);
+        min-height: 15.6875rem;
+
+        @media (min-width:$md4) {
+            min-height: 18.875rem;
+            padding: rem(8) rem(24) rem(24);
+
+        }
     }
 
     // .article-card__meta
@@ -132,11 +177,18 @@
         align-content: flex-start;
         flex-wrap: wrap;
         color: #A1A1A1;
-        font-size: 0.9375rem;
         line-height: 110%;
         gap: rem(10);
         row-gap: rem(2);
         min-height: rem(42);
+        font-size: rem(14);
+        width: 100%;
+
+        @media (min-width:$md4) {
+            width: auto;
+            font-size: 0.9375rem;
+
+        }
     }
 
     // .article-card__category
@@ -173,11 +225,20 @@
         text-align: center;
         line-height: 1.2;
         margin-top: rem(20);
+        font-size: rem(14);
+
+        @media (min-width:$md4) {
+            font-size: 1rem;
+        }
     }
 }
 
 .popular-tags {
-    padding: rem(40) 0 rem(40);
+    padding: rem(30) 0 rem(40);
+
+    @media (min-width:$md5) {
+        padding: rem(40) 0;
+    }
 
     @media (min-width:$md2) {
         padding: rem(45) 0 rem(40);
@@ -197,12 +258,17 @@
         & a.tag-cloud-link {
             background: #F6F6F6;
             color: #393939;
-            font-size: 1.375rem;
             line-height: 150%;
             text-transform: lowercase;
             padding: 0.5625rem 1.6875rem;
             border-radius: 0.25rem;
             transition: background-color 0.3s ease;
+            font-size: rem(18) !important;
+
+            @media (min-width:$md5) {
+                font-size: 1.375rem !important;
+
+            }
 
             @media (any-hover: hover) {
                 &:hover {
@@ -214,7 +280,11 @@
 }
 
 .most-read {
-    padding: rem(40) 0 rem(100);
+    padding: rem(40) 0 rem(88);
+
+    @media (min-width:$md5) {
+        padding: rem(40) 0 rem(100);
+    }
 
     .container {
         @media (min-width:$md1) {
@@ -228,8 +298,11 @@
     // .most-read__slider
     &__slider {
         position: relative;
+        margin-top: rem(30);
 
-        margin-top: rem(45);
+        @media (min-width:$md5) {
+            margin-top: rem(45);
+        }
 
         .swiper {
             overflow: visible;

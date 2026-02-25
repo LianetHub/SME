@@ -1,6 +1,13 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
+  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BebasNeue";
+  font-display: swap;
   src: url("../fonts/BebasNeue-Book.woff") format("woff"), url("../fonts/BebasNeue-Book.woff2") format("woff2");
   font-weight: 350;
   font-style: normal;
@@ -15,8 +22,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
-  font-weight: 700;
+  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -27,18 +34,11 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "BebasNeue";
-  font-display: swap;
-  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
+  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: "PTSans";
@@ -50,9 +50,9 @@
 @font-face {
   font-family: "PTSans";
   font-display: swap;
-  src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
+  src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
 }
 .promotions__body ul li::before, .swiper-button-next, .swiper-button-prev, .breadcrumbs__item:not(:last-child)::before, [class^=icon-]:before,
 [class*=" icon-"]:before {
@@ -10324,7 +10324,12 @@ h6,
 
 .articles {
   margin-top: 4.0625rem;
-  padding: var(--header-height, 7.75rem) 0 2.5rem;
+  padding: var(--header-height, 7.75rem) 0 1.875rem;
+}
+@media (min-width: 575.98px) {
+  .articles {
+    padding: var(--header-height, 7.75rem) 0 2.5rem;
+  }
 }
 @media (min-width: 1199.98px) {
   .articles {
@@ -10333,30 +10338,55 @@ h6,
 }
 .articles__header {
   background-color: #F6F6F6;
-  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 1.25rem;
+}
+@media (min-width: 575.98px) {
+  .articles__header {
+    padding: 2.5rem;
+  }
 }
 .articles__logo {
-  max-width: 6.685rem;
+  max-width: 4.375rem;
+}
+@media (min-width: 575.98px) {
+  .articles__logo {
+    max-width: 6.685rem;
+  }
 }
 .articles__content {
-  padding: 0.6rem 0;
+  padding: 0.875rem 0;
+}
+@media (min-width: 575.98px) {
+  .articles__content {
+    padding: 0.6rem 0;
+  }
 }
 .articles__title {
-  margin-top: 0.4rem;
+  margin-top: 2rem;
+}
+@media (min-width: 575.98px) {
+  .articles__title {
+    margin-top: 0.4rem;
+  }
 }
 .articles__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   max-width: 100%;
-  margin-inline: auto;
-  max-width: 48.75rem;
   gap: 1.25rem;
   row-gap: 1.875rem;
-  margin-top: 3.2rem;
+  margin-top: 0.75rem;
+}
+@media (min-width: 575.98px) {
+  .articles__list {
+    margin-top: 3.2rem;
+    margin-inline: auto;
+    max-width: 48.75rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1199.98px) {
   .articles__list {
@@ -10378,11 +10408,21 @@ h6,
   transition-property: transform;
 }
 .article-card.swiper-slide {
-  width: 23.75rem;
+  width: 100%;
   height: auto;
 }
+@media (min-width: 575.98px) {
+  .article-card.swiper-slide {
+    width: 23.75rem;
+  }
+}
 .article-card.swiper-slide .article-card__body {
-  min-height: 12rem;
+  min-height: auto;
+}
+@media (min-width: 575.98px) {
+  .article-card.swiper-slide .article-card__body {
+    min-height: 12rem;
+  }
 }
 .article-card__content {
   flex: 1 1 auto;
@@ -10408,12 +10448,18 @@ h6,
   left: 0;
 }
 .article-card__body {
-  padding: 0.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 18.875rem;
   flex: 1 1 auto;
+  padding: 0.5rem 1.25rem 1.25rem;
+  min-height: 15.6875rem;
+}
+@media (min-width: 767.98px) {
+  .article-card__body {
+    min-height: 18.875rem;
+    padding: 0.5rem 1.5rem 1.5rem;
+  }
 }
 .article-card__meta {
   display: flex;
@@ -10421,11 +10467,18 @@ h6,
   align-content: flex-start;
   flex-wrap: wrap;
   color: #A1A1A1;
-  font-size: 0.9375rem;
   line-height: 110%;
   gap: 0.625rem;
   row-gap: 0.125rem;
   min-height: 2.625rem;
+  font-size: 0.875rem;
+  width: 100%;
+}
+@media (min-width: 767.98px) {
+  .article-card__meta {
+    width: auto;
+    font-size: 0.9375rem;
+  }
 }
 .article-card__views {
   display: flex;
@@ -10452,10 +10505,21 @@ h6,
   text-align: center;
   line-height: 1.2;
   margin-top: 1.25rem;
+  font-size: 0.875rem;
+}
+@media (min-width: 767.98px) {
+  .article-card__excerpt {
+    font-size: 1rem;
+  }
 }
 
 .popular-tags {
-  padding: 2.5rem 0 2.5rem;
+  padding: 1.875rem 0 2.5rem;
+}
+@media (min-width: 575.98px) {
+  .popular-tags {
+    padding: 2.5rem 0;
+  }
 }
 @media (min-width: 1199.98px) {
   .popular-tags {
@@ -10471,12 +10535,17 @@ h6,
 .popular-tags__cloud a.tag-cloud-link {
   background: #F6F6F6;
   color: #393939;
-  font-size: 1.375rem;
   line-height: 150%;
   text-transform: lowercase;
   padding: 0.5625rem 1.6875rem;
   border-radius: 0.25rem;
   transition: background-color 0.3s ease;
+  font-size: 1.125rem !important;
+}
+@media (min-width: 575.98px) {
+  .popular-tags__cloud a.tag-cloud-link {
+    font-size: 1.375rem !important;
+  }
 }
 @media (any-hover: hover) {
   .popular-tags__cloud a.tag-cloud-link:hover {
@@ -10485,7 +10554,12 @@ h6,
 }
 
 .most-read {
-  padding: 2.5rem 0 6.25rem;
+  padding: 2.5rem 0 5.5rem;
+}
+@media (min-width: 575.98px) {
+  .most-read {
+    padding: 2.5rem 0 6.25rem;
+  }
 }
 @media (min-width: 1439.98px) {
   .most-read .container {
@@ -10494,7 +10568,12 @@ h6,
 }
 .most-read__slider {
   position: relative;
-  margin-top: 2.8125rem;
+  margin-top: 1.875rem;
+}
+@media (min-width: 575.98px) {
+  .most-read__slider {
+    margin-top: 2.8125rem;
+  }
 }
 .most-read__slider .swiper {
   overflow: visible;
