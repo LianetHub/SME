@@ -357,18 +357,29 @@ add_filter('wpseo_breadcrumb_links', function ($links) {
     $blog_page_id = get_option('page_for_posts');
 
     if ($blog_page_id) {
-      $blog_link = array(
-        'url' => get_permalink($blog_page_id),
-        'text' => 'Блог СМЕ',
-      );
+      $blog_url = get_permalink($blog_page_id);
+      $exists = false;
 
-      array_splice($links, 1, 0, array($blog_link));
+      foreach ($links as $link) {
+        if (isset($link['url']) && $link['url'] === $blog_url) {
+          $exists = true;
+          break;
+        }
+      }
+
+      if (!$exists) {
+        $blog_link = array(
+          'url' => $blog_url,
+          'text' => 'Блог СМЕ',
+        );
+        array_splice($links, 1, 0, array($blog_link));
+      }
     }
   }
 
   foreach ($links as &$link) {
     if (isset($link['text'])) {
-      if ($link['text'] === 'Блог') {
+      if ($link['text'] === 'Блог' || $link['text'] === 'Blog') {
         $link['text'] = 'Блог СМЕ';
       }
       if ($link['text'] === 'Главная страница' || $link['text'] === 'Home') {
@@ -381,10 +392,13 @@ add_filter('wpseo_breadcrumb_links', function ($links) {
 });
 
 add_filter('wpseo_breadcrumb_single_link', function ($link_output, $link) {
-  if (strpos($link_output, 'breadcrumb_last') !== false) {
-    return '<li class="breadcrumbs__item" aria-current="page"><span class="breadcrumbs__current">' . $link['text'] . '</span></li>';
+  if (isset($link['text'])) {
+    if (strpos($link_output, 'breadcrumb_last') !== false) {
+      return '<li class="breadcrumbs__item" aria-current="page"><span class="breadcrumbs__current">' . $link['text'] . '</span></li>';
+    }
+    return '<li class="breadcrumbs__item"><a href="' . $link['url'] . '" class="breadcrumbs__link">' . $link['text'] . '</a></li>';
   }
-  return '<li class="breadcrumbs__item"><a href="' . $link['url'] . '" class="breadcrumbs__link">' . $link['text'] . '</a></li>';
+  return $link_output;
 }, 10, 2);
 
 add_filter('wpseo_breadcrumb_output', function ($output) {
@@ -397,7 +411,6 @@ add_filter('wpseo_breadcrumb_output', function ($output) {
 add_filter('wpseo_breadcrumb_separator', function () {
   return '';
 });
-
 
 add_action('init', function () {
   register_taxonomy('post_tag', []);
