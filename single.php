@@ -2,6 +2,11 @@
 set_query_var('header', '');
 set_query_var('logo', 'pink');
 get_header();
+
+$raw_content = get_the_content();
+$data = cme_content_with_toc(apply_filters('the_content', $raw_content));
+$content = $data['content'];
+$toc_list = $data['toc'];
 ?>
 <section class="article">
     <div class="article__header">
@@ -61,8 +66,34 @@ get_header();
     </div>
     <div class="article__content">
         <div class="container">
-            <div class="single-article" data-post-id="<?php echo get_the_ID(); ?>">
-                <?php the_content(); ?>
+            <div class="article__details">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="article__details-column">
+                            <div class="article__details-caption h5">Содержание</div>
+                            <ul class="article__toc" id="toc">
+                                <?php if ($toc_list) : ?>
+                                    <?php echo $toc_list; ?>
+                                <?php else : ?>
+                                    <li class="article__toc-item">Содержание пусто</li>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="article__details-column">
+                            <div class="article__details-caption h5">Для кого эта статья</div>
+                            <ul class="article__details-list">
+                                <li class="article__details-item">
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-article typography-block" data-post-id="<?php echo get_the_ID(); ?>">
+                <?php echo $content; ?>
             </div>
         </div>
     </div>

@@ -484,3 +484,185 @@ function cme_pluralize($number, $titles)
 add_filter('wp_tag_cloud', function ($return) {
   return preg_replace('/(<a[^>]*>)([^<]+)(<\/a>)/i', '$1#$2$3', $return);
 });
+
+
+add_filter('use_block_editor_for_post_type', function ($use_block_editor, $post_type) {
+  if ($post_type === 'post') {
+    return true;
+  }
+  return $use_block_editor;
+}, 100, 2);
+
+
+function cme_transliterate($text)
+{
+  $cyr = [
+    'а',
+    'б',
+    'в',
+    'г',
+    'д',
+    'е',
+    'ё',
+    'ж',
+    'з',
+    'и',
+    'й',
+    'к',
+    'л',
+    'м',
+    'н',
+    'о',
+    'п',
+    'р',
+    'с',
+    'т',
+    'у',
+    'ф',
+    'х',
+    'ц',
+    'ч',
+    'ш',
+    'щ',
+    'ъ',
+    'ы',
+    'ь',
+    'э',
+    'ю',
+    'я',
+    'А',
+    'Б',
+    'В',
+    'Г',
+    'Д',
+    'Е',
+    'Ё',
+    'Ж',
+    'З',
+    'И',
+    'Й',
+    'К',
+    'Л',
+    'М',
+    'Н',
+    'О',
+    'П',
+    'Р',
+    'С',
+    'Т',
+    'У',
+    'Ф',
+    'Х',
+    'Ц',
+    'Ч',
+    'Ш',
+    'Щ',
+    'Ъ',
+    'Ы',
+    'Ь',
+    'Э',
+    'Ю',
+    'Я'
+  ];
+  $lat = [
+    'a',
+    'b',
+    'v',
+    'g',
+    'd',
+    'e',
+    'io',
+    'zh',
+    'z',
+    'i',
+    'y',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'r',
+    's',
+    't',
+    'u',
+    'f',
+    'h',
+    'ts',
+    'ch',
+    'sh',
+    'shb',
+    '',
+    'y',
+    '',
+    'e',
+    'yu',
+    'ya',
+    'a',
+    'b',
+    'v',
+    'g',
+    'd',
+    'e',
+    'io',
+    'zh',
+    'z',
+    'i',
+    'y',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'r',
+    's',
+    't',
+    'u',
+    'f',
+    'h',
+    'ts',
+    'ch',
+    'sh',
+    'shb',
+    '',
+    'y',
+    '',
+    'e',
+    'yu',
+    'ya'
+  ];
+
+  $text = str_replace($cyr, $lat, $text);
+  return sanitize_title($text);
+}
+
+
+function cme_content_with_toc($content)
+{
+  $toc_list = '';
+
+  $content = preg_replace_callback('/<h([2])(.*?)>(.*?)<\/h\1>/i', function ($matches) use (&$toc_list) {
+    $tag = $matches[1];
+    $attrs = $matches[2];
+    $title_html = $matches[3];
+    $title_text = strip_tags($title_html);
+
+    $slug = cme_transliterate($title_text);
+
+    if (!$slug) {
+      $slug = 'heading-' . mt_rand(1000, 9999);
+    }
+
+    $toc_list .= '<li class="article__toc-item">';
+    $toc_list .= '<a href="#' . $slug . '" class="article__toc-link">' . $title_text . '</a>';
+    $toc_list .= '</li>';
+
+    return '<h' . $tag . $attrs . ' id="' . $slug . '">' . $title_html . '</h' . $tag . '>';
+  }, $content);
+
+  return [
+    'content' => $content,
+    'toc'     => $toc_list
+  ];
+}
