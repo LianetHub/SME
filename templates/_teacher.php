@@ -4,7 +4,7 @@
             <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail('full'); ?>
             <?php else : ?>
-                <img src=" <?php echo get_template_directory_uri(); ?>/assets/img/teacher-thumb.svg" alt="Заглушка">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher-thumb.svg" alt="Заглушка">
             <?php endif; ?>
         </span>
         <span class="teacher__name text-block-md fw-bold">
@@ -26,13 +26,12 @@
                 }
             }
             $experience_date = get_field('experience');
+            $years = 0;
 
             if ($experience_date) {
-
                 $start_year = (int) date('Y', strtotime($experience_date));
                 $current_year = (int) date('Y');
                 $years = max(0, $current_year - $start_year);
-
                 echo $years . ' ' . plural_years($years);
             }
             ?>
@@ -68,6 +67,7 @@
                 <div class="teacher__modal-desc">
                     <?php the_content() ?>
                 </div>
+                <a href="<?php the_permalink(); ?>" class="teacher__modal-btn btn btn-primary">Профиль автора</a>
             </div>
         </div>
     </div>

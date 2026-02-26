@@ -119,6 +119,7 @@ $for_whom_list = get_field('for_whom');
 
                 $t_name = get_the_title($teacher_id);
                 $t_thumb = get_the_post_thumbnail_url($teacher_id, 'thumbnail');
+                $t_link = get_permalink($teacher_id);
 
                 $first_letter = mb_substr($t_name, 0, 1, 'UTF-8');
 
@@ -141,8 +142,8 @@ $for_whom_list = get_field('for_whom');
                     }
                 }
             ?>
-                <div class="article__author">
-                    <div class="article__author-thumb">
+                <a href="<?php echo esc_url($t_link); ?>" class="article__author">
+                    <span class="article__author-thumb">
                         <?php if ($t_thumb) : ?>
                             <img src="<?php echo esc_url($t_thumb); ?>"
                                 alt="<?php echo esc_attr($t_name); ?>"
@@ -150,19 +151,19 @@ $for_whom_list = get_field('for_whom');
                         <?php else : ?>
                             <span><?php echo esc_html($first_letter); ?></span>
                         <?php endif; ?>
-                    </div>
-                    <div class="article__author-info">
-                        <div class="article__author-name">Автор <?php echo esc_html($t_name); ?></div>
-                        <div class="article__author-details">
+                    </span>
+                    <span class="article__author-info">
+                        <span class="article__author-name">Автор <?php echo esc_html($t_name); ?></span>
+                        <span class="article__author-details">
                             <?php if ($emp_year) : ?>
                                 Педагог СME с <?php echo $emp_year; ?>г.
                             <?php endif; ?>
                             <?php if ($exp_year) : ?>
                                 Стаж преподавания: с <?php echo $exp_year; ?> года
                             <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
+                        </span>
+                    </span>
+                </a>
             <?php endif; ?>
         </div>
     </div>

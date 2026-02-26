@@ -1,6 +1,13 @@
 @font-face {
                             font-family: 'BebasNeue';
                             font-display: swap;
+                            src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+                            font-weight: 400;
+                            font-style: normal;
+                        }
+@font-face {
+                            font-family: 'BebasNeue';
+                            font-display: swap;
                             src: url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
                             font-weight: 700;
                             font-style: normal;
@@ -27,9 +34,9 @@
                             font-style: normal;
                         }
 @font-face {
-                            font-family: 'BebasNeue';
+                            font-family: 'PTSans';
                             font-display: swap;
-                            src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+                            src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
                             font-weight: 400;
                             font-style: normal;
                         }
@@ -39,13 +46,6 @@
                             src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
                             font-weight: 400;
                             font-style: italic;
-                        }
-@font-face {
-                            font-family: 'PTSans';
-                            font-display: swap;
-                            src: url("../fonts/PTSans-Regular.woff") format("woff"), url("../fonts/PTSans-Regular.woff2") format("woff2");
-                            font-weight: 400;
-                            font-style: normal;
                         }
 @font-face {
                             font-family: 'PTSans';

@@ -173,6 +173,13 @@
         gap: 2.5rem;
         padding: 1.25rem 2.5rem 1.5rem;
         margin-inline: auto;
+        transition: background-color 0.3s ease;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: color.adjust($color: #F6F6F6, $lightness: -10%);
+            }
+        }
     }
 
     // .article__author-thumb
@@ -187,6 +194,9 @@
     &__author-info {
         font-size: 1.125rem;
         line-height: 110%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     // .article__author-name
