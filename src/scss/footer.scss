@@ -8,12 +8,14 @@
 	background: #303030;
 	color: #a1a1a1;
 	padding: rem(25) 0;
+
 	@media (min-width: $md5) {
 		padding: rem(40) 0;
 	}
+
 	// .footer__container
-	&__container {
-	}
+	&__container {}
+
 	// .footer__header
 	&__header {
 		@media (max-width: $md5) {
@@ -21,6 +23,7 @@
 			padding: 0;
 		}
 	}
+
 	// .footer__column
 	&__column {
 		@media (max-width: $md5) {
@@ -28,13 +31,17 @@
 				.footer__caption {
 					order: 1;
 				}
+
 				.footer__menu {
 					order: 1;
+
 					&:nth-child(2) {
 						display: block;
 						order: 1;
+
 						.menu-item {
 							display: none;
+
 							&:first-child {
 								display: block;
 								text-transform: uppercase;
@@ -46,21 +53,25 @@
 					}
 				}
 			}
+
 			&:nth-child(3) {
 				.footer__caption {
 					&:nth-child(3) {
 						order: 1;
 					}
 				}
+
 				.footer__menu {
 					&:nth-child(4) {
 						order: 1;
 					}
 				}
 			}
+
 			display: contents;
 		}
 	}
+
 	// .footer__home
 	&__home {
 		font-size: 1.875rem;
@@ -68,6 +79,7 @@
 		display: inline-block;
 		transition: color 0.3s ease 0s;
 		order: -1;
+
 		@media (min-width: $md5) {
 			font-size: 2.25rem;
 		}
@@ -78,29 +90,36 @@
 			}
 		}
 	}
+
 	// .footer__menu
 	&__menu {
 		display: none;
+
 		@media (max-width: $md5) {
 			width: 100%;
 			order: -1;
 			margin-top: 1rem;
 		}
+
 		@media (min-width: $md5) {
 			display: block;
 			margin-top: 0.63rem;
 			font-size: 0.875rem;
 			line-height: 120%;
 		}
+
 		@media (min-width: $md2) {
 			font-size: 1rem;
 		}
+
 		& li {
 			&:not(:last-child) {
 				margin-bottom: 0.5em;
 			}
+
 			& a {
 				transition: color 0.3s ease 0s;
+
 				@media (any-hover: hover) {
 					&:hover {
 						color: #fff;
@@ -109,12 +128,15 @@
 			}
 		}
 	}
+
 	// .footer__caption
 	&__caption {
 		display: inline-block;
+
 		&:not(:first-child) {
 			@media (min-width: $md5) {
 				margin-top: 2.75rem;
+
 				&.offset-lg {
 					margin-top: 5rem;
 				}
@@ -127,18 +149,22 @@
 			width: 100%;
 			order: -1;
 		}
+
 		&:is(a) {
 			transition: color 0.3s ease 0s;
+
 			@media (any-hover: hover) {
 				&:hover {
 					color: #fff;
 				}
 			}
 		}
+
 		&.active {
 			color: #fff;
 		}
 	}
+
 	// .footer__vacanies
 	&__vacanies {
 		align-self: flex-end;
@@ -153,14 +179,17 @@
 		line-height: 120%;
 		text-transform: uppercase;
 		transition: color 0.3s ease 0s;
+
 		@media (max-width: $md5) {
 			order: 2;
 		}
+
 		@media (min-width: $md5) {
 			max-width: 10.08125rem;
 			font-size: 2.5rem;
 			margin-top: 7.5rem;
 		}
+
 		@media (min-width: $md2) {
 			margin-top: 5.61rem;
 			font-size: 3.125rem;
@@ -172,6 +201,7 @@
 			}
 		}
 	}
+
 	// .footer__bottom
 	&__bottom {
 		margin-top: 1.5rem;
@@ -180,40 +210,50 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1.25rem 0 0 0;
+
 		@media (min-width: $md2) {
 			margin-top: 1rem;
 		}
 	}
+
 	// .footer__copy
 	&__copy {
 		font-size: 0.75rem;
 		max-width: 9.875rem;
+
 		@media (min-width: $md5) {
 			font-size: 1rem;
 			max-width: 100%;
 		}
 	}
+
 	// .footer__logo
 	&__logo {
 		max-width: 7.11581rem;
+
 		@media (min-width: $md5) {
 			max-width: 100%;
 		}
 	}
+
 	// .footer__contacts
 	&__contacts {
 		margin-top: 2.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+
 		@media (max-width: $md5) {
 			order: 2;
 		}
 	}
+
 	// .footer__whatsapp
 	&__whatsapp {
 		position: relative;
+		width: fit-content;
 		z-index: 2;
+
 		@media (any-hover: hover) {
 			&:hover {
 				.footer__whatsapp-items {
@@ -223,10 +263,12 @@
 			}
 		}
 	}
+
 	// .footer__whatsapp-btn
 	&__whatsapp-btn {
 		@extend .footer__link;
 	}
+
 	// .footer__whatsapp-items
 	&__whatsapp-items {
 		top: auto;
@@ -235,10 +277,12 @@
 		bottom: 100%;
 		@extend .header__whatsapp-items;
 	}
+
 	// .footer__whatsapp-item
 	&__whatsapp-item {
 		@extend .header__whatsapp-item;
 	}
+
 	// .footer__link
 	&__link {
 		font-family: $font-bebas;
@@ -248,6 +292,7 @@
 		align-items: center;
 		gap: rem(10);
 		transition: color 0.3s ease 0s;
+
 		&::before {
 			width: 1.375rem;
 			height: 1.375rem;
@@ -256,26 +301,32 @@
 			justify-content: center;
 			align-items: center;
 		}
+
 		&.icon-phone {
 			&::before {
 				font-size: 1rem;
 			}
 		}
+
 		font-size: 1.25rem;
+
 		@media (min-width: $md4) {
 			font-size: 1.5rem;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: #fff;
 			}
 		}
 	}
+
 	// .footer__socials
 	&__socials {
 		display: flex;
 		gap: rem(12);
 	}
+
 	// .footer__social
 	&__social {
 		display: flex;
@@ -287,14 +338,17 @@
 		color: #fff;
 		border-radius: 50%;
 		transition: background-color 0.3s ease;
+
 		&.icon-vk {
 			font-size: 0.875rem;
+
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: #07f;
 				}
 			}
 		}
+
 		&.icon-telegram {
 			@media (any-hover: hover) {
 				&:hover {

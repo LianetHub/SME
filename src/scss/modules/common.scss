@@ -437,12 +437,18 @@
 	}
 
 	&.promo-teachers {
-		@media (min-width: $md3) {
-			background-image: url("@img/banners/banner-teachers.jpg");
-		}
+
 
 		@media (min-width: $md5) {
 			background-image: url("@img/banners/banner-vacancies.jpg");
+		}
+
+		@media (min-width: $md3) {
+			background-image: url("@img/banners/banner-teachers.jpg");
+
+			.promo__subtitle {
+				margin-top: rem(20);
+			}
 		}
 
 		@media (max-width: $md5) {
@@ -460,6 +466,14 @@
 
 			.promo__subtitle {
 				font-size: 1.125rem;
+			}
+		}
+	}
+
+	.container {
+		.page-template-about-page & {
+			@media (max-width:$md3) {
+				max-width: 100%;
 			}
 		}
 	}
@@ -491,6 +505,12 @@
 		.page-template-lublino-park-template & {
 			@media (max-width: $md5) {
 				padding-top: 2.3rem;
+			}
+		}
+
+		.page-template-vacancies-page & {
+			@media (max-width: $md5) {
+				padding-top: 2.5rem;
 			}
 		}
 	}
@@ -567,7 +587,7 @@
 			gap: 1.06rem;
 
 			.promo__title {
-				font-size: 1.375rem;
+				font-size: 1.5rem;
 			}
 
 			@media (max-width: $md4) {
@@ -624,6 +644,12 @@
 				margin: 0 3.6rem 0 auto !important;
 			}
 		}
+
+		.page-template-about-page & {
+			@media (max-width:$md4) {
+				max-width: 100%;
+			}
+		}
 	}
 
 	// .promo__image
@@ -652,6 +678,12 @@
 
 				&+.promo__offer {
 					margin-top: 0;
+				}
+			}
+
+			.page-template-about-page & {
+				@media (max-width:$md4) {
+					order: -1;
 				}
 			}
 		}
@@ -726,6 +758,8 @@
 				max-width: 18.468rem;
 			}
 		}
+
+
 	}
 
 	// // .promo__tagline
@@ -838,6 +872,22 @@
 			&.lg-mobile {
 				@media (max-width: $md3) {
 					font-size: 5.34363rem;
+
+					.page-template-about-page & {
+						@media (min-width:$md4) {
+							font-size: 4rem;
+
+						}
+					}
+				}
+			}
+
+			.page-template-about-page & {
+
+				@media (max-width:$md4) {
+					@media (min-width:$md5) {
+						display: block;
+					}
 				}
 			}
 
@@ -873,6 +923,14 @@
 				@media (min-width: $md2) {
 					font-size: 0.57em;
 				}
+			}
+		}
+
+		.page-template-exams & {
+			@media (max-width:$md5) {
+				max-width: 24rem;
+				margin: 0 auto;
+
 			}
 		}
 	}

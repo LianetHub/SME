@@ -11,9 +11,9 @@
                                 <small>ЖК «Люблинский Парк»</small>
                             </address>
                             <div class="certer-card__row">
-                                <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/lyublino.png" data-fancybox class="certer-card__image">
+                                <div class="certer-card__image">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/lyublino.png" alt="Фото нашего центра">
-                                </a>
+                                </div>
                                 <div class="certer-card__info">
                                     <ul class="certer-card__contacts text-block-md">
                                         <li class="certer-card__contacts-item icon-phone">
@@ -49,9 +49,9 @@
                                 Борисовка,16
                                 <small>ЖК «Ярославский»</small>
                             </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/01.jpg" data-fancybox class="certer-card__image">
+                            <div class="certer-card__image">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/01.jpg" alt="Фото нашего центра">
-                            </a>
+                            </div>
                             <div class="certer-card__info">
                                 <ul class="certer-card__contacts text-block-md">
                                     <li class="certer-card__contacts-item icon-phone">
@@ -80,9 +80,9 @@
                                 кадомцева,2
                                 <small>ЖК «новое медведково»</small>
                             </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" data-fancybox class="certer-card__image">
+                            <div class="certer-card__image">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
-                            </a>
+                            </div>
                             <div class="certer-card__info">
                                 <ul class="certer-card__contacts text-block-md">
                                     <li class="certer-card__contacts-item icon-phone">
@@ -111,9 +111,9 @@
                                 2-я институтская, 24А
                                 <small>ЖК «Ярославский»</small>
                             </address>
-                            <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" data-fancybox class="certer-card__image">
+                            <div class="certer-card__image">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/03.jpg" alt="Фото нашего центра">
-                            </a>
+                            </div>
                             <div class="certer-card__info">
                                 <ul class="certer-card__contacts text-block-md">
                                     <li class="certer-card__contacts-item icon-phone">
@@ -149,9 +149,9 @@
                                 <small>ЖК «измайловский лес»</small>
                             </address>
                             <div class="certer-card__row">
-                                <a href="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" data-fancybox class="certer-card__image">
+                                <div class="certer-card__image">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location/02.jpg" alt="Фото нашего центра">
-                                </a>
+                                </div>
                                 <div class="certer-card__info">
                                     <ul class="certer-card__contacts text-block-md">
                                         <li class="certer-card__contacts-item icon-phone">

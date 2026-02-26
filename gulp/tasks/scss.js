@@ -22,45 +22,17 @@ export const scss = () => {
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+        .pipe(groupCssMediaQueries())
         .pipe(
-            app.plugins.if(
-                app.isBuild,
-                groupCssMediaQueries()
-            )
+            autoprefixer({
+                grid: true,
+                overrideBrowserslist: ['last 3 versions'],
+                cascade: true
+            })
         )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         webpcss({
-        //             webpClass: '.webp',
-        //             noWebpClass: '.no-webp'
-        //         })
-        //     )
-        // )
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                autoprefixer({
-                    grid: true,
-                    overrideBrowserslist: ['last 3 versions'],
-                    cascade: true
-                })
-            )
-        )
-        // .pipe(
-        //     app.plugins.if(
-        //         app.isBuild,
-        //         shorthand()
-        //     )
-        // )
         .pipe(app.plugins.replace(/@img\//g, '../img/'))
         .pipe(app.gulp.dest(app.path.build.css))
-        .pipe(
-            app.plugins.if(
-                app.isBuild,
-                cleanCss()
-            )
-        )
+        .pipe(cleanCss())
         .pipe(rename({
             extname: ".min.css"
         }))

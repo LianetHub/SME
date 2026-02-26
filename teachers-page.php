@@ -56,5 +56,6 @@ if ($requirements) : ?>
 <?php require_once(TEMPLATE_PATH . '_lesson.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_sign-lesson.php'); ?>
 <?php require_once(TEMPLATE_PATH . '_reviews.php'); ?>
+<?php require_once(TEMPLATE_PATH . '_faq.php'); ?>
 
 <?php get_footer(); ?>
