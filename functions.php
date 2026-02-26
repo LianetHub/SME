@@ -90,9 +90,14 @@ function register_teachers_post_type()
     ],
     'public' => true,
     'has_archive' => false,
-    'publicly_queryable' => false,
+    'publicly_queryable' => true,
+    'rewrite' => [
+      'slug'       => 'teachers',
+      'with_front' => false,
+    ],
     'menu_icon' => 'dashicons-welcome-learn-more',
     'supports' => ['title', 'editor', 'thumbnail'],
+    'show_in_rest' => true,
   ]);
 }
 add_action('init', 'register_teachers_post_type');
@@ -377,6 +382,14 @@ add_filter('wpseo_breadcrumb_links', function ($links) {
     }
   }
 
+  if (is_singular('teacher')) {
+    $teachers_link = array(
+      'url' => home_url('/teachers/'),
+      'text' => 'Преподаватели',
+    );
+    array_splice($links, 1, 0, array($teachers_link));
+  }
+
   foreach ($links as &$link) {
     if (isset($link['text'])) {
       if ($link['text'] === 'Блог' || $link['text'] === 'Blog') {
@@ -390,7 +403,6 @@ add_filter('wpseo_breadcrumb_links', function ($links) {
 
   return $links;
 });
-
 add_filter('wpseo_breadcrumb_single_link', function ($link_output, $link) {
   if (isset($link['text'])) {
     if (strpos($link_output, 'breadcrumb_last') !== false) {
