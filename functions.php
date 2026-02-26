@@ -685,3 +685,13 @@ add_shortcode('promo_banner', function () {
   get_template_part('components/_banner');
   return ob_get_clean();
 });
+
+function plural_years($n)
+{
+  $n = abs($n) % 100;
+  $n1 = $n % 10;
+  if ($n > 10 && $n < 20) return 'лет';
+  if ($n1 > 1 && $n1 < 5) return 'года';
+  if ($n1 == 1) return 'год';
+  return 'лет';
+}

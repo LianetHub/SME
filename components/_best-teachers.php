@@ -23,7 +23,11 @@
 
                 if ($teachers->have_posts()): ?>
                     <?php while ($teachers->have_posts()): $teachers->the_post(); ?>
-                        <?php get_template_part('templates/_teacher'); ?>
+                        <?php
+                        get_template_part('templates/_teacher', null, [
+                            'show_position' => true
+                        ]);
+                        ?>
                     <?php endwhile; ?>
                 <?php endif;
                 wp_reset_postdata();

@@ -1,3 +1,15 @@
+<?php
+$experience_date = get_field('experience');
+$years_text = '';
+
+if ($experience_date) {
+    $start_year = (int) date('Y', strtotime($experience_date));
+    $current_year = (int) date('Y');
+    $years_count = max(0, $current_year - $start_year);
+    $years_text = $years_count . ' ' . plural_years($years_count);
+}
+?>
+
 <div class="teacher swiper-slide">
     <a href="#teacher-<?php the_ID(); ?>" data-fancybox class="teacher__main">
         <span class="teacher__image">
@@ -11,30 +23,12 @@
             <?php the_title(); ?>
         </span>
         <span class="teacher__position text-block-md">
-            Язык: <?php the_field('language'); ?><br>
-            Стаж:
-            <?php
-            if (!function_exists('plural_years')) {
-                function plural_years($n)
-                {
-                    $n = abs($n) % 100;
-                    $n1 = $n % 10;
-                    if ($n > 10 && $n < 20) return 'лет';
-                    if ($n1 > 1 && $n1 < 5) return 'года';
-                    if ($n1 == 1) return 'год';
-                    return 'лет';
-                }
-            }
-            $experience_date = get_field('experience');
-            $years = 0;
-
-            if ($experience_date) {
-                $start_year = (int) date('Y', strtotime($experience_date));
-                $current_year = (int) date('Y');
-                $years = max(0, $current_year - $start_year);
-                echo $years . ' ' . plural_years($years);
-            }
-            ?>
+            <?php if (isset($args['show_position']) && $args['show_position'] === true) : ?>
+                <?php the_field('position'); ?>
+            <?php else : ?>
+                Язык: <?php the_field('language'); ?><br>
+                Стаж: <?php echo $years_text; ?>
+            <?php endif; ?>
         </span>
     </a>
 
@@ -57,12 +51,7 @@
                 </div>
                 <div class="teacher__modal-info text-block-lg">
                     Язык: <?php the_field('language'); ?><br>
-                    Стаж преподавания:
-                    <?php
-                    if ($experience_date) {
-                        echo $years . ' ' . plural_years($years);
-                    }
-                    ?>
+                    Стаж преподавания: <?php echo $years_text; ?>
                 </div>
                 <div class="teacher__modal-desc">
                     <?php the_content() ?>
