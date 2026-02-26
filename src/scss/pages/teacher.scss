@@ -28,15 +28,35 @@
     // .teacher-page__content
     &__content {
         margin-top: 3.75rem;
+
+        .container {
+            @media (max-width:$md5) {
+                max-width: 72%;
+            }
+        }
     }
 
     // .teacher-page__photo
     &__photo {
-        width: 18.75rem;
-        height: 18.75rem;
-        float: left;
-        margin-right: 2.12rem;
-        margin-bottom: 1.25rem;
+        aspect-ratio: 1;
+
+        margin-bottom: 2.44rem;
+
+
+        @media (min-width:$md5) {
+            width: 15rem;
+            height: 15rem;
+            margin-bottom: 1.25rem;
+            float: left;
+            margin-right: 2.12rem;
+
+        }
+
+        @media (min-width:$md3) {
+            width: 18.75rem;
+            height: 18.75rem;
+
+        }
     }
 
     // .teacher-page__placeholder
@@ -44,24 +64,50 @@
 
     // .teacher-page__title
     &__title {
-        font-size: 1.5rem;
         font-family: $fontfamily;
         text-transform: capitalize;
-        display: flex;
-        align-items: center;
-        gap: rem(34);
+        font-size: 1.25rem;
+
+        @media (min-width:$md5) {
+            display: flex;
+            align-items: center;
+            gap: rem(34);
+            font-size: 1.5rem;
+
+        }
+    }
+
+    // .teacher-page__title-icon
+    &__title-icon {
+        display: none;
+
+        @media (min-width:$md4) {
+            display: inline-block;
+        }
     }
 
     // .teacher-page__meta
     &__meta {
-        margin-top: 1.25rem;
-        font-size: 1.25rem;
         line-height: 120%;
+        font-size: 1rem;
+        margin-top: rem(10);
+
+        @media (min-width:$md5) {
+            font-size: 1.25rem;
+            margin-top: 1.25rem;
+
+        }
     }
 
     // .teacher-page__desc
     &__desc {
-        margin-top: 1.25rem;
+        font-size: rem(14);
+        margin-top: rem(10);
+
+        @media (min-width:$md5) {
+            margin-top: 1.25rem;
+            font-size: 1rem;
+        }
 
         p {
             &:not(:last-child) {
@@ -253,5 +299,10 @@
 }
 
 .teacher-articles {
-    padding: 3.75rem 0 5rem;
+    padding: rem(60) 0;
+
+    @media (min-width:$md4) {
+        padding: 3.75rem 0 5rem;
+
+    }
 }

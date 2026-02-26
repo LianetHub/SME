@@ -10919,28 +10919,71 @@ h6,
 .teacher-page__content {
   margin-top: 3.75rem;
 }
+@media (max-width: 575.98px) {
+  .teacher-page__content .container {
+    max-width: 72%;
+  }
+}
 .teacher-page__photo {
-  width: 18.75rem;
-  height: 18.75rem;
-  float: left;
-  margin-right: 2.12rem;
-  margin-bottom: 1.25rem;
+  aspect-ratio: 1;
+  margin-bottom: 2.44rem;
+}
+@media (min-width: 575.98px) {
+  .teacher-page__photo {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 1.25rem;
+    float: left;
+    margin-right: 2.12rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .teacher-page__photo {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
 }
 .teacher-page__title {
-  font-size: 1.5rem;
   font-family: "PTSans";
   text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  gap: 2.125rem;
+  font-size: 1.25rem;
+}
+@media (min-width: 575.98px) {
+  .teacher-page__title {
+    display: flex;
+    align-items: center;
+    gap: 2.125rem;
+    font-size: 1.5rem;
+  }
+}
+.teacher-page__title-icon {
+  display: none;
+}
+@media (min-width: 767.98px) {
+  .teacher-page__title-icon {
+    display: inline-block;
+  }
 }
 .teacher-page__meta {
-  margin-top: 1.25rem;
-  font-size: 1.25rem;
   line-height: 120%;
+  font-size: 1rem;
+  margin-top: 0.625rem;
+}
+@media (min-width: 575.98px) {
+  .teacher-page__meta {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+  }
 }
 .teacher-page__desc {
-  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  margin-top: 0.625rem;
+}
+@media (min-width: 575.98px) {
+  .teacher-page__desc {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+  }
 }
 .teacher-page__desc p:not(:last-child) {
   margin-bottom: 0.75rem;
@@ -11100,5 +11143,10 @@ h6,
 }
 
 .teacher-articles {
-  padding: 3.75rem 0 5rem;
+  padding: 3.75rem 0;
+}
+@media (min-width: 767.98px) {
+  .teacher-articles {
+    padding: 3.75rem 0 5rem;
+  }
 }

@@ -50,7 +50,7 @@ $author_articles = new WP_Query([
                 </div>
                 <div class="teacher-page__details">
                     <h1 class="teacher-page__title">
-                        <span class="teacher-page__title-image">
+                        <span class="teacher-page__title-icon">
                             <img src="<?php echo get_template_directory_uri() . '/assets/img/icons/CME-author.svg' ?>" alt="Иконка">
                         </span>
                         <?php echo esc_html($t_name); ?>
