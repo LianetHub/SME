@@ -7,6 +7,9 @@ $raw_content = get_the_content();
 $data = cme_content_with_toc(apply_filters('the_content', $raw_content));
 $content = $data['content'];
 $toc_list = $data['toc'];
+
+$teacher_id = get_field('article_author');
+$for_whom_list = get_field('for_whom');
 ?>
 <section class="article">
     <div class="article__header">
@@ -18,7 +21,7 @@ $toc_list = $data['toc'];
             <?php endif; ?>
             <div class="article__header-content">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-xl-5">
                         <h1 class="article__title h3"><?php echo get_the_title() ?></h1>
                         <div class="article__meta">
                             <?php
@@ -43,7 +46,7 @@ $toc_list = $data['toc'];
                         </div>
                         <p class="article__excerpt"><?php echo get_the_excerpt() ?></p>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-xl-7">
                         <div class="article__poster">
                             <?php
                             $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
@@ -68,7 +71,7 @@ $toc_list = $data['toc'];
         <div class="container">
             <div class="article__details">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="article__details-column">
                             <div class="article__details-caption h5">Содержание</div>
                             <ul class="article__toc" id="toc">
@@ -80,36 +83,99 @@ $toc_list = $data['toc'];
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6">
                         <div class="article__details-column">
                             <div class="article__details-caption h5">Для кого эта статья</div>
                             <ul class="article__details-list">
-                                <li class="article__details-item">
-
-                                </li>
+                                <?php if ($for_whom_list) : ?>
+                                    <?php if (is_array($for_whom_list)) : ?>
+                                        <?php foreach ($for_whom_list as $item) : ?>
+                                            <li class="article__details-item">
+                                                <?php echo esc_html($item['text'] ?? $item); ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    <?php else : ?>
+                                        <li class="article__details-item">
+                                            <?php echo esc_html($for_whom_list); ?>
+                                        </li>
+                                    <?php endif; ?>
+                                <?php else : ?>
+                                    <li class="article__details-item">Для всех интересующихся</li>
+                                <?php endif; ?>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single-article typography-block" data-post-id="<?php echo get_the_ID(); ?>">
+            <div class="article__body single-article typography-block" data-post-id="<?php echo get_the_ID(); ?>">
                 <?php echo $content; ?>
             </div>
+
+            <?php
+            if ($teacher_id) :
+                if (is_array($teacher_id)) {
+                    $teacher_id = $teacher_id[0];
+                }
+
+                $t_name = get_the_title($teacher_id);
+                $t_thumb = get_the_post_thumbnail_url($teacher_id, 'thumbnail');
+
+                $first_letter = mb_substr($t_name, 0, 1, 'UTF-8');
+
+                $exp_date = get_field('experience', $teacher_id);
+                $emp_date = get_field('employment_date', $teacher_id);
+
+                $exp_year = '';
+                if ($exp_date) {
+                    $date_obj = DateTime::createFromFormat('d/m/Y', $exp_date);
+                    if ($date_obj) {
+                        $exp_year = $date_obj->format('Y');
+                    }
+                }
+
+                $emp_year = '';
+                if ($emp_date) {
+                    $date_obj = DateTime::createFromFormat('d/m/Y', $emp_date);
+                    if ($date_obj) {
+                        $emp_year = $date_obj->format('Y');
+                    }
+                }
+            ?>
+                <div class="article__author">
+                    <div class="article__author-thumb">
+                        <?php if ($t_thumb) : ?>
+                            <img src="<?php echo esc_url($t_thumb); ?>"
+                                alt="<?php echo esc_attr($t_name); ?>"
+                                class="cover-image">
+                        <?php else : ?>
+                            <span><?php echo esc_html($first_letter); ?></span>
+                        <?php endif; ?>
+                    </div>
+                    <div class="article__author-info">
+                        <div class="article__author-name">Автор <?php echo esc_html($t_name); ?></div>
+                        <div class="article__author-details">
+                            <?php if ($emp_year) : ?>
+                                Педагог СME с <?php echo $emp_year; ?>г.
+                            <?php endif; ?>
+                            <?php if ($exp_year) : ?>
+                                Стаж преподавания: с <?php echo $exp_year; ?> года
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
 
 <script>
     $(function() {
-
         const $article = $('.single-article');
-
         if ($article.length) {
             const postId = $article.data('post-id');
             const viewStorageKey = 'article_viewed_' + postId;
             const now = Date.now();
             const dayInMs = 24 * 60 * 60 * 1000;
-
             const lastView = localStorage.getItem(viewStorageKey);
 
             if (!lastView || (now - lastView) > dayInMs) {

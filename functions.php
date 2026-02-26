@@ -666,3 +666,10 @@ function cme_content_with_toc($content)
     'toc'     => $toc_list
   ];
 }
+
+
+add_shortcode('promo_banner', function () {
+  ob_start();
+  get_template_part('components/_banner');
+  return ob_get_clean();
+});
