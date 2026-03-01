@@ -8,7 +8,7 @@
                         Здесь мы собрали наиболее часто ​возникающие вопросы наших ​клиентов.
                     </p>
                     <div class="faq__icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.png" alt="Логотип">
                     </div>
                 </div>
                 <div class="col-xl-6 offset-xl-1 col-lg-7">

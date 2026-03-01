@@ -13,6 +13,15 @@
 		}
 	}
 
+	.page-template-rock-the-language & {
+		padding-top: 0;
+
+		@media (min-width:$md5) {
+			padding: rem(40) 0;
+
+		}
+	}
+
 	@media (min-width: $md3) {
 		padding: 5rem 0;
 	}
@@ -39,6 +48,81 @@
 		justify-content: center;
 		align-items: center;
 
+		.page-template-rock-the-language & {
+			@media (max-width:$md5) {
+				margin: -1.75rem -1.25rem 0;
+			}
+
+			@media (min-width:$md4) {
+				max-width: rem(292);
+				margin-left: auto;
+			}
+		}
+
+		.page-template-oge & {
+			@media (min-width:$md4) {
+				justify-content: flex-end;
+				padding-right: rem(70);
+
+			}
+		}
+
+		.page-id-68 & {
+			@media (max-width:$md5) {
+				max-width: rem(110);
+				margin: 0 auto;
+			}
+
+			@media (min-width:$md4) {
+				justify-content: flex-end;
+				padding-right: rem(94);
+			}
+		}
+
+		.page-id-70 & {
+			@media (max-width:$md5) {
+				max-width: rem(86);
+				margin: 0 auto;
+			}
+
+			@media (min-width:$md4) {
+				justify-content: flex-end;
+				padding-right: rem(111);
+			}
+		}
+
+		.page-id-72 & {
+			@media (max-width:$md5) {
+				max-width: rem(140);
+				margin: 0 auto;
+			}
+
+			@media (min-width:$md4) {
+				justify-content: flex-end;
+				padding-right: rem(69);
+			}
+		}
+
+		.page-id-74 & {
+			@media (max-width:$md5) {
+				max-width: rem(195);
+				margin: 0 auto;
+			}
+
+			@media (min-width:$md4) {
+				justify-content: flex-end;
+				padding-right: rem(70);
+			}
+		}
+
+		.page-template-ege & {
+			@media (min-width:$md4) {
+				justify-content: flex-end;
+				padding-right: rem(70);
+
+			}
+		}
+
 		.page-template-adults & {
 			@media (max-width: $md5) {
 				margin: rem(-28) -1.25rem 0;
@@ -60,6 +144,29 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		.page-template-rock-the-language & {
+			@media (min-width:$md4) {
+				margin-left: rem(38);
+
+			}
+		}
+
+		.page-template-oge & {
+			@media (max-width:$md2) {
+				@media (min-width:$md4) {
+					max-width: rem(340);
+				}
+			}
+		}
+
+		.page-template-ege & {
+			@media (max-width:$md2) {
+				@media (min-width:$md4) {
+					max-width: rem(340);
+				}
+			}
+		}
 
 		@media (min-width: $md5) {
 			align-items: flex-start;
@@ -167,7 +274,19 @@
 			display: none;
 		}
 
-		.page-template-rock-the-language,
+		.page-template-14-17 & {
+
+			@media (max-width:$md5) {
+				display: none;
+			}
+		}
+
+		.page-template-rock-the-language & {
+			order: -1;
+			margin-bottom: 2rem;
+			margin-top: 0;
+		}
+
 		.page-template-adults & {
 			order: -1;
 			margin-bottom: 2rem;
@@ -392,7 +511,7 @@
 }
 
 .sections {
-	padding: 1.5rem 0 2.5rem;
+	padding: rem(60) 0 2.5rem;
 
 	@media (min-width: $md4) {
 		padding: 3.75rem 0 5rem;
@@ -408,6 +527,12 @@
 	&__title {
 		&:not(:first-child) {
 			margin-top: 3.75rem;
+		}
+
+		&.h3 {
+			@media (max-width:$md5) {
+				font-size: rem(40);
+			}
 		}
 	}
 
@@ -548,13 +673,22 @@
 
 	// .info__card-image
 	&__card-image {
-		flex: 0 0 rem(184);
+
 		height: rem(184);
 		display: flex;
 		flex-direction: column;
+		flex-grow: 0;
+		flex-shrink: 0;
+		width: rem(184);
+		aspect-ratio: 1;
+
+		.page-template-preschoolers & {
+			height: rem(246);
+			width: rem(246);
+		}
 
 		@media (min-width: $md2) {
-			flex: 0 0 rem(204);
+			width: rem(204);
 			height: rem(204);
 
 			.page-template-preschoolers & {
@@ -616,7 +750,7 @@
 }
 
 .results {
-	padding: rem(30) 0;
+	padding: rem(60) 0 rem(30);
 
 	@media (min-width: $md3) {
 		padding: 3.75rem 0 rem(30);

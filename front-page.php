@@ -21,7 +21,7 @@ $our_centres_video_poster = get_field('our_centres_video_poster');
                         <?php if ($our_centres_title): ?>
                             <div class="our-centres__header">
                                 <div class="our-centres__header-icon">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.png" alt="Логотип">
                                 </div>
                                 <h2 class="our-centres__title h4"><?= $our_centres_title ?></h2>
                             </div>

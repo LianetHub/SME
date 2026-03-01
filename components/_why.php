@@ -36,7 +36,10 @@ $tag = ($why_title) ? 'section' : 'div';
                                     <?php endif; ?>
                                     <?php if ($key === 0) : ?>
                                         <div class="why__card-logo">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                                            <?php
+                                            $logo_name = (is_page_template('lets-develop-it.php') || is_page_template('preparing-for-school.php')) ? 'CME-for-kids.svg' : 'CME-language-centres.png';
+                                            ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/<?php echo $logo_name; ?>" alt="Логотип">
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($title) : ?>
@@ -64,11 +67,20 @@ $tag = ($why_title) ? 'section' : 'div';
                                     <button type="button" data-toggler-card class="why__card-btn icon-plus-circle"></button>
                                     <?php if ($key === 0) : ?>
                                         <div class="why__card-logo">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                                            <?php
+                                            $logo_name = (is_page_template('lets-develop-it.php') || is_page_template('preparing-for-school.php')) ? 'CME-for-kids.svg' : 'CME-language-centres.png';
+                                            ?>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/<?php echo $logo_name; ?>" alt="Логотип">
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($back) : ?>
-                                        <div class="why__card-body">
+                                        <?
+                                        $body_class = "why__card-body";
+                                        if (mb_strlen(strip_tags($back)) > 150) {
+                                            $body_class .= " small";
+                                        }
+                                        ?>
+                                        <div class="<?= $body_class ?>">
                                             <? echo $back ?>
                                         </div>
                                     <?php endif; ?>

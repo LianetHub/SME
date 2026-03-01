@@ -60,11 +60,13 @@ $list = get_field('language-desc_list');
         <div class="container">
             <div class="row">
                 <div class="offset-lg-2 col-lg-4 col-md-6">
-                    <div class="language-desc__image">
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                    </div>
+                    <picture class="language-desc__image">
+                        <source media="(min-width: 767.98px)" srcset="<?php echo esc_url($image['url']); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/we-know-large.jpg"
+                            alt="<?php echo esc_attr($image['alt']); ?>">
+                    </picture>
                 </div>
-                <div class="col-lg-4 col-md-5 offset-md-1">
+                <div class="col-lg-5 col-md-6">
                     <div class="language-desc__main">
                         <?php if ($title) : ?>
                             <h2 class="language-desc__title h5 text-center-mobile">

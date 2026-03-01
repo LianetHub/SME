@@ -23,27 +23,19 @@
 }
 
 @font-face {
-  font-family: "BebasNeue";
-  font-display: swap;
-  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PTSans";
-  font-display: swap;
-  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "PTSans";
   font-display: swap;
   src: url("../fonts/PTSans-BoldItalic.woff") format("woff"), url("../fonts/PTSans-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-display: swap;
+  src: url("../fonts/BebasNeue-Regular.woff") format("woff"), url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -60,6 +52,14 @@
   src: url("../fonts/PTSans-Italic.woff") format("woff"), url("../fonts/PTSans-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-display: swap;
+  src: url("../fonts/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
 .promotions__body ul li::before,
@@ -2966,6 +2966,11 @@ h6,
           transform: rotateY(180deg);
 }
 
+.why__card.is-flipped .why__card-front .why__card-logo,
+.why__card.is-flipped .why__card-front [data-toggler-card] {
+  display: none;
+}
+
 .why__card.orange .why__card-inner {
   background: #fa5300;
   color: #fff;
@@ -3052,6 +3057,38 @@ h6,
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.page-template-adults .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-lets-develop-it .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-preparing-for-school .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-mini-garden .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-14-17 .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-10-13 .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-7-9 .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
+}
+
+.page-template-preschoolers .why__card-front:has(.why__card-background) .why__card-btn::before {
+  color: #fff;
 }
 
 .why__card-back {
@@ -3161,6 +3198,10 @@ h6,
   gap: 1rem;
 }
 
+.why__card-body.small {
+  font-size: 0.8125rem;
+}
+
 .why__card-body h3 {
   font-size: 1.625rem;
 }
@@ -3222,6 +3263,11 @@ h6,
   width: 100%;
   height: 100%;
   border-radius: 1.625rem;
+}
+
+.page-template-language .why__card-background img {
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 .license {
@@ -3424,6 +3470,7 @@ h6,
 
 .regular__logo {
   display: none;
+  max-width: 4.875rem;
 }
 
 .regular__image {
@@ -4934,6 +4981,10 @@ h6,
   background: #f6f6f6;
 }
 
+.page-template-rock-the-language .language-desc {
+  padding-top: 0;
+}
+
 .language-desc.language-desc-white {
   background: #fff;
 }
@@ -5044,7 +5095,14 @@ h6,
   margin-top: 2rem;
 }
 
-.language-desc__icon .page-template-rock-the-language,
+.page-template-rock-the-language .language-desc__icon {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
 .page-template-adults .language-desc__icon {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -5194,7 +5252,7 @@ h6,
 }
 
 .sections {
-  padding: 1.5rem 0 2.5rem;
+  padding: 3.75rem 0 2.5rem;
 }
 
 .sections__desc {
@@ -5278,9 +5336,6 @@ h6,
 }
 
 .info__card-image {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 11.5rem;
-          flex: 0 0 11.5rem;
   height: 11.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5289,6 +5344,18 @@ h6,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 11.5rem;
+  aspect-ratio: 1;
+}
+
+.page-template-preschoolers .info__card-image {
+  height: 15.375rem;
+  width: 15.375rem;
 }
 
 .info__card-image img {
@@ -5334,7 +5401,7 @@ h6,
 }
 
 .results {
-  padding: 1.875rem 0;
+  padding: 3.75rem 0 1.875rem;
 }
 
 .results__body {
@@ -5605,6 +5672,28 @@ h6,
 .prices__table-price-current {
   background: #f6d838;
   padding: 0.25rem;
+}
+
+.prices__mobile-table {
+  background: #F6F6F6;
+  padding: 1.25rem;
+  margin: 0 -1.25rem;
+}
+
+.prices__mobile-table table {
+  width: 100%;
+}
+
+.prices__mobile-table th,
+.prices__mobile-table td {
+  border: 1px solid #eee;
+  background: #fff;
+  text-align: center;
+  min-height: 3.8125rem;
+  gap: 0.52rem;
+  font-size: 0.875rem;
+  padding: 0.81rem 0.25rem;
+  width: 50%;
 }
 
 .promotions {
@@ -5880,7 +5969,7 @@ h6,
 }
 
 .benefits {
-  padding: 2.5rem 0;
+  padding: 3.75rem 0 2.5rem;
 }
 
 .benefits__title {
@@ -7903,9 +7992,9 @@ h6,
 
   .promo__offer.promo__offer-blue {
     text-align: left;
-    padding: 1.94rem;
+    padding: 1.625rem;
     font-size: 1.625rem;
-    max-width: 17.8125rem;
+    max-width: 19.4375rem;
   }
 
   .promo__offer.promo__offer-white {
@@ -8103,6 +8192,10 @@ h6,
     margin-right: 0;
   }
 
+  .page-template-rock-the-language .language-desc {
+    padding: 2.5rem 0;
+  }
+
   .page-template-adults .language-desc__image img {
     height: 26.125rem;
     width: 18.25rem;
@@ -8201,6 +8294,10 @@ h6,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .prices__mobile-table {
+    display: none;
   }
 
   .promotions {
@@ -8877,7 +8974,7 @@ h6,
 
   .promo.promo-adults .promo__offer {
     margin-left: auto;
-    max-width: 20rem;
+    max-width: 17rem;
   }
 
   .promo.promo-adults .promo__side {
@@ -9089,13 +9186,45 @@ h6,
   }
 
   .why__card-back {
-    padding: 1.29rem 1rem 1.29rem 1.25rem;
+    padding: 2.3rem 1rem 0.5rem 1.25rem;
     width: 100%;
     border-radius: 1.77256rem;
   }
 
   .why__card-title {
     padding-right: 1rem;
+  }
+
+  .page-template-adults .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-lets-develop-it .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-preparing-for-school .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-mini-garden .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-14-17 .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-10-13 .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-7-9 .why__card-title {
+    padding-right: 0;
+  }
+
+  .page-template-preschoolers .why__card-title {
+    padding-right: 0;
   }
 
   .page-template-default .why__card-title.h6 {
@@ -9144,6 +9273,7 @@ h6,
     display: block;
     margin-top: auto;
     margin-left: auto;
+    max-width: 5.625rem;
   }
 
   .partner {
@@ -9288,7 +9418,7 @@ h6,
   }
 
   .teachers__link {
-    margin-top: 3.94rem;
+    margin-top: 2.5rem;
   }
 
   .teachers__link::before {
@@ -9527,6 +9657,57 @@ h6,
     font-size: 1rem;
   }
 
+  .page-template-rock-the-language .language-desc__image {
+    max-width: 18.25rem;
+    margin-left: auto;
+  }
+
+  .page-template-oge .language-desc__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 4.375rem;
+  }
+
+  .page-id-68 .language-desc__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 5.875rem;
+  }
+
+  .page-id-70 .language-desc__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 6.9375rem;
+  }
+
+  .page-id-72 .language-desc__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 4.3125rem;
+  }
+
+  .page-id-74 .language-desc__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 4.375rem;
+  }
+
+  .page-template-ege .language-desc__image {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 4.375rem;
+  }
+
+  .page-template-rock-the-language .language-desc__main {
+    margin-left: 2.375rem;
+  }
+
   .selection__main {
     padding: 4.37rem 0 3.5rem;
   }
@@ -9655,11 +9836,16 @@ h6,
   }
 
   .prices__slide {
-    width: 13.4375rem;
+    width: 14.375rem;
+  }
+
+  .prices__table-column {
+    width: 14.375rem;
   }
 
   .prices__table-row {
     font-size: 1rem;
+    padding: 0.81rem 0.55rem;
   }
 
   .speaker__body {
@@ -10813,6 +10999,16 @@ h6,
     font-size: 5rem;
   }
 
+  .page-template-prices-online .promo__title.promo__title_lg {
+    font-size: 4.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-template-prices .promo__title.promo__title_lg {
+    font-size: 4.75rem;
+    margin-bottom: 0.5rem;
+  }
+
   .page-template-lublino-park-template .promo__title small {
     font-size: 0.57em;
   }
@@ -10832,6 +11028,14 @@ h6,
   .page-template-lublino-park-template .promo__subtitle {
     margin-top: 1.5rem !important;
     font-size: 3.625rem;
+  }
+
+  .page-template-prices-online .promo__subtitle {
+    font-size: 2.875rem;
+  }
+
+  .page-template-prices .promo__subtitle {
+    font-size: 2.875rem;
   }
 
   .promo__sticker {
@@ -10892,6 +11096,30 @@ h6,
     min-height: 27.25rem;
   }
 
+  .page-template-lets-develop-it .why__card-inner {
+    padding: 2.19rem 1.5rem;
+  }
+
+  .page-template-preparing-for-school .why__card-inner {
+    padding: 2.19rem 1.5rem;
+  }
+
+  .page-template-14-17 .why__card-inner {
+    padding: 2.19rem 1.5rem;
+  }
+
+  .page-template-10-13 .why__card-inner {
+    padding: 2.19rem 1.5rem;
+  }
+
+  .page-template-7-9 .why__card-inner {
+    padding: 2.19rem 1.5rem;
+  }
+
+  .page-template-preschoolers .why__card-inner {
+    padding: 2.19rem 1.5rem;
+  }
+
   .why__card-inner {
     padding: 2.19rem;
     border-radius: 2.25rem;
@@ -10900,6 +11128,14 @@ h6,
   .why__card-back {
     padding: 2.19rem;
     border-radius: 2.25rem;
+  }
+
+  .page-template-preparing-for-school .why__card-back {
+    padding: 2.19rem 1.5rem;
+  }
+
+  .page-template-mini-garden .why__card-back {
+    padding: 2.19rem 1.5rem;
   }
 
   .why__card-btn {
@@ -11399,9 +11635,7 @@ h6,
   }
 
   .info__card-image {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 12.75rem;
-            flex: 0 0 12.75rem;
+    width: 12.75rem;
     height: 12.75rem;
   }
 
@@ -12158,6 +12392,11 @@ h6,
     gap: 1rem;
   }
 
+  .page-id-68 .desc__image {
+    width: 21.5rem;
+    margin-left: -4.375rem;
+  }
+
   .groups__list {
     gap: 2.25rem;
     margin-top: 4.94rem;
@@ -12259,6 +12498,14 @@ h6,
     font-size: 5.34363rem;
   }
 
+  .page-template-lets-develop-it .desc__title.h4 {
+    font-size: 2.25rem;
+  }
+
+  .page-template-lets-develop-it .desc__title.h4 br {
+    display: none;
+  }
+
   .programms__card-btn.btn-md {
     padding-inline: 1.3125rem;
   }
@@ -12342,6 +12589,10 @@ h6,
     background-image: url("../img/banners/banner-adults-mobile.jpg");
   }
 
+  .promo.promo-adults .promo__body {
+    padding-top: 2.2rem;
+  }
+
   .promo.promo-minigarden .promo__side {
     margin-top: 20rem;
   }
@@ -12395,6 +12646,10 @@ h6,
     margin: 0 auto;
   }
 
+  .page-template-preparing-for-school .promo__body {
+    padding-top: 2rem;
+  }
+
   .promo__offer.promo__offer-blue {
     gap: 0.63rem;
   }
@@ -12429,6 +12684,13 @@ h6,
     margin-top: 2rem;
   }
 
+  .page-template-individual .promo__image.order-first {
+    margin-top: 1.25rem;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+
   .page-template-exams .promo__image.order-first {
     margin-top: 1.25rem;
     -webkit-box-ordinal-group: 1;
@@ -12441,6 +12703,20 @@ h6,
         -ms-flex-order: 0;
             order: 0;
     margin-top: 1.6875rem;
+  }
+
+  .page-template-language .promo__image.order-first {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-top: 1.6875rem;
+  }
+
+  .page-template-online .promo__image.order-first {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin: -1rem 0;
   }
 
   .promo__subtitle.text-center-mobile {
@@ -12464,6 +12740,16 @@ h6,
     display: contents;
   }
 
+  .why__card.swiper-slide {
+    height: auto;
+  }
+
+  .why__card:has(.why__card-background) {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+
   .why__card-inner {
     min-height: 22.125rem;
   }
@@ -12483,6 +12769,10 @@ h6,
 
   .license__subtitle {
     line-height: 150%;
+  }
+
+  .partner + .banner {
+    margin-top: 2.5rem;
   }
 
   .partner__title {
@@ -12543,8 +12833,16 @@ h6,
   }
 
   .desc.desc-green .desc__image {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .desc + .banner {
+    margin-top: 3.75rem;
+  }
+
+  .desc + .teachers {
+    margin-top: 3.75rem;
   }
 
   .page-template-rock-the-language .desc__body .row {
@@ -12642,6 +12940,10 @@ h6,
 }
 
 @media (max-width: 575.98px) {
+  html {
+    font-size: 4.2666666667vw;
+  }
+
   .form__footer {
     gap: 1rem;
     -webkit-box-pack: center;
@@ -12840,12 +13142,36 @@ h6,
     font-size: 1.125rem;
   }
 
+  .page-template-prices-online .promo__body:has(.promo__image.order-first) .promo__offer {
+    margin-top: 0.55rem;
+  }
+
+  .page-template-prices .promo__body:has(.promo__image.order-first) .promo__offer {
+    margin-top: 0.55rem;
+  }
+
   .page-template-lublino-park-template .promo__body {
     padding-top: 2.3rem;
   }
 
   .page-template-vacancies-page .promo__body {
     padding-top: 2.5rem;
+  }
+
+  .page-template-mini-garden .promo__body {
+    padding-top: 2rem;
+  }
+
+  .page-template-14-17 .promo__body {
+    padding-top: 2rem;
+  }
+
+  .page-template-10-13 .promo__body {
+    padding-top: 2rem;
+  }
+
+  .page-template-7-9 .promo__body {
+    padding-top: 2rem;
   }
 
   .promo__offer.promo__offer-blue {
@@ -12862,6 +13188,14 @@ h6,
 
   .promo__image.sm-mobile + .promo__offer {
     margin-top: 0;
+  }
+
+  .page-template-prices-online .promo__title.promo__title_lg {
+    font-size: 2.875rem;
+  }
+
+  .page-template-prices .promo__title.promo__title_lg {
+    font-size: 2.875rem;
   }
 
   .page-template-exams .promo__title {
@@ -12898,8 +13232,21 @@ h6,
     font-size: 0.875rem;
   }
 
+  .desc.desc-magazine .desc__subtitle {
+    text-align: center;
+  }
+
+  .desc.desc-magazine .desc__image {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .desc__title.h3 {
     font-size: 2.25rem;
+  }
+
+  .page-template-14-17 .desc__title.h3 {
+    font-size: 1.625rem;
   }
 
   .desc__text {
@@ -12909,6 +13256,22 @@ h6,
   .page-id-68 .desc__image {
     max-width: 13.1875rem;
     margin: 0 auto 2.5rem;
+  }
+
+  .page-id-70 .desc__image {
+    margin: 0;
+  }
+
+  .page-id-72 .desc__image {
+    margin: 0;
+  }
+
+  .page-id-74 .desc__image {
+    margin: 0;
+  }
+
+  .page-template-default .our-centres .container {
+    padding: 0 1.875rem;
   }
 
   .our-centres__title {
@@ -12925,6 +13288,10 @@ h6,
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .page-template-default .our-centres__video {
+    margin: 0 -1.875rem;
   }
 
   .our-centres__icon img {
@@ -12971,6 +13338,30 @@ h6,
     padding-top: 0;
   }
 
+  .page-template-rock-the-language .language-desc__image {
+    margin: -1.75rem -1.25rem 0;
+  }
+
+  .page-id-68 .language-desc__image {
+    max-width: 6.875rem;
+    margin: 0 auto;
+  }
+
+  .page-id-70 .language-desc__image {
+    max-width: 5.375rem;
+    margin: 0 auto;
+  }
+
+  .page-id-72 .language-desc__image {
+    max-width: 8.75rem;
+    margin: 0 auto;
+  }
+
+  .page-id-74 .language-desc__image {
+    max-width: 12.1875rem;
+    margin: 0 auto;
+  }
+
   .page-template-adults .language-desc__image {
     margin: -1.75rem -1.25rem 0;
   }
@@ -12986,8 +13377,16 @@ h6,
             justify-content: center;
   }
 
+  .page-template-14-17 .language-desc__icon {
+    display: none;
+  }
+
   .selection__title {
     font-size: 1.625rem;
+  }
+
+  .sections__title.h3 {
+    font-size: 2.5rem;
   }
 
   .results__title {
@@ -13023,8 +13422,13 @@ h6,
     margin-bottom: 0;
   }
 
+  .prices__slider.prices__slider--desktop {
+    display: none;
+  }
+
   .promotions__title {
     font-size: 3.125rem;
+    padding-right: 3rem;
   }
 
   .promotions__body {
@@ -13080,9 +13484,49 @@ h6,
   }
 }
 
+@media (max-width: 1199.98px) and (min-width: 767.98px) {
+  .promo.promo-schoolers .promo__offer {
+    margin-right: 2rem;
+  }
+
+  .page-template-preparing-for-school .promo__offer {
+    max-width: 16.75rem;
+  }
+
+  .promo-rock-the-lang .promo__subtitle {
+    max-width: 20rem;
+  }
+
+  .page-template-oge .language-desc__main {
+    max-width: 21.25rem;
+  }
+
+  .page-template-ege .language-desc__main {
+    max-width: 21.25rem;
+  }
+}
+
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   .promo.promo-adults {
     background-position: 45% bottom;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 767.98px) {
+  .page-template-lets-develop-it .promo__offer {
+    max-width: 19rem;
+  }
+
+  .page-template-oge .promo__image {
+    display: none;
+  }
+
+  .page-template-ege .promo__image {
+    display: none;
+  }
+
+  .page-template-about-page .promo__title.promo__title_xl.lg-mobile {
+    font-size: 4rem;
   }
 }
 
@@ -13090,11 +13534,23 @@ h6,
   .page-template-prices .promo__image {
     width: 22rem;
   }
-}
 
-@media (max-width: 991.98px) and (min-width: 767.98px) {
-  .page-template-about-page .promo__title.promo__title_xl.lg-mobile {
-    font-size: 4rem;
+  .page-template-oge .promo__image {
+    width: 16.875rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 2.5rem;
+  }
+
+  .page-template-ege .promo__image {
+    width: 16.875rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 2.5rem;
+  }
+
+  .desc.desc-magazine .desc__title {
+    font-size: 3.125rem;
   }
 }
 

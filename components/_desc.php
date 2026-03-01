@@ -37,7 +37,10 @@
 
                             <?php if ($desc_section['image_order'] !== 'order-first' && $desc_section['has_icon_logo']) : ?>
                                 <div class="desc__logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                                    <?php
+                                    $logo_name = is_page_template('lets-develop-it.php') ? 'CME-for-kids.svg' : 'CME-language-centres.png';
+                                    ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/<?php echo $logo_name; ?>" alt="Логотип">
                                 </div>
                             <?php endif; ?>
                         </div>

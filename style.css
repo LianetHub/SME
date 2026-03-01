@@ -20,10 +20,13 @@ Tested up to: 6.5.4
 Requires PHP: 8.1
 
 */
-    .header__whatsapp:hover .header__whatsapp-items {        z-index: 1;    }
+.header__whatsapp:hover .header__whatsapp-items {
+    z-index: 1;
+}
 
 .is-flipped .why__card-btn::before {
-transform: rotate(45deg);}
+    transform: rotate(45deg);
+}
 
 @media (max-width: 575.98px) {
     .promo.promo-preschoolers::before {
@@ -39,15 +42,16 @@ transform: rotate(45deg);}
         background-repeat: no-repeat;
         background-position: center;
 
-}
-.promo.promo-preschoolers {
-  position: relative;
-}
+    }
+
+    .promo.promo-preschoolers {
+        position: relative;
+    }
 }
 
 
-.wpcf7-form-control-wrap   .dropdown__list-item.active, .dropdown__list-item[aria-checked=true] {
-    color: #393939!important;
+.wpcf7-form-control-wrap .dropdown__list-item.active, .dropdown__list-item[aria-checked=true] {
+    color: #393939 !important;
 }
 
 
@@ -56,7 +60,8 @@ transform: rotate(45deg);}
     list-style-position: inside;
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
-    list-style-type: disc; /* или decimal для ol */
+    list-style-type: disc;
+    /* или decimal для ol */
 }
 
 .center-page-content ul li,
@@ -65,21 +70,32 @@ transform: rotate(45deg);}
 }
 
 
-.page-id-2653 .trial{display:none!important;}
-.prices{padding: 0rem 0 2.5rem!important;}
-.reviews__title {        font-size: 3.125rem!important;   }
-.page-id-2653 .footer {	margin-top: 5rem;}
+.page-id-2653 .trial {
+    display: none !important;
+}
+
+.reviews__title {
+    font-size: 3.125rem !important;
+}
+
+.page-id-2653 .footer {
+    margin-top: 5rem;
+}
 
 
 
 /* Мобайл: вернуть нормальные пробелы в заголовках карточек целей */
 @media (max-width: 768px) {
-  .goals__slide-title.h5,
-  .goals__slide-title.h4 {
-    letter-spacing: 0;          /* снять отрицательный трекинг */
-    word-spacing: 0.12em;       /* чуть расширить промежутки между словами */
-    font-kerning: none;         /* на случай агрессивного кернинга шрифта */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+
+    .goals__slide-title.h5,
+    .goals__slide-title.h4 {
+        letter-spacing: 0;
+        /* снять отрицательный трекинг */
+        word-spacing: 0.12em;
+        /* чуть расширить промежутки между словами */
+        font-kerning: none;
+        /* на случай агрессивного кернинга шрифта */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }

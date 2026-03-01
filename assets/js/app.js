@@ -12,6 +12,8 @@ if (typeof Fancybox !== "undefined" && Fancybox !== null) {
 
 $(function () {
 
+
+
     // detect user OS
     const isMobile = {
         Android: () => /Android/i.test(navigator.userAgent),
@@ -269,7 +271,7 @@ $(function () {
                 clickable: true
             },
             breakpoints: {
-                797.98: {
+                767.98: {
                     slidesPerView: 1,
                     spaceBetween: 0
                 }
@@ -880,6 +882,19 @@ $(function () {
     $phoneInputs.on('input', onPhoneInput);
     $phoneInputs.on('paste', onPhonePaste);
 
+
+
+    // anchors fix
+    if (window.location.hash) {
+        var hash = window.location.hash.replace('/', '');
+        var target = $(hash);
+
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+        }
+    }
 
 })
 

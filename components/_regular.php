@@ -22,7 +22,7 @@
                         </div>
                         <a href="/rock-the-language" class="regular__more icon-arrow-cirlce h6">подробнее</a>
                         <div class="regular__logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-rock-the-language.svg" alt="Логотип">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-rock-the-language.png" alt="Логотип">
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,9 @@
                     <div class="regular__image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/benefits/01.jpg" class="cover-image" alt="Постер">
                         <div class="regular__logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-rock-the-language.svg" alt="Логотип">
+                            <img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-rock-the-language.png"
+                                alt="Логотип">
                         </div>
                     </div>
                 </div>

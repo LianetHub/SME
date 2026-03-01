@@ -22,7 +22,7 @@
                             Наши программы лицензированы государством. Вы сможете получить налоговый вычет и использовать материнский капитал для оплаты обучения.
                         </p>
                         <div class="license__logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.svg" alt="Логотип">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/CME-language-centres.png" alt="Логотип">
                         </div>
                     </div>
                 </div>
