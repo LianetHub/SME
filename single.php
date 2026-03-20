@@ -170,29 +170,35 @@ $for_whom_list = get_field('for_whom');
 </section>
 
 <script>
-    $(function() {
-        const $article = $('.single-article');
-        if ($article.length) {
-            const postId = $article.data('post-id');
+    document.addEventListener('DOMContentLoaded', function() {
+        const article = document.querySelector('.single-article');
+
+        if (article) {
+            const postId = article.dataset.postId;
             const viewStorageKey = 'article_viewed_' + postId;
             const now = Date.now();
             const dayInMs = 24 * 60 * 60 * 1000;
             const lastView = localStorage.getItem(viewStorageKey);
 
             if (!lastView || (now - lastView) > dayInMs) {
-                $.ajax({
-                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                    type: 'POST',
-                    data: {
-                        action: 'cme_increment_views',
-                        post_id: postId
-                    },
-                    success: function(res) {
+                const params = new URLSearchParams();
+                params.append('action', 'cme_increment_views');
+                params.append('post_id', postId);
+
+                fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        method: 'POST',
+                        header: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: params
+                    })
+                    .then(response => response.json())
+                    .then(res => {
                         if (res.success) {
                             localStorage.setItem(viewStorageKey, now);
                         }
-                    }
-                });
+                    })
+                    .catch(err => console.warn('Fetch error:', err));
             }
         }
     });
